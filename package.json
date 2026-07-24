@@ -1,0 +1,37 @@
+{
+  "name": "palmeta",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "pals": "node scripts/generate-pals-catalog.mjs",
+    "pals:work": "node scripts/merge-pal-work.mjs",
+    "pals:stats": "node scripts/merge-pal-stats.mjs",
+    "news": "node scripts/ingest-news.mjs",
+    "icons:pals": "node scripts/fetch-pal-icons.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.20",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.20",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.10"
+  }
+}

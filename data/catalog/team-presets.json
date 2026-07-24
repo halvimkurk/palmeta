@@ -1,0 +1,90 @@
+[
+  {
+    "id": "gobfin-weapon",
+    "name": "Gobfin Weapon Stack",
+    "description": "Angry Shark still stacks in 1.0 — four Gobfin (or Ignis mix) plus a mount infusion (Chillet/Orserk) for player-weapon boss melts.",
+    "tier": "S",
+    "team": ["gobfin", "gobfin", "gobfin", "gobfin", "chillet"],
+    "effectFocus": ["combat-buffs", "melee", "firearms"]
+  },
+  {
+    "id": "orserk-ramp",
+    "name": "Orserk Bullet Ramp",
+    "description": "1.0 core: Orserk stacks Attack/Defense on the active Pal from bullet hits (up to +150%). Pair with a weakness DPS and Lyleen for long fights. Keep every species unique.",
+    "tier": "S",
+    "team": ["orserk", "jormuntide-ignis", "lyleen", "jetragon", "anubis"],
+    "effectFocus": ["combat-buffs", "firearms", "fire-boost"]
+  },
+  {
+    "id": "energy-gunner",
+    "name": "Energy Gunner",
+    "description": "Trainer energy weapons + Orserk ramp. Xenogard / Xenolord amplify armed-Pal skills while Jetragon covers mobility and Dragon damage.",
+    "tier": "S",
+    "team": ["orserk", "xenogard", "xenolord", "jetragon", "lyleen"],
+    "effectFocus": ["firearms", "combat-buffs", "flying-mount"]
+  },
+  {
+    "id": "status-punish",
+    "name": "Status Punisher",
+    "description": "Blind from Vanwyrm Cryst into a heavy active Pal (Astegon), with Orserk ramping and Shadowbeak pressure. Swap the DPS for the boss weakness.",
+    "tier": "S",
+    "team": ["vanwyrm-cryst", "astegon", "orserk", "shadowbeak", "lyleen"],
+    "effectFocus": ["status", "combat-buffs", "dark-boost"]
+  },
+  {
+    "id": "libero-raid",
+    "name": "Libero Raid Lead",
+    "description": "Bellanoir Libero as the active nuke with Orserk stacks, Lyleen sustain, and Frostallion for Ice coverage on Dragon threats.",
+    "tier": "S",
+    "team": ["bellanoir-libero", "orserk", "lyleen", "frostallion", "jetragon"],
+    "effectFocus": ["combat-buffs", "dark-boost", "ice-boost"]
+  },
+  {
+    "id": "knocklem-wall",
+    "name": "Knocklem Wall",
+    "description": "Knocklem Iron/Steel Guardian Mode for long raids — Orserk still ramps the active slot, Lyleen heals, Anubis covers Earth utility.",
+    "tier": "A",
+    "team": ["knocklem", "orserk", "lyleen", "anubis", "jetragon"],
+    "effectFocus": ["combat-buffs", "earth-boost", "healing"]
+  },
+  {
+    "id": "ice-dragon",
+    "name": "Ice vs Dragon",
+    "description": "Frostallion lead for Dragon bosses with Cryolinx support, Orserk stacks, and a flyer for repositioning.",
+    "tier": "A",
+    "team": ["frostallion", "cryolinx", "orserk", "jetragon", "lyleen"],
+    "effectFocus": ["ice-boost", "flying-mount", "combat-buffs"]
+  },
+  {
+    "id": "world-tree",
+    "name": "World Tree Key",
+    "description": "Panthalus opens the World Tree barrier — keep a flyer and a healer ready for the endgame route.",
+    "tier": "A",
+    "team": ["panthalus", "jetragon", "anubis", "lyleen", "orserk"],
+    "effectFocus": ["mobility", "water-boost", "combat-buffs"]
+  },
+  {
+    "id": "fishing",
+    "name": "Fishing Build",
+    "description": "Water party with fishing boosts for lunker hunting along the coast.",
+    "tier": "B",
+    "team": ["ghangler", "penking", "pengullet", "jelliette", "faleris-aqua"],
+    "effectFocus": ["fishing", "water-boost"]
+  },
+  {
+    "id": "loot-farmer",
+    "name": "Loot Farmer",
+    "description": "Drop-rate and ranch helpers for sphere materials, ore, and gold while surveying.",
+    "tier": "B",
+    "team": ["vanwyrm", "vixy", "mau", "reptyro", "mammorest"],
+    "effectFocus": ["more-drops", "capture"]
+  },
+  {
+    "id": "pack-mule",
+    "name": "Pack Mule",
+    "description": "Stacked carry weight for long survey and hauling runs.",
+    "tier": "B",
+    "team": ["wumpo", "kingpaca", "broncherry", "cattiva", "direhowl"],
+    "effectFocus": ["carry-weight", "ground-mount"]
+  }
+]

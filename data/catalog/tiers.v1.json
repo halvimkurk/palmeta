@@ -1,0 +1,312 @@
+{
+  "version": 2,
+  "updatedAt": "2026-07-24",
+  "disclaimer": "Community ranking for Palworld 1.0 (Jul 2026) — cross-checked against patch notes, work stats in this catalog, and public tier coverage. Reasonable people disagree; read the notes.",
+  "lists": [
+    {
+      "role": "combat",
+      "label": "Combat",
+      "description": "Boss clears, tower sovereigns, raid DPS, and fight-together damage.",
+      "bands": [
+        {
+          "grade": "S",
+          "pals": [
+            { "slug": "jetragon", "why": "Fastest flyer + Aerial Missile — still the endgame all-round carry" },
+            { "slug": "bellanoir-libero", "why": "Top raid Dark nuke for late bosses" },
+            { "slug": "frostallion", "why": "Premier Ice steed — Dragon bosses melt while mounted" },
+            { "slug": "frostallion-noct", "why": "Dark Frostallion for Neutral / Shadow phases" },
+            { "slug": "jormuntide-ignis", "why": "Strongest non-legendary Fire/Dragon carry + burn payoff" },
+            { "slug": "blazamut-ryu", "why": "Dragon-fire burst for volcano and late raids" },
+            { "slug": "xenolord", "why": "Raid flyer — huge stamina hauls and combat pressure" },
+            { "slug": "necromus", "why": "Legendary Dark ground powerhouse" },
+            { "slug": "paladius", "why": "Legendary Neutral tank/DPS with triple-jump mobility" },
+            { "slug": "neptilius", "why": "1.0 Water legendary — ocean fights and Fire-boss answers" },
+            { "slug": "anubis", "why": "Ground sidestep bruiser that also anchors your base" },
+            { "slug": "shadowbeak", "why": "Accessible Dark flyer DPS before raid legendaries" },
+            { "slug": "orserk", "why": "Bullet-hit Attack/Defense ramp on the active Pal (up to +150%)" },
+            { "slug": "gobfin", "why": "Angry Shark still stacks — best player-weapon attack aura" }
+          ]
+        },
+        {
+          "grade": "A",
+          "pals": [
+            { "slug": "selyne", "why": "Mounted DPS / Astral fights + elite Handiwork hybrid" },
+            { "slug": "bellanoir", "why": "Base raid form — still excellent Dark damage" },
+            { "slug": "blazamut", "why": "Pure Fire ground DPS and mining hybrid" },
+            { "slug": "bastigor", "why": "Ice frontliner with shields and top Cooling work" },
+            { "slug": "astegon", "why": "Dragon/Dark tank — ore-drop mount while fighting surveys" },
+            { "slug": "grizzbolt", "why": "Electric mount fighter with minigun stagger" },
+            { "slug": "suzaku", "why": "Classic Fire flyer for mid/late coverage" },
+            { "slug": "faleris", "why": "Fast non-legendary Fire flyer before Jetragon" },
+            { "slug": "relaxaurus-lux", "why": "Missile Lux form for ranged Electric pressure" },
+            { "slug": "beakon", "why": "Early Electric flyer that scales into endgame parties" },
+            { "slug": "xenogard", "why": "Armed-Pal skill amp for energy-weapon builds" },
+            { "slug": "knocklem", "why": "Earth bruiser with Iron Guardian self-buff" },
+            { "slug": "gobfin-ignis", "why": "Fire Gobfin — same stackable Angry Shark for burn parties" },
+            { "slug": "lyleen-noct", "why": "Dark Grass healer/DPS hybrid for long raids" }
+          ]
+        },
+        {
+          "grade": "B",
+          "pals": [
+            { "slug": "helzephyr-lux", "why": "Lightning flyer alternative for Electric routes" },
+            { "slug": "ragnahawk", "why": "Compact Fire mount — fits dungeon ceilings" },
+            { "slug": "suzaku-aqua", "why": "Water Suzaku for flexible typing" },
+            { "slug": "cryolinx", "why": "Ice support DPS before Frostallion" },
+            { "slug": "mossanda-lux", "why": "Electric grenade partner for camp clears" },
+            { "slug": "warsect", "why": "Bug tank with solid bulk" },
+            { "slug": "quivern", "why": "Dragon flyer workhorse" },
+            { "slug": "univolt", "why": "Fast Electric charger" },
+            { "slug": "kitsun", "why": "Fire fox mount fighter" },
+            { "slug": "rayhound", "why": "Electric sprint bruiser" },
+            { "slug": "pyrin-noct", "why": "Dark horse for Neutral coverage" },
+            { "slug": "wixen", "why": "Player Fire damage aura" },
+            { "slug": "katress-ignis", "why": "Ignis Dark/Fire support" },
+            { "slug": "robinquill", "why": "Bow / hawk-eye synergy" }
+          ]
+        },
+        {
+          "grade": "C",
+          "pals": [
+            { "slug": "blazehowl", "why": "Early Fire mount fighter" },
+            { "slug": "foxcicle", "why": "Ice support starter for Frostallion teams" },
+            { "slug": "penking", "why": "Water tanker for mid-game" },
+            { "slug": "menasting", "why": "Dark scorpion bruiser" },
+            { "slug": "elizabee", "why": "Queen bee swarm damage" },
+            { "slug": "dazzi", "why": "Early Electric companion" },
+            { "slug": "felbat", "why": "Drain / sustain for long surveys" },
+            { "slug": "chillet", "why": "Ride infusion into Dragon shots — pairs with Gobfin" }
+          ]
+        },
+        {
+          "grade": "D",
+          "pals": [
+            { "slug": "lifmunk", "why": "Tutorial partner — graduate ASAP" },
+            { "slug": "lamball", "why": "Early shield toy" },
+            { "slug": "pengullet", "why": "Cute, not a fight win condition" },
+            { "slug": "jelliette", "why": "Fishing-leaning; leave for lunkers" }
+          ]
+        }
+      ]
+    },
+    {
+      "role": "workers",
+      "label": "Base workers",
+      "description": "Specialists for Kindling, Handiwork, Mining, Planting, Transport, and ranch under the 1.0 Level-10 work system.",
+      "bands": [
+        {
+          "grade": "S",
+          "pals": [
+            { "slug": "anubis", "why": "Handiwork 6 / Mining 6 — still the all-round base anchor" },
+            { "slug": "selyne", "why": "Handiwork 7 leader — three jobs in one bed slot" },
+            { "slug": "lyleen", "why": "Planting 7 + Gathering / Medicine farm elite" },
+            { "slug": "lyleen-noct", "why": "Dark Lyleen — Medicine 7 + farm elite" },
+            { "slug": "jormuntide-ignis", "why": "Kindling 7 — ore smelts while your raid sweeper rests" },
+            { "slug": "jormuntide", "why": "Watering 7 for crop cycles" },
+            { "slug": "astegon", "why": "Mining 7 + double ore drops while ridden" },
+            { "slug": "knocklem", "why": "Mining 7 / Transporting 7 — heavy-stack hauler" },
+            { "slug": "orserk", "why": "Generating Electricity 8 — best power specialist" },
+            { "slug": "bastigor", "why": "Cooling 8 for food / late production lines" },
+            { "slug": "frostallion", "why": "Cooling 7 legendary fridge" },
+            { "slug": "neptilius", "why": "Watering 7 — finishes crop cycles fast" },
+            { "slug": "bellanoir-libero", "why": "Medicine 7 + Handiwork hybrid" },
+            { "slug": "sibelyx", "why": "Cooling + cloth / ranch value" }
+          ]
+        },
+        {
+          "grade": "A",
+          "pals": [
+            { "slug": "blazamut", "why": "Kindling / Mining 7 hybrid for smelting bases" },
+            { "slug": "blazamut-ryu", "why": "Kindling / Mining 7 endgame smelter" },
+            { "slug": "faleris", "why": "Kindling 6 Fire flyer that still works the forge" },
+            { "slug": "faleris-aqua", "why": "Watering 6 for ocean / farm bases" },
+            { "slug": "helzephyr", "why": "Fastest Transport path for compact crafting bases" },
+            { "slug": "helzephyr-lux", "why": "Lux Transport speed for spread-out layouts" },
+            { "slug": "wumpo", "why": "Transporting 6 + Lumbering capacity king" },
+            { "slug": "wumpo-botan", "why": "Transporting 6 Leaf hauler" },
+            { "slug": "mammorest", "why": "Logging + bulk transport" },
+            { "slug": "elizabee", "why": "Honey / Gathering base staple" },
+            { "slug": "beegarde", "why": "Farming swarm for plantations + cake honey" },
+            { "slug": "menasting", "why": "Mining + Dark base helper" },
+            { "slug": "vixy", "why": "Ranch spheres / gold — fuels every capture grind" },
+            { "slug": "frostallion-noct", "why": "Gathering 7 legendary harvester" },
+            { "slug": "jetragon", "why": "Gathering 8 when parked — absurd for a flyer" },
+            { "slug": "bellanoir", "why": "Medicine 5 + Handiwork before Libero" }
+          ]
+        },
+        {
+          "grade": "B",
+          "pals": [
+            { "slug": "mozzarina", "why": "Milk ranch staple for cake" },
+            { "slug": "mau", "why": "Gold ranch helper" },
+            { "slug": "mau-cryst", "why": "Ice Mau ranch variant" },
+            { "slug": "melpaca", "why": "Wool / transport early" },
+            { "slug": "cattiva", "why": "Early Handiwork, mining, and +carry" },
+            { "slug": "chikipi", "why": "Eggs for cooking lines" },
+            { "slug": "grizzbolt", "why": "Generating Electricity 5 mid-game power" },
+            { "slug": "suzaku-aqua", "why": "Watering 6 flyer for coastal farms" },
+            { "slug": "broncherry", "why": "Planting 5 weight hybrid" },
+            { "slug": "quivern-botan", "why": "Planting 5 Leaf Quivern" },
+            { "slug": "reptyro-cryst", "why": "Cooling 5 before Bastigor / Frostallion" }
+          ]
+        },
+        {
+          "grade": "C",
+          "pals": [
+            { "slug": "lamball", "why": "Starter wool / Kindling" },
+            { "slug": "lifmunk", "why": "Early Gathering until better pals" },
+            { "slug": "foxcicle", "why": "Farming 3 ranch filler" },
+            { "slug": "pengullet", "why": "Early watering / cute filler" }
+          ]
+        }
+      ]
+    },
+    {
+      "role": "flying-mounts",
+      "label": "Flying mounts",
+      "description": "Exploration speed, Sunreach vertical routes, oil rigs, and aerial survey.",
+      "bands": [
+        {
+          "grade": "S",
+          "pals": [
+            { "slug": "jetragon", "why": "~3300 sprint — fastest long-range flyer for 100% routes" },
+            { "slug": "xenolord", "why": "~2700 sprint with ~300 stamina — wins long Sunreach hauls" },
+            { "slug": "frostallion", "why": "Ice legendary steed — speed + combat conversion" },
+            { "slug": "frostallion-noct", "why": "Dark Frostallion for night / Dark zones" },
+            { "slug": "shadowbeak", "why": "Smoothest Dark hybrid of traversal and DPS" }
+          ]
+        },
+        {
+          "grade": "A",
+          "pals": [
+            { "slug": "faleris", "why": "Fastest common Fire flyer (~1400) before legendaries" },
+            { "slug": "helzephyr-lux", "why": "Fast lightning flyer" },
+            { "slug": "ragnahawk", "why": "Small hitbox — best dungeon / cave flyer" },
+            { "slug": "selyne", "why": "Astral flyer when the meteor event unlocks it" },
+            { "slug": "faleris-aqua", "why": "Water Faleris for ocean legs" },
+            { "slug": "quivern", "why": "Dragon flyer workhorse" },
+            { "slug": "silvegis", "why": "Steel dragon flyer option" },
+            { "slug": "suzaku", "why": "Classic Fire flyer" }
+          ]
+        },
+        {
+          "grade": "B",
+          "pals": [
+            { "slug": "helzephyr", "why": "Base Dark flyer before Lux" },
+            { "slug": "suzaku-aqua", "why": "Water Suzaku" },
+            { "slug": "beakon", "why": "Early Electric flyer" },
+            { "slug": "vanwyrm", "why": "Early Fire flyer + loot" },
+            { "slug": "vanwyrm-cryst", "why": "Ice Vanwyrm" },
+            { "slug": "quivern-botan", "why": "Leaf Quivern variant" },
+            { "slug": "astegon", "why": "Mining while flying" }
+          ]
+        },
+        {
+          "grade": "C",
+          "pals": [
+            { "slug": "nitewing", "why": "First real sky unlock for many players" }
+          ]
+        }
+      ]
+    },
+    {
+      "role": "ground-mounts",
+      "label": "Ground mounts",
+      "description": "Land speed, weight stacks, water travel, and region traversal without flight.",
+      "bands": [
+        {
+          "grade": "S",
+          "pals": [
+            { "slug": "necromus", "why": "Legendary Dark ground speed + power" },
+            { "slug": "paladius", "why": "Legendary Neutral charger with triple jump" },
+            { "slug": "neptilius", "why": "Fastest water mount — vertical ocean jumps over cliffs" },
+            { "slug": "blazamut-ryu", "why": "Dragon-fire ground nuke mount" },
+            { "slug": "jormuntide-ignis", "why": "Fire Jormuntide for lava biomes + burn payoff" }
+          ]
+        },
+        {
+          "grade": "A",
+          "pals": [
+            { "slug": "fenglope", "why": "Best early/mid land speed — easy breed path" },
+            { "slug": "blazamut", "why": "Fire ground mount for volcano" },
+            { "slug": "grizzbolt", "why": "Electric mount + gunner skill" },
+            { "slug": "univolt", "why": "Fast Electric charger" },
+            { "slug": "rayhound", "why": "Electric sprint mount" },
+            { "slug": "jormuntide", "why": "Water serpent — no stamina drain on flat ocean" },
+            { "slug": "anubis", "why": "Ground combat mount with sidestep" },
+            { "slug": "knocklem", "why": "Tank mount with Guardian Mode" },
+            { "slug": "wumpo", "why": "Carry-weight king for survey loot" },
+            { "slug": "kingpaca", "why": "Weight + soft ground travel" }
+          ]
+        },
+        {
+          "grade": "B",
+          "pals": [
+            { "slug": "direhowl", "why": "First great land sprint (Lv9)" },
+            { "slug": "eikthyrdeer", "why": "Classic forest charger" },
+            { "slug": "eikthyrdeer-terra", "why": "Terra deer for desert" },
+            { "slug": "kitsun", "why": "Fire fox mount" },
+            { "slug": "pyrin", "why": "Electric horse" },
+            { "slug": "pyrin-noct", "why": "Dark Pyrin" },
+            { "slug": "reindrix", "why": "Ice / Insulation travel" },
+            { "slug": "mossanda", "why": "Grenade partner + travel" },
+            { "slug": "relaxaurus", "why": "Missile mount mid-game" },
+            { "slug": "gildane", "why": "Gold coyote mount" },
+            { "slug": "azurobe", "why": "Water/Dragon scenic ride (Lv24 progression)" }
+          ]
+        },
+        {
+          "grade": "C",
+          "pals": [
+            { "slug": "melpaca", "why": "Early wool taxi" },
+            { "slug": "surfent", "why": "Water travel before better mounts" },
+            { "slug": "chillet", "why": "Cute Ice mount for early towers" },
+            { "slug": "dinossom", "why": "Leaf starter mount" },
+            { "slug": "yakumo", "why": "Utility land partner" },
+            { "slug": "broncherry", "why": "Weight + Planting hybrid" }
+          ]
+        }
+      ]
+    },
+    {
+      "role": "catching",
+      "label": "Catching helpers",
+      "description": "Sphere economy, capture synergies, and ranch helpers for the Paldex grind.",
+      "bands": [
+        {
+          "grade": "S",
+          "pals": [
+            { "slug": "vixy", "why": "Ranch spheres — fuels every capture grind" }
+          ]
+        },
+        {
+          "grade": "A",
+          "pals": [
+            { "slug": "mau", "why": "Gold ranch for sphere crafting costs" },
+            { "slug": "mau-cryst", "why": "Ice Mau gold alternative" },
+            { "slug": "vanwyrm", "why": "More drops while surveying nests" },
+            { "slug": "gobfin", "why": "Stackable attack aura so weak pals stay catchable" },
+            { "slug": "beegarde", "why": "Honey for cakes while you hunt" },
+            { "slug": "mozzarina", "why": "Milk for cake / long catch sessions" }
+          ]
+        },
+        {
+          "grade": "B",
+          "pals": [
+            { "slug": "chikipi", "why": "Eggs / cooking sustain" },
+            { "slug": "cattiva", "why": "Early mining for sphere mats + carry" },
+            { "slug": "felbat", "why": "Life steal saves meds on long catch runs" },
+            { "slug": "gobfin-ignis", "why": "Fire Gobfin stacks for burn-capture setups" }
+          ]
+        },
+        {
+          "grade": "C",
+          "pals": [
+            { "slug": "lifmunk", "why": "Starter partner until Vixy ranch is online" },
+            { "slug": "lamball", "why": "Wool filler — replace quickly" }
+          ]
+        }
+      ]
+    }
+  ]
+}

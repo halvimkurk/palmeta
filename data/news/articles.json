@@ -1,0 +1,47 @@
+{
+  "version": "2",
+  "generatedAt": "2026-07-24T18:00:00.000Z",
+  "articles": [
+    {
+      "id": "palmeta-launch",
+      "slug": "palmeta-is-open",
+      "title": "Palmeta is open — send feedback",
+      "excerpt": "The Palworld toolkit portal is live: tier lists, breeding, team builder, and Paldeck. Tell us what to fix next at support@palmeta.app.",
+      "publishedAt": "2026-07-24T12:00:00.000Z",
+      "updatedAt": "2026-07-24T12:00:00.000Z",
+      "tags": ["site", "launch", "feedback"],
+      "body": [
+        {
+          "type": "p",
+          "text": "Palmeta is live — an unofficial Palworld 1.0 toolkit for role tier lists, breeding routes, party builds, and a full Paldeck."
+        },
+        {
+          "type": "h2",
+          "text": "What you can do today"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Browse combat, work, and mount tier lists",
+            "Run the breeding calculator for target pals",
+            "Load meta comps or build a custom party of five",
+            "Filter the Paldeck by element, work, and combat tier"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Feedback"
+        },
+        {
+          "type": "p",
+          "text": "Found a wrong tier placement, a broken link, or a missing pal? Email support@palmeta.app — we read every note and prioritize data fixes first."
+        },
+        {
+          "type": "p",
+          "text": "Palmeta is a fan project and is not affiliated with Pocketpair."
+        }
+      ],
+      "sourceRefs": []
+    }
+  ]
+}

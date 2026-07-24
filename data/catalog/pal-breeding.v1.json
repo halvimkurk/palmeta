@@ -1,0 +1,793 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13",
+  "source": "palworld.gg combiRank + curated unique combos",
+  "formula": "floor((rankA + rankB + 1) / 2) → closest combiRank (tie → lower combiPriority)",
+  "ranks": {
+    "anubis": {
+      "combiRank": 480,
+      "combiPriority": 48000,
+      "ignoreCombi": false,
+      "index": 139
+    },
+    "astegon": {
+      "combiRank": 490,
+      "combiPriority": 49000,
+      "ignoreCombi": false,
+      "index": 158
+    },
+    "azurobe": {
+      "combiRank": 1830,
+      "combiPriority": 183000,
+      "ignoreCombi": false,
+      "index": 41
+    },
+    "bastigor": {
+      "combiRank": 50,
+      "combiPriority": 5000,
+      "ignoreCombi": true,
+      "index": 191
+    },
+    "beakon": {
+      "combiRank": 1690,
+      "combiPriority": 169000,
+      "ignoreCombi": false,
+      "index": 96
+    },
+    "beegarde": {
+      "combiRank": 2350,
+      "combiPriority": 235000,
+      "ignoreCombi": false,
+      "index": 67
+    },
+    "bellanoir": {
+      "combiRank": 620,
+      "combiPriority": 62000,
+      "ignoreCombi": true,
+      "index": 195
+    },
+    "bellanoir-libero": {
+      "combiRank": 130,
+      "combiPriority": 13000,
+      "ignoreCombi": true,
+      "index": 195
+    },
+    "blazamut": {
+      "combiRank": 410,
+      "combiPriority": 41000,
+      "ignoreCombi": false,
+      "index": 137
+    },
+    "blazamut-ryu": {
+      "combiRank": 100,
+      "combiPriority": 10000,
+      "ignoreCombi": true,
+      "index": 137
+    },
+    "blazehowl": {
+      "combiRank": 1360,
+      "combiPriority": 136000,
+      "ignoreCombi": false,
+      "index": 112
+    },
+    "blazehowl-noct": {
+      "combiRank": 1270,
+      "combiPriority": 127000,
+      "ignoreCombi": false,
+      "index": 112
+    },
+    "broncherry": {
+      "combiRank": 1380,
+      "combiPriority": 138000,
+      "ignoreCombi": false,
+      "index": 108
+    },
+    "cattiva": {
+      "combiRank": 2760,
+      "combiPriority": 276000,
+      "ignoreCombi": false,
+      "index": 2
+    },
+    "celaray": {
+      "combiRank": 2740,
+      "combiPriority": 274000,
+      "ignoreCombi": false,
+      "index": 7
+    },
+    "chikipi": {
+      "combiRank": 3080,
+      "combiPriority": 308000,
+      "ignoreCombi": false,
+      "index": 3
+    },
+    "chillet": {
+      "combiRank": 2330,
+      "combiPriority": 233000,
+      "ignoreCombi": false,
+      "index": 103
+    },
+    "cryolinx": {
+      "combiRank": 1040,
+      "combiPriority": 104000,
+      "ignoreCombi": false,
+      "index": 132
+    },
+    "dazzi": {
+      "combiRank": 2400,
+      "combiPriority": 240000,
+      "ignoreCombi": false,
+      "index": 92
+    },
+    "dinossom": {
+      "combiRank": 2100,
+      "combiPriority": 210000,
+      "ignoreCombi": false,
+      "index": 84
+    },
+    "dinossom-lux": {
+      "combiRank": 1890,
+      "combiPriority": 189000,
+      "ignoreCombi": false,
+      "index": 84
+    },
+    "direhowl": {
+      "combiRank": 2680,
+      "combiPriority": 268000,
+      "ignoreCombi": false,
+      "index": 33
+    },
+    "dumud": {
+      "combiRank": 2290,
+      "combiPriority": 229000,
+      "ignoreCombi": false,
+      "index": 109
+    },
+    "eikthyrdeer": {
+      "combiRank": 2710,
+      "combiPriority": 271000,
+      "ignoreCombi": false,
+      "index": 32
+    },
+    "eikthyrdeer-terra": {
+      "combiRank": 2580,
+      "combiPriority": 258000,
+      "ignoreCombi": false,
+      "index": 32
+    },
+    "elizabee": {
+      "combiRank": 1790,
+      "combiPriority": 179000,
+      "ignoreCombi": false,
+      "index": 68
+    },
+    "faleris": {
+      "combiRank": 500,
+      "combiPriority": 50000,
+      "ignoreCombi": true,
+      "index": 188
+    },
+    "faleris-aqua": {
+      "combiRank": 450,
+      "combiPriority": 45000,
+      "ignoreCombi": true,
+      "index": 188
+    },
+    "felbat": {
+      "combiRank": 1570,
+      "combiPriority": 157000,
+      "ignoreCombi": false,
+      "index": 65
+    },
+    "fenglope": {
+      "combiRank": 1960,
+      "combiPriority": 196000,
+      "ignoreCombi": false,
+      "index": 83
+    },
+    "foxcicle": {
+      "combiRank": 1970,
+      "combiPriority": 197000,
+      "ignoreCombi": false,
+      "index": 95
+    },
+    "frostallion": {
+      "combiRank": 150,
+      "combiPriority": 15000,
+      "ignoreCombi": true,
+      "index": 200
+    },
+    "frostallion-noct": {
+      "combiRank": 110,
+      "combiPriority": 11000,
+      "ignoreCombi": true,
+      "index": 200
+    },
+    "galeclaw": {
+      "combiRank": 2570,
+      "combiPriority": 257000,
+      "ignoreCombi": false,
+      "index": 49
+    },
+    "ghangler": {
+      "combiRank": 880,
+      "combiPriority": 88000,
+      "ignoreCombi": false,
+      "index": 97
+    },
+    "gildane": {
+      "combiRank": 730,
+      "combiPriority": 73000,
+      "ignoreCombi": false,
+      "index": 154
+    },
+    "gobfin": {
+      "combiRank": 2550,
+      "combiPriority": 255000,
+      "ignoreCombi": false,
+      "index": 55
+    },
+    "gobfin-ignis": {
+      "combiRank": 2430,
+      "combiPriority": 243000,
+      "ignoreCombi": false,
+      "index": 55
+    },
+    "grizzbolt": {
+      "combiRank": 1020,
+      "combiPriority": 102000,
+      "ignoreCombi": true,
+      "index": 185
+    },
+    "helzephyr": {
+      "combiRank": 1130,
+      "combiPriority": 113000,
+      "ignoreCombi": false,
+      "index": 80
+    },
+    "helzephyr-lux": {
+      "combiRank": 960,
+      "combiPriority": 96000,
+      "ignoreCombi": false,
+      "index": 80
+    },
+    "jelliette": {
+      "combiRank": 2650,
+      "combiPriority": 265000,
+      "ignoreCombi": false,
+      "index": 45
+    },
+    "jetragon": {
+      "combiRank": 70,
+      "combiPriority": 7000,
+      "ignoreCombi": true,
+      "index": 202
+    },
+    "jormuntide": {
+      "combiRank": 590,
+      "combiPriority": 59000,
+      "ignoreCombi": false,
+      "index": 121
+    },
+    "jormuntide-ignis": {
+      "combiRank": 170,
+      "combiPriority": 17000,
+      "ignoreCombi": false,
+      "index": 121
+    },
+    "katress": {
+      "combiRank": 2040,
+      "combiPriority": 204000,
+      "ignoreCombi": false,
+      "index": 79
+    },
+    "katress-ignis": {
+      "combiRank": 1800,
+      "combiPriority": 180000,
+      "ignoreCombi": false,
+      "index": 79
+    },
+    "killamari": {
+      "combiRank": 2770,
+      "combiPriority": 277000,
+      "ignoreCombi": false,
+      "index": 30
+    },
+    "kingpaca": {
+      "combiRank": 2220,
+      "combiPriority": 222000,
+      "ignoreCombi": false,
+      "index": 21
+    },
+    "kingpaca-cryst": {
+      "combiRank": 1530,
+      "combiPriority": 153000,
+      "ignoreCombi": false,
+      "index": 21
+    },
+    "kitsun": {
+      "combiRank": 1670,
+      "combiPriority": 167000,
+      "ignoreCombi": false,
+      "index": 111
+    },
+    "knocklem": {
+      "combiRank": 260,
+      "combiPriority": 26000,
+      "ignoreCombi": false,
+      "index": 159
+    },
+    "lamball": {
+      "combiRank": 3050,
+      "combiPriority": 305000,
+      "ignoreCombi": false,
+      "index": 1
+    },
+    "lifmunk": {
+      "combiRank": 3020,
+      "combiPriority": 302000,
+      "ignoreCombi": false,
+      "index": 4
+    },
+    "lovander": {
+      "combiRank": 2090,
+      "combiPriority": 209000,
+      "ignoreCombi": false,
+      "index": 69
+    },
+    "lyleen": {
+      "combiRank": 240,
+      "combiPriority": 24000,
+      "ignoreCombi": true,
+      "index": 186
+    },
+    "lyleen-noct": {
+      "combiRank": 220,
+      "combiPriority": 22000,
+      "ignoreCombi": true,
+      "index": 186
+    },
+    "mammorest": {
+      "combiRank": 1340,
+      "combiPriority": 134000,
+      "ignoreCombi": false,
+      "index": 87
+    },
+    "mau": {
+      "combiRank": 3040,
+      "combiPriority": 304000,
+      "ignoreCombi": false,
+      "index": 27
+    },
+    "mau-cryst": {
+      "combiRank": 2750,
+      "combiPriority": 275000,
+      "ignoreCombi": false,
+      "index": 27
+    },
+    "melpaca": {
+      "combiRank": 2720,
+      "combiPriority": 272000,
+      "ignoreCombi": false,
+      "index": 20
+    },
+    "menasting": {
+      "combiRank": 1120,
+      "combiPriority": 112000,
+      "ignoreCombi": false,
+      "index": 99
+    },
+    "mossanda": {
+      "combiRank": 2060,
+      "combiPriority": 206000,
+      "ignoreCombi": false,
+      "index": 102
+    },
+    "mossanda-lux": {
+      "combiRank": 1440,
+      "combiPriority": 144000,
+      "ignoreCombi": false,
+      "index": 102
+    },
+    "mozzarina": {
+      "combiRank": 2800,
+      "combiPriority": 280000,
+      "ignoreCombi": false,
+      "index": 40
+    },
+    "necromus": {
+      "combiRank": 190,
+      "combiPriority": 19000,
+      "ignoreCombi": true,
+      "index": 199
+    },
+    "neptilius": {
+      "combiRank": 160,
+      "combiPriority": 16000,
+      "ignoreCombi": true,
+      "index": 201
+    },
+    "nitewing": {
+      "combiRank": 2560,
+      "combiPriority": 256000,
+      "ignoreCombi": false,
+      "index": 51
+    },
+    "orserk": {
+      "combiRank": 120,
+      "combiPriority": 12000,
+      "ignoreCombi": true,
+      "index": 187
+    },
+    "paladius": {
+      "combiRank": 180,
+      "combiPriority": 18000,
+      "ignoreCombi": true,
+      "index": 198
+    },
+    "panthalus": {
+      "combiRank": 20,
+      "combiPriority": 2000,
+      "ignoreCombi": true,
+      "index": 203
+    },
+    "pengullet": {
+      "combiRank": 2960,
+      "combiPriority": 296000,
+      "ignoreCombi": false,
+      "index": 17
+    },
+    "penking": {
+      "combiRank": 2070,
+      "combiPriority": 207000,
+      "ignoreCombi": false,
+      "index": 18
+    },
+    "pyrin": {
+      "combiRank": 1980,
+      "combiPriority": 198000,
+      "ignoreCombi": false,
+      "index": 93
+    },
+    "pyrin-noct": {
+      "combiRank": 1870,
+      "combiPriority": 187000,
+      "ignoreCombi": false,
+      "index": 93
+    },
+    "quivern": {
+      "combiRank": 1210,
+      "combiPriority": 121000,
+      "ignoreCombi": false,
+      "index": 124
+    },
+    "quivern-botan": {
+      "combiRank": 1300,
+      "combiPriority": 130000,
+      "ignoreCombi": false,
+      "index": 124
+    },
+    "ragnahawk": {
+      "combiRank": 1050,
+      "combiPriority": 105000,
+      "ignoreCombi": false,
+      "index": 104
+    },
+    "rayhound": {
+      "combiRank": 1920,
+      "combiPriority": 192000,
+      "ignoreCombi": false,
+      "index": 98
+    },
+    "reindrix": {
+      "combiRank": 1930,
+      "combiPriority": 193000,
+      "ignoreCombi": false,
+      "index": 101
+    },
+    "relaxaurus": {
+      "combiRank": 1090,
+      "combiPriority": 109000,
+      "ignoreCombi": false,
+      "index": 94
+    },
+    "relaxaurus-lux": {
+      "combiRank": 770,
+      "combiPriority": 77000,
+      "ignoreCombi": false,
+      "index": 94
+    },
+    "reptyro": {
+      "combiRank": 1060,
+      "combiPriority": 106000,
+      "ignoreCombi": false,
+      "index": 129
+    },
+    "reptyro-cryst": {
+      "combiRank": 600,
+      "combiPriority": 60000,
+      "ignoreCombi": false,
+      "index": 129
+    },
+    "robinquill": {
+      "combiRank": 2260,
+      "combiPriority": 226000,
+      "ignoreCombi": false,
+      "index": 76
+    },
+    "robinquill-terra": {
+      "combiRank": 2050,
+      "combiPriority": 205000,
+      "ignoreCombi": false,
+      "index": 76
+    },
+    "selyne": {
+      "combiRank": 360,
+      "combiPriority": 36000,
+      "ignoreCombi": true,
+      "index": 190
+    },
+    "shadowbeak": {
+      "combiRank": 550,
+      "combiPriority": 55000,
+      "ignoreCombi": true,
+      "index": 189
+    },
+    "sibelyx": {
+      "combiRank": 1810,
+      "combiPriority": 181000,
+      "ignoreCombi": false,
+      "index": 116
+    },
+    "silvegis": {
+      "combiRank": 560,
+      "combiPriority": 56000,
+      "ignoreCombi": false,
+      "index": 160
+    },
+    "surfent": {
+      "combiRank": 2440,
+      "combiPriority": 244000,
+      "ignoreCombi": false,
+      "index": 75
+    },
+    "suzaku": {
+      "combiRank": 1200,
+      "combiPriority": 120000,
+      "ignoreCombi": false,
+      "index": 122
+    },
+    "suzaku-aqua": {
+      "combiRank": 740,
+      "combiPriority": 74000,
+      "ignoreCombi": false,
+      "index": 122
+    },
+    "teafant": {
+      "combiRank": 3070,
+      "combiPriority": 307000,
+      "ignoreCombi": false,
+      "index": 11
+    },
+    "univolt": {
+      "combiRank": 2270,
+      "combiPriority": 227000,
+      "ignoreCombi": false,
+      "index": 54
+    },
+    "vanwyrm": {
+      "combiRank": 1650,
+      "combiPriority": 165000,
+      "ignoreCombi": false,
+      "index": 64
+    },
+    "vanwyrm-cryst": {
+      "combiRank": 1430,
+      "combiPriority": 143000,
+      "ignoreCombi": false,
+      "index": 64
+    },
+    "vixy": {
+      "combiRank": 3060,
+      "combiPriority": 306000,
+      "ignoreCombi": false,
+      "index": 6
+    },
+    "warsect": {
+      "combiRank": 1280,
+      "combiPriority": 128000,
+      "ignoreCombi": false,
+      "index": 113
+    },
+    "wixen": {
+      "combiRank": 2080,
+      "combiPriority": 208000,
+      "ignoreCombi": false,
+      "index": 78
+    },
+    "wixen-noct": {
+      "combiRank": 1490,
+      "combiPriority": 149000,
+      "ignoreCombi": false,
+      "index": 78
+    },
+    "wumpo": {
+      "combiRank": 830,
+      "combiPriority": 83000,
+      "ignoreCombi": false,
+      "index": 134
+    },
+    "wumpo-botan": {
+      "combiRank": 610,
+      "combiPriority": 61000,
+      "ignoreCombi": false,
+      "index": 134
+    },
+    "xenogard": {
+      "combiRank": 990,
+      "combiPriority": 99000,
+      "ignoreCombi": true,
+      "index": 146
+    },
+    "xenolord": {
+      "combiRank": 400,
+      "combiPriority": 40000,
+      "ignoreCombi": true,
+      "index": 196
+    },
+    "yakumo": {
+      "combiRank": 2230,
+      "combiPriority": 223000,
+      "ignoreCombi": false,
+      "index": 127
+    }
+  },
+  "uniqueCombos": [
+    {
+      "parents": [
+        "relaxaurus",
+        "sparkit"
+      ],
+      "child": "relaxaurus-lux"
+    },
+    {
+      "parents": [
+        "mossanda",
+        "grizzbolt"
+      ],
+      "child": "mossanda-lux"
+    },
+    {
+      "parents": [
+        "vanwyrm",
+        "foxcicle"
+      ],
+      "child": "vanwyrm-cryst"
+    },
+    {
+      "parents": [
+        "mau",
+        "pengullet"
+      ],
+      "child": "mau-cryst"
+    },
+    {
+      "parents": [
+        "gobfin",
+        "rooby"
+      ],
+      "child": "gobfin-ignis"
+    },
+    {
+      "parents": [
+        "suzaku",
+        "jormuntide"
+      ],
+      "child": "suzaku-aqua"
+    },
+    {
+      "parents": [
+        "blazehowl",
+        "felbat"
+      ],
+      "child": "blazehowl-noct"
+    },
+    {
+      "parents": [
+        "pyrin",
+        "katress"
+      ],
+      "child": "pyrin-noct"
+    },
+    {
+      "parents": [
+        "kingpaca",
+        "reindrix"
+      ],
+      "child": "kingpaca-cryst"
+    },
+    {
+      "parents": [
+        "reptyro",
+        "foxcicle"
+      ],
+      "child": "reptyro-cryst"
+    },
+    {
+      "parents": [
+        "robinquill",
+        "fuddler"
+      ],
+      "child": "robinquill-terra"
+    },
+    {
+      "parents": [
+        "dinossom",
+        "rayhound"
+      ],
+      "child": "dinossom-lux"
+    },
+    {
+      "parents": [
+        "eikthyrdeer",
+        "hangyu"
+      ],
+      "child": "eikthyrdeer-terra"
+    },
+    {
+      "parents": [
+        "frostallion",
+        "helzephyr"
+      ],
+      "child": "frostallion-noct"
+    },
+    {
+      "parents": [
+        "jormuntide",
+        "arsox"
+      ],
+      "child": "jormuntide-ignis"
+    },
+    {
+      "parents": [
+        "lyleen",
+        "menasting"
+      ],
+      "child": "lyleen-noct"
+    },
+    {
+      "parents": [
+        "wumpo",
+        "cinnamoth"
+      ],
+      "child": "wumpo-botan"
+    },
+    {
+      "parents": [
+        "helzephyr",
+        "beakon"
+      ],
+      "child": "helzephyr-lux"
+    },
+    {
+      "parents": [
+        "blazamut",
+        "jetragon"
+      ],
+      "child": "blazamut-ryu"
+    },
+    {
+      "parents": [
+        "wixen",
+        "felbat"
+      ],
+      "child": "wixen-noct"
+    },
+    {
+      "parents": [
+        "faleris",
+        "jormuntide"
+      ],
+      "child": "faleris-aqua"
+    }
+  ]
+}

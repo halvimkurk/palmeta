@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13",
+  "source": "palworld.gg pals dump (work levels)",
+  "pals": {
+    "anubis": {
+      "handiwork": 6,
+      "mining": 6,
+      "transporting": 4
+    },
+    "astegon": {
+      "handiwork": 3,
+      "mining": 7
+    },
+    "azurobe": {
+      "watering": 4
+    },
+    "bastigor": {
+      "cooling": 8,
+      "deforesting": 6,
+      "mining": 5
+    },
+    "beakon": {
+      "gathering": 2,
+      "generating-electricity": 4,
+      "transporting": 5
+    },
+    "beegarde": {
+      "gathering": 3,
+      "deforesting": 2,
+      "handiwork": 2,
+      "farming": 3,
+      "medicine-production": 2,
+      "planting": 2,
+      "transporting": 2
+    },
+    "bellanoir": {
+      "handiwork": 5,
+      "medicine-production": 5,
+      "transporting": 4
+    },
+    "bellanoir-libero": {
+      "handiwork": 6,
+      "medicine-production": 7,
+      "transporting": 4
+    },
+    "blazamut": {
+      "kindling": 6,
+      "mining": 7
+    },
+    "blazamut-ryu": {
+      "kindling": 6,
+      "mining": 7
+    },
+    "blazehowl": {
+      "deforesting": 3,
+      "kindling": 5
+    },
+    "blazehowl-noct": {
+      "deforesting": 3,
+      "kindling": 5
+    },
+    "broncherry": {
+      "planting": 5
+    },
+    "cattiva": {
+      "gathering": 1,
+      "handiwork": 1,
+      "mining": 1,
+      "transporting": 1
+    },
+    "celaray": {
+      "transporting": 1,
+      "watering": 1
+    },
+    "chikipi": {
+      "gathering": 1,
+      "farming": 1
+    },
+    "chillet": {
+      "gathering": 1,
+      "cooling": 2
+    },
+    "cryolinx": {
+      "cooling": 4,
+      "deforesting": 4,
+      "handiwork": 3,
+      "transporting": 4
+    },
+    "dazzi": {
+      "generating-electricity": 3,
+      "handiwork": 2,
+      "transporting": 2
+    },
+    "dinossom": {
+      "deforesting": 3,
+      "planting": 3
+    },
+    "dinossom-lux": {
+      "deforesting": 4,
+      "generating-electricity": 3
+    },
+    "direhowl": {
+      "gathering": 1
+    },
+    "dumud": {
+      "mining": 2,
+      "farming": 1,
+      "transporting": 1,
+      "watering": 2
+    },
+    "eikthyrdeer": {
+      "deforesting": 2
+    },
+    "eikthyrdeer-terra": {
+      "deforesting": 2
+    },
+    "elizabee": {
+      "gathering": 4,
+      "deforesting": 3,
+      "handiwork": 4,
+      "medicine-production": 4,
+      "planting": 4
+    },
+    "faleris": {
+      "kindling": 6,
+      "transporting": 3
+    },
+    "faleris-aqua": {
+      "transporting": 5,
+      "watering": 6
+    },
+    "felbat": {
+      "medicine-production": 3
+    },
+    "fenglope": {
+      "deforesting": 3
+    },
+    "foxcicle": {
+      "cooling": 4,
+      "farming": 3
+    },
+    "frostallion": {
+      "cooling": 7
+    },
+    "frostallion-noct": {
+      "gathering": 7
+    },
+    "galeclaw": {
+      "gathering": 2
+    },
+    "ghangler": {
+      "transporting": 2,
+      "watering": 5
+    },
+    "gildane": {
+      "gathering": 5
+    },
+    "gobfin": {
+      "handiwork": 2,
+      "transporting": 1,
+      "watering": 2
+    },
+    "gobfin-ignis": {
+      "kindling": 2,
+      "handiwork": 2,
+      "transporting": 1
+    },
+    "grizzbolt": {
+      "deforesting": 3,
+      "generating-electricity": 5,
+      "handiwork": 4,
+      "transporting": 5
+    },
+    "helzephyr": {
+      "transporting": 4
+    },
+    "helzephyr-lux": {
+      "generating-electricity": 4,
+      "transporting": 5
+    },
+    "jelliette": {
+      "handiwork": 1,
+      "transporting": 1,
+      "watering": 2
+    },
+    "jetragon": {
+      "gathering": 8
+    },
+    "jormuntide": {
+      "watering": 7
+    },
+    "jormuntide-ignis": {
+      "kindling": 7
+    },
+    "katress": {
+      "handiwork": 3,
+      "medicine-production": 3,
+      "transporting": 2
+    },
+    "katress-ignis": {
+      "kindling": 3,
+      "handiwork": 3,
+      "medicine-production": 3,
+      "transporting": 2
+    },
+    "killamari": {
+      "gathering": 1,
+      "transporting": 2,
+      "watering": 1
+    },
+    "kingpaca": {
+      "gathering": 2
+    },
+    "kingpaca-cryst": {
+      "gathering": 2,
+      "cooling": 4
+    },
+    "kitsun": {
+      "kindling": 3
+    },
+    "knocklem": {
+      "gathering": 4,
+      "mining": 7,
+      "transporting": 7
+    },
+    "lamball": {
+      "handiwork": 1,
+      "farming": 1,
+      "transporting": 1
+    },
+    "lifmunk": {
+      "gathering": 1,
+      "deforesting": 1,
+      "handiwork": 1,
+      "medicine-production": 1,
+      "planting": 1
+    },
+    "lovander": {
+      "handiwork": 3,
+      "mining": 2,
+      "medicine-production": 3,
+      "transporting": 2
+    },
+    "lyleen": {
+      "gathering": 6,
+      "handiwork": 5,
+      "medicine-production": 5,
+      "planting": 7
+    },
+    "lyleen-noct": {
+      "gathering": 6,
+      "handiwork": 5,
+      "medicine-production": 7
+    },
+    "mammorest": {
+      "deforesting": 4,
+      "mining": 4,
+      "planting": 4
+    },
+    "mau": {
+      "gathering": 1,
+      "farming": 1
+    },
+    "mau-cryst": {
+      "cooling": 1,
+      "farming": 1
+    },
+    "melpaca": {
+      "farming": 2
+    },
+    "menasting": {
+      "deforesting": 3,
+      "mining": 5
+    },
+    "mossanda": {
+      "deforesting": 4,
+      "handiwork": 2,
+      "planting": 3,
+      "transporting": 4
+    },
+    "mossanda-lux": {
+      "deforesting": 4,
+      "generating-electricity": 4,
+      "handiwork": 3,
+      "transporting": 4
+    },
+    "mozzarina": {
+      "farming": 2
+    },
+    "necromus": {
+      "deforesting": 6,
+      "mining": 6
+    },
+    "neptilius": {
+      "watering": 7
+    },
+    "nitewing": {
+      "gathering": 2
+    },
+    "orserk": {
+      "generating-electricity": 8,
+      "handiwork": 3,
+      "transporting": 4
+    },
+    "paladius": {
+      "deforesting": 6,
+      "mining": 6
+    },
+    "pengullet": {
+      "cooling": 1,
+      "handiwork": 1,
+      "transporting": 1,
+      "watering": 1
+    },
+    "penking": {
+      "cooling": 2,
+      "handiwork": 2,
+      "mining": 3,
+      "transporting": 3,
+      "watering": 2
+    },
+    "pyrin": {
+      "deforesting": 2,
+      "kindling": 4
+    },
+    "pyrin-noct": {
+      "deforesting": 3,
+      "kindling": 4
+    },
+    "quivern": {
+      "gathering": 3,
+      "handiwork": 2,
+      "mining": 4,
+      "transporting": 5
+    },
+    "quivern-botan": {
+      "gathering": 4,
+      "handiwork": 2,
+      "mining": 3,
+      "planting": 5,
+      "transporting": 4
+    },
+    "ragnahawk": {
+      "kindling": 4,
+      "transporting": 5
+    },
+    "rayhound": {
+      "generating-electricity": 4
+    },
+    "reindrix": {
+      "cooling": 3,
+      "deforesting": 3
+    },
+    "relaxaurus": {
+      "transporting": 3,
+      "watering": 3
+    },
+    "relaxaurus-lux": {
+      "generating-electricity": 4,
+      "transporting": 3
+    },
+    "reptyro": {
+      "kindling": 5,
+      "mining": 5
+    },
+    "reptyro-cryst": {
+      "cooling": 5,
+      "mining": 5
+    },
+    "robinquill": {
+      "gathering": 3,
+      "deforesting": 2,
+      "handiwork": 3,
+      "medicine-production": 1,
+      "planting": 2,
+      "transporting": 2
+    },
+    "robinquill-terra": {
+      "gathering": 3,
+      "deforesting": 2,
+      "handiwork": 3,
+      "medicine-production": 2,
+      "transporting": 2
+    },
+    "selyne": {
+      "handiwork": 7,
+      "medicine-production": 6,
+      "transporting": 3
+    },
+    "shadowbeak": {
+      "gathering": 2
+    },
+    "sibelyx": {
+      "cooling": 3,
+      "farming": 3,
+      "medicine-production": 3
+    },
+    "silvegis": {
+      "deforesting": 6
+    },
+    "surfent": {
+      "farming": 2,
+      "watering": 3
+    },
+    "suzaku": {
+      "kindling": 5
+    },
+    "suzaku-aqua": {
+      "watering": 6
+    },
+    "teafant": {
+      "watering": 1
+    },
+    "univolt": {
+      "deforesting": 1,
+      "generating-electricity": 3
+    },
+    "vanwyrm": {
+      "kindling": 2,
+      "transporting": 3
+    },
+    "vanwyrm-cryst": {
+      "cooling": 2,
+      "transporting": 3
+    },
+    "vixy": {
+      "gathering": 1,
+      "farming": 1
+    },
+    "warsect": {
+      "deforesting": 4,
+      "handiwork": 3,
+      "planting": 3,
+      "transporting": 5
+    },
+    "wixen": {
+      "kindling": 3,
+      "handiwork": 3,
+      "transporting": 2
+    },
+    "wixen-noct": {
+      "kindling": 4,
+      "handiwork": 4,
+      "transporting": 2
+    },
+    "wumpo": {
+      "cooling": 5,
+      "deforesting": 5,
+      "handiwork": 3,
+      "transporting": 6
+    },
+    "wumpo-botan": {
+      "deforesting": 5,
+      "handiwork": 3,
+      "planting": 3,
+      "transporting": 6
+    },
+    "xenogard": {
+      "mining": 4
+    },
+    "xenolord": {
+      "gathering": 2
+    },
+    "yakumo": {
+      "gathering": 2
+    }
+  }
+}

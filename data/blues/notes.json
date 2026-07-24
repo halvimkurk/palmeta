@@ -1,0 +1,157 @@
+{
+  "version": "2",
+  "generatedAt": "2026-07-24T19:00:00.000Z",
+  "notes": [
+    {
+      "id": "blue-1-0-launch",
+      "slug": "palworld-1-0-official-release",
+      "title": "Palworld 1.0 is live",
+      "summary": "Pocketpair ships the full 1.0 release after Early Access: 72 new Pals, Sunreach floating islands, the World Tree endgame route, level cap 80, and major partner-skill / combat overhauls. Existing saves carry forward.",
+      "publishedAt": "2026-07-10T00:00:00.000Z",
+      "sourceName": "Steam News",
+      "sourceUrl": "https://store.steampowered.com/news/app/1623730",
+      "tags": ["1.0", "release"],
+      "body": [
+        {
+          "type": "p",
+          "text": "Palworld left Early Access on July 10, 2026. Pocketpair framed 1.0 as a full launch rather than a polish patch: new regions, dozens of Pals, and systems that reshuffle endgame parties and base lineups."
+        },
+        {
+          "type": "h2",
+          "text": "What shipped"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "72 additional Pals (new species and elemental variants)",
+            "Sunreach floating islands and the World Tree endgame route",
+            "Player level cap raised to 80",
+            "Partner-skill rework across 200+ Pals",
+            "Work suitability scaled toward Level 10 with condenser changes",
+            "Existing saves remain supported"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "For toolkit users: expect combat and worker tier placements to move as Awakening, Mutation, and the new legendaries settle into community comps."
+        }
+      ]
+    },
+    {
+      "id": "blue-patch-notes-size",
+      "slug": "1-0-patch-notes-steam-limit",
+      "title": "1.0 patch notes nearly broke Steam’s character limit",
+      "summary": "Publishing lead John “Bucky” Buckley said the 1.0 changelog ran past 10,000 words / ~66k characters — over Steam’s 32k limit — then confirmed they published the full notes “without making any compromise.”",
+      "publishedAt": "2026-07-09T00:00:00.000Z",
+      "sourceName": "Pocketpair / Steam",
+      "sourceUrl": "https://store.steampowered.com/news/app/1623730",
+      "tags": ["1.0", "patch-notes"],
+      "body": [
+        {
+          "type": "p",
+          "text": "The day before launch, Pocketpair’s publishing lead posted that the 1.0 changelog would not fit Steam’s announcement character cap. The draft reportedly cleared 10,000 words and roughly double Steam’s 32k-character limit."
+        },
+        {
+          "type": "p",
+          "text": "A follow-up confirmed the full notes went live without cutting content. Treat that Steam post as the canonical “what changed” document for balance, partner skills, and systems — not third-party summaries alone."
+        }
+      ]
+    },
+    {
+      "id": "blue-feybreak",
+      "slug": "feybreak-v0-4-11",
+      "title": "Feybreak v0.4.11 — new island and pals",
+      "summary": "Major Early Access expansion adding Feybreak Island, new Pals, buildings, and systems. Sets up later endgame progression that 1.0 continues to expand.",
+      "publishedAt": "2024-12-23T00:00:00.000Z",
+      "sourceName": "Steam News",
+      "sourceUrl": "https://store.steampowered.com/news/app/1623730/view/518574472406499342",
+      "tags": ["feybreak", "update"],
+      "body": [
+        {
+          "type": "p",
+          "text": "Feybreak was one of the largest Early Access content drops: a new island, additional Pals, buildings, and systems that pushed the map and progression beyond the original Palpagos loop."
+        },
+        {
+          "type": "p",
+          "text": "1.0 still leans on that expansion’s geography and roster. If you are returning from a long break, treat Feybreak as the mid-EA checkpoint before Sunreach and the World Tree."
+        }
+      ]
+    },
+    {
+      "id": "blue-sakurajima",
+      "slug": "sakurajima-v0-3-1",
+      "title": "Sakurajima v0.3.1 — new area and buildings",
+      "summary": "Sakurajima update lands with a new region, additional Pals, and expanded base building — one of the largest mid-EA content drops before Feybreak.",
+      "publishedAt": "2024-06-27T00:00:00.000Z",
+      "sourceName": "Steam News",
+      "sourceUrl": "https://store.steampowered.com/news/app/1623730/view/4159718272378624292",
+      "tags": ["sakurajima", "update"],
+      "body": [
+        {
+          "type": "p",
+          "text": "Sakurajima introduced a new region, more Pals, and a wider building kit. It remains relevant in 1.0 for meteor events (Selyne) and mid-game progression routes that feed into later islands."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "New area and traversal challenges",
+            "Additional Pals and breeding targets",
+            "Expanded structures for bases"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blue-partner-skills",
+      "slug": "partner-skills-no-duplicate-stack",
+      "title": "Partner skills: most duplicates no longer stack",
+      "summary": "In 1.0, almost all identical partner-skill auras do not stack from multiple copies of the same Pal. Gobfin / Gobfin Ignis Angry Shark is a notable exception that still stacks for player-weapon builds; Orserk’s bullet ramp stacks with itself up to 30 times on the active Pal.",
+      "publishedAt": "2026-07-10T00:00:00.000Z",
+      "sourceName": "Pocketpair patch notes",
+      "sourceUrl": "https://store.steampowered.com/news/app/1623730",
+      "tags": ["1.0", "combat", "balance"],
+      "body": [
+        {
+          "type": "p",
+          "text": "Pocketpair reworked partner skills on more than 200 Pals for 1.0. The headline balance rule: for almost all species, putting multiple copies of the same Pal in the party no longer multiplies the same aura."
+        },
+        {
+          "type": "h2",
+          "text": "Exceptions that still matter"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Gobfin / Gobfin Ignis Angry Shark still stacks for player Attack — classic weapon parties remain viable",
+            "Orserk’s Ferocious Thunder Dragon ramps Attack/Defense on the active Pal from bullet hits, stacking up to 30 times with itself",
+            "Diverse five-species parties are the default for most other auras"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Build parties around distinct roles (ramp, weakness DPS, heal, mount) unless you are intentionally running a Gobfin weapon stack."
+        }
+      ]
+    },
+    {
+      "id": "blue-price-hold",
+      "slug": "price-stays-29-99",
+      "title": "Base price stays $29.99 for 1.0",
+      "summary": "Pocketpair confirmed Palworld keeps its standard $29.99 price at 1.0 launch. Launch window also included a short Steam discount for new buyers.",
+      "publishedAt": "2026-07-10T00:00:00.000Z",
+      "sourceName": "Pocketpair",
+      "sourceUrl": "https://store.steampowered.com/app/1623730/Palworld/",
+      "tags": ["1.0", "store"],
+      "body": [
+        {
+          "type": "p",
+          "text": "Despite the scale of the 1.0 update, Pocketpair kept the standard store price at $29.99. Early Access owners get the update as part of ownership; new buyers saw a short launch discount window on Steam."
+        },
+        {
+          "type": "p",
+          "text": "No gameplay systems are locked behind a price bump — the toolkit here tracks the same free 1.0 content everyone receives."
+        }
+      ]
+    }
+  ]
+}
