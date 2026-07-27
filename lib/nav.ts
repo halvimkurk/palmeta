@@ -29,6 +29,13 @@ export const NAV = {
     icon: "pals",
     hint: "Every pal sheet",
   },
+  map: {
+    href: "/map?mode=hunt",
+    match: "/map",
+    label: "Field Atlas",
+    icon: "map",
+    hint: "Alphas, spawns, collect",
+  },
   blues: {
     href: "/blues",
     match: "/blues",
@@ -45,7 +52,7 @@ export const NAV = {
   },
 } as const;
 
-export const TOOL_NAV = [NAV.tiers, NAV.breeding, NAV.teams, NAV.pals] as const;
+export const TOOL_NAV = [NAV.tiers, NAV.breeding, NAV.teams, NAV.pals, NAV.map] as const;
 export const FEED_NAV = [NAV.blues, NAV.news] as const;
 
 export type NavIconName = (typeof NAV)[keyof typeof NAV]["icon"];
