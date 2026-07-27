@@ -12,34 +12,34 @@ export type CompanionArt = {
 };
 
 /**
- * Official Pocketpair art sources:
- * - tiers: Steam trading card (Jetragon)
- * - breeding: in-game base / ranch screenshot (Steam store)
- * - teams: co-op flight toward tower (Steam store)
- * - pals: Steam profile background key art (Depresso + Cattiva)
+ * Official Pocketpair art (pre-cropped for home cards):
+ * - pals: Xbox Super Hero key art (tight cast crop)
+ * - breeding: same key art, left companion group
+ * - teams: Steam screenshot — four mounted riders
+ * - tiers: Steam screenshot — Zoe + Grizzbolt
  *
  * Run `pnpm companion:art` to refresh cached WebP files.
  */
 export const COMPANION_ART: Record<CompanionArtTone, CompanionArt> = {
   tiers: {
     src: "/companion/tiers.webp",
-    objectPosition: "72% 42%",
-    credit: "Steam trading card — Jetragon (Pocketpair)",
+    objectPosition: "50% 35%",
+    credit: "Official screenshot — Zoe & Grizzbolt (Pocketpair / Steam)",
   },
   breeding: {
     src: "/companion/breeding.webp",
-    objectPosition: "58% 48%",
-    credit: "Official screenshot — Palworld (Pocketpair / Steam)",
+    objectPosition: "35% 55%",
+    credit: "Official key art — Palworld (Pocketpair / Xbox)",
   },
   teams: {
     src: "/companion/teams.webp",
-    objectPosition: "68% 50%",
-    credit: "Official screenshot — Palworld (Pocketpair / Steam)",
+    objectPosition: "50% 55%",
+    credit: "Official screenshot — mounted party (Pocketpair / Steam)",
   },
   pals: {
     src: "/companion/pals.webp",
-    objectPosition: "78% 50%",
-    credit: "Steam profile background — Key Art (Pocketpair)",
+    objectPosition: "50% 55%",
+    credit: "Official key art — Palworld (Pocketpair / Xbox)",
   },
 };
 

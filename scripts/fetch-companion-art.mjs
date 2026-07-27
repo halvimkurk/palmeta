@@ -1,7 +1,6 @@
 /**
- * Download official Palworld art for companion page heroes → public/companion/*.webp
+ * Download + crop official Palworld art for home tool cards → public/companion/*.webp
  *
- * Sources: Steam store screenshots, trading cards, profile backgrounds.
  * Usage: node scripts/fetch-companion-art.mjs
  */
 import { mkdir, writeFile } from "node:fs/promises";
@@ -13,27 +12,54 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, "..", "public", "companion");
 const UA = "ThePaldexBot/1.0 (+https://thepaldex.com; unofficial Palworld toolkit)";
 
-/** @type {Record<string, { url: string, out: string, width: number }>} */
+const TARGET_W = 1400;
+const RATIO = 2.15;
+const TARGET_H = Math.round(TARGET_W / RATIO);
+
+/** @type {Record<string, { url: string, out: string, extract: (w: number, h: number) => { left: number, top: number, width: number, height: number } }>} */
 const ASSETS = {
-  tiers: {
-    url: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1623730/124778e85aae5d2b1bc31f70fcdc48d7c65e27c9.jpg",
-    out: "tiers.webp",
-    width: 1200,
+  pals: {
+    url: "https://store-images.s-microsoft.com/image/apps.54359.13654268679289325.ececb946-5639-4e77-b347-9d188d4e7e02.58b7fb42-a33a-48ea-a6c9-c990b4653b2f",
+    out: "pals.webp",
+    extract: (W, H) => {
+      const height = Math.round(H * 0.52);
+      const width = Math.round(height * RATIO);
+      return { left: (W - width) / 2 + W * 0.02, top: H * 0.42, width, height };
+    },
   },
   breeding: {
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/ss_1e6f7cf3c58086df2a3e9b13a988c2681d372b2d.1920x1080.jpg",
+    // Same official key art as MobyGames press promo (Moby CDN often blocks bots).
+    url: "https://store-images.s-microsoft.com/image/apps.54359.13654268679289325.ececb946-5639-4e77-b347-9d188d4e7e02.58b7fb42-a33a-48ea-a6c9-c990b4653b2f",
     out: "breeding.webp",
-    width: 1200,
+    extract: (W, H) => {
+      const height = Math.round(H * 0.55);
+      const width = Math.round(height * RATIO);
+      return { left: 0, top: H * 0.4, width, height };
+    },
   },
   teams: {
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/ss_b3cea7c9f04a67d784d4c6a0c157a11d6268b189.1920x1080.jpg",
+    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/efec2f6aaaca15d66e30455e3b57383fdaa246c5/ss_efec2f6aaaca15d66e30455e3b57383fdaa246c5.1920x1080.jpg",
     out: "teams.webp",
-    width: 1200,
+    extract: (W, H) => {
+      const height = Math.round(H * 0.78);
+      const width = Math.round(height * RATIO);
+      if (width >= W) {
+        const hh = Math.round(W / RATIO);
+        return { left: 0, top: (H - hh) * 0.4, width: W, height: hh };
+      }
+      return { left: (W - width) / 2, top: H * 0.18, width, height };
+    },
   },
-  pals: {
-    url: "https://steamcommunity.com/economy/profilebackground/items/1623730/d88e6f9f99794ac579c1814455704c4e0d4bf174.jpg",
-    out: "pals.webp",
-    width: 1200,
+  tiers: {
+    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/e2c34987fa3f3893480afed747b0c2ede52e5a31/ss_e2c34987fa3f3893480afed747b0c2ede52e5a31.1920x1080.jpg",
+    out: "tiers.webp",
+    extract: (W, H) => {
+      const height = Math.round(H * 0.68);
+      const width = Math.round(height * RATIO);
+      let left = W * 0.28;
+      if (left + width > W) left = W - width;
+      return { left, top: 0, width, height };
+    },
   },
 };
 
@@ -47,12 +73,20 @@ await mkdir(outDir, { recursive: true });
 
 for (const [key, asset] of Object.entries(ASSETS)) {
   const raw = await fetchBuffer(asset.url);
+  const meta = await sharp(raw).metadata();
+  const box = asset.extract(meta.width, meta.height);
+  const left = Math.max(0, Math.round(box.left));
+  const top = Math.max(0, Math.round(box.top));
+  const width = Math.min(Math.round(box.width), meta.width - left);
+  const height = Math.min(Math.round(box.height), meta.height - top);
+
   const webp = await sharp(raw)
-    .resize(asset.width, null, { withoutEnlargement: true })
-    .webp({ quality: 84 })
+    .extract({ left, top, width, height })
+    .resize(TARGET_W, TARGET_H, { fit: "cover", position: "centre" })
+    .webp({ quality: 86 })
     .toBuffer();
-  const dest = path.join(outDir, asset.out);
-  await writeFile(dest, webp);
+
+  await writeFile(path.join(outDir, asset.out), webp);
   console.log(`${key} → ${asset.out} (${(webp.length / 1024).toFixed(0)} KB)`);
 }
 
