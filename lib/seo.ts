@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 
-/** Canonical origin — override with NEXT_PUBLIC_SITE_URL when needed. */
-function resolveSiteUrl(): string {
-  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  if (explicit) return explicit;
+/** Production origin until paldex.app is registered. */
+export const PRODUCTION_SITE_URL = "https://palworld-achievements.vercel.app";
 
+/** Canonical origin — preview uses VERCEL_URL; prod uses PRODUCTION_SITE_URL. */
+function resolveSiteUrl(): string {
   if (process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
   }
 
-  return "https://palworld-achievements.vercel.app";
+  if (process.env.NODE_ENV === "development") {
+    const local = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+    return local ?? "http://localhost:3000";
+  }
+
+  return PRODUCTION_SITE_URL;
 }
 
 export const SITE_URL = resolveSiteUrl();
