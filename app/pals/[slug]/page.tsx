@@ -79,7 +79,7 @@ export default async function PalDetailPage({ params }: Props) {
         uniqueCombos={getUniqueCombosForPal(slug)}
         prevSlug={prevSlug}
         nextSlug={nextSlug}
-        seoIntro={seoIntro ?? undefined}
+        seoIntro={seoIntro}
       />
     </>
   );

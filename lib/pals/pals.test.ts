@@ -55,6 +55,18 @@ describe("filterPals work", () => {
       "anubis",
     ]);
   });
+
+  it("sorts by dex number ascending by default", () => {
+    expect(sortPals(sample, "dex").map((p) => p.slug)).toEqual(["anubis", "jetragon"]);
+  });
+
+  it("sorts by primary element then name", () => {
+    const pals: Pal[] = [
+      { ...sample[0]!, slug: "jetragon", name: "Jetragon", elements: ["dragon"] },
+      { ...sample[1]!, slug: "anubis", name: "Anubis", elements: ["earth"] },
+    ];
+    expect(sortPals(pals, "element").map((p) => p.slug)).toEqual(["anubis", "jetragon"]);
+  });
 });
 
 describe("topWorks", () => {
@@ -67,10 +79,18 @@ describe("topWorks", () => {
 });
 
 describe("catalog work merge", () => {
-  it("attaches work levels to curated pals", () => {
+  it("attaches work levels to pals", () => {
     const anubis = getPals().find((p) => p.slug === "anubis");
     expect(anubis?.work?.handiwork).toBe(6);
     expect(anubis?.work?.mining).toBe(6);
+  });
+
+  it("includes 1.0-only pals in the roster", () => {
+    const slugs = new Set(getPals().map((p) => p.slug));
+    expect(slugs.has("hartalis")).toBe(true);
+    expect(slugs.has("renjishi")).toBe(true);
+    expect(slugs.has("solenne")).toBe(true);
+    expect(getPals().length).toBeGreaterThanOrEqual(287);
   });
 });
 

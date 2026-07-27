@@ -1,241 +1,23 @@
 {
-  "version": 1,
-  "updatedAt": "2026-07-13",
+  "version": 2,
+  "updatedAt": "2026-07-27",
+  "source": "palworld.gg Nuxt pals module + curated partner-skill overlays",
   "pals": [
     {
-      "slug": "anubis",
-      "name": "Anubis",
+      "slug": "lamball",
+      "name": "Lamball",
       "elements": [
-        "earth"
-      ],
-      "rarity": "epic",
-      "dexNo": 100,
-      "partnerSkill": {
-        "name": "Guardian of the Desert",
-        "description": "When fighting together, player attacks can clear Earth defenses; top Handiwork worker.",
-        "tags": [
-          "combat-buffs",
-          "earth-boost",
-          "melee",
-          "base-work"
-        ]
-      }
-    },
-    {
-      "slug": "astegon",
-      "name": "Astegon",
-      "elements": [
-        "dark",
-        "dragon"
-      ],
-      "rarity": "epic",
-      "dexNo": 98,
-      "partnerSkill": {
-        "name": "Black Ankylosaur",
-        "description": "Can be ridden as a flying mount. Improves mining while mounted.",
-        "tags": [
-          "flying-mount",
-          "more-drops",
-          "base-work"
-        ]
-      }
-    },
-    {
-      "slug": "azurobe",
-      "name": "Azurobe",
-      "elements": [
-        "water",
-        "dragon"
-      ],
-      "rarity": "rare",
-      "dexNo": 82,
-      "partnerSkill": {
-        "name": "Waterwing Dance",
-        "description": "Can be ridden. Applies Water to rider attacks.",
-        "tags": [
-          "ground-mount",
-          "water-boost",
-          "dragon-boost"
-        ]
-      }
-    },
-    {
-      "slug": "bastigor",
-      "name": "Bastigor",
-      "elements": [
-        "ice"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Frost Armor",
-        "description": "Ice frontliner — shields and Ice damage support.",
-        "tags": [
-          "shield",
-          "ice-boost",
-          "combat-buffs"
-        ]
-      }
-    },
-    {
-      "slug": "beakon",
-      "name": "Beakon",
-      "elements": [
-        "electricity"
-      ],
-      "rarity": "rare",
-      "dexNo": 73,
-      "partnerSkill": {
-        "name": "Thunderous",
-        "description": "Can be ridden as a flying mount. Changes rider attacks to Electric.",
-        "tags": [
-          "flying-mount",
-          "electricity-boost"
-        ]
-      }
-    },
-    {
-      "slug": "beegarde",
-      "name": "Beegarde",
-      "elements": [
-        "leaf"
+        "normal"
       ],
       "rarity": "common",
-      "dexNo": 50,
+      "dexNo": 1,
       "partnerSkill": {
-        "name": "Worker Bee",
-        "description": "When in party with Elizabee, boosts work. Ranch honey producer.",
+        "name": "Fluffy Shield",
+        "description": "When activated, becomes a living shield for the player.",
         "tags": [
           "base-work",
-          "more-drops"
+          "shield"
         ]
-      }
-    },
-    {
-      "slug": "bellanoir",
-      "name": "Bellanoir",
-      "elements": [
-        "dark"
-      ],
-      "rarity": "legendary",
-      "partnerSkill": {
-        "name": "Nightmare Ballad",
-        "description": "Raid legend — massive Dark battlefield presence.",
-        "tags": [
-          "combat-buffs",
-          "dark-boost",
-          "status"
-        ]
-      }
-    },
-    {
-      "slug": "bellanoir-libero",
-      "name": "Bellanoir Libero",
-      "elements": [
-        "dark"
-      ],
-      "rarity": "legendary",
-      "partnerSkill": {
-        "name": "Scorching Nightmare",
-        "description": "Enhanced raid form with stronger Dark control.",
-        "tags": [
-          "combat-buffs",
-          "dark-boost",
-          "status"
-        ]
-      }
-    },
-    {
-      "slug": "blazamut",
-      "name": "Blazamut",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "epic",
-      "dexNo": 79,
-      "partnerSkill": {
-        "name": "Magma Kaiser",
-        "description": "Can be ridden. Boosts Fire damage while fighting together.",
-        "tags": [
-          "ground-mount",
-          "fire-boost",
-          "combat-buffs"
-        ]
-      }
-    },
-    {
-      "slug": "blazamut-ryu",
-      "name": "Blazamut Ryu",
-      "elements": [
-        "dragon",
-        "fire"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Dragon Kaiser",
-        "description": "Can be ridden. Boosts Dragon damage while fighting together.",
-        "tags": [
-          "ground-mount",
-          "dragon-boost",
-          "fire-boost"
-        ]
-      }
-    },
-    {
-      "slug": "blazehowl",
-      "name": "Blazehowl",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "rare",
-      "dexNo": 84,
-      "partnerSkill": {
-        "name": "Hellfire Breath",
-        "description": "Can be ridden. Boosts Fire damage while fighting together vs Grass.",
-        "tags": [
-          "ground-mount",
-          "fire-boost",
-          "combat-buffs"
-        ]
-      }
-    },
-    {
-      "slug": "blazehowl-noct",
-      "name": "Blazehowl Noct",
-      "elements": [
-        "fire",
-        "dark"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Darkflame Breath",
-        "description": "Can be ridden. Boosts Fire damage while fighting together vs Neutral.",
-        "tags": [
-          "ground-mount",
-          "fire-boost",
-          "dark-boost"
-        ]
-      }
-    },
-    {
-      "slug": "broncherry",
-      "name": "Broncherry",
-      "elements": [
-        "leaf"
-      ],
-      "rarity": "epic",
-      "dexNo": 86,
-      "partnerSkill": {
-        "name": "Overaffectionate",
-        "description": "Can be ridden. Increases player max carry weight while in party.",
-        "tags": [
-          "ground-mount",
-          "carry-weight",
-          "leaf-boost"
-        ],
-        "stackGroup": "carry-weight",
-        "stackValue": 100,
-        "stackUnit": "",
-        "stackLabel": "+{n} player carry weight"
       }
     },
     {
@@ -260,22 +42,6 @@
       }
     },
     {
-      "slug": "celaray",
-      "name": "Celaray",
-      "elements": [
-        "water"
-      ],
-      "rarity": "common",
-      "dexNo": 27,
-      "partnerSkill": {
-        "name": "Profiling",
-        "description": "While in hand, acts as a glider.",
-        "tags": [
-          "glider"
-        ]
-      }
-    },
-    {
       "slug": "chikipi",
       "name": "Chikipi",
       "elements": [
@@ -289,680 +55,6 @@
         "tags": [
           "eggs",
           "base-work"
-        ]
-      }
-    },
-    {
-      "slug": "chillet",
-      "name": "Chillet",
-      "elements": [
-        "ice",
-        "dragon"
-      ],
-      "rarity": "common",
-      "dexNo": 55,
-      "partnerSkill": {
-        "name": "Wriggling Weasel",
-        "description": "Can be ridden. Changes rider attacks to Dragon.",
-        "tags": [
-          "ground-mount",
-          "dragon-boost",
-          "ice-boost"
-        ]
-      }
-    },
-    {
-      "slug": "cryolinx",
-      "name": "Cryolinx",
-      "elements": [
-        "ice"
-      ],
-      "rarity": "rare",
-      "dexNo": 83,
-      "partnerSkill": {
-        "name": "Dragon Hunter",
-        "description": "While fighting together, greatly boosts damage vs Dragon.",
-        "tags": [
-          "combat-buffs",
-          "ice-boost",
-          "dragon-boost"
-        ]
-      }
-    },
-    {
-      "slug": "dazzi",
-      "name": "Dazzi",
-      "elements": [
-        "electricity"
-      ],
-      "rarity": "common",
-      "dexNo": 62,
-      "partnerSkill": {
-        "name": "Lady of Lightning",
-        "description": "Summon lightning support while fighting; boosts Electric damage.",
-        "tags": [
-          "combat-buffs",
-          "electricity-boost",
-          "status"
-        ]
-      }
-    },
-    {
-      "slug": "dinossom",
-      "name": "Dinossom",
-      "elements": [
-        "leaf",
-        "dragon"
-      ],
-      "rarity": "rare",
-      "dexNo": 64,
-      "partnerSkill": {
-        "name": "Fragrant Dragon",
-        "description": "Can be ridden. Applies Grass to rider attacks.",
-        "tags": [
-          "ground-mount",
-          "leaf-boost",
-          "dragon-boost"
-        ]
-      }
-    },
-    {
-      "slug": "dinossom-lux",
-      "name": "Dinossom Lux",
-      "elements": [
-        "electricity",
-        "dragon"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Thunder Dragon",
-        "description": "Can be ridden. Applies Electric to rider attacks.",
-        "tags": [
-          "ground-mount",
-          "electricity-boost",
-          "dragon-boost"
-        ]
-      }
-    },
-    {
-      "slug": "direhowl",
-      "name": "Direhowl",
-      "elements": [
-        "normal"
-      ],
-      "rarity": "common",
-      "dexNo": 26,
-      "partnerSkill": {
-        "name": "Direhowl Rider",
-        "description": "Can be ridden. Fast ground mount for early exploration.",
-        "tags": [
-          "ground-mount",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "dumud",
-      "name": "Dumud",
-      "elements": [
-        "earth",
-        "water"
-      ],
-      "rarity": "common",
-      "dexNo": 43,
-      "partnerSkill": {
-        "name": "Mud-Clad",
-        "description": "While in party, improves Ground-type teammate effectiveness.",
-        "tags": [
-          "earth-boost",
-          "combat-buffs"
-        ]
-      }
-    },
-    {
-      "slug": "eikthyrdeer",
-      "name": "Eikthyrdeer",
-      "elements": [
-        "normal"
-      ],
-      "rarity": "rare",
-      "dexNo": 37,
-      "partnerSkill": {
-        "name": "Guardian of the Forest",
-        "description": "Can be ridden. Double jump while mounted; improves logging.",
-        "tags": [
-          "ground-mount",
-          "mobility",
-          "more-drops"
-        ]
-      }
-    },
-    {
-      "slug": "eikthyrdeer-terra",
-      "name": "Eikthyrdeer Terra",
-      "elements": [
-        "earth"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Guardian of the Plains",
-        "description": "Can be ridden. Double jump while mounted; improves logging.",
-        "tags": [
-          "ground-mount",
-          "mobility",
-          "more-drops"
-        ]
-      }
-    },
-    {
-      "slug": "elizabee",
-      "name": "Elizabee",
-      "elements": [
-        "leaf"
-      ],
-      "rarity": "epic",
-      "dexNo": 51,
-      "partnerSkill": {
-        "name": "Queen Bee Command",
-        "description": "While fighting together, Beegarde stats rise.",
-        "tags": [
-          "combat-buffs",
-          "base-work"
-        ]
-      }
-    },
-    {
-      "slug": "faleris",
-      "name": "Faleris",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "epic",
-      "dexNo": 105,
-      "partnerSkill": {
-        "name": "Scorching Predator",
-        "description": "Can be ridden as a flying mount. Improves Fire ore / loot yields.",
-        "tags": [
-          "flying-mount",
-          "more-drops",
-          "fire-boost"
-        ]
-      }
-    },
-    {
-      "slug": "faleris-aqua",
-      "name": "Faleris Aqua",
-      "elements": [
-        "water"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Aquatic Predator",
-        "description": "Can be ridden as a flying mount. Improves fishing-related yields.",
-        "tags": [
-          "flying-mount",
-          "fishing",
-          "water-boost"
-        ]
-      }
-    },
-    {
-      "slug": "felbat",
-      "name": "Felbat",
-      "elements": [
-        "dark"
-      ],
-      "rarity": "rare",
-      "dexNo": 94,
-      "partnerSkill": {
-        "name": "Life Steal",
-        "description": "While fighting together, player attacks restore a bit of HP.",
-        "tags": [
-          "combat-buffs",
-          "healing"
-        ]
-      }
-    },
-    {
-      "slug": "fenglope",
-      "name": "Fenglope",
-      "elements": [
-        "normal"
-      ],
-      "rarity": "common",
-      "dexNo": 93,
-      "partnerSkill": {
-        "name": "Wind and Clouds",
-        "description": "Can be ridden. Greatly improves jump while mounted.",
-        "tags": [
-          "ground-mount",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "foxcicle",
-      "name": "Foxcicle",
-      "elements": [
-        "ice"
-      ],
-      "rarity": "rare",
-      "dexNo": 57,
-      "partnerSkill": {
-        "name": "Crystal Carrier",
-        "description": "While fighting together, Ice attacks deal more damage.",
-        "tags": [
-          "combat-buffs",
-          "ice-boost"
-        ]
-      }
-    },
-    {
-      "slug": "frostallion",
-      "name": "Frostallion",
-      "elements": [
-        "ice"
-      ],
-      "rarity": "legendary",
-      "dexNo": 110,
-      "partnerSkill": {
-        "name": "Ice Steed",
-        "description": "Can be ridden as a flying mount. Changes rider attacks to Ice.",
-        "tags": [
-          "flying-mount",
-          "ice-boost",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "frostallion-noct",
-      "name": "Frostallion Noct",
-      "elements": [
-        "dark"
-      ],
-      "rarity": "legendary",
-      "partnerSkill": {
-        "name": "Black Steed",
-        "description": "Can be ridden as a flying mount. Changes rider attacks to Dark.",
-        "tags": [
-          "flying-mount",
-          "dark-boost",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "galeclaw",
-      "name": "Galeclaw",
-      "elements": [
-        "normal"
-      ],
-      "rarity": "common",
-      "dexNo": 47,
-      "partnerSkill": {
-        "name": "Galeclaw Rider",
-        "description": "While in hand, acts as a glider.",
-        "tags": [
-          "glider",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "ghangler",
-      "name": "Ghangler",
-      "elements": [
-        "dark",
-        "water"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Deep Angler",
-        "description": "Improves fishing outcomes while in party.",
-        "tags": [
-          "fishing",
-          "more-drops"
-        ],
-        "stackGroup": "fishing-luck",
-        "stackValue": 1,
-        "stackUnit": "",
-        "stackLabel": "+{n} fishing bonus layer"
-      }
-    },
-    {
-      "slug": "gildane",
-      "name": "Gildane",
-      "elements": [
-        "earth"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Gold Dash",
-        "description": "Fast Earth mount with loot-friendly routes.",
-        "tags": [
-          "ground-mount",
-          "mobility",
-          "more-drops"
-        ]
-      }
-    },
-    {
-      "slug": "gobfin",
-      "name": "Gobfin",
-      "elements": [
-        "water"
-      ],
-      "rarity": "common",
-      "dexNo": 31,
-      "partnerSkill": {
-        "name": "Angry Shark",
-        "description": "While fighting together, player attack rises. Stacks with more Gobfin.",
-        "tags": [
-          "combat-buffs",
-          "melee"
-        ],
-        "stackGroup": "player-attack",
-        "stackValue": 10,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% player attack (while fighting together)"
-      }
-    },
-    {
-      "slug": "gobfin-ignis",
-      "name": "Gobfin Ignis",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "common",
-      "dexNo": 31,
-      "partnerSkill": {
-        "name": "Angry Shark",
-        "description": "While fighting together, player attack rises. Stacks with more Gobfin Ignis.",
-        "tags": [
-          "combat-buffs",
-          "melee",
-          "fire-boost"
-        ],
-        "stackGroup": "player-attack",
-        "stackValue": 10,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% player attack (while fighting together)"
-      }
-    },
-    {
-      "slug": "grizzbolt",
-      "name": "Grizzbolt",
-      "elements": [
-        "electricity"
-      ],
-      "rarity": "epic",
-      "dexNo": 103,
-      "partnerSkill": {
-        "name": "Lightning Claus",
-        "description": "Can be ridden. Fires a minigun while mounted.",
-        "tags": [
-          "ground-mount",
-          "firearms",
-          "electricity-boost"
-        ]
-      }
-    },
-    {
-      "slug": "helzephyr",
-      "name": "Helzephyr",
-      "elements": [
-        "dark"
-      ],
-      "rarity": "rare",
-      "dexNo": 97,
-      "partnerSkill": {
-        "name": "Wings of Death",
-        "description": "Can be ridden as a flying mount. Boosts Dark attacks while fighting together.",
-        "tags": [
-          "flying-mount",
-          "dark-boost"
-        ]
-      }
-    },
-    {
-      "slug": "helzephyr-lux",
-      "name": "Helzephyr Lux",
-      "elements": [
-        "dark",
-        "electricity"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Wings of Thunder",
-        "description": "Can be ridden as a flying mount. Boosts Electric attacks while fighting together.",
-        "tags": [
-          "flying-mount",
-          "electricity-boost"
-        ]
-      }
-    },
-    {
-      "slug": "jelliette",
-      "name": "Jelliette",
-      "elements": [
-        "water"
-      ],
-      "rarity": "common",
-      "partnerSkill": {
-        "name": "Jelly Shelter",
-        "description": "Helps with aquatic exploration and soft Water support.",
-        "tags": [
-          "fishing",
-          "water-boost",
-          "shield"
-        ]
-      }
-    },
-    {
-      "slug": "jetragon",
-      "name": "Jetragon",
-      "elements": [
-        "dragon"
-      ],
-      "rarity": "legendary",
-      "dexNo": 111,
-      "partnerSkill": {
-        "name": "Aerial Missile",
-        "description": "Can be ridden as a flying mount. Fires homing missiles while mounted.",
-        "tags": [
-          "flying-mount",
-          "firearms",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "jormuntide",
-      "name": "Jormuntide",
-      "elements": [
-        "dragon",
-        "water"
-      ],
-      "rarity": "epic",
-      "dexNo": 101,
-      "partnerSkill": {
-        "name": "Stormbringer Sea Dragon",
-        "description": "Can be ridden. Prevents stamina drain while swimming.",
-        "tags": [
-          "ground-mount",
-          "water-boost",
-          "dragon-boost"
-        ]
-      }
-    },
-    {
-      "slug": "jormuntide-ignis",
-      "name": "Jormuntide Ignis",
-      "elements": [
-        "dragon",
-        "fire"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Stormbringer Lava Dragon",
-        "description": "Can be ridden. Powerful Fire/Dragon combat mount.",
-        "tags": [
-          "ground-mount",
-          "fire-boost",
-          "dragon-boost"
-        ]
-      }
-    },
-    {
-      "slug": "katress",
-      "name": "Katress",
-      "elements": [
-        "dark"
-      ],
-      "rarity": "rare",
-      "dexNo": 75,
-      "partnerSkill": {
-        "name": "Grimoire Collector",
-        "description": "While in party, Neutral attacks deal more damage.",
-        "tags": [
-          "combat-buffs",
-          "normal-boost"
-        ],
-        "stackGroup": "neutral-attack",
-        "stackValue": 20,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% Neutral attack damage"
-      }
-    },
-    {
-      "slug": "katress-ignis",
-      "name": "Katress Ignis",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Grimoire Collector",
-        "description": "While in party, Fire attacks deal more damage.",
-        "tags": [
-          "combat-buffs",
-          "fire-boost"
-        ],
-        "stackGroup": "fire-attack",
-        "stackValue": 20,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% Fire attack damage"
-      }
-    },
-    {
-      "slug": "killamari",
-      "name": "Killamari",
-      "elements": [
-        "dark",
-        "water"
-      ],
-      "rarity": "common",
-      "dexNo": 23,
-      "partnerSkill": {
-        "name": "Floating Orb",
-        "description": "While in hand, acts as a floating help / glide assist.",
-        "tags": [
-          "glider",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "kingpaca",
-      "name": "Kingpaca",
-      "elements": [
-        "normal"
-      ],
-      "rarity": "epic",
-      "dexNo": 89,
-      "partnerSkill": {
-        "name": "King of Muscles",
-        "description": "Can be ridden. Increases player max carry weight while in party.",
-        "tags": [
-          "ground-mount",
-          "carry-weight"
-        ],
-        "stackGroup": "carry-weight",
-        "stackValue": 100,
-        "stackUnit": "",
-        "stackLabel": "+{n} player carry weight"
-      }
-    },
-    {
-      "slug": "kingpaca-cryst",
-      "name": "Kingpaca Cryst",
-      "elements": [
-        "ice"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "King of Muscles",
-        "description": "Can be ridden. Increases player max carry weight while in party.",
-        "tags": [
-          "ground-mount",
-          "carry-weight",
-          "ice-boost"
-        ],
-        "stackGroup": "carry-weight",
-        "stackValue": 100,
-        "stackUnit": "",
-        "stackLabel": "+{n} player carry weight"
-      }
-    },
-    {
-      "slug": "kitsun",
-      "name": "Kitsun",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "rare",
-      "dexNo": 61,
-      "partnerSkill": {
-        "name": "Clear Mind",
-        "description": "Can be ridden. Keeps the player warm in cold environments.",
-        "tags": [
-          "ground-mount",
-          "insulation",
-          "fire-boost"
-        ]
-      }
-    },
-    {
-      "slug": "knocklem",
-      "name": "Knocklem",
-      "elements": [
-        "earth"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Rock Crusher",
-        "description": "Heavy Earth fighter — strong Mining / combat synergy.",
-        "tags": [
-          "combat-buffs",
-          "earth-boost",
-          "base-work"
-        ]
-      }
-    },
-    {
-      "slug": "lamball",
-      "name": "Lamball",
-      "elements": [
-        "normal"
-      ],
-      "rarity": "common",
-      "dexNo": 1,
-      "partnerSkill": {
-        "name": "Fluffy Shield",
-        "description": "When activated, becomes a living shield for the player.",
-        "tags": [
-          "shield"
         ]
       }
     },
@@ -984,6 +76,1535 @@
       }
     },
     {
+      "slug": "fuack",
+      "name": "Fuack",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 5,
+      "partnerSkill": {
+        "name": "Surfing Slam",
+        "description": "When activated, Fuack body surfs towards an enemy and slams into them.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "fuack-ignis",
+      "name": "Fuack Ignis",
+      "elements": [
+        "water",
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 5,
+      "partnerSkill": {
+        "name": "Fire Tackle",
+        "description": "When activated, Fuack Ignis fire surfs towards an enemy and slams into them.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "vixy",
+      "name": "Vixy",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 6,
+      "partnerSkill": {
+        "name": "Dig Here!",
+        "description": "When assigned to Ranch, sometimes digs up Pal Spheres.",
+        "tags": [
+          "capture",
+          "base-work",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "celaray",
+      "name": "Celaray",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 7,
+      "partnerSkill": {
+        "name": "Profiling",
+        "description": "While in hand, acts as a glider.",
+        "tags": [
+          "glider"
+        ]
+      }
+    },
+    {
+      "slug": "celaray-lux",
+      "name": "Celaray Lux",
+      "elements": [
+        "water",
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 7,
+      "partnerSkill": {
+        "name": "Jolt Glider",
+        "description": "While in party, modifies the performance of the equipped glider. Prevents fall damage and extends the duration of high-speed gliding.",
+        "tags": [
+          "glider"
+        ]
+      }
+    },
+    {
+      "slug": "cremis",
+      "name": "Cremis",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 8,
+      "partnerSkill": {
+        "name": "Fluffy Wool",
+        "description": "While in party, increases Attack of Neutral Pals by 15~30%. (Does not stack) Sometimes drops Wool when assigned to Ranch.",
+        "tags": [
+          "base-work",
+          "combat-buffs",
+          "normal-boost"
+        ]
+      }
+    },
+    {
+      "slug": "croajiro",
+      "name": "Croajiro",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 9,
+      "partnerSkill": {
+        "name": "Leap Stance",
+        "description": "When activated, Croajiro Noct channels its loyalty and puffs up its abdomen to store energy. Climbing on top will propel the player high into the air. While airborne before landing, the player's Attack is increased by 50~86%.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "croajiro-noct",
+      "name": "Croajiro Noct",
+      "elements": [
+        "water",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 9,
+      "partnerSkill": {
+        "name": "Shadow Stance",
+        "description": "When activated, Croajiro Noct channels its loyalty and puffs up its abdomen to store energy. Climbing on top will propel the player high into the air. While in party, improves player's and Pals' Dark damage to enemy weak points by 25~40%. (Does not stack)",
+        "tags": [
+          "dark-boost"
+        ]
+      }
+    },
+    {
+      "slug": "herbil",
+      "name": "Herbil",
+      "elements": [
+        "leaf",
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 10,
+      "partnerSkill": {
+        "name": "Herbil Pulse",
+        "description": "While in party, Herbil uses its healing powers to restore 30~60% of the player's Max Health when incapacitated.",
+        "tags": [
+          "healing"
+        ]
+      }
+    },
+    {
+      "slug": "teafant",
+      "name": "Teafant",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 11,
+      "partnerSkill": {
+        "name": "Soothing Shower",
+        "description": "When activated, restores player HP over time.",
+        "tags": [
+          "healing"
+        ]
+      }
+    },
+    {
+      "slug": "gumoss",
+      "name": "Gumoss",
+      "elements": [
+        "leaf",
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 12,
+      "partnerSkill": {
+        "name": "Logging Assistance",
+        "description": "While in party, improves logging efficiency by 30~50% and reduces weight of all types of wood by 40~60%. (Does not stack)",
+        "tags": [
+          "carry-weight"
+        ]
+      }
+    },
+    {
+      "slug": "pupperai",
+      "name": "Pupperai",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 13,
+      "partnerSkill": {
+        "name": "Best Boy",
+        "description": "While in party, increases the player's melee weapon damage by 10~35%. (Does not stack)",
+        "tags": [
+          "melee"
+        ]
+      }
+    },
+    {
+      "slug": "clovee",
+      "name": "Clovee",
+      "elements": [
+        "leaf",
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 14,
+      "partnerSkill": {
+        "name": "Happy Clover",
+        "description": "While at a base, increases the Gathering Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "jolthog",
+      "name": "Jolthog",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 15,
+      "partnerSkill": {
+        "name": "Jolt Bomb",
+        "description": "When activated, equips Jolthog to the player to be thrown at an enemy, causing an Electric explosion upon impact.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "jolthog-cryst",
+      "name": "Jolthog Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 15,
+      "partnerSkill": {
+        "name": "Cold Bomb",
+        "description": "When activated, equips Jolthog Cryst to the player to be thrown at an enemy, causing an Ice explosion upon impact.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "depresso",
+      "name": "Depresso",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 16,
+      "partnerSkill": {
+        "name": "Caffeine Inoculation",
+        "description": "When activated, Depresso chugs an entire energy drink, increasing its Movement Speed and Work Speed by 100~900%. Sometimes drops Venom Gland when assigned to Ranch.",
+        "tags": [
+          "base-work",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "pengullet",
+      "name": "Pengullet",
+      "elements": [
+        "water",
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 17,
+      "partnerSkill": {
+        "name": "Pengullet Cannon",
+        "description": "Can be loaded into a launcher; useful near water and fishing spots.",
+        "tags": [
+          "firearms",
+          "fishing",
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "pengullet-lux",
+      "name": "Pengullet Lux",
+      "elements": [
+        "water",
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 17,
+      "partnerSkill": {
+        "name": "Pengullet Lux Launcher",
+        "description": "When activated, the player equips Pengullet Lux to fire Rocket Launcher as ammunition. Pengullet Lux explodes on impact and is incapacitated.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "penking",
+      "name": "Penking",
+      "elements": [
+        "water",
+        "ice"
+      ],
+      "rarity": "rare",
+      "dexNo": 18,
+      "partnerSkill": {
+        "name": "Brave Sailor",
+        "description": "While fighting together, Water attacks deal more damage.",
+        "tags": [
+          "combat-buffs",
+          "water-boost",
+          "fishing"
+        ]
+      }
+    },
+    {
+      "slug": "penking-lux",
+      "name": "Penking Lux",
+      "elements": [
+        "water",
+        "electricity"
+      ],
+      "rarity": "rare",
+      "dexNo": 18,
+      "partnerSkill": {
+        "name": "Unyielding Storm Commander",
+        "description": "While in party, improves player's and Pals' Water damage to enemy weak points by 25~40%. (Does not stack)",
+        "tags": [
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "hoocrates",
+      "name": "Hoocrates",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 19,
+      "partnerSkill": {
+        "name": "Dark Knowledge",
+        "description": "While in party, increases Attack of Dark Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "combat-buffs",
+          "dark-boost"
+        ]
+      }
+    },
+    {
+      "slug": "melpaca",
+      "name": "Melpaca",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 20,
+      "partnerSkill": {
+        "name": "Pacapaca Wool",
+        "description": "Can be ridden. Ranch wool producer.",
+        "tags": [
+          "ground-mount",
+          "base-work",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "kingpaca",
+      "name": "Kingpaca",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "epic",
+      "dexNo": 21,
+      "partnerSkill": {
+        "name": "King of Muscles",
+        "description": "Can be ridden. Increases player max carry weight while in party.",
+        "tags": [
+          "ground-mount",
+          "carry-weight"
+        ],
+        "stackGroup": "carry-weight",
+        "stackValue": 100,
+        "stackUnit": "",
+        "stackLabel": "+{n} player carry weight"
+      }
+    },
+    {
+      "slug": "kingpaca-cryst",
+      "name": "Kingpaca Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "epic",
+      "dexNo": 21,
+      "partnerSkill": {
+        "name": "King of Muscles",
+        "description": "Can be ridden. Increases player max carry weight while in party.",
+        "tags": [
+          "ground-mount",
+          "carry-weight",
+          "ice-boost"
+        ],
+        "stackGroup": "carry-weight",
+        "stackValue": 100,
+        "stackUnit": "",
+        "stackLabel": "+{n} player carry weight"
+      }
+    },
+    {
+      "slug": "daedream",
+      "name": "Daedream",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 22,
+      "partnerSkill": {
+        "name": "Dream Chaser",
+        "description": "While in party, appears near the player. Attacks hostile enemies with Dark magic bullets. These bullets will not reduce the target's Health below 1.",
+        "tags": [
+          "firearms",
+          "healing"
+        ]
+      }
+    },
+    {
+      "slug": "tanzee",
+      "name": "Tanzee",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 23,
+      "partnerSkill": {
+        "name": "Cheery Rifle",
+        "description": "When activated, Tanzee will mercilessly fire an assault rifle at nearby enemies for a limited time.",
+        "tags": [
+          "firearms"
+        ]
+      }
+    },
+    {
+      "slug": "tanzee-ignis",
+      "name": "Tanzee Ignis",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 23,
+      "partnerSkill": {
+        "name": "Chipper Chimp Gunfire",
+        "description": "When activated, Tanzee Ignis will mercilessly fire a Fire assault rifle at nearby enemies for a limited time.",
+        "tags": [
+          "firearms"
+        ]
+      }
+    },
+    {
+      "slug": "nox",
+      "name": "Nox",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 24,
+      "partnerSkill": {
+        "name": "Kuudere",
+        "description": "When activated, detects the location of nearby Pal Effigies.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "flambelle",
+      "name": "Flambelle",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 25,
+      "partnerSkill": {
+        "name": "Magma Tears",
+        "description": "While in party, recovers Health of the player and Party Pals by 0.1~0.5% per second outside of combat. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
+        "tags": [
+          "healing",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "rooby",
+      "name": "Rooby",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 26,
+      "partnerSkill": {
+        "name": "Tiny Spark",
+        "description": "While in party, increases Defense of Fire Pals by 15~30%. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
+        "tags": [
+          "base-work",
+          "fire-boost"
+        ]
+      }
+    },
+    {
+      "slug": "mau",
+      "name": "Mau",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 27,
+      "partnerSkill": {
+        "name": "Gold Digger",
+        "description": "When assigned to Ranch, digs up gold coins.",
+        "tags": [
+          "more-drops",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "mau-cryst",
+      "name": "Mau Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 27,
+      "partnerSkill": {
+        "name": "Gold Digger",
+        "description": "When assigned to Ranch, digs up gold coins.",
+        "tags": [
+          "more-drops",
+          "base-work",
+          "ice-boost"
+        ]
+      }
+    },
+    {
+      "slug": "rushoar",
+      "name": "Rushoar",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 28,
+      "partnerSkill": {
+        "name": "Hard Head",
+        "description": "Can be ridden. While mounted, increases efficiency of destroying Stone by 500~2000%.",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "foxparks",
+      "name": "Foxparks",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 29,
+      "partnerSkill": {
+        "name": "Huggy Fire",
+        "description": "When activated, equips to the player and transforms into a flamethrower.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "foxparks-cryst",
+      "name": "Foxparks Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 29,
+      "partnerSkill": {
+        "name": "Huggy Frost",
+        "description": "When activated, equips to the player and attacks using frigid air.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "killamari",
+      "name": "Killamari",
+      "elements": [
+        "dark",
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 30,
+      "partnerSkill": {
+        "name": "Floating Orb",
+        "description": "While in hand, acts as a floating help / glide assist.",
+        "tags": [
+          "glider",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "killamari-primo",
+      "name": "Killamari Primo",
+      "elements": [
+        "normal",
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 30,
+      "partnerSkill": {
+        "name": "Fried Killamari",
+        "description": "While in party, modifies the performance of the equipped glider. Enables gentle floating while gliding for an extended time.",
+        "tags": [
+          "glider"
+        ]
+      }
+    },
+    {
+      "slug": "fuddler",
+      "name": "Fuddler",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 31,
+      "partnerSkill": {
+        "name": "Mining Assistance",
+        "description": "While in party, improves player mining efficiency by 30~60% and reduces Stone weight by 80~100%. (Does not stack)",
+        "tags": [
+          "carry-weight"
+        ]
+      }
+    },
+    {
+      "slug": "eikthyrdeer",
+      "name": "Eikthyrdeer",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 32,
+      "partnerSkill": {
+        "name": "Guardian of the Forest",
+        "description": "Can be ridden. Double jump while mounted; improves logging.",
+        "tags": [
+          "ground-mount",
+          "mobility",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "eikthyrdeer-terra",
+      "name": "Eikthyrdeer Terra",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 32,
+      "partnerSkill": {
+        "name": "Guardian of the Plains",
+        "description": "Can be ridden. Double jump while mounted; improves logging.",
+        "tags": [
+          "ground-mount",
+          "mobility",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "direhowl",
+      "name": "Direhowl",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 33,
+      "partnerSkill": {
+        "name": "Direhowl Rider",
+        "description": "Can be ridden. Fast ground mount for early exploration.",
+        "tags": [
+          "ground-mount",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "caprity",
+      "name": "Caprity",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 34,
+      "partnerSkill": {
+        "name": "Berry Picker",
+        "description": "Sometimes drops Red Berries from its back when assigned to Ranch. While in party, restores 100~200 Pal’s Hunger to the Pal with the lowest Hunger every 5 minutes. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "caprity-noct",
+      "name": "Caprity Noct",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 34,
+      "partnerSkill": {
+        "name": "Venom Picker",
+        "description": "Sometimes drops Venom Gland from its back when assigned to Ranch. While in party, restores 100~200 Pal’s Hunger to the Pal with the lowest Hunger every 5 minutes. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "swee",
+      "name": "Swee",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 35,
+      "partnerSkill": {
+        "name": "Fluffy",
+        "description": "While in party, increases Attack and Defense of Sweepa.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "sweepa",
+      "name": "Sweepa",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "rare",
+      "dexNo": 36,
+      "partnerSkill": {
+        "name": "King of Fluff",
+        "description": "Can be ridden. This Pal's Attack and Defense increase by 12~24% for each Swee in party.",
+        "tags": [
+          "combat-buffs",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "turtacle",
+      "name": "Turtacle",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 37,
+      "partnerSkill": {
+        "name": "Spikey Carrier",
+        "description": "While in party, reduces Ore weight by 80~100%. (Does not stack)",
+        "tags": [
+          "carry-weight"
+        ]
+      }
+    },
+    {
+      "slug": "turtacle-terra",
+      "name": "Turtacle Terra",
+      "elements": [
+        "water",
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 37,
+      "partnerSkill": {
+        "name": "Shiny Hauler",
+        "description": "While in party, reduces weight of Sulfur and Coal by 80~100%. Also improves player's and Pals' Ground damage to enemy weak points by 80~100%. (Does not stack)",
+        "tags": [
+          "carry-weight",
+          "earth-boost"
+        ]
+      }
+    },
+    {
+      "slug": "hangyu",
+      "name": "Hangyu",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 38,
+      "partnerSkill": {
+        "name": "Flying Trapeze",
+        "description": "Partner skill details unavailable.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "hangyu-cryst",
+      "name": "Hangyu Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 38,
+      "partnerSkill": {
+        "name": "Winter Trapeze",
+        "description": "Partner skill details unavailable.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "woolipop",
+      "name": "Woolipop",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 39,
+      "partnerSkill": {
+        "name": "Candy Pop",
+        "description": "Sometimes drops Cotton Candy when assigned to Ranch. While at a base, reduces Hunger depletion rate of Base Pals by -20~-10%. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "woolipop-terra",
+      "name": "Woolipop Terra",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 39,
+      "partnerSkill": {
+        "name": "Bitter Pop",
+        "description": "Sometimes drops Caramel Cotton Candy when assigned to Ranch. While at a base, reduces Hunger depletion rate of Base Pals by -25~-15%. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "mozzarina",
+      "name": "Mozzarina",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 40,
+      "partnerSkill": {
+        "name": "Milk Maker",
+        "description": "When assigned to Ranch, produces Milk.",
+        "tags": [
+          "base-work",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "azurobe",
+      "name": "Azurobe",
+      "elements": [
+        "water",
+        "dragon"
+      ],
+      "rarity": "rare",
+      "dexNo": 41,
+      "partnerSkill": {
+        "name": "Waterwing Dance",
+        "description": "Can be ridden. Applies Water to rider attacks.",
+        "tags": [
+          "ground-mount",
+          "water-boost",
+          "dragon-boost"
+        ]
+      }
+    },
+    {
+      "slug": "azurobe-cryst",
+      "name": "Azurobe Cryst",
+      "elements": [
+        "ice",
+        "dragon"
+      ],
+      "rarity": "epic",
+      "dexNo": 41,
+      "partnerSkill": {
+        "name": "Icewing Dance",
+        "description": "Can be ridden to travel on water. While mounted, changes the player’s attack type to Ice and increases Attack by 5~20%.",
+        "tags": [
+          "combat-buffs",
+          "ice-boost",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "sparkit",
+      "name": "Sparkit",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 42,
+      "partnerSkill": {
+        "name": "Static Electricity",
+        "description": "While in party, increases Attack of Electric Pals by 15~30%. (Does not stack) Sometimes drops Electric Organ when assigned to Ranch.",
+        "tags": [
+          "base-work",
+          "combat-buffs",
+          "electricity-boost"
+        ]
+      }
+    },
+    {
+      "slug": "kelpsea",
+      "name": "Kelpsea",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 43,
+      "partnerSkill": {
+        "name": "Aqua Spout",
+        "description": "While in party, increases Attack of Water Pals by 15~30%. (Does not stack) Sometimes drops Aquatic Pal Fluids when assigned to Ranch.",
+        "tags": [
+          "base-work",
+          "combat-buffs",
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "kelpsea-ignis",
+      "name": "Kelpsea Ignis",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 43,
+      "partnerSkill": {
+        "name": "Lava Spout",
+        "description": "While in party, increases Attack of Fire Pals by 15~30%. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
+        "tags": [
+          "base-work",
+          "combat-buffs",
+          "fire-boost"
+        ]
+      }
+    },
+    {
+      "slug": "ribbuny",
+      "name": "Ribbuny",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 44,
+      "partnerSkill": {
+        "name": "Happy-Go-Lucky Bunny",
+        "description": "While in party, increases Attack of Neutral Pals by 15~30%. (Does not stack) While at a base, increases the Handiwork Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work",
+          "combat-buffs",
+          "normal-boost"
+        ]
+      }
+    },
+    {
+      "slug": "ribbuny-botan",
+      "name": "Ribbuny Botan",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 44,
+      "partnerSkill": {
+        "name": "Ground 'n' Pound",
+        "description": "While in party, improves player's and Pals' Grass damage to enemy weak points by 25~40%. (Does not stack) Increases efficiency by 200~400% when working at a Weapon Workbench, Weapon Assembly Line, or other related facilities.",
+        "tags": [
+          "leaf-boost"
+        ]
+      }
+    },
+    {
+      "slug": "jelliette",
+      "name": "Jelliette",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 45,
+      "partnerSkill": {
+        "name": "Jelly Shelter",
+        "description": "Helps with aquatic exploration and soft Water support.",
+        "tags": [
+          "fishing",
+          "water-boost",
+          "shield"
+        ]
+      }
+    },
+    {
+      "slug": "jellroy",
+      "name": "Jellroy",
+      "elements": [
+        "water",
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 46,
+      "partnerSkill": {
+        "name": "Jellroy Drop",
+        "description": "While in party, increases items obtained from salvaging by 55~95%. While Jelliette and Jellroy are in your base, Jellroy's watering speed increases by 50~120%. (Does not stack)",
+        "tags": [
+          "more-drops",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "amione",
+      "name": "Amione",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 47,
+      "partnerSkill": {
+        "name": "Magical Twin Powers",
+        "description": "While at a base, increases the Watering Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "gloopie",
+      "name": "Gloopie",
+      "elements": [
+        "water",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 48,
+      "partnerSkill": {
+        "name": "Sticky Princess",
+        "description": "While in party, the capture gauge decreases 12~35% more slowly while the bars are not overlapping during the fishing minigame. (Does not stack)",
+        "tags": [
+          "fishing",
+          "capture"
+        ]
+      }
+    },
+    {
+      "slug": "gloopie-primo",
+      "name": "Gloopie Primo",
+      "elements": [
+        "water",
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 48,
+      "partnerSkill": {
+        "name": "Cephalo-Princess",
+        "description": "While in party, increases Defense of Water Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "galeclaw",
+      "name": "Galeclaw",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 49,
+      "partnerSkill": {
+        "name": "Galeclaw Rider",
+        "description": "While in hand, acts as a glider.",
+        "tags": [
+          "glider",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "wispaw",
+      "name": "Wispaw",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 50,
+      "partnerSkill": {
+        "name": "Death-Cheating Feline",
+        "description": "While in party, increases the capture rate when awarded a back bonus. (Does not stack)",
+        "tags": [
+          "capture"
+        ]
+      }
+    },
+    {
+      "slug": "nitewing",
+      "name": "Nitewing",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 51,
+      "partnerSkill": {
+        "name": "Travel Companion",
+        "description": "Can be ridden as a flying mount.",
+        "tags": [
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "tombat",
+      "name": "Tombat",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 52,
+      "partnerSkill": {
+        "name": "Ultrasonic Sensor",
+        "description": "When activated, uses ultrasonic waves to detect nearby dungeons, treasure chests, and scrap.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "tocotoco",
+      "name": "Tocotoco",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 53,
+      "partnerSkill": {
+        "name": "Eggbomb Launcher",
+        "description": "When activated, equips to the player and transforms into an egg launcher.",
+        "tags": [
+          "eggs"
+        ]
+      }
+    },
+    {
+      "slug": "univolt",
+      "name": "Univolt",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "rare",
+      "dexNo": 54,
+      "partnerSkill": {
+        "name": "Swift Deity",
+        "description": "Can be ridden. Changes rider attacks to Electric.",
+        "tags": [
+          "ground-mount",
+          "electricity-boost",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "univolt-cryst",
+      "name": "Univolt Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "rare",
+      "dexNo": 54,
+      "partnerSkill": {
+        "name": "Frigid Deity",
+        "description": "Can be ridden. While mounted, changes the player’s attack type to Ice and increases Attack by 5~20%.",
+        "tags": [
+          "combat-buffs",
+          "ice-boost",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "gobfin",
+      "name": "Gobfin",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 55,
+      "partnerSkill": {
+        "name": "Angry Shark",
+        "description": "While fighting together, player attack rises. Stacks with more Gobfin.",
+        "tags": [
+          "combat-buffs",
+          "melee"
+        ],
+        "stackGroup": "player-attack",
+        "stackValue": 10,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% player attack (while fighting together)"
+      }
+    },
+    {
+      "slug": "gobfin-ignis",
+      "name": "Gobfin Ignis",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 55,
+      "partnerSkill": {
+        "name": "Angry Shark",
+        "description": "While fighting together, player attack rises. Stacks with more Gobfin Ignis.",
+        "tags": [
+          "combat-buffs",
+          "melee",
+          "fire-boost"
+        ],
+        "stackGroup": "player-attack",
+        "stackValue": 10,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% player attack (while fighting together)"
+      }
+    },
+    {
+      "slug": "loupmoon",
+      "name": "Loupmoon",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 56,
+      "partnerSkill": {
+        "name": "Dark Gleam Strike",
+        "description": "When activated, attacks targeted enemy with Jumping Claw. When this Pal uses Jumping Claw, it has a x1.1~2.5 damage multiplier. While in party, increases the player's melee weapon attack speed by 15~30%. (Does not stack)",
+        "tags": [
+          "melee",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "loupmoon-cryst",
+      "name": "Loupmoon Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 56,
+      "partnerSkill": {
+        "name": "Frozen Gleam Strike",
+        "description": "When activated, attacks targeted enemy with Snow Claw. When this Pal uses Snow Claw, it has a x1.1~2.5 damage multiplier. While in party, increases the player's melee weapon attack speed by 15~30%. (Does not stack)",
+        "tags": [
+          "melee"
+        ]
+      }
+    },
+    {
+      "slug": "cawgnito",
+      "name": "Cawgnito",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 57,
+      "partnerSkill": {
+        "name": "Eerie Nightstreaker",
+        "description": "When activated, grants Night Vision to see in dark places. Activate again to turn off. Sometimes digs up Bone when assigned to Ranch.",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "arsox",
+      "name": "Arsox",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 58,
+      "partnerSkill": {
+        "name": "Warm Body",
+        "description": "Can be ridden. While in party, the player gains Cold Resistance +2. (Does not stack)",
+        "tags": [
+          "insulation",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "muffly",
+      "name": "Muffly",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 59,
+      "partnerSkill": {
+        "name": "Fluffy Flutterer",
+        "description": "While in party, increases the capture rate of Pals afflicted with Freeze. (Does not stack)",
+        "tags": [
+          "capture"
+        ]
+      }
+    },
+    {
+      "slug": "bristla",
+      "name": "Bristla",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 60,
+      "partnerSkill": {
+        "name": "Princess Gaze",
+        "description": "While in party, increases Attack of Grass Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "cinnamoth",
+      "name": "Cinnamoth",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 61,
+      "partnerSkill": {
+        "name": "Mysterious Scales",
+        "description": "When activated, attacks the targeted enemy with Poison Fog. While at a base, increases the Farming Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "puffolt",
+      "name": "Puffolt",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 62,
+      "partnerSkill": {
+        "name": "Crackle Booster",
+        "description": "While at a base, increases the Generating Electricity Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "elphidran",
+      "name": "Elphidran",
+      "elements": [
+        "dragon"
+      ],
+      "rarity": "rare",
+      "dexNo": 63,
+      "partnerSkill": {
+        "name": "Amicable Holy Dragon",
+        "description": "Can be ridden as a flying mount. While flying, Movement Speed is increased. While in party, Dark Pals drop 40~80% more items when defeated. (Does not stack)",
+        "tags": [
+          "more-drops",
+          "mobility",
+          "dark-boost",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "elphidran-aqua",
+      "name": "Elphidran Aqua",
+      "elements": [
+        "dragon",
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 63,
+      "partnerSkill": {
+        "name": "Amicable Water Dragon",
+        "description": "Can be ridden as a flying mount. While flying, Movement Speed is increased. While in party, player and party Pals take 15~30% less Fire damage and are immune to Burn. (Does not stack)",
+        "tags": [
+          "mobility",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "vanwyrm",
+      "name": "Vanwyrm",
+      "elements": [
+        "fire",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 64,
+      "partnerSkill": {
+        "name": "Aerial Marauder",
+        "description": "Can be ridden as a flying mount. Improves loot from defeated Pals.",
+        "tags": [
+          "flying-mount",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "vanwyrm-cryst",
+      "name": "Vanwyrm Cryst",
+      "elements": [
+        "ice",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 64,
+      "partnerSkill": {
+        "name": "Aerial Marauder",
+        "description": "Can be ridden as a flying mount. Improves loot from defeated Pals.",
+        "tags": [
+          "flying-mount",
+          "more-drops",
+          "ice-boost"
+        ]
+      }
+    },
+    {
+      "slug": "felbat",
+      "name": "Felbat",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 65,
+      "partnerSkill": {
+        "name": "Life Steal",
+        "description": "While fighting together, player attacks restore a bit of HP.",
+        "tags": [
+          "combat-buffs",
+          "healing"
+        ]
+      }
+    },
+    {
+      "slug": "vaelet",
+      "name": "Vaelet",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 66,
+      "partnerSkill": {
+        "name": "Purification of Gaia",
+        "description": "While in party, Ground Pals drop 40~80% more items when defeated. (Does not stack) Sometimes drops various seeds when assigned to Ranch.",
+        "tags": [
+          "more-drops",
+          "base-work",
+          "earth-boost"
+        ]
+      }
+    },
+    {
+      "slug": "beegarde",
+      "name": "Beegarde",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 67,
+      "partnerSkill": {
+        "name": "Worker Bee",
+        "description": "When in party with Elizabee, boosts work. Ranch honey producer.",
+        "tags": [
+          "base-work",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "elizabee",
+      "name": "Elizabee",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 68,
+      "partnerSkill": {
+        "name": "Queen Bee Command",
+        "description": "While fighting together, Beegarde stats rise.",
+        "tags": [
+          "combat-buffs",
+          "base-work"
+        ]
+      }
+    },
+    {
       "slug": "lovander",
       "name": "Lovander",
       "elements": [
@@ -1001,37 +1622,526 @@
       }
     },
     {
-      "slug": "lyleen",
-      "name": "Lyleen",
+      "slug": "grintale",
+      "name": "Grintale",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 70,
+      "partnerSkill": {
+        "name": "Glaring Cat's Eye",
+        "description": "Can be ridden. While in party, picking up a Pal Egg has a 50~75% chance of receiving one extra. (Does not stack)",
+        "tags": [
+          "eggs",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "tarantriss",
+      "name": "Tarantriss",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 71,
+      "partnerSkill": {
+        "name": "Tarantriss’ Web",
+        "description": "Can be ridden. Can double jump while mounted. Additionally, can shoot spider web to grapple and move at high speed.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "polapup",
+      "name": "Polapup",
+      "elements": [
+        "ice",
+        "water"
+      ],
+      "rarity": "rare",
+      "dexNo": 72,
+      "partnerSkill": {
+        "name": "Rider of the Snowy Mountain",
+        "description": "Can be ridden. Movement Speed is increased by 80~160% while mounted on snow. Can also slide quickly down slopes.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "polapup-terra",
+      "name": "Polapup Terra",
+      "elements": [
+        "ice",
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 72,
+      "partnerSkill": {
+        "name": "Snowy Mountain Slider",
+        "description": "Can be ridden. Movement Speed is increased by 80~160% while mounted on snow. Can also slide quickly down slopes. While it starts out slow, the top speed it can hit while sliding is no joke.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "leezpunk",
+      "name": "Leezpunk",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 73,
+      "partnerSkill": {
+        "name": "Too Cool to be Seen",
+        "description": "When activated, Leezpunk and the player become invisible, making them undetectable to enemies for {ActiveSkillOverWriteEffectTime} seconds.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "leezpunk-ignis",
+      "name": "Leezpunk Ignis",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 73,
+      "partnerSkill": {
+        "name": "Too Cool to be Seen",
+        "description": "When activated, Leezpunk Ignis and the player become invisible, making them undetectable to enemies for {ActiveSkillOverWriteEffectTime} seconds.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "gorirat",
+      "name": "Gorirat",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 74,
+      "partnerSkill": {
+        "name": "Full-Power Gorilla Mode",
+        "description": "When activated, unleashes a primal fury that increases Gorirat's Attack by 75~300% for a limited time.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "gorirat-terra",
+      "name": "Gorirat Terra",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 74,
+      "partnerSkill": {
+        "name": "Full-Power Gorilla Pound",
+        "description": "While in party, increases the player's climbing speed by 50~100%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "surfent",
+      "name": "Surfent",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 75,
+      "partnerSkill": {
+        "name": "Swift Swimmer",
+        "description": "Can be ridden. Prevents stamina drain while swimming.",
+        "tags": [
+          "ground-mount",
+          "mobility",
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "surfent-terra",
+      "name": "Surfent Terra",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 75,
+      "partnerSkill": {
+        "name": "Sand Swimmer",
+        "description": "Can be ridden. While in party, the player's attacks inflict Muddy 2~6. (Does not stack)",
+        "tags": [
+          "combat-buffs",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "robinquill",
+      "name": "Robinquill",
       "elements": [
         "leaf"
       ],
-      "rarity": "epic",
-      "dexNo": 104,
+      "rarity": "rare",
+      "dexNo": 76,
       "partnerSkill": {
-        "name": "Harvest Goddess",
-        "description": "When activated, restores player HP. Top Farming / Gathering worker.",
+        "name": "Hawk Eye",
+        "description": "While fighting together, player bow / arrow damage rises.",
         "tags": [
-          "healing",
-          "base-work",
+          "bow",
+          "combat-buffs"
+        ],
+        "stackGroup": "player-bow",
+        "stackValue": 20,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% bow / arrow damage"
+      }
+    },
+    {
+      "slug": "robinquill-terra",
+      "name": "Robinquill Terra",
+      "elements": [
+        "leaf",
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 76,
+      "partnerSkill": {
+        "name": "Hawk Eye",
+        "description": "While fighting together, player bow / arrow damage rises.",
+        "tags": [
+          "bow",
+          "combat-buffs"
+        ],
+        "stackGroup": "player-bow",
+        "stackValue": 20,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% bow / arrow damage"
+      }
+    },
+    {
+      "slug": "flopie",
+      "name": "Flopie",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 77,
+      "partnerSkill": {
+        "name": "Helper Bunny",
+        "description": "While in party, appears near the player. Automatically picks up nearby items.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "wixen",
+      "name": "Wixen",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 78,
+      "partnerSkill": {
+        "name": "Lord Fox",
+        "description": "While fighting together, Fire attacks deal more player damage.",
+        "tags": [
+          "combat-buffs",
+          "fire-boost"
+        ],
+        "stackGroup": "player-fire",
+        "stackValue": 10,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% player Fire damage"
+      }
+    },
+    {
+      "slug": "wixen-noct",
+      "name": "Wixen Noct",
+      "elements": [
+        "fire",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 78,
+      "partnerSkill": {
+        "name": "Lord Fox",
+        "description": "While fighting together, Dark attacks deal more player damage.",
+        "tags": [
+          "combat-buffs",
+          "dark-boost"
+        ],
+        "stackGroup": "player-dark",
+        "stackValue": 10,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% player Dark damage"
+      }
+    },
+    {
+      "slug": "katress",
+      "name": "Katress",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 79,
+      "partnerSkill": {
+        "name": "Grimoire Collector",
+        "description": "While in party, Neutral attacks deal more damage.",
+        "tags": [
+          "combat-buffs",
+          "normal-boost"
+        ],
+        "stackGroup": "neutral-attack",
+        "stackValue": 20,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% Neutral attack damage"
+      }
+    },
+    {
+      "slug": "katress-ignis",
+      "name": "Katress Ignis",
+      "elements": [
+        "dark",
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 79,
+      "partnerSkill": {
+        "name": "Grimoire Collector",
+        "description": "While in party, Fire attacks deal more damage.",
+        "tags": [
+          "combat-buffs",
+          "fire-boost"
+        ],
+        "stackGroup": "fire-attack",
+        "stackValue": 20,
+        "stackUnit": "%",
+        "stackLabel": "+{n}% Fire attack damage"
+      }
+    },
+    {
+      "slug": "helzephyr",
+      "name": "Helzephyr",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 80,
+      "partnerSkill": {
+        "name": "Wings of Death",
+        "description": "Can be ridden as a flying mount. Boosts Dark attacks while fighting together.",
+        "tags": [
+          "combat-buffs",
+          "dark-boost",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "helzephyr-lux",
+      "name": "Helzephyr Lux",
+      "elements": [
+        "dark",
+        "electricity"
+      ],
+      "rarity": "epic",
+      "dexNo": 80,
+      "partnerSkill": {
+        "name": "Wings of Thunder",
+        "description": "Can be ridden as a flying mount. Boosts Electric attacks while fighting together.",
+        "tags": [
+          "combat-buffs",
+          "electricity-boost",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "elgrove",
+      "name": "Elgrove",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "rare",
+      "dexNo": 81,
+      "partnerSkill": {
+        "name": "Mother Nature's Menace",
+        "description": "When activated, Elgrove changes the player's attack type to Grass and increases Attack by 30~50%.",
+        "tags": [
+          "combat-buffs",
           "leaf-boost"
         ]
       }
     },
     {
-      "slug": "lyleen-noct",
-      "name": "Lyleen Noct",
+      "slug": "elgrove-cryst",
+      "name": "Elgrove Cryst",
       "elements": [
+        "ice"
+      ],
+      "rarity": "rare",
+      "dexNo": 81,
+      "partnerSkill": {
+        "name": "Father Winter's Threat",
+        "description": "While in party, grants the player the ability to Freeze enemies afflicted with Soak in one strike.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "lunaris",
+      "name": "Lunaris",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 82,
+      "partnerSkill": {
+        "name": "Antigravity",
+        "description": "While in party, spheres home in on Pals, and carrying capacity increases by 300~600. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "fenglope",
+      "name": "Fenglope",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 83,
+      "partnerSkill": {
+        "name": "Wind and Clouds",
+        "description": "Can be ridden. Greatly improves jump while mounted.",
+        "tags": [
+          "ground-mount",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "fenglope-lux",
+      "name": "Fenglope Lux",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 83,
+      "partnerSkill": {
+        "name": "Stormcloud",
+        "description": "Can be ridden. Can double jump while mounted. While in party, Water Pals drop 40~80% more items when defeated. (Does not stack)",
+        "tags": [
+          "more-drops",
+          "mobility",
+          "water-boost",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "dinossom",
+      "name": "Dinossom",
+      "elements": [
+        "leaf",
+        "dragon"
+      ],
+      "rarity": "rare",
+      "dexNo": 84,
+      "partnerSkill": {
+        "name": "Fragrant Dragon",
+        "description": "Can be ridden. Applies Grass to rider attacks.",
+        "tags": [
+          "ground-mount",
+          "leaf-boost",
+          "dragon-boost"
+        ]
+      }
+    },
+    {
+      "slug": "dinossom-lux",
+      "name": "Dinossom Lux",
+      "elements": [
+        "electricity",
+        "dragon"
+      ],
+      "rarity": "rare",
+      "dexNo": 84,
+      "partnerSkill": {
+        "name": "Thunder Dragon",
+        "description": "Can be ridden. Applies Electric to rider attacks.",
+        "tags": [
+          "ground-mount",
+          "electricity-boost",
+          "dragon-boost"
+        ]
+      }
+    },
+    {
+      "slug": "bushi",
+      "name": "Bushi",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 85,
+      "partnerSkill": {
+        "name": "Brandish Blade",
+        "description": "When activated, attacks targeted enemy with Iaigiri. When this Pal uses Iaigiri, it has a x1.1~2.5 damage multiplier.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "bushi-noct",
+      "name": "Bushi Noct",
+      "elements": [
+        "fire",
         "dark"
       ],
-      "rarity": "epic",
+      "rarity": "rare",
+      "dexNo": 85,
       "partnerSkill": {
-        "name": "Harvest Goddess",
-        "description": "When activated, restores player HP. Dark variant support.",
+        "name": "Void Blade",
+        "description": "When activated, attacks targeted enemy with Iaigiri. When this Pal uses Iaigiri, it has a x1.1~2.5 damage multiplier. While in party, increases the player's melee weapon damage by 30~65% but only when not in combat. (Does not stack)",
         "tags": [
-          "healing",
-          "dark-boost",
-          "base-work"
+          "melee"
+        ]
+      }
+    },
+    {
+      "slug": "munchill",
+      "name": "Munchill",
+      "elements": [
+        "ice",
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 86,
+      "partnerSkill": {
+        "name": "Icy Maw",
+        "description": "While in party, reduces the weight of ingredient and food by 30~60%. When paired with another Ice Pal, their Rot Speed also reduces by -80~-30%. (Does not stack)",
+        "tags": [
+          "carry-weight"
         ]
       }
     },
@@ -1043,7 +2153,7 @@
         "earth"
       ],
       "rarity": "epic",
-      "dexNo": 90,
+      "dexNo": 87,
       "partnerSkill": {
         "name": "Gaia Crusher",
         "description": "Can be ridden. While mounted, improves logging and mining yields.",
@@ -1055,54 +2165,378 @@
       }
     },
     {
-      "slug": "mau",
-      "name": "Mau",
+      "slug": "mammorest-cryst",
+      "name": "Mammorest Cryst",
       "elements": [
-        "dark"
+        "ice",
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 87,
+      "partnerSkill": {
+        "name": "Ice Crusher",
+        "description": "Can be ridden. While mounted, increases logging efficiency by 220~500% and mining efficiency by 500~2000%.",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "finsider",
+      "name": "Finsider",
+      "elements": [
+        "water"
       ],
       "rarity": "common",
-      "dexNo": 24,
+      "dexNo": 88,
       "partnerSkill": {
-        "name": "Gold Digger",
-        "description": "When assigned to Ranch, digs up gold coins.",
+        "name": "Water Gun",
+        "description": "When activated, Finsider changes the player's attack type to Water and increases Attack by 30~50%.",
         "tags": [
-          "more-drops",
+          "combat-buffs",
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "finsider-ignis",
+      "name": "Finsider Ignis",
+      "elements": [
+        "water",
+        "fire"
+      ],
+      "rarity": "common",
+      "dexNo": 88,
+      "partnerSkill": {
+        "name": "Ember Chamber",
+        "description": "While in party, Finsider Ignis helps carry supplies, reducing the weight of weapons in your inventory by 60~100%. Also improves player's and Pals' Fire damage to enemy weak points by 25~40%. (Does not stack)",
+        "tags": [
+          "carry-weight",
+          "fire-boost"
+        ]
+      }
+    },
+    {
+      "slug": "petallia",
+      "name": "Petallia",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 89,
+      "partnerSkill": {
+        "name": "Blessing of the Flower Spirit",
+        "description": "When activated, soothing blossoms restore the player's Health by 75~85%. While at a base, increases the Planting Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "healing",
           "base-work"
         ]
       }
     },
     {
-      "slug": "mau-cryst",
-      "name": "Mau Cryst",
+      "slug": "petallia-ignis",
+      "name": "Petallia Ignis",
+      "elements": [
+        "leaf",
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 89,
+      "partnerSkill": {
+        "name": "Passion of the Flower Spirit",
+        "description": "When activated, soothing blossoms restore the player's Health by 80~90%. While in party, player and party Pals take 15~30% less Grass damage, and are immune to Ivy-Covered. (Does not stack)",
+        "tags": [
+          "healing"
+        ]
+      }
+    },
+    {
+      "slug": "leafan",
+      "name": "Leafan",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "rare",
+      "dexNo": 90,
+      "partnerSkill": {
+        "name": "Selfless Discipline",
+        "description": "This Pal's Attack and Defense increase by 2~6% for each other Grass Pal in your party.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "incineram",
+      "name": "Incineram",
+      "elements": [
+        "fire",
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 91,
+      "partnerSkill": {
+        "name": "Flameclaw Hunter",
+        "description": "When activated, attacks the targeted enemy with Hellfire Claw. When this Pal uses Hellfire Claw, it has a x1.1~2.5 damage multiplier.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "incineram-noct",
+      "name": "Incineram Noct",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 91,
+      "partnerSkill": {
+        "name": "Darkclaw Hunter",
+        "description": "When activated, attacks the targeted enemy with Nightmare Claw. When this Pal uses Nightmare Claw, it has a x1.1~2.5 damage multiplier.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "dazzi",
+      "name": "Dazzi",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 92,
+      "partnerSkill": {
+        "name": "Lady of Lightning",
+        "description": "Summon lightning support while fighting; boosts Electric damage.",
+        "tags": [
+          "combat-buffs",
+          "electricity-boost",
+          "status"
+        ]
+      }
+    },
+    {
+      "slug": "dazzi-noct",
+      "name": "Dazzi Noct",
+      "elements": [
+        "dark",
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 92,
+      "partnerSkill": {
+        "name": "Lady of Dark Lightning",
+        "description": "While in party, appears near the player. Attacks hostile enemies with Dark bolts. These bolts will not reduce the target's Health below 1.",
+        "tags": [
+          "healing"
+        ]
+      }
+    },
+    {
+      "slug": "pyrin",
+      "name": "Pyrin",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 93,
+      "partnerSkill": {
+        "name": "Red Hare",
+        "description": "Can be ridden. Changes rider attacks to Fire.",
+        "tags": [
+          "ground-mount",
+          "fire-boost",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "pyrin-noct",
+      "name": "Pyrin Noct",
+      "elements": [
+        "fire",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 93,
+      "partnerSkill": {
+        "name": "Black Hare",
+        "description": "Can be ridden. Changes rider attacks to Dark.",
+        "tags": [
+          "ground-mount",
+          "dark-boost",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "relaxaurus",
+      "name": "Relaxaurus",
+      "elements": [
+        "dragon",
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 94,
+      "partnerSkill": {
+        "name": "Hungry Missile",
+        "description": "Can be ridden. Fires missile while mounted.",
+        "tags": [
+          "ground-mount",
+          "firearms"
+        ]
+      }
+    },
+    {
+      "slug": "relaxaurus-lux",
+      "name": "Relaxaurus Lux",
+      "elements": [
+        "dragon",
+        "electricity"
+      ],
+      "rarity": "epic",
+      "dexNo": 94,
+      "partnerSkill": {
+        "name": "Hungry Missile",
+        "description": "Can be ridden. Fires electric missile while mounted.",
+        "tags": [
+          "ground-mount",
+          "firearms",
+          "electricity-boost"
+        ]
+      }
+    },
+    {
+      "slug": "foxcicle",
+      "name": "Foxcicle",
       "elements": [
         "ice"
       ],
-      "rarity": "common",
+      "rarity": "rare",
+      "dexNo": 95,
       "partnerSkill": {
-        "name": "Gold Digger",
-        "description": "When assigned to Ranch, digs up gold coins.",
+        "name": "Crystal Carrier",
+        "description": "While fighting together, Ice attacks deal more damage.",
         "tags": [
-          "more-drops",
           "base-work",
+          "combat-buffs",
           "ice-boost"
         ]
       }
     },
     {
-      "slug": "melpaca",
-      "name": "Melpaca",
+      "slug": "beakon",
+      "name": "Beakon",
       "elements": [
-        "normal"
+        "electricity"
       ],
-      "rarity": "common",
-      "dexNo": 36,
+      "rarity": "rare",
+      "dexNo": 96,
       "partnerSkill": {
-        "name": "Pacapaca Wool",
-        "description": "Can be ridden. Ranch wool producer.",
+        "name": "Thunderous",
+        "description": "Can be ridden as a flying mount. Changes rider attacks to Electric.",
+        "tags": [
+          "mobility",
+          "combat-buffs",
+          "electricity-boost",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "beakon-cryst",
+      "name": "Beakon Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "rare",
+      "dexNo": 96,
+      "partnerSkill": {
+        "name": "Coldsnap",
+        "description": "Can be ridden as a flying mount. While mounted, changes the player's attack type to Ice and increases Attack by 5~20%. This Pal’s Movement Speed increases by 5~25% for each other Ice Pal in your party. (Excluding Beakon Cryst)",
+        "tags": [
+          "mobility",
+          "combat-buffs",
+          "ice-boost",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "ghangler",
+      "name": "Ghangler",
+      "elements": [
+        "dark",
+        "water"
+      ],
+      "rarity": "rare",
+      "dexNo": 97,
+      "partnerSkill": {
+        "name": "Deep Angler",
+        "description": "Improves fishing outcomes while in party.",
+        "tags": [
+          "fishing",
+          "more-drops"
+        ],
+        "stackGroup": "fishing-luck",
+        "stackValue": 1,
+        "stackUnit": "",
+        "stackLabel": "+{n} fishing bonus layer"
+      }
+    },
+    {
+      "slug": "ghangler-ignis",
+      "name": "Ghangler Ignis",
+      "elements": [
+        "fire",
+        "water"
+      ],
+      "rarity": "rare",
+      "dexNo": 97,
+      "partnerSkill": {
+        "name": "Abyssal Celebrity Chef",
+        "description": "Can be ridden to travel on water. This Pal’s Movement Speed increases by 5~25% for each other Fire or Water Pal in your party. (Excluding Ghangler Ignis)",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "rayhound",
+      "name": "Rayhound",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "rare",
+      "dexNo": 98,
+      "partnerSkill": {
+        "name": "Jumping Force",
+        "description": "Can be ridden. Improves jump height while mounted.",
         "tags": [
           "ground-mount",
-          "base-work",
-          "more-drops"
+          "mobility",
+          "electricity-boost"
+        ]
+      }
+    },
+    {
+      "slug": "rayhound-cryst",
+      "name": "Rayhound Cryst",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "rare",
+      "dexNo": 98,
+      "partnerSkill": {
+        "name": "Snow Shepherd",
+        "description": "Can be ridden. Can perform a double jump while mounted. While in party, increases Defense of Ice Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "mobility",
+          "ice-boost",
+          "ground-mount"
         ]
       }
     },
@@ -1126,13 +2560,80 @@
       }
     },
     {
+      "slug": "menasting-terra",
+      "name": "Menasting Terra",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 99,
+      "partnerSkill": {
+        "name": "Golden Scorpion",
+        "description": "While in party, player's Defense increases by 5~10%, and Electric Pals drop 40~80% more items when defeated. (Does not stack)",
+        "tags": [
+          "more-drops",
+          "electricity-boost"
+        ]
+      }
+    },
+    {
+      "slug": "needoll",
+      "name": "Needoll",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 100,
+      "partnerSkill": {
+        "name": "Hug Me Please",
+        "description": "While in party, increases player's and Pals' damage to enemies afflicted with Ivy-Covered by 50~65%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "needoll-noct",
+      "name": "Needoll Noct",
+      "elements": [
+        "dark",
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 100,
+      "partnerSkill": {
+        "name": "Hug You So Much",
+        "description": "While in party, the player's attacks inflict Ivy-Covered 2~6. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "reindrix",
+      "name": "Reindrix",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 101,
+      "partnerSkill": {
+        "name": "Cool Body",
+        "description": "Keeps the player cool in hot environments.",
+        "tags": [
+          "insulation",
+          "ground-mount"
+        ]
+      }
+    },
+    {
       "slug": "mossanda",
       "name": "Mossanda",
       "elements": [
         "leaf"
       ],
       "rarity": "rare",
-      "dexNo": 33,
+      "dexNo": 102,
       "partnerSkill": {
         "name": "Grenadier Panda",
         "description": "Can be ridden. Fires explosive grenades while mounted.",
@@ -1150,6 +2651,7 @@
         "electricity"
       ],
       "rarity": "rare",
+      "dexNo": 102,
       "partnerSkill": {
         "name": "Grenadier Panda",
         "description": "Can be ridden. Fires electric grenades while mounted.",
@@ -1161,198 +2663,569 @@
       }
     },
     {
-      "slug": "mozzarina",
-      "name": "Mozzarina",
+      "slug": "chillet",
+      "name": "Chillet",
       "elements": [
-        "normal"
+        "ice",
+        "dragon"
       ],
       "rarity": "common",
-      "dexNo": 29,
+      "dexNo": 103,
       "partnerSkill": {
-        "name": "Milk Maker",
-        "description": "When assigned to Ranch, produces Milk.",
+        "name": "Wriggling Weasel",
+        "description": "Can be ridden. Changes rider attacks to Dragon.",
         "tags": [
+          "ground-mount",
+          "dragon-boost",
+          "ice-boost"
+        ]
+      }
+    },
+    {
+      "slug": "chillet-ignis",
+      "name": "Chillet Ignis",
+      "elements": [
+        "fire",
+        "dragon"
+      ],
+      "rarity": "rare",
+      "dexNo": 103,
+      "partnerSkill": {
+        "name": "Sparkling Weasel",
+        "description": "Can be ridden. While mounted, changes the player’s attack type to Fire and increases Attack by 5~20%.",
+        "tags": [
+          "combat-buffs",
+          "fire-boost",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "ragnahawk",
+      "name": "Ragnahawk",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 104,
+      "partnerSkill": {
+        "name": "Flame Wing",
+        "description": "Can be ridden as a flying mount. Changes rider attacks to Fire.",
+        "tags": [
+          "combat-buffs",
+          "fire-boost",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "moldron",
+      "name": "Moldron",
+      "elements": [
+        "fire",
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 105,
+      "partnerSkill": {
+        "name": "Magma Overload",
+        "description": "Can be ridden as a mount. This Pal's Attack increases by 4~8% for each other Fire or Ground Pal in your party.",
+        "tags": [
+          "combat-buffs",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "moldron-cryst",
+      "name": "Moldron Cryst",
+      "elements": [
+        "ice",
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 105,
+      "partnerSkill": {
+        "name": "Ice Overload",
+        "description": "Can be ridden. While in party, improves player's and Pals' Ice damage to enemy weak points by 25~40%. (Does not stack)",
+        "tags": [
+          "ice-boost",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "palumba",
+      "name": "Palumba",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "rare",
+      "dexNo": 106,
+      "partnerSkill": {
+        "name": "Samba Step",
+        "description": "Can be ridden. Movement Speed is increased by 155~240% while mounted on grass.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "digtoise",
+      "name": "Digtoise",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 107,
+      "partnerSkill": {
+        "name": "Drill Crusher",
+        "description": "When activated, enters the Shell Spin state. Follows the player while spinning, increasing ore mining efficiency by 800~2000%.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "broncherry",
+      "name": "Broncherry",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 108,
+      "partnerSkill": {
+        "name": "Overaffectionate",
+        "description": "Can be ridden. Increases player max carry weight while in party.",
+        "tags": [
+          "ground-mount",
+          "carry-weight",
+          "leaf-boost"
+        ],
+        "stackGroup": "carry-weight",
+        "stackValue": 100,
+        "stackUnit": "",
+        "stackLabel": "+{n} player carry weight"
+      }
+    },
+    {
+      "slug": "broncherry-aqua",
+      "name": "Broncherry Aqua",
+      "elements": [
+        "leaf",
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 108,
+      "partnerSkill": {
+        "name": "Purity's Full Bloom",
+        "description": "Can be ridden. While in party, Pal Eggs you pick up have a 45~55% chance of becoming an Alpha Pal Egg. (Does not stack)",
+        "tags": [
+          "eggs",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "dumud",
+      "name": "Dumud",
+      "elements": [
+        "earth",
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 109,
+      "partnerSkill": {
+        "name": "Mud-Clad",
+        "description": "While in party, improves Ground-type teammate effectiveness.",
+        "tags": [
+          "base-work",
+          "combat-buffs",
+          "earth-boost"
+        ]
+      }
+    },
+    {
+      "slug": "dumud-gild",
+      "name": "Dumud Gild",
+      "elements": [
+        "earth",
+        "water"
+      ],
+      "rarity": "rare",
+      "dexNo": 109,
+      "partnerSkill": {
+        "name": "Golden Harvest",
+        "description": "While in party, increases amount of Gold Coin dropped by enemies by +100~200%. Sometimes drops High Quality Pal Oil when assigned to Ranch, with a small chance to drop Gold Coin. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "braloha",
+      "name": "Braloha",
+      "elements": [
+        "leaf",
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 110,
+      "partnerSkill": {
+        "name": "Balmy Weather",
+        "description": "Can be ridden. While in your base, increases the egg production speed of Pals assigned to Breeding Farm by 20~50%. (Does not stack)",
+        "tags": [
+          "eggs",
+          "ground-mount",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "kitsun",
+      "name": "Kitsun",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 111,
+      "partnerSkill": {
+        "name": "Clear Mind",
+        "description": "Can be ridden. Keeps the player warm in cold environments.",
+        "tags": [
+          "ground-mount",
+          "insulation",
+          "fire-boost"
+        ]
+      }
+    },
+    {
+      "slug": "kitsun-noct",
+      "name": "Kitsun Noct",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 111,
+      "partnerSkill": {
+        "name": "Gloomhowl",
+        "description": "Can be ridden. While in party, player and party Pals take 15~30% less Dark damage and are immune to Blind. (Does not stack)",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "blazehowl",
+      "name": "Blazehowl",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 112,
+      "partnerSkill": {
+        "name": "Hellfire Breath",
+        "description": "Can be ridden. Boosts Fire damage while fighting together vs Grass.",
+        "tags": [
+          "ground-mount",
+          "fire-boost",
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "blazehowl-noct",
+      "name": "Blazehowl Noct",
+      "elements": [
+        "fire",
+        "dark"
+      ],
+      "rarity": "epic",
+      "dexNo": 112,
+      "partnerSkill": {
+        "name": "Darkflame Breath",
+        "description": "Can be ridden. Boosts Fire damage while fighting together vs Neutral.",
+        "tags": [
+          "ground-mount",
+          "fire-boost",
+          "dark-boost"
+        ]
+      }
+    },
+    {
+      "slug": "warsect",
+      "name": "Warsect",
+      "elements": [
+        "earth",
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 113,
+      "partnerSkill": {
+        "name": "Hard Armor",
+        "description": "While fighting together, improves player defense.",
+        "tags": [
+          "shield",
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "warsect-terra",
+      "name": "Warsect Terra",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 113,
+      "partnerSkill": {
+        "name": "Fullmetal Shell",
+        "description": "While in your party, generates a barrier around the player after 5 melee hits are landed within 5~9 seconds. (Does not stack)",
+        "tags": [
+          "melee"
+        ]
+      }
+    },
+    {
+      "slug": "frostplume",
+      "name": "Frostplume",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 114,
+      "partnerSkill": {
+        "name": "Peacock Pounce",
+        "description": "While in party, Frostplume's icy aura sharpens focus, increasing the player's reload speeds by 20~50%. (Does not stack)",
+        "tags": [
+          "firearms"
+        ]
+      }
+    },
+    {
+      "slug": "majex",
+      "name": "Majex",
+      "elements": [
+        "dark",
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 115,
+      "partnerSkill": {
+        "name": "Phantasmal Arcana",
+        "description": "While in party, when the player attacks an enemy afflicted with Burn, the enemy creates flames around itself, dealing continuous damage equal to 15~30% of the player's attack damage to enemies that come into contact with them. (Does not stack.)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "sibelyx",
+      "name": "Sibelyx",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "rare",
+      "dexNo": 116,
+      "partnerSkill": {
+        "name": "Silk Maker",
+        "description": "When in base, produces High Quality Cloth. Cold insulation aura.",
+        "tags": [
+          "insulation",
           "base-work",
           "more-drops"
         ]
       }
     },
     {
-      "slug": "necromus",
-      "name": "Necromus",
-      "elements": [
-        "dark"
-      ],
-      "rarity": "legendary",
-      "dexNo": 109,
-      "partnerSkill": {
-        "name": "Dark Knight of the Abyss",
-        "description": "Can be ridden. Enhances mount charge / lance combat.",
-        "tags": [
-          "ground-mount",
-          "melee",
-          "dark-boost"
-        ]
-      }
-    },
-    {
-      "slug": "neptilius",
-      "name": "Neptilius",
-      "elements": [
-        "water"
-      ],
-      "rarity": "legendary",
-      "partnerSkill": {
-        "name": "Abyssal Dominator",
-        "description": "Legendary ocean mount — swimming sovereignty and Water damage.",
-        "tags": [
-          "ground-mount",
-          "water-boost",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "nitewing",
-      "name": "Nitewing",
+      "slug": "sibelyx-primo",
+      "name": "Sibelyx Primo",
       "elements": [
         "normal"
       ],
-      "rarity": "common",
-      "dexNo": 38,
+      "rarity": "epic",
+      "dexNo": 116,
       "partnerSkill": {
-        "name": "Travel Companion",
-        "description": "Can be ridden as a flying mount.",
+        "name": "Gilded Shroud",
+        "description": "While in party, increases Defense of Neutral Pals by 15~30%. (Does not stack) Sometimes makes High Quality Cloth when assigned to Ranch.",
         "tags": [
-          "flying-mount"
+          "base-work",
+          "normal-boost"
         ]
       }
     },
     {
-      "slug": "orserk",
-      "name": "Orserk",
+      "slug": "maraith",
+      "name": "Maraith",
       "elements": [
-        "dragon",
-        "electricity"
+        "dark"
       ],
-      "rarity": "epic",
-      "dexNo": 106,
+      "rarity": "rare",
+      "dexNo": 117,
       "partnerSkill": {
-        "name": "Ferocious Thunder Dragon",
-        "description": "While fighting together, greatly boosts Electric damage vs Water.",
+        "name": "Messenger of Death",
+        "description": "Can be ridden. While in party, all Party Pals' Active Skill cooldowns are reduced by 30~60% whenever you defeat an enemy. (Does not stack)",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "shroomer",
+      "name": "Shroomer",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 118,
+      "partnerSkill": {
+        "name": "Rampant Spores",
+        "description": "Can be ridden. Sometimes drops Mushroom or Cavern Mushroom when assigned to Ranch.",
+        "tags": [
+          "base-work",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "shroomer-noct",
+      "name": "Shroomer Noct",
+      "elements": [
+        "leaf",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 118,
+      "partnerSkill": {
+        "name": "Roiling Spores",
+        "description": "Can be ridden. While at a base, its mysterious spores slow the rate at which the SAN value of allies at the base decreases by 10~15%.",
+        "tags": [
+          "base-work",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "icelyn",
+      "name": "Icelyn",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 119,
+      "partnerSkill": {
+        "name": "Witch's Icy Veil",
+        "description": "When activated, Icelyn changes the player's attack type to Ice and increases Attack by 30~50%.",
         "tags": [
           "combat-buffs",
-          "electricity-boost",
+          "ice-boost"
+        ]
+      }
+    },
+    {
+      "slug": "gildra",
+      "name": "Gildra",
+      "elements": [
+        "dark",
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 120,
+      "partnerSkill": {
+        "name": "Resurrection",
+        "description": "While fighting together, when Gildra is incapacitated, it revives with its Hunger reduced to 0.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "jormuntide",
+      "name": "Jormuntide",
+      "elements": [
+        "dragon",
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 121,
+      "partnerSkill": {
+        "name": "Stormbringer Sea Dragon",
+        "description": "Can be ridden. Prevents stamina drain while swimming.",
+        "tags": [
+          "ground-mount",
+          "water-boost",
           "dragon-boost"
         ]
       }
     },
     {
-      "slug": "paladius",
-      "name": "Paladius",
+      "slug": "jormuntide-ignis",
+      "name": "Jormuntide Ignis",
       "elements": [
-        "normal"
+        "dragon",
+        "fire"
       ],
-      "rarity": "legendary",
-      "dexNo": 108,
+      "rarity": "epic",
+      "dexNo": 121,
       "partnerSkill": {
-        "name": "Holy Knight of the Forest",
-        "description": "Can be ridden. Enhances mount charge / lance combat.",
+        "name": "Stormbringer Lava Dragon",
+        "description": "Can be ridden. Powerful Fire/Dragon combat mount.",
         "tags": [
           "ground-mount",
-          "melee",
-          "shield"
+          "fire-boost",
+          "dragon-boost"
         ]
       }
     },
     {
-      "slug": "panthalus",
-      "name": "Panthalus",
+      "slug": "suzaku",
+      "name": "Suzaku",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 122,
+      "partnerSkill": {
+        "name": "Wings of Flame",
+        "description": "Can be ridden as a flying mount. Enhances Fire attacks.",
+        "tags": [
+          "flying-mount",
+          "fire-boost"
+        ]
+      }
+    },
+    {
+      "slug": "suzaku-aqua",
+      "name": "Suzaku Aqua",
       "elements": [
         "water"
       ],
       "rarity": "epic",
-      "isNew": true,
+      "dexNo": 122,
       "partnerSkill": {
-        "name": "World Tide",
-        "description": "Required in party to open World Tree barrier after researcher turn-in.",
+        "name": "Wings of Water",
+        "description": "Can be ridden as a flying mount. Enhances Water attacks.",
+        "tags": [
+          "flying-mount",
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "dazemu",
+      "name": "Dazemu",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 123,
+      "partnerSkill": {
+        "name": "Sand Sprint",
+        "description": "Can be ridden. Movement Speed is increased by 50~100% while mounted on sand.",
         "tags": [
           "mobility",
-          "water-boost"
-        ]
-      }
-    },
-    {
-      "slug": "pengullet",
-      "name": "Pengullet",
-      "elements": [
-        "water",
-        "ice"
-      ],
-      "rarity": "common",
-      "dexNo": 10,
-      "partnerSkill": {
-        "name": "Pengullet Cannon",
-        "description": "Can be loaded into a launcher; useful near water and fishing spots.",
-        "tags": [
-          "firearms",
-          "fishing",
-          "water-boost"
-        ]
-      }
-    },
-    {
-      "slug": "penking",
-      "name": "Penking",
-      "elements": [
-        "water",
-        "ice"
-      ],
-      "rarity": "rare",
-      "dexNo": 11,
-      "partnerSkill": {
-        "name": "Brave Sailor",
-        "description": "While fighting together, Water attacks deal more damage.",
-        "tags": [
-          "combat-buffs",
-          "water-boost",
-          "fishing"
-        ]
-      }
-    },
-    {
-      "slug": "pyrin",
-      "name": "Pyrin",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "rare",
-      "dexNo": 58,
-      "partnerSkill": {
-        "name": "Red Hare",
-        "description": "Can be ridden. Changes rider attacks to Fire.",
-        "tags": [
-          "ground-mount",
-          "fire-boost",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "pyrin-noct",
-      "name": "Pyrin Noct",
-      "elements": [
-        "fire",
-        "dark"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Black Hare",
-        "description": "Can be ridden. Changes rider attacks to Dark.",
-        "tags": [
-          "ground-mount",
-          "dark-boost",
-          "mobility"
+          "ground-mount"
         ]
       }
     },
@@ -1363,13 +3236,14 @@
         "dragon"
       ],
       "rarity": "rare",
-      "dexNo": 95,
+      "dexNo": 124,
       "partnerSkill": {
         "name": "Sky Dragon's Affection",
         "description": "Can be ridden as a flying mount. Boosts Dragon damage while fighting together.",
         "tags": [
-          "flying-mount",
-          "dragon-boost"
+          "combat-buffs",
+          "dragon-boost",
+          "flying-mount"
         ]
       }
     },
@@ -1381,100 +3255,97 @@
         "leaf"
       ],
       "rarity": "epic",
+      "dexNo": 124,
       "partnerSkill": {
         "name": "Sky Dragon's Affection",
         "description": "Can be ridden as a flying mount. Boosts Grass damage while fighting together.",
         "tags": [
-          "flying-mount",
-          "leaf-boost"
+          "combat-buffs",
+          "leaf-boost",
+          "flying-mount"
         ]
       }
     },
     {
-      "slug": "ragnahawk",
-      "name": "Ragnahawk",
+      "slug": "lullu",
+      "name": "Lullu",
       "elements": [
-        "fire"
+        "leaf"
       ],
-      "rarity": "rare",
-      "dexNo": 74,
+      "rarity": "common",
+      "dexNo": 125,
       "partnerSkill": {
-        "name": "Flame Wing",
-        "description": "Can be ridden as a flying mount. Changes rider attacks to Fire.",
+        "name": "Floral Boost",
+        "description": "While at a base, Lullu fills farms with good spirits, increasing the growth rate of the crops by 50~70%.",
         "tags": [
-          "flying-mount",
-          "fire-boost"
+          "base-work"
         ]
       }
     },
     {
-      "slug": "rayhound",
-      "name": "Rayhound",
+      "slug": "kikit",
+      "name": "Kikit",
       "elements": [
-        "electricity"
+        "earth"
       ],
-      "rarity": "rare",
-      "dexNo": 60,
+      "rarity": "common",
+      "dexNo": 126,
       "partnerSkill": {
-        "name": "Jumping Force",
-        "description": "Can be ridden. Improves jump height while mounted.",
+        "name": "Sandball Soccer",
+        "description": "While in party, increases Defense of Ground Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "earth-boost"
+        ]
+      }
+    },
+    {
+      "slug": "yakumo",
+      "name": "Yakumo",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 127,
+      "partnerSkill": {
+        "name": "Buddy Travel",
+        "description": "Ground companion — early mobility and Neutral support.",
         "tags": [
           "ground-mount",
           "mobility",
-          "electricity-boost"
+          "normal-boost"
         ]
       }
     },
     {
-      "slug": "reindrix",
-      "name": "Reindrix",
+      "slug": "skutlass",
+      "name": "Skutlass",
       "elements": [
-        "ice"
-      ],
-      "rarity": "common",
-      "dexNo": 59,
-      "partnerSkill": {
-        "name": "Cool Body",
-        "description": "Keeps the player cool in hot environments.",
-        "tags": [
-          "insulation",
-          "ground-mount"
-        ]
-      }
-    },
-    {
-      "slug": "relaxaurus",
-      "name": "Relaxaurus",
-      "elements": [
-        "dragon",
         "water"
       ],
-      "rarity": "epic",
-      "dexNo": 85,
+      "rarity": "rare",
+      "dexNo": 128,
       "partnerSkill": {
-        "name": "Hungry Missile",
-        "description": "Can be ridden. Fires missile while mounted.",
+        "name": "Fish Fillet",
+        "description": "When activated, Skutlass becomes the player's katana (Attack: 2600~3900). If it does not revert to its normal form quickly, Skutlass will become incapacitated. It will also become incapacitated if Iaigiri is used.",
         "tags": [
-          "ground-mount",
-          "firearms"
+          "combat-buffs"
         ]
       }
     },
     {
-      "slug": "relaxaurus-lux",
-      "name": "Relaxaurus Lux",
+      "slug": "skutlass-ignis",
+      "name": "Skutlass Ignis",
       "elements": [
-        "dragon",
-        "electricity"
+        "water",
+        "fire"
       ],
-      "rarity": "epic",
+      "rarity": "rare",
+      "dexNo": 128,
       "partnerSkill": {
-        "name": "Hungry Missile",
-        "description": "Can be ridden. Fires electric missile while mounted.",
+        "name": "Seared Fish Fillet",
+        "description": "When activated, Skutlass Ignis becomes the player's katana (Attack: 2900~4200). If it does not revert to its normal form quickly, Skutlass Ignis will become incapacitated. It will also become incapacitated if Iaigiri is used.",
         "tags": [
-          "ground-mount",
-          "firearms",
-          "electricity-boost"
+          "combat-buffs"
         ]
       }
     },
@@ -1486,7 +3357,7 @@
         "earth"
       ],
       "rarity": "rare",
-      "dexNo": 88,
+      "dexNo": 129,
       "partnerSkill": {
         "name": "Ore-Loving Machine",
         "description": "Can be ridden. Improves mining while mounted.",
@@ -1505,6 +3376,7 @@
         "earth"
       ],
       "rarity": "rare",
+      "dexNo": 129,
       "partnerSkill": {
         "name": "Ice-Loving Machine",
         "description": "Can be ridden. Improves mining while mounted.",
@@ -1516,313 +3388,119 @@
       }
     },
     {
-      "slug": "robinquill",
-      "name": "Robinquill",
-      "elements": [
-        "leaf"
-      ],
-      "rarity": "rare",
-      "dexNo": 48,
-      "partnerSkill": {
-        "name": "Hawk Eye",
-        "description": "While fighting together, player bow / arrow damage rises.",
-        "tags": [
-          "bow",
-          "combat-buffs"
-        ],
-        "stackGroup": "player-bow",
-        "stackValue": 20,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% bow / arrow damage"
-      }
-    },
-    {
-      "slug": "robinquill-terra",
-      "name": "Robinquill Terra",
-      "elements": [
-        "leaf",
-        "earth"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Hawk Eye",
-        "description": "While fighting together, player bow / arrow damage rises.",
-        "tags": [
-          "bow",
-          "combat-buffs"
-        ],
-        "stackGroup": "player-bow",
-        "stackValue": 20,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% bow / arrow damage"
-      }
-    },
-    {
-      "slug": "selyne",
-      "name": "Selyne",
-      "elements": [
-        "dark",
-        "normal"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Moonlight Grace",
-        "description": "Astral mount/support — strong vs Dragon teams need Ice/Dragon prep.",
-        "tags": [
-          "flying-mount",
-          "dark-boost",
-          "combat-buffs"
-        ]
-      }
-    },
-    {
-      "slug": "shadowbeak",
-      "name": "Shadowbeak",
+      "slug": "starryon",
+      "name": "Starryon",
       "elements": [
         "dark"
       ],
-      "rarity": "epic",
-      "dexNo": 101,
+      "rarity": "rare",
+      "dexNo": 130,
       "partnerSkill": {
-        "name": "Modified DNA",
-        "description": "Can be ridden as a flying mount. Greatly boosts Dark damage while fighting together.",
+        "name": "Night Dancer",
+        "description": "Can be ridden. Boosts jumping ability while mounted. This Pal's movement speed increases by +50~100% at night.",
         "tags": [
-          "flying-mount",
-          "dark-boost"
+          "mobility",
+          "ground-mount"
         ]
       }
     },
     {
-      "slug": "sibelyx",
-      "name": "Sibelyx",
+      "slug": "starryon-primo",
+      "name": "Starryon Primo",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "epic",
+      "dexNo": 130,
+      "partnerSkill": {
+        "name": "Light Dancer",
+        "description": "Can be ridden. Boosts Jump Power while mounted. This Pal’s Movement Speed increases by 5~25% for each other Neutral Pal in your party. (Excluding Starryon Primo)",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "pierdon",
+      "name": "Pierdon",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 131,
+      "partnerSkill": {
+        "name": "Power Stone",
+        "description": "While in party, increases player's and Pals' damage to enemies afflicted with Muddy by 50~65%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "pierdon-cryst",
+      "name": "Pierdon Cryst",
       "elements": [
         "ice"
       ],
       "rarity": "rare",
-      "dexNo": 54,
+      "dexNo": 131,
       "partnerSkill": {
-        "name": "Silk Maker",
-        "description": "When in base, produces High Quality Cloth. Cold insulation aura.",
+        "name": "Power Crystal",
+        "description": "While in party, player and party Pals take 15~30% less Dragon damage. (Does not stack)",
         "tags": [
-          "insulation",
-          "base-work",
-          "more-drops"
+          "combat-buffs"
         ]
       }
     },
     {
-      "slug": "silvegis",
-      "name": "Silvegis",
+      "slug": "cryolinx",
+      "name": "Cryolinx",
       "elements": [
-        "dragon"
+        "ice"
       ],
-      "rarity": "epic",
+      "rarity": "rare",
+      "dexNo": 132,
       "partnerSkill": {
-        "name": "Silver Wings",
-        "description": "Dragon flyer for late-game traverse and Dragon syn.",
+        "name": "Dragon Hunter",
+        "description": "While fighting together, greatly boosts damage vs Dragon.",
         "tags": [
-          "flying-mount",
+          "combat-buffs",
+          "ice-boost",
           "dragon-boost"
         ]
       }
     },
     {
-      "slug": "surfent",
-      "name": "Surfent",
+      "slug": "cryolinx-terra",
+      "name": "Cryolinx Terra",
       "elements": [
-        "water"
-      ],
-      "rarity": "common",
-      "dexNo": 65,
-      "partnerSkill": {
-        "name": "Swift Swimmer",
-        "description": "Can be ridden. Prevents stamina drain while swimming.",
-        "tags": [
-          "ground-mount",
-          "mobility",
-          "water-boost"
-        ]
-      }
-    },
-    {
-      "slug": "suzaku",
-      "name": "Suzaku",
-      "elements": [
-        "fire"
-      ],
-      "rarity": "epic",
-      "dexNo": 102,
-      "partnerSkill": {
-        "name": "Wings of Flame",
-        "description": "Can be ridden as a flying mount. Enhances Fire attacks.",
-        "tags": [
-          "flying-mount",
-          "fire-boost"
-        ]
-      }
-    },
-    {
-      "slug": "suzaku-aqua",
-      "name": "Suzaku Aqua",
-      "elements": [
-        "water"
-      ],
-      "rarity": "epic",
-      "partnerSkill": {
-        "name": "Wings of Water",
-        "description": "Can be ridden as a flying mount. Enhances Water attacks.",
-        "tags": [
-          "flying-mount",
-          "water-boost"
-        ]
-      }
-    },
-    {
-      "slug": "teafant",
-      "name": "Teafant",
-      "elements": [
-        "water"
-      ],
-      "rarity": "common",
-      "dexNo": 2,
-      "partnerSkill": {
-        "name": "Soothing Shower",
-        "description": "When activated, restores player HP over time.",
-        "tags": [
-          "healing"
-        ]
-      }
-    },
-    {
-      "slug": "univolt",
-      "name": "Univolt",
-      "elements": [
-        "electricity"
+        "earth"
       ],
       "rarity": "rare",
-      "dexNo": 56,
+      "dexNo": 132,
       "partnerSkill": {
-        "name": "Swift Deity",
-        "description": "Can be ridden. Changes rider attacks to Electric.",
+        "name": "Explosive Strength",
+        "description": "While in party, when attacking enemy weak point, increases the power of the next weak point attack by 30~60%. (Does not stack)",
         "tags": [
-          "ground-mount",
-          "electricity-boost",
-          "mobility"
-        ]
-      }
-    },
-    {
-      "slug": "vanwyrm",
-      "name": "Vanwyrm",
-      "elements": [
-        "fire",
-        "dark"
-      ],
-      "rarity": "rare",
-      "dexNo": 71,
-      "partnerSkill": {
-        "name": "Aerial Marauder",
-        "description": "Can be ridden as a flying mount. Improves loot from defeated Pals.",
-        "tags": [
-          "flying-mount",
-          "more-drops"
-        ]
-      }
-    },
-    {
-      "slug": "vanwyrm-cryst",
-      "name": "Vanwyrm Cryst",
-      "elements": [
-        "ice",
-        "dark"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Aerial Marauder",
-        "description": "Can be ridden as a flying mount. Improves loot from defeated Pals.",
-        "tags": [
-          "flying-mount",
-          "more-drops",
-          "ice-boost"
-        ]
-      }
-    },
-    {
-      "slug": "vixy",
-      "name": "Vixy",
-      "elements": [
-        "normal"
-      ],
-      "rarity": "common",
-      "dexNo": 14,
-      "partnerSkill": {
-        "name": "Dig Here!",
-        "description": "When assigned to Ranch, sometimes digs up Pal Spheres.",
-        "tags": [
-          "capture",
-          "base-work",
-          "more-drops"
-        ]
-      }
-    },
-    {
-      "slug": "warsect",
-      "name": "Warsect",
-      "elements": [
-        "earth",
-        "leaf"
-      ],
-      "rarity": "epic",
-      "dexNo": 92,
-      "partnerSkill": {
-        "name": "Hard Armor",
-        "description": "While fighting together, improves player defense.",
-        "tags": [
-          "shield",
           "combat-buffs"
         ]
       }
     },
     {
-      "slug": "wixen",
-      "name": "Wixen",
+      "slug": "snugloo",
+      "name": "Snugloo",
       "elements": [
-        "fire"
+        "ice"
       ],
-      "rarity": "rare",
-      "dexNo": 76,
+      "rarity": "common",
+      "dexNo": 133,
       "partnerSkill": {
-        "name": "Lord Fox",
-        "description": "While fighting together, Fire attacks deal more player damage.",
+        "name": "Invisible Eye",
+        "description": "While in party, reduces the chance of being detected by enemies. (Does not stack)",
         "tags": [
-          "combat-buffs",
-          "fire-boost"
-        ],
-        "stackGroup": "player-fire",
-        "stackValue": 10,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% player Fire damage"
-      }
-    },
-    {
-      "slug": "wixen-noct",
-      "name": "Wixen Noct",
-      "elements": [
-        "dark",
-        "fire"
-      ],
-      "rarity": "rare",
-      "partnerSkill": {
-        "name": "Lord Fox",
-        "description": "While fighting together, Dark attacks deal more player damage.",
-        "tags": [
-          "combat-buffs",
-          "dark-boost"
-        ],
-        "stackGroup": "player-dark",
-        "stackValue": 10,
-        "stackUnit": "%",
-        "stackLabel": "+{n}% player Dark damage"
+          "combat-buffs"
+        ]
       }
     },
     {
@@ -1832,7 +3510,7 @@
         "ice"
       ],
       "rarity": "rare",
-      "dexNo": 91,
+      "dexNo": 134,
       "partnerSkill": {
         "name": "Guardian of the Snowy Mountain",
         "description": "Can be ridden. Increases player max carry weight while in party.",
@@ -1854,6 +3532,7 @@
         "leaf"
       ],
       "rarity": "epic",
+      "dexNo": 134,
       "partnerSkill": {
         "name": "Guardian of the Forest",
         "description": "Can be ridden. Increases player max carry weight while in party.",
@@ -1868,18 +3547,1299 @@
       }
     },
     {
+      "slug": "sootseer",
+      "name": "Sootseer",
+      "elements": [
+        "dark",
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 135,
+      "partnerSkill": {
+        "name": "Grave Robber",
+        "description": "While in party, player and party Pals take 15~30% less Neutral damage. (Does not stack) Sometimes digs up Bone when assigned to Ranch.",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "carnibora",
+      "name": "Carnibora",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "rare",
+      "dexNo": 136,
+      "partnerSkill": {
+        "name": "Entangling Tongue",
+        "description": "While in party, when the player performs a dodge roll or dodge step, Carnibora creates a whirlwind that deals damage to enemies it touches (Grass / Power: 40~80). (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "blazamut",
+      "name": "Blazamut",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 137,
+      "partnerSkill": {
+        "name": "Magma Kaiser",
+        "description": "Can be ridden. Boosts Fire damage while fighting together.",
+        "tags": [
+          "ground-mount",
+          "fire-boost",
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "blazamut-ryu",
+      "name": "Blazamut Ryu",
+      "elements": [
+        "dragon",
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 137,
+      "partnerSkill": {
+        "name": "Dragon Kaiser",
+        "description": "Can be ridden. Boosts Dragon damage while fighting together.",
+        "tags": [
+          "ground-mount",
+          "dragon-boost",
+          "fire-boost"
+        ]
+      }
+    },
+    {
+      "slug": "dualith",
+      "name": "Dualith",
+      "elements": [
+        "earth",
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 138,
+      "partnerSkill": {
+        "name": "Forest Laser",
+        "description": "Can be ridden. When activated, Dualith fires a powerful Grass laser from its right hand.",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "dualith-noct",
+      "name": "Dualith Noct",
+      "elements": [
+        "earth",
+        "dark"
+      ],
+      "rarity": "epic",
+      "dexNo": 138,
+      "partnerSkill": {
+        "name": "Corruption Laser",
+        "description": "Can be ridden. When activated, Dualith Noct fires a powerful Dark laser from its right hand.",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "anubis",
+      "name": "Anubis",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 139,
+      "partnerSkill": {
+        "name": "Guardian of the Desert",
+        "description": "When fighting together, player attacks can clear Earth defenses; top Handiwork worker.",
+        "tags": [
+          "combat-buffs",
+          "earth-boost",
+          "melee",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "sekhmet",
+      "name": "Sekhmet",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 140,
+      "partnerSkill": {
+        "name": "Desert Empress",
+        "description": "While at base, boosts Anubis's work speed by 20~40%. Increases efficiency by 30~60% if Sekhmet is also working at a Workbench, Workshop, or other related facilities. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "prixter",
+      "name": "Prixter",
+      "elements": [
+        "dark",
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 141,
+      "partnerSkill": {
+        "name": "Phantom Venom",
+        "description": "While in party, increases player's and Pals' damage to enemies afflicted with Poison by 50~65%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "prixter-lux",
+      "name": "Prixter Lux",
+      "elements": [
+        "electricity",
+        "earth"
+      ],
+      "rarity": "rare",
+      "dexNo": 141,
+      "partnerSkill": {
+        "name": "Scorpion Longwave",
+        "description": "When activated, Prixter Lux changes the player's attack type to Electric and increases Attack by 30~50%.",
+        "tags": [
+          "combat-buffs",
+          "electricity-boost"
+        ]
+      }
+    },
+    {
+      "slug": "tetroise",
+      "name": "Tetroise ",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 142,
+      "partnerSkill": {
+        "name": "Masonry Archelon",
+        "description": "Can be ridden While at a base, increases the Mining Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "tetroise-primo",
+      "name": "Tetroise Primo",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "epic",
+      "dexNo": 142,
+      "partnerSkill": {
+        "name": "Stone-Chaser Archelon",
+        "description": "Can be ridden. While in party, increases the durability of all weapons and armor by 80~100%. (Does not stack)",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "nyafia",
+      "name": "Nyafia",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 143,
+      "partnerSkill": {
+        "name": "Shot-Nyan Mode",
+        "description": "When activated, Nyafia will fire a shotgun at nearby enemies for a limited time. While in party, increases the player's shotgun damage by 10~35%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "mimog",
+      "name": "Mimog",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 144,
+      "partnerSkill": {
+        "name": "Master of Unlocking",
+        "description": "While fighting together, Mimog can open treasure chests without using a key.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "xenovader",
+      "name": "Xenovader",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 145,
+      "partnerSkill": {
+        "name": "Unknown Invader",
+        "description": "While in party, increases the damage of the last bullet fired from a full-auto weapon by 100~160%. (Does not stack)",
+        "tags": [
+          "firearms"
+        ]
+      }
+    },
+    {
       "slug": "xenogard",
       "name": "Xenogard",
       "elements": [
         "dragon"
       ],
       "rarity": "epic",
+      "dexNo": 146,
       "partnerSkill": {
         "name": "Extraterrestrial",
         "description": "High-rarity Dragon combat partner.",
         "tags": [
           "combat-buffs",
           "dragon-boost"
+        ]
+      }
+    },
+    {
+      "slug": "prunelia",
+      "name": "Prunelia",
+      "elements": [
+        "leaf",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 147,
+      "partnerSkill": {
+        "name": "Prayer for Abundant Harvest",
+        "description": "While at a base, Prunelia's prayers bless the crops, increasing their harvest by 18~35%.",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "nitemary",
+      "name": "Nitemary",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 148,
+      "partnerSkill": {
+        "name": "Soul Collector",
+        "description": "While fighting together, Pals drop +100~200% more Pal Souls when defeated. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "nitemary-botan",
+      "name": "Nitemary Botan",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "rare",
+      "dexNo": 148,
+      "partnerSkill": {
+        "name": "Soul Binder",
+        "description": "While in party, increases Defense of Grass Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "leaf-boost"
+        ]
+      }
+    },
+    {
+      "slug": "smokie",
+      "name": "Smokie",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 149,
+      "partnerSkill": {
+        "name": "Dig, Smokie! Dig!",
+        "description": "When activated, uses its sharp sense of smell to detect nearby Chromite. While fighting together, Chromite acquisition increases by +100~200%.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "smokie-cryst",
+      "name": "Smokie Cryst",
+      "elements": [
+        "dark",
+        "ice"
+      ],
+      "rarity": "common",
+      "dexNo": 149,
+      "partnerSkill": {
+        "name": "Cryo Instincts",
+        "description": "While at a base, increases the Cooling Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "omascul",
+      "name": "Omascul",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 150,
+      "partnerSkill": {
+        "name": "Masquerade Dance",
+        "description": "While in party, increases Party Pals' EXP gained by 40~80%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "whalaska",
+      "name": "Whalaska",
+      "elements": [
+        "ice",
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 151,
+      "partnerSkill": {
+        "name": "Chilled Whale Cruiser",
+        "description": "Can be ridden. While in party, fishing minigames start with the capture gauge increased by 5~14%. Additionally, while the bars overlap, capture progress increases by 5~14%. (Does not stack)",
+        "tags": [
+          "fishing",
+          "capture",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "whalaska-ignis",
+      "name": "Whalaska Ignis",
+      "elements": [
+        "ice",
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 151,
+      "partnerSkill": {
+        "name": "Cozy Whale Cruiser",
+        "description": "Can be ridden. While in party, fishing minigame begins with the capture gauge 7~17% higher than usual, and capture progress increases by 7~17% while the bars overlap. (Does not stack)",
+        "tags": [
+          "fishing",
+          "capture",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "verdash",
+      "name": "Verdash",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 152,
+      "partnerSkill": {
+        "name": "Grassland Gymnast",
+        "description": "While in party, grants 1 additional jump and 1 additional mid-air dash. (Does not stack)",
+        "tags": [
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "splatterina",
+      "name": "Splatterina",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 153,
+      "partnerSkill": {
+        "name": "Blade of Uncontrolled Passion",
+        "description": "While in party, the amount of items obtained from using the Meat Cleaver increases by 100~200%. (Does not stack)",
+        "tags": [
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "gildane",
+      "name": "Gildane",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 154,
+      "partnerSkill": {
+        "name": "Gold Dash",
+        "description": "Fast Earth mount with loot-friendly routes.",
+        "tags": [
+          "ground-mount",
+          "mobility",
+          "more-drops"
+        ]
+      }
+    },
+    {
+      "slug": "dogen",
+      "name": "Dogen",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 155,
+      "partnerSkill": {
+        "name": "Homeward Prayer",
+        "description": "When activated, teleports to the nearest base. Cannot be used inside dungeons or similar areas.",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "bulldosu",
+      "name": "Bulldosu",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 156,
+      "partnerSkill": {
+        "name": "Yokozuna's Presence",
+        "description": "Can be ridden. While in party, player and party Pals take 15~30% less Electric damage and are immune to Electrify. (Does not stack)",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "celesdir",
+      "name": "Celesdir",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 157,
+      "partnerSkill": {
+        "name": "Blessing of Purification",
+        "description": "Can be ridden. This Pal's Attack and Movement Speed increases by 2~6% for each other Neutral Pal in your party. When in party, recovers Health of the player and Party Pals by 0.15~0.75% per second. (Does not stack)",
+        "tags": [
+          "healing",
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "celesdir-noct",
+      "name": "Celesdir Noct",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 157,
+      "partnerSkill": {
+        "name": "Blessing of Chaos",
+        "description": "Can be ridden. While in party, the Pal fighting alongside you gradually loses Health in exchange for 40~80% Attack increase. (Does not stack)",
+        "tags": [
+          "healing",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "astegon",
+      "name": "Astegon",
+      "elements": [
+        "dragon",
+        "dark"
+      ],
+      "rarity": "epic",
+      "dexNo": 158,
+      "partnerSkill": {
+        "name": "Black Ankylosaur",
+        "description": "Can be ridden as a flying mount. Improves mining while mounted.",
+        "tags": [
+          "flying-mount",
+          "more-drops",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "knocklem",
+      "name": "Knocklem",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 159,
+      "partnerSkill": {
+        "name": "Rock Crusher",
+        "description": "Heavy Earth fighter — strong Mining / combat synergy.",
+        "tags": [
+          "combat-buffs",
+          "earth-boost",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "knocklem-ignis",
+      "name": "Knocklem Ignis",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 159,
+      "partnerSkill": {
+        "name": "Iron Guardian Mode",
+        "description": "When activated, a steel resolve increases Knocklem Ignis's Attack by 60~210% and Defense by 60~210% for a limited time.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "silvegis",
+      "name": "Silvegis",
+      "elements": [
+        "dragon"
+      ],
+      "rarity": "epic",
+      "dexNo": 160,
+      "partnerSkill": {
+        "name": "Silver Wings",
+        "description": "Dragon flyer for late-game traverse and Dragon syn.",
+        "tags": [
+          "flying-mount",
+          "dragon-boost"
+        ]
+      }
+    },
+    {
+      "slug": "azurmane",
+      "name": "Azurmane",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "rare",
+      "dexNo": 161,
+      "partnerSkill": {
+        "name": "Plasma Dash",
+        "description": "Can be ridden. Grants Air Dash, to move at even higher speeds.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "valentail",
+      "name": "Valentail",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 162,
+      "partnerSkill": {
+        "name": "Big Stretch",
+        "description": "While in party, reduces the effects of gravity on the player, making them more floaty while jumping and falling. (Does not stack)",
+        "tags": [
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "snock",
+      "name": "Snock",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 163,
+      "partnerSkill": {
+        "name": "Charging Shell",
+        "description": "While in party, the player's attacks inflict Electrify 2~6. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "snock-lux",
+      "name": "Snock Lux",
+      "elements": [
+        "electricity",
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 163,
+      "partnerSkill": {
+        "name": "Grounding Shell",
+        "description": "While in party, player and party Pals take 15~30% less Water damage, and are immune to Soak. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "souffline",
+      "name": "Souffline",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "dexNo": 164,
+      "partnerSkill": {
+        "name": "Fuzzy Fairy",
+        "description": "While in party, increases the capture rate of Pals afflicted with Ivy-Covered. (Does not stack)",
+        "tags": [
+          "capture"
+        ]
+      }
+    },
+    {
+      "slug": "lapiron",
+      "name": "Lapiron",
+      "elements": [
+        "earth"
+      ],
+      "rarity": "common",
+      "dexNo": 165,
+      "partnerSkill": {
+        "name": "Friend of Earth",
+        "description": "While in party, increases the player's Defense by 50~65% while sprinting. (Does not stack)",
+        "tags": [
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "hoodle",
+      "name": "Hoodle",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 166,
+      "partnerSkill": {
+        "name": "Void-Dweller",
+        "description": "While in party, increases the player's damage dealt to enemies that are not in combat by 50~100%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "slowatt",
+      "name": "Slowatt",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "common",
+      "dexNo": 167,
+      "partnerSkill": {
+        "name": "Chillswitch",
+        "description": "While in party, when the player attacks an enemy afflicted with Electrify, the enemy discharges electricity, dealing damage equal to 40~60% of the player's attack damage to nearby enemies. (Does not stack.)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "bakemi",
+      "name": "Bakemi",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 168,
+      "partnerSkill": {
+        "name": "Grinning Death",
+        "description": "While in party, attacking enemies afflicted with Poison reduces their Attack by 40~80%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "solmora",
+      "name": "Solmora",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "dexNo": 169,
+      "partnerSkill": {
+        "name": "Charming Fish",
+        "description": "Can be ridden to travel on water. While in party, makes it easier to fish up talented Pals. (Does not stack)",
+        "tags": [
+          "fishing",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "solmora-lux",
+      "name": "Solmora Lux",
+      "elements": [
+        "water",
+        "electricity"
+      ],
+      "rarity": "rare",
+      "dexNo": 169,
+      "partnerSkill": {
+        "name": "Shocking Fish",
+        "description": "Can be ridden to travel on water. While mounted, changes the player's attack type to Electric and increases Attack by 5~20%. While in party, makes it easier to fish up talented Pals. (Does not stack)",
+        "tags": [
+          "fishing",
+          "combat-buffs",
+          "electricity-boost",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "lapure",
+      "name": "Lapure",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "dexNo": 170,
+      "partnerSkill": {
+        "name": "Long-Sleeved Hurray",
+        "description": "While in party, reduces the Partner Skill cooldowns for other party Pals by 10~50%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "eidrolon",
+      "name": "Eidrolon",
+      "elements": [
+        "dragon",
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 171,
+      "partnerSkill": {
+        "name": "Liberated Pterosaur",
+        "description": "Can be ridden as a flying mount. This Pal's Attack and Movement Speed increase by 2~6% for each other Dragonor Dark Pal in your party.",
+        "tags": [
+          "mobility",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "eidrolon-ignis",
+      "name": "Eidrolon Ignis",
+      "elements": [
+        "dragon",
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 171,
+      "partnerSkill": {
+        "name": "Resentful Pterosaur",
+        "description": "Can be ridden as a flying mount. This Pal's Attack and Movement Speed increase by 2~6% or each other Dragon or Fire Pal in your party. (Excluding Eidrolon Ignis)",
+        "tags": [
+          "mobility",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "dynamoff",
+      "name": "Dynamoff",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "rare",
+      "dexNo": 172,
+      "partnerSkill": {
+        "name": "Electro-Massage Incubation",
+        "description": "Can be ridden as a flying mount. While at a base, shortens the time it takes to incubate eggs by 20~40%. (Does not stack)",
+        "tags": [
+          "base-work",
+          "eggs",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "tropicaw",
+      "name": "Tropicaw",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "rare",
+      "dexNo": 173,
+      "partnerSkill": {
+        "name": "Flower Dance",
+        "description": "While in party, extends the invincibility period during dodge rolls and dodge steps by 15~30%. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "flaracle",
+      "name": "Flaracle",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 174,
+      "partnerSkill": {
+        "name": "Burning Future",
+        "description": "While in party, when the player attacks an enemy afflicted with Burn, the enemy explodes, dealing damage equal to 40~60% of the player's attack damage to nearby enemies. (Does not stack.)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "ophydia",
+      "name": "Ophydia",
+      "elements": [
+        "leaf",
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 175,
+      "partnerSkill": {
+        "name": "Glorious Mist",
+        "description": "Can be ridden. While in party, the player's attacks inflict Soak 2~6. (Does not stack)",
+        "tags": [
+          "combat-buffs",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "dupin",
+      "name": "Dupin",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 176,
+      "partnerSkill": {
+        "name": "Trick-Loving Fluffle",
+        "description": "While in party, when the player's Health falls below 50%, Dupin generates an explosion around the player (Fire / Power: 100~200 / Burn buildup: 777). Additionally, while the player's Health is below 50%, the player's Attack is increased by 30~50%. (Does not stack)",
+        "tags": [
+          "healing",
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "roujay",
+      "name": "Roujay",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 177,
+      "partnerSkill": {
+        "name": "Dark-Nester",
+        "description": "Can be ridden as a flying mount. While in party, increases player's and Pals' damage to enemies afflicted with Blind by 50~65%. (Does not stack)",
+        "tags": [
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "venusa",
+      "name": "Venusa",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "dexNo": 178,
+      "partnerSkill": {
+        "name": "Snake's Sagacity",
+        "description": "While in party, the player's attacks inflict Blind 2~6. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "mycora",
+      "name": "Mycora",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "rare",
+      "dexNo": 179,
+      "partnerSkill": {
+        "name": "Charming Spore",
+        "description": "While at a base, increases the Medicine Production Work Suitability Level for all other Base Pals by +1. (Does not stack)",
+        "tags": [
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "loomen",
+      "name": "Loomen",
+      "elements": [
+        "dark",
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 180,
+      "partnerSkill": {
+        "name": "Lantern Enchantment",
+        "description": "While in party, the player's arrows explode on contact, dealing additional damage equal to 15~30% of the player's attack damage. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "wistella",
+      "name": "Wistella",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "dexNo": 181,
+      "partnerSkill": {
+        "name": "Hidden Dark Energy",
+        "description": "While in party, increases Defense of Dark Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "dark-boost"
+        ]
+      }
+    },
+    {
+      "slug": "solenne",
+      "name": "Solenne",
+      "elements": [
+        "dark",
+        "normal"
+      ],
+      "rarity": "rare",
+      "dexNo": 182,
+      "partnerSkill": {
+        "name": "Untainted Maiden",
+        "description": "While in party, increases the player's Attack by 30~80% if all Pals in party are different species. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "renjishi",
+      "name": "Renjishi",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "rare",
+      "dexNo": 183,
+      "partnerSkill": {
+        "name": "Stage Combat",
+        "description": "While in party, the player's attacks inflict Burn 2~6. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "aegidron",
+      "name": "Aegidron",
+      "elements": [
+        "dragon",
+        "earth"
+      ],
+      "rarity": "epic",
+      "dexNo": 184,
+      "partnerSkill": {
+        "name": "Indestructible Fortress",
+        "description": "Can be ridden. While in party, player and party Pals take 60~80% less damage from explosive attacks, and are immune to Stun. (Does not stack)",
+        "tags": [
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "grizzbolt",
+      "name": "Grizzbolt",
+      "elements": [
+        "electricity"
+      ],
+      "rarity": "epic",
+      "dexNo": 185,
+      "partnerSkill": {
+        "name": "Lightning Claus",
+        "description": "Can be ridden. Fires a minigun while mounted.",
+        "tags": [
+          "ground-mount",
+          "firearms",
+          "electricity-boost"
+        ]
+      }
+    },
+    {
+      "slug": "lyleen",
+      "name": "Lyleen",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 186,
+      "partnerSkill": {
+        "name": "Harvest Goddess",
+        "description": "When activated, restores player HP. Top Farming / Gathering worker.",
+        "tags": [
+          "healing",
+          "base-work",
+          "leaf-boost"
+        ]
+      }
+    },
+    {
+      "slug": "lyleen-noct",
+      "name": "Lyleen Noct",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "epic",
+      "dexNo": 186,
+      "partnerSkill": {
+        "name": "Harvest Goddess",
+        "description": "When activated, restores player HP. Dark variant support.",
+        "tags": [
+          "healing",
+          "dark-boost",
+          "base-work"
+        ]
+      }
+    },
+    {
+      "slug": "orserk",
+      "name": "Orserk",
+      "elements": [
+        "dragon",
+        "electricity"
+      ],
+      "rarity": "epic",
+      "dexNo": 187,
+      "partnerSkill": {
+        "name": "Ferocious Thunder Dragon",
+        "description": "While fighting together, greatly boosts Electric damage vs Water.",
+        "tags": [
+          "combat-buffs",
+          "electricity-boost",
+          "dragon-boost"
+        ]
+      }
+    },
+    {
+      "slug": "faleris",
+      "name": "Faleris",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "epic",
+      "dexNo": 188,
+      "partnerSkill": {
+        "name": "Scorching Predator",
+        "description": "Can be ridden as a flying mount. Improves Fire ore / loot yields.",
+        "tags": [
+          "flying-mount",
+          "more-drops",
+          "fire-boost"
+        ]
+      }
+    },
+    {
+      "slug": "faleris-aqua",
+      "name": "Faleris Aqua",
+      "elements": [
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 188,
+      "partnerSkill": {
+        "name": "Aquatic Predator",
+        "description": "Can be ridden as a flying mount. Improves fishing-related yields.",
+        "tags": [
+          "flying-mount",
+          "fishing",
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "shadowbeak",
+      "name": "Shadowbeak",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "epic",
+      "dexNo": 189,
+      "partnerSkill": {
+        "name": "Modified DNA",
+        "description": "Can be ridden as a flying mount. Greatly boosts Dark damage while fighting together.",
+        "tags": [
+          "mobility",
+          "dark-boost",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "selyne",
+      "name": "Selyne",
+      "elements": [
+        "dark",
+        "normal"
+      ],
+      "rarity": "epic",
+      "dexNo": 190,
+      "partnerSkill": {
+        "name": "Moonlight Grace",
+        "description": "Astral mount/support — strong vs Dragon teams need Ice/Dragon prep.",
+        "tags": [
+          "flying-mount",
+          "dark-boost",
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "bastigor",
+      "name": "Bastigor",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "epic",
+      "dexNo": 191,
+      "partnerSkill": {
+        "name": "Frost Armor",
+        "description": "Ice frontliner — shields and Ice damage support.",
+        "tags": [
+          "shield",
+          "ice-boost",
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "shaolong",
+      "name": "Shaolong",
+      "elements": [
+        "dragon",
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 192,
+      "partnerSkill": {
+        "name": "Azure Sovereign",
+        "description": "Can be ridden as a flying mount. This Pal's Attack increases by 4~8% for each other Dragon Pal in your party.",
+        "tags": [
+          "combat-buffs",
+          "flying-mount"
+        ]
+      }
+    },
+    {
+      "slug": "silvance",
+      "name": "Silvance",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "epic",
+      "dexNo": 193,
+      "partnerSkill": {
+        "name": "Spore Stalwart",
+        "description": "While in party, when the player attacks an enemy afflicted with Ivy-Covered, the enemy explodes, dealing additional damage equal to 40~60% of the player's attack damage. (Does not stack) Also grants immunity to the World Tree's Explosive Spores to both the player and their Pals.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "dandilord",
+      "name": "Dandilord",
+      "elements": [
+        "leaf",
+        "dark"
+      ],
+      "rarity": "epic",
+      "dexNo": 194,
+      "partnerSkill": {
+        "name": "Mist Stalwart",
+        "description": "When activated, the player's attacks inflict Poison 2~6. While in party, grants the player and party Pals immunity to Poison, and nullifies the effects of toxic gas in the World Tree area. (Does not stack)",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "bellanoir",
+      "name": "Bellanoir",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "legendary",
+      "dexNo": 195,
+      "partnerSkill": {
+        "name": "Nightmare Ballad",
+        "description": "Raid legend — massive Dark battlefield presence.",
+        "tags": [
+          "combat-buffs",
+          "dark-boost",
+          "status"
+        ]
+      }
+    },
+    {
+      "slug": "bellanoir-libero",
+      "name": "Bellanoir Libero",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "legendary",
+      "dexNo": 195,
+      "partnerSkill": {
+        "name": "Scorching Nightmare",
+        "description": "Enhanced raid form with stronger Dark control.",
+        "tags": [
+          "combat-buffs",
+          "dark-boost",
+          "status"
         ]
       }
     },
@@ -1891,6 +4851,7 @@
         "dragon"
       ],
       "rarity": "epic",
+      "dexNo": 196,
       "partnerSkill": {
         "name": "Invasion Protocol",
         "description": "Space invader — Dark/Dragon pressure for late content.",
@@ -1902,19 +4863,331 @@
       }
     },
     {
-      "slug": "yakumo",
-      "name": "Yakumo",
+      "slug": "hartalis",
+      "name": "Hartalis",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "epic",
+      "dexNo": 197,
+      "partnerSkill": {
+        "name": "Sacred Barrier",
+        "description": "Can be ridden. While mounted, it generates a barrier that blocks all attacks. Can triple jump while mounted.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "paladius",
+      "name": "Paladius",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "legendary",
+      "dexNo": 198,
+      "partnerSkill": {
+        "name": "Holy Knight of the Forest",
+        "description": "Can be ridden. Enhances mount charge / lance combat.",
+        "tags": [
+          "ground-mount",
+          "melee",
+          "shield"
+        ]
+      }
+    },
+    {
+      "slug": "necromus",
+      "name": "Necromus",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "legendary",
+      "dexNo": 199,
+      "partnerSkill": {
+        "name": "Dark Knight of the Abyss",
+        "description": "Can be ridden. Enhances mount charge / lance combat.",
+        "tags": [
+          "ground-mount",
+          "melee",
+          "dark-boost"
+        ]
+      }
+    },
+    {
+      "slug": "frostallion",
+      "name": "Frostallion",
+      "elements": [
+        "ice"
+      ],
+      "rarity": "legendary",
+      "dexNo": 200,
+      "partnerSkill": {
+        "name": "Ice Steed",
+        "description": "Can be ridden as a flying mount. Changes rider attacks to Ice.",
+        "tags": [
+          "flying-mount",
+          "ice-boost",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "frostallion-noct",
+      "name": "Frostallion Noct",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "legendary",
+      "dexNo": 200,
+      "partnerSkill": {
+        "name": "Black Steed",
+        "description": "Can be ridden as a flying mount. Changes rider attacks to Dark.",
+        "tags": [
+          "flying-mount",
+          "dark-boost",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "neptilius",
+      "name": "Neptilius",
+      "elements": [
+        "water"
+      ],
+      "rarity": "legendary",
+      "dexNo": 201,
+      "partnerSkill": {
+        "name": "Abyssal Dominator",
+        "description": "Legendary ocean mount — swimming sovereignty and Water damage.",
+        "tags": [
+          "ground-mount",
+          "water-boost",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "jetragon",
+      "name": "Jetragon",
+      "elements": [
+        "dragon"
+      ],
+      "rarity": "legendary",
+      "dexNo": 202,
+      "partnerSkill": {
+        "name": "Aerial Missile",
+        "description": "Can be ridden as a flying mount. Fires homing missiles while mounted.",
+        "tags": [
+          "flying-mount",
+          "firearms",
+          "mobility"
+        ]
+      }
+    },
+    {
+      "slug": "panthalus",
+      "name": "Panthalus",
+      "elements": [
+        "water"
+      ],
+      "rarity": "epic",
+      "dexNo": 203,
+      "partnerSkill": {
+        "name": "World Tide",
+        "description": "Required in party to open World Tree barrier after researcher turn-in.",
+        "tags": [
+          "mobility",
+          "water-boost"
+        ]
+      }
+    },
+    {
+      "slug": "astralym",
+      "name": "Astralym",
+      "elements": [],
+      "rarity": "epic",
+      "dexNo": 204,
+      "partnerSkill": {
+        "name": "—",
+        "description": "This Pal's abilities are still being investigated.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "blue-slime",
+      "name": "Blue Slime",
+      "elements": [
+        "water"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Slime Body",
+        "description": "Can be ridden. Can jump high into the air while mounted.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "cave-bat",
+      "name": "Cave Bat",
       "elements": [
         "normal"
       ],
       "rarity": "common",
       "partnerSkill": {
-        "name": "Buddy Travel",
-        "description": "Ground companion — early mobility and Neutral support.",
+        "name": "Bat Backup",
+        "description": "While in party, appears near the player. Automatically picks up nearby items.",
         "tags": [
-          "ground-mount",
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "demon-eye",
+      "name": "Demon Eye",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Demonic Sight",
+        "description": "While in party, increases Attack of Dark Pals by 15~30%. (Does not stack)",
+        "tags": [
+          "combat-buffs",
+          "dark-boost"
+        ]
+      }
+    },
+    {
+      "slug": "enchanted-sword",
+      "name": "Enchanted Sword",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Enchant",
+        "description": "While in party, Dark Pals drop 40~80% more items when defeated. (Does not stack)",
+        "tags": [
+          "more-drops",
+          "dark-boost"
+        ]
+      }
+    },
+    {
+      "slug": "eye-of-cthulhu",
+      "name": "Eye of Cthulhu",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "rare",
+      "partnerSkill": {
+        "name": "Mad Eye Lunge",
+        "description": "When activated, Eye of Cthulhu charges and attacks targeted enemy.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "green-slime",
+      "name": "Green Slime",
+      "elements": [
+        "leaf"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Slime Body",
+        "description": "Can be ridden. Can jump high into the air while mounted.",
+        "tags": [
           "mobility",
-          "normal-boost"
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "illuminant-bat",
+      "name": "Illuminant Bat",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Bat Backup",
+        "description": "While in party, appears near the player. Automatically picks up nearby items.",
+        "tags": [
+          "combat-buffs"
+        ]
+      }
+    },
+    {
+      "slug": "illuminant-slime",
+      "name": "Illuminant Slime",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Slime Body",
+        "description": "Can be ridden. Can jump high into the air while mounted.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "purple-slime",
+      "name": "Purple Slime",
+      "elements": [
+        "dark"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Slime Body",
+        "description": "Can be ridden. Can jump high into the air while mounted.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "rainbow-slime",
+      "name": "Rainbow Slime",
+      "elements": [
+        "normal"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Slime Body",
+        "description": "Can be ridden. Can jump high into the air while mounted.",
+        "tags": [
+          "mobility",
+          "ground-mount"
+        ]
+      }
+    },
+    {
+      "slug": "red-slime",
+      "name": "Red Slime",
+      "elements": [
+        "fire"
+      ],
+      "rarity": "common",
+      "partnerSkill": {
+        "name": "Slime Body",
+        "description": "Can be ridden. Can jump high into the air while mounted.",
+        "tags": [
+          "mobility",
+          "ground-mount"
         ]
       }
     }

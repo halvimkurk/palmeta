@@ -85,6 +85,54 @@ function elementsLabel(pal: Pal): string {
   return pal.elements.map((e) => ELEMENT_LABELS[e]).join(" / ");
 }
 
+function articleBefore(word: string): string {
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
+
+function lowercaseFirst(text: string): string {
+  if (!text) return text;
+  return text.charAt(0).toLowerCase() + text.slice(1);
+}
+
+/** Prefer the human label after an em dash (e.g. "Mining 7 — hauler" → "hauler"). */
+function summarizeWhy(why: string): string {
+  const dash = why.indexOf(" — ");
+  if (dash >= 0) return why.slice(dash + 3).trim();
+  return why.trim();
+}
+
+function joinOr(items: string[]): string {
+  if (items.length === 0) return "";
+  if (items.length === 1) return items[0]!;
+  if (items.length === 2) return `${items[0]} or ${items[1]}`;
+  return `${items.slice(0, -1).join(", ")}, or ${items[items.length - 1]}`;
+}
+
+function usePhraseFromTier(t: PalTierHit): string {
+  const gist = lowercaseFirst(summarizeWhy(t.why));
+  switch (t.role) {
+    case "workers":
+      return `on base as a ${gist}`;
+    case "ground-mounts":
+      return `as a ${gist}`;
+    case "flying-mounts":
+      return `as a ${gist}`;
+    case "catching":
+      return `when catching pals (${gist})`;
+    default:
+      return gist;
+  }
+}
+
+function partnerSkillSentence(name: string, description: string): string {
+  const desc = description.replace(/\.$/, "").trim();
+  if (desc.includes(" — ")) {
+    const [lead, tail] = desc.split(" — ", 2);
+    return `Its partner skill, ${name}, ${lowercaseFirst(lead!)} — ${lowercaseFirst(tail ?? "")}.`;
+  }
+  return `Its partner skill, ${name}, ${lowercaseFirst(desc)}.`;
+}
+
 /** Meta description — unique per pal from catalog facts, not a single boilerplate. */
 export function buildPalPageDescription(pal: Pal, tiers: PalTierHit[]): string {
   const elements = elementsLabel(pal);
@@ -130,44 +178,56 @@ export function buildPalPageTitle(pal: Pal, tiers: PalTierHit[]): string {
   return `${pal.name} — Paldeck Stats & Breeding`;
 }
 
-/** Visible intro for top pals — indexable summary above the stat panels. */
-export function buildPalSeoIntro(pal: Pal, tiers: PalTierHit[]): string | null {
-  if (!isTopPalSlug(pal.slug)) return null;
-
+/** Visible intro — short prose summary above the stat panels. */
+export function buildPalSeoIntro(pal: Pal, tiers: PalTierHit[]): string {
   const elements = elementsLabel(pal);
+  const rarity = RARITY_LABELS[pal.rarity].toLowerCase();
   const combat = combatTier(tiers);
   const work = topWork(pal);
-  const parts: string[] = [
-    `${pal.name} is a ${RARITY_LABELS[pal.rarity].toLowerCase()} ${elements} pal in Palworld 1.0.`,
-  ];
-
-  if (combat) {
-    parts.push(`Combat tier ${combat.grade}: ${combat.why}`);
-  }
-
   const otherTiers = tiers
     .filter((t) => t.role !== "combat")
     .sort((a, b) => gradeRank(a.grade) - gradeRank(b.grade))
     .slice(0, 2);
-  for (const t of otherTiers) {
-    parts.push(`${t.label} ${t.grade}: ${t.why}`);
+
+  const sentences: string[] = [];
+
+  if (combat) {
+    sentences.push(
+      `${pal.name} is ${articleBefore(rarity)} ${rarity} ${elements} pal and ${articleBefore(combat.why)} ${lowercaseFirst(combat.why)}.`,
+    );
+  } else {
+    const lead = otherTiers[0];
+    const hook = lead
+      ? `, often picked for ${lowercaseFirst(summarizeWhy(lead.why))}`
+      : "";
+    sentences.push(`${pal.name} is ${articleBefore(rarity)} ${rarity} ${elements} pal${hook}.`);
   }
 
-  if (work) {
-    parts.push(`Best base work on this sheet is ${WORK_LABELS[work.id]} level ${work.level}.`);
+  const uses = otherTiers.map(usePhraseFromTier);
+  if (uses.length > 0) {
+    sentences.push(`Players usually reach for it ${joinOr(uses)}.`);
+  } else if (work) {
+    sentences.push(
+      `On base it shines at ${WORK_LABELS[work.id].toLowerCase()} (level ${work.level}).`,
+    );
+  } else if (!combat && tiers.length > 0) {
+    const best = bestTierHit(tiers);
+    if (best) {
+      sentences.push(
+        `It's a ${best.grade.toLowerCase()}-tier pick for ${best.label.toLowerCase()} — ${lowercaseFirst(summarizeWhy(best.why))}.`,
+      );
+    }
   }
 
-  parts.push(
-    `Partner skill ${pal.partnerSkill.name} — ${truncate(pal.partnerSkill.description, 140)}`,
+  sentences.push(partnerSkillSentence(pal.partnerSkill.name, pal.partnerSkill.description));
+
+  sentences.push(
+    pal.breeding?.ignoreCombi
+      ? "See the breeding section below for capture-only and unique combo notes."
+      : "Use the breeding calculator below to find parent pairs.",
   );
 
-  if (pal.breeding?.ignoreCombi) {
-    parts.push("Use the breeding section below for capture-only / unique combo notes.");
-  } else {
-    parts.push("Jump to the breeding calculator to find parent pairs for this pal.");
-  }
-
-  return parts.join(" ");
+  return sentences.join(" ");
 }
 
 /** JSON-LD / OG text — fuller than partner-skill line alone. */

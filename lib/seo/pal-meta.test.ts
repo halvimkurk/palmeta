@@ -38,12 +38,23 @@ describe("pal-meta", () => {
     expect(title).toContain("Combat Tier");
   });
 
-  it("returns seo intro only for top pals", () => {
+  it("returns seo intro for every pal", () => {
     expect(buildPalSeoIntro(getPalBySlug("jetragon")!, findPalTiers("jetragon"))).toMatch(
       /Jetragon/,
     );
-    expect(buildPalSeoIntro(getPalBySlug("lamball")!, findPalTiers("lamball"))).toBeNull();
+    expect(buildPalSeoIntro(getPalBySlug("lamball")!, findPalTiers("lamball"))).toMatch(
+      /Lamball/,
+    );
     expect(isTopPalSlug("gobfin")).toBe(true);
     expect(isTopPalSlug("lamball")).toBe(false);
+  });
+
+  it("writes prose seo intros instead of tier bullet lists", () => {
+    const intro = buildPalSeoIntro(getPalBySlug("knocklem")!, findPalTiers("knocklem"));
+    expect(intro).toMatch(/Knocklem is an epic Earth pal/);
+    expect(intro).toMatch(/Rock Crusher/);
+    expect(intro).not.toMatch(/Combat tier/);
+    expect(intro).not.toMatch(/Base workers/);
+    expect(intro).not.toMatch(/Best base work on this sheet/);
   });
 });

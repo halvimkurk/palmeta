@@ -9,10 +9,10 @@
     "lint": "eslint",
     "test": "vitest run",
     "pals": "node scripts/generate-pals-catalog.mjs",
+    "pals:import": "node scripts/import-full-roster.mjs",
+    "pals:tiers-fill": "node scripts/expand-combat-tiers.mjs",
     "pals:work": "node scripts/merge-pal-work.mjs",
     "pals:stats": "node scripts/merge-pal-stats.mjs",
-    "news": "node scripts/ingest-news.mjs",
-    "news:force": "node scripts/ingest-news.mjs",
     "icons:pals": "node scripts/fetch-pal-icons.mjs",
     "companion:art": "node scripts/fetch-companion-art.mjs"
   },

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { NavIcon } from "@/components/layout/NavIcons";
-import { FEED_NAV, NAV, TOOL_NAV } from "@/lib/nav";
+import { NAV, TOOL_NAV } from "@/lib/nav";
 
 type Props = {
   children: React.ReactNode;
@@ -51,25 +51,6 @@ export function AppShell({ children }: Props) {
             {link.label}
           </Link>
         ))}
-
-        <div className="side-nav__feeds">
-          <p className="side-nav__label">Dispatches</p>
-          {FEED_NAV.map((link) => (
-            <Link
-              key={link.match}
-              href={link.href}
-              className={
-                isActive(pathname, link.match)
-                  ? "side-link side-link--feed is-active"
-                  : "side-link side-link--feed"
-              }
-              onClick={onNavigate}
-            >
-              <NavIcon name={link.icon} />
-              {link.label}
-            </Link>
-          ))}
-        </div>
       </>
     );
   }
@@ -111,13 +92,11 @@ export function AppShell({ children }: Props) {
         <main className="shell-main__content">{children}</main>
 
         <footer className={`site-footer${isHome ? " site-footer--home" : ""}`}>
-          <span>Palworld Meta — summit tiers, egg nest &amp; raid rosters</span>
+          <span>Palworld Meta — Paldeck, tier lists, breeding &amp; teams</span>
           <Link href={NAV.tiers.href}>{NAV.tiers.label}</Link>
           <Link href={NAV.breeding.href}>{NAV.breeding.label}</Link>
           <Link href={NAV.teams.href}>{NAV.teams.label}</Link>
           <Link href={NAV.pals.href}>{NAV.pals.label}</Link>
-          <Link href={NAV.blues.href}>{NAV.blues.label}</Link>
-          <Link href={NAV.news.href}>{NAV.news.label}</Link>
           <Link href="/privacy">Privacy</Link>
         </footer>
       </div>

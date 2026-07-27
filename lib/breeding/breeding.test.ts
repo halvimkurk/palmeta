@@ -10,9 +10,10 @@ describe("combat stats merge", () => {
     expect(anubis?.breeding?.combiRank).toBe(480);
   });
 
-  it("covers the curated catalog", () => {
+  it("covers the full catalog", () => {
     const withStats = getPals().filter((p) => p.stats?.hp);
     expect(withStats.length).toBe(getPals().length);
+    expect(getPals().length).toBeGreaterThanOrEqual(287);
   });
 });
 

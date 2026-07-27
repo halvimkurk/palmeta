@@ -14,9 +14,9 @@ Status legend: `todo` | `waiting-approval` | `in-progress` | `seo-review` | `don
 | --- | --- | --- | --- | --- |
 | P0-1 | Ship `/map` to production (remove `notFound`, mobile + found tracking + 4 modes) | feature | waiting-approval | Code exists; page currently 404s |
 | P0-2 | Add Map card on home + nav + CompanionTools | polish | waiting-approval | Blocked on P0-1 |
-| P0-3 | `AdSlot` + inventory + consent + `ads.txt` | feature | waiting-approval | Ask before implementing |
-| P0-4 | Apply AdSense after live domain + privacy | ops | todo | User-owned account step |
-| P0-5 | GSC property + submit sitemap | ops | todo | User / growth can document steps |
+| P0-3 | `AdSlot` + inventory + consent + `ads.txt` | feature | blocked | User: no ads for now |
+| P0-4 | Apply AdSense after live domain + privacy | ops | blocked | User: no ads for now |
+| P0-5 | GSC property + submit sitemap | ops | blocked | User: domain not registered yet |
 | P0-6 | Update site tagline/home copy for live tools | seo | done | Map omitted until P0-1 |
 
 ## Phase 1 — Session depth loops
@@ -33,9 +33,9 @@ Status legend: `todo` | `waiting-approval` | `in-progress` | `seo-review` | `don
 
 | ID | Item | Type | Status | Notes |
 | --- | --- | --- | --- | --- |
-| P2-1 | Strengthen `/breeding` + `/tiers` titles/FAQ for 1.0 intent | seo | todo | |
+| P2-1 | Strengthen `/breeding` + `/tiers` titles/FAQ for 1.0 intent | seo | done | All tool hubs + home h1/FAQ 2026-07-27 |
 | P2-2 | `/map` FAQ + WebApplication JSON-LD + mode intent | seo | waiting-approval | Blocked on P0-1 |
-| P2-3 | Top-30 pal pages: unique descriptions + complete modules | seo | todo | |
+| P2-3 | Top-30 pal pages: unique descriptions + complete modules | seo | done | `lib/seo/pal-meta.ts` + intro block 2026-07-27 |
 | P2-4 | Patch-day routine doc (tiers/breeding within 24–48h) | ops | todo | |
 | P2-5 | 3–5 pillar mini-guides linking into tools | feature | waiting-approval | Ask first |
 | P2-6 | Home visible FAQ (match JSON-LD) | seo | done | PASS 2026-07-27 |
@@ -58,6 +58,15 @@ Status legend: `todo` | `waiting-approval` | `in-progress` | `seo-review` | `don
 ---
 
 ## Agent handoff log
+
+### 2026-07-27 (batch 3)
+- Growth: P2-3 — data-driven unique pal meta for all pages; top-30 intent titles + visible SEO intro; JSON-LD uses full description.
+- Next: P3 distribution drafts or P2-4 patch-day doc.
+
+### 2026-07-27 (batch 2)
+- Growth: P2-1 — intent `<h1>` on all tool hubs; stronger titles/descriptions/FAQ; home h1 + 4th FAQ; layout OG/title refresh.
+- SEO review: pending user-triggered recheck.
+- Next: P2-3 top pal descriptions, or P3 distribution drafts.
 
 ### 2026-07-27
 - Growth: started loop; baseline SEO review PASS with notes; fixed breeding URL write-back, home SeoFaq, CompCard → pal links, tagline refresh (no map claims).

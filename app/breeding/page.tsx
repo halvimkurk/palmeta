@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { BreedingClient } from "@/components/breeding/BreedingClient";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SeoFaq } from "@/components/seo/SeoFaq";
 import { pageMeta } from "@/lib/seo";
+import { BREEDING_FAQ } from "@/lib/seo/faqs";
 import { breadcrumbJsonLd, faqJsonLd, webAppJsonLd } from "@/lib/seo/schema";
 import { getBreedingMeta, getPals } from "@/lib/teams/catalog";
 
 const DESCRIPTION =
-  "Free Palworld 1.0 breeding calculator — predict the egg from any parent pair, reverse-lookup parents for a target pal, and share combos via URL.";
+  "Free Palworld 1.0 breeding calculator — foretell the egg from any parent pair or trace every lineage that yields your target pal.";
 
 export const metadata: Metadata = pageMeta({
   title: "Palworld Breeding Calculator — Find Parents & Predict Eggs",
@@ -16,26 +16,13 @@ export const metadata: Metadata = pageMeta({
   path: "/breeding",
 });
 
-const FAQ = [
-  {
-    q: "How does the Palworld breeding calculator work?",
-    a: "Pick two parents to see the predicted child, or choose a target pal to list valid parent combinations from the site catalog. Use results to plan chains before you spend cakes.",
-  },
-  {
-    q: "Can I find parents for a specific pal?",
-    a: "Yes. Reverse lookup mode lists combinations that produce your target so you can breed toward Anubis, Jormuntide Ignis, or other goals instead of guessing pairs.",
-  },
-  {
-    q: "Can I share a breeding combo link?",
-    a: "Yes. The URL updates as you pick parents (?a= and ?b=) or a target child (?child=). Copy the address bar to bookmark or send a combo to a friend.",
-  },
-  {
-    q: "Is this calculator for Palworld 1.0?",
-    a: "Yes. Combos are driven by the curated Palworld Meta breeding data for the current catalog. Legendary and special rules still require checking the pal sheet notes when relevant.",
-  },
-];
 
-export default function BreedingPage() {
+export default async function BreedingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ a?: string; b?: string; child?: string }>;
+}) {
+  const sp = await searchParams;
   const pals = getPals();
   const { uniqueCombos } = getBreedingMeta();
 
@@ -52,13 +39,17 @@ export default function BreedingPage() {
             { name: "Home", path: "/" },
             { name: "Breeding calculator", path: "/breeding" },
           ]),
-          faqJsonLd(FAQ),
+          faqJsonLd(BREEDING_FAQ),
         ]}
       />
-      <Suspense fallback={<p className="hub-hint">Loading breeding…</p>}>
-        <BreedingClient pals={pals} uniqueCombos={uniqueCombos} />
-      </Suspense>
-      <SeoFaq title="Breeding calculator FAQ" items={FAQ} />
+      <BreedingClient
+        pals={pals}
+        uniqueCombos={uniqueCombos}
+        parentA={sp.a ?? ""}
+        parentB={sp.b ?? ""}
+        child={sp.child ?? ""}
+      />
+      <SeoFaq title="Breeding calculator FAQ" items={BREEDING_FAQ} />
     </>
   );
 }

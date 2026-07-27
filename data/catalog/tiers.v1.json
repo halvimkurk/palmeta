@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "updatedAt": "2026-07-24",
-  "disclaimer": "Community ranking for Palworld 1.0 (Jul 2026) — cross-checked against patch notes, work stats in this catalog, and public tier coverage. Reasonable people disagree; read the notes.",
+  "version": 4,
+  "updatedAt": "2026-07-27",
+  "disclaimer": "Community ranking for Palworld 1.0 — editorial S–A bands plus stats-based fill for the full Paldex. New roster entries marked “Roster expand” need a human pass.",
   "lists": [
     {
       "role": "combat",
@@ -11,80 +11,1222 @@
         {
           "grade": "S",
           "pals": [
-            { "slug": "jetragon", "why": "Fastest flyer + Aerial Missile — still the endgame all-round carry" },
-            { "slug": "bellanoir-libero", "why": "Top raid Dark nuke for late bosses" },
-            { "slug": "frostallion", "why": "Premier Ice steed — Dragon bosses melt while mounted" },
-            { "slug": "frostallion-noct", "why": "Dark Frostallion for Neutral / Shadow phases" },
-            { "slug": "jormuntide-ignis", "why": "Strongest non-legendary Fire/Dragon carry + burn payoff" },
-            { "slug": "blazamut-ryu", "why": "Dragon-fire burst for volcano and late raids" },
-            { "slug": "xenolord", "why": "Raid flyer — huge stamina hauls and combat pressure" },
-            { "slug": "necromus", "why": "Legendary Dark ground powerhouse" },
-            { "slug": "paladius", "why": "Legendary Neutral tank/DPS with triple-jump mobility" },
-            { "slug": "neptilius", "why": "1.0 Water legendary — ocean fights and Fire-boss answers" },
-            { "slug": "anubis", "why": "Ground sidestep bruiser that also anchors your base" },
-            { "slug": "shadowbeak", "why": "Accessible Dark flyer DPS before raid legendaries" },
-            { "slug": "orserk", "why": "Bullet-hit Attack/Defense ramp on the active Pal (up to +150%)" },
-            { "slug": "gobfin", "why": "Angry Shark still stacks — best player-weapon attack aura" }
+            {
+              "slug": "jetragon",
+              "why": "Endgame aerial standard — top Shot + Aerial Missile mobility"
+            },
+            {
+              "slug": "bellanoir-libero",
+              "why": "Raid Dark nuke with top Attack growth for late bosses"
+            },
+            {
+              "slug": "xenolord",
+              "why": "Raid flyer ceiling — stamina hauls and Cosmic / Omega pressure"
+            },
+            {
+              "slug": "frostallion",
+              "why": "Premier Ice steed — Dragon bosses melt while mounted"
+            },
+            {
+              "slug": "frostallion-noct",
+              "why": "Dark Frostallion for Neutral / Shadow phases"
+            },
+            {
+              "slug": "necromus",
+              "why": "Legendary Dark ground powerhouse + fastest land dash"
+            },
+            {
+              "slug": "paladius",
+              "why": "Legendary Neutral tank/DPS with triple-jump mobility"
+            },
+            {
+              "slug": "neptilius",
+              "why": "1.0 Water legendary — Fire-boss answer and ocean fights"
+            },
+            {
+              "slug": "jormuntide-ignis",
+              "why": "Strongest non-legendary Fire/Dragon carry + burn payoff"
+            },
+            {
+              "slug": "blazamut-ryu",
+              "why": "Raid Fire/Dragon burst for volcano and tight timers"
+            },
+            {
+              "slug": "shadowbeak",
+              "why": "Accessible Dark flyer DPS before raid legendaries"
+            },
+            {
+              "slug": "anubis",
+              "why": "Ground sidestep bruiser that also anchors your base"
+            },
+            {
+              "slug": "orserk",
+              "why": "1.0 core: bullet-hit Attack/Defense ramp on the active Pal (up to +150%)"
+            },
+            {
+              "slug": "gobfin",
+              "why": "Angry Shark still stacks — best player-weapon attack aura"
+            }
           ]
         },
         {
           "grade": "A",
           "pals": [
-            { "slug": "selyne", "why": "Mounted DPS / Astral fights + elite Handiwork hybrid" },
-            { "slug": "bellanoir", "why": "Base raid form — still excellent Dark damage" },
-            { "slug": "blazamut", "why": "Pure Fire ground DPS and mining hybrid" },
-            { "slug": "bastigor", "why": "Ice frontliner with shields and top Cooling work" },
-            { "slug": "astegon", "why": "Dragon/Dark tank — ore-drop mount while fighting surveys" },
-            { "slug": "grizzbolt", "why": "Electric mount fighter with minigun stagger" },
-            { "slug": "suzaku", "why": "Classic Fire flyer for mid/late coverage" },
-            { "slug": "faleris", "why": "Fast non-legendary Fire flyer before Jetragon" },
-            { "slug": "relaxaurus-lux", "why": "Missile Lux form for ranged Electric pressure" },
-            { "slug": "beakon", "why": "Early Electric flyer that scales into endgame parties" },
-            { "slug": "xenogard", "why": "Armed-Pal skill amp for energy-weapon builds" },
-            { "slug": "knocklem", "why": "Earth bruiser with Iron Guardian self-buff" },
-            { "slug": "gobfin-ignis", "why": "Fire Gobfin — same stackable Angry Shark for burn parties" },
-            { "slug": "lyleen-noct", "why": "Dark Grass healer/DPS hybrid for long raids" }
+            {
+              "slug": "selyne",
+              "why": "Mounted Dark/Neutral DPS amp + Handiwork 7 hybrid"
+            },
+            {
+              "slug": "bellanoir",
+              "why": "Base raid form — still excellent Dark damage"
+            },
+            {
+              "slug": "blazamut",
+              "why": "Pure Fire ground DPS and Mining 7 hybrid"
+            },
+            {
+              "slug": "bastigor",
+              "why": "Ice frontliner with shields before Frostallion"
+            },
+            {
+              "slug": "cryolinx",
+              "why": "High Attack Ice support — best pre-Frostallion Dragon answer"
+            },
+            {
+              "slug": "astegon",
+              "why": "Dragon/Dark tank for raid Dark phases + ore mount"
+            },
+            {
+              "slug": "grizzbolt",
+              "why": "Electric mount fighter with minigun stagger"
+            },
+            {
+              "slug": "suzaku",
+              "why": "Classic Fire flyer — Wings of Fire coverage"
+            },
+            {
+              "slug": "faleris",
+              "why": "Fast non-legendary Fire flyer before Jetragon"
+            },
+            {
+              "slug": "faleris-aqua",
+              "why": "Water Faleris — Fire-boss answer without legendaries"
+            },
+            {
+              "slug": "relaxaurus-lux",
+              "why": "Missile Lux form for ranged Electric pressure"
+            },
+            {
+              "slug": "beakon",
+              "why": "Early Electric flyer that scales into endgame parties"
+            },
+            {
+              "slug": "xenogard",
+              "why": "Armed-Pal skill amp for energy-weapon builds"
+            },
+            {
+              "slug": "knocklem",
+              "why": "Earth bruiser with Iron Guardian self-buff"
+            },
+            {
+              "slug": "gobfin-ignis",
+              "why": "Fire Gobfin — same stackable Angry Shark for burn parties"
+            },
+            {
+              "slug": "lyleen-noct",
+              "why": "Dark Grass healer/DPS hybrid for long raids"
+            },
+            {
+              "slug": "lyleen",
+              "why": "Grass healer/DPS with strong mid/late raid sustain"
+            },
+            {
+              "slug": "jormuntide",
+              "why": "Water/Dragon sea serpent — bulk DPS before Ignis"
+            },
+            {
+              "slug": "panthalus",
+              "why": "Absurd HP/Defense Water epic — soaks while dealing Shot pressure"
+            },
+            {
+              "slug": "blazehowl-noct",
+              "why": "Dark-fire Howl — clear upgrade over base Blazehowl"
+            }
           ]
         },
         {
           "grade": "B",
           "pals": [
-            { "slug": "helzephyr-lux", "why": "Lightning flyer alternative for Electric routes" },
-            { "slug": "ragnahawk", "why": "Compact Fire mount — fits dungeon ceilings" },
-            { "slug": "suzaku-aqua", "why": "Water Suzaku for flexible typing" },
-            { "slug": "cryolinx", "why": "Ice support DPS before Frostallion" },
-            { "slug": "mossanda-lux", "why": "Electric grenade partner for camp clears" },
-            { "slug": "warsect", "why": "Bug tank with solid bulk" },
-            { "slug": "quivern", "why": "Dragon flyer workhorse" },
-            { "slug": "univolt", "why": "Fast Electric charger" },
-            { "slug": "kitsun", "why": "Fire fox mount fighter" },
-            { "slug": "rayhound", "why": "Electric sprint bruiser" },
-            { "slug": "pyrin-noct", "why": "Dark horse for Neutral coverage" },
-            { "slug": "wixen", "why": "Player Fire damage aura" },
-            { "slug": "katress-ignis", "why": "Ignis Dark/Fire support" },
-            { "slug": "robinquill", "why": "Bow / hawk-eye synergy" }
+            {
+              "slug": "aegidron",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "astralym",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "azurobe",
+              "why": "Water/Dragon mount bruiser for mid surveys"
+            },
+            {
+              "slug": "dandilord",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "dinossom-lux",
+              "why": "Electric Dinossom — mid-game typed mount fighter"
+            },
+            {
+              "slug": "eidrolon-ignis",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "ghangler",
+              "why": "Dark/Water angler — niche but punchy Shot"
+            },
+            {
+              "slug": "gildane",
+              "why": "Earth epic mount with solid bruiser stats"
+            },
+            {
+              "slug": "hartalis",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "helzephyr",
+              "why": "Dark flyer DPS with solid Attack for mid/late"
+            },
+            {
+              "slug": "helzephyr-lux",
+              "why": "Lightning flyer alternative for Electric routes"
+            },
+            {
+              "slug": "katress",
+              "why": "Dark support mage before Ignis"
+            },
+            {
+              "slug": "katress-ignis",
+              "why": "Ignis Dark/Fire support"
+            },
+            {
+              "slug": "kingpaca",
+              "why": "Neutral bulk tank — soaks, does not carry DPS"
+            },
+            {
+              "slug": "kingpaca-cryst",
+              "why": "Ice Kingpaca tank for Dragon bosses"
+            },
+            {
+              "slug": "kitsun",
+              "why": "Fire fox mount fighter"
+            },
+            {
+              "slug": "knocklem-ignis",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "mammorest",
+              "why": "Leaf/Earth bulk for soaking mid bosses"
+            },
+            {
+              "slug": "menasting",
+              "why": "Dark scorpion — bulk + Mining hybrid bruiser"
+            },
+            {
+              "slug": "moldron-cryst",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "mossanda",
+              "why": "Leaf grenade partner — solid mid-game camp clear"
+            },
+            {
+              "slug": "mossanda-lux",
+              "why": "Electric grenade partner for camp clears"
+            },
+            {
+              "slug": "ophydia",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "pyrin",
+              "why": "Fire horse mount fighter before Noct"
+            },
+            {
+              "slug": "pyrin-noct",
+              "why": "Dark horse for Neutral coverage"
+            },
+            {
+              "slug": "quivern",
+              "why": "Dragon flyer workhorse"
+            },
+            {
+              "slug": "quivern-botan",
+              "why": "Leaf Quivern — Dragon/Grass flexible coverage"
+            },
+            {
+              "slug": "ragnahawk",
+              "why": "Compact Fire mount — fits dungeon ceilings"
+            },
+            {
+              "slug": "rayhound",
+              "why": "Electric sprint bruiser"
+            },
+            {
+              "slug": "relaxaurus",
+              "why": "Missile base form — still fine ranged pressure"
+            },
+            {
+              "slug": "reptyro",
+              "why": "Fire/Earth tank before Blazamut"
+            },
+            {
+              "slug": "reptyro-cryst",
+              "why": "Ice Reptyro for early Dragon coverage"
+            },
+            {
+              "slug": "robinquill",
+              "why": "Bow / hawk-eye synergy"
+            },
+            {
+              "slug": "shaolong",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "silvance",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "silvegis",
+              "why": "Dragon lumber flyer — fine mid pressure"
+            },
+            {
+              "slug": "suzaku-aqua",
+              "why": "Water Suzaku for flexible typing"
+            },
+            {
+              "slug": "univolt",
+              "why": "Fast Electric charger"
+            },
+            {
+              "slug": "vanwyrm",
+              "why": "Fire/Dark flyer for early aerial fights + loot"
+            },
+            {
+              "slug": "vanwyrm-cryst",
+              "why": "Ice Vanwyrm for Dragon / Fire answers"
+            },
+            {
+              "slug": "warsect",
+              "why": "Bug tank with solid bulk"
+            },
+            {
+              "slug": "whalaska",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "whalaska-ignis",
+              "why": "Roster expand — strong combat stats among unranked 1.0 pals (review later)"
+            },
+            {
+              "slug": "wixen",
+              "why": "Player Fire damage aura"
+            },
+            {
+              "slug": "wixen-noct",
+              "why": "Dark Wixen aura for Neutral / Shadow routes"
+            },
+            {
+              "slug": "wumpo",
+              "why": "Ice bulk with surprising fight presence"
+            },
+            {
+              "slug": "wumpo-botan",
+              "why": "Leaf Wumpo — tanky mid-game body"
+            }
           ]
         },
         {
           "grade": "C",
           "pals": [
-            { "slug": "blazehowl", "why": "Early Fire mount fighter" },
-            { "slug": "foxcicle", "why": "Ice support starter for Frostallion teams" },
-            { "slug": "penking", "why": "Water tanker for mid-game" },
-            { "slug": "menasting", "why": "Dark scorpion bruiser" },
-            { "slug": "elizabee", "why": "Queen bee swarm damage" },
-            { "slug": "dazzi", "why": "Early Electric companion" },
-            { "slug": "felbat", "why": "Drain / sustain for long surveys" },
-            { "slug": "chillet", "why": "Ride infusion into Dragon shots — pairs with Gobfin" }
+            {
+              "slug": "azurmane",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "azurobe-cryst",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "beakon-cryst",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "beegarde",
+              "why": "Bee swarm filler until Elizabee"
+            },
+            {
+              "slug": "blazehowl",
+              "why": "Early Fire mount fighter — graduate to Noct / Blazamut"
+            },
+            {
+              "slug": "braloha",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "broncherry",
+              "why": "Leaf mount — more travel than fight"
+            },
+            {
+              "slug": "bushi",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "bushi-noct",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "celaray",
+              "why": "Water early mount / glider — light combat"
+            },
+            {
+              "slug": "celesdir",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "celesdir-noct",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "chillet",
+              "why": "Ride infusion into Dragon shots — pairs with Gobfin stacks"
+            },
+            {
+              "slug": "croajiro-noct",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "cryolinx-terra",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "dazzi",
+              "why": "Early Electric companion"
+            },
+            {
+              "slug": "demon-eye",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "dinossom",
+              "why": "Leaf/Dragon starter mount fighter"
+            },
+            {
+              "slug": "direhowl",
+              "why": "Early Neutral sprint fighter (Lv9 saddle)"
+            },
+            {
+              "slug": "dogen",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "dualith",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "dualith-noct",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "dupin",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "eidrolon",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "eikthyrdeer",
+              "why": "Neutral charger — fine until better mounts"
+            },
+            {
+              "slug": "eikthyrdeer-terra",
+              "why": "Earth Deer — typed early charger"
+            },
+            {
+              "slug": "elgrove",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "elgrove-cryst",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "elizabee",
+              "why": "Queen bee swarm damage"
+            },
+            {
+              "slug": "enchanted-sword",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "eye-of-cthulhu",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "felbat",
+              "why": "Drain / sustain for long surveys — not a nuke"
+            },
+            {
+              "slug": "fenglope",
+              "why": "Fast ground travel; light combat kit"
+            },
+            {
+              "slug": "fenglope-lux",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "flaracle",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "foxcicle",
+              "why": "Ice support starter toward Frostallion teams"
+            },
+            {
+              "slug": "frostplume",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "ghangler-ignis",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "gildra",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "gorirat",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "gorirat-terra",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "icelyn",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "incineram",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "incineram-noct",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "killamari",
+              "why": "Dark/Water early glider toy"
+            },
+            {
+              "slug": "lapure",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "leafan",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "loomen",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "loupmoon",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "loupmoon-cryst",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "lovander",
+              "why": "Dark mid support — niche heal / drain, low Attack"
+            },
+            {
+              "slug": "majex",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "menasting-terra",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "moldron",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "nitewing",
+              "why": "First Neutral flyer before real DPS birds"
+            },
+            {
+              "slug": "nyafia",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "omascul",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "palumba",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "penking",
+              "why": "Water tanker for mid-game"
+            },
+            {
+              "slug": "penking-lux",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "petallia-ignis",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "pierdon",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "pierdon-cryst",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "polapup",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "polapup-terra",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "prixter",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "prixter-lux",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "rayhound-cryst",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "reindrix",
+              "why": "Ice deer — early cold coverage"
+            },
+            {
+              "slug": "renjishi",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "robinquill-terra",
+              "why": "Earth Robinquill — bow kit with typed coverage"
+            },
+            {
+              "slug": "roujay",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "sekhmet",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "solenne",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "sootseer",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "splatterina",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "starryon",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "starryon-primo",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "surfent",
+              "why": "Water serpent — early ocean fights only"
+            },
+            {
+              "slug": "tarantriss",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "tetroise",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "tetroise-primo",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "univolt-cryst",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "vaelet",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "verdash",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "warsect-terra",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            },
+            {
+              "slug": "xenovader",
+              "why": "Roster expand — mid combat stats; usable filler until editorial pass"
+            }
           ]
         },
         {
           "grade": "D",
           "pals": [
-            { "slug": "lifmunk", "why": "Tutorial partner — graduate ASAP" },
-            { "slug": "lamball", "why": "Early shield toy" },
-            { "slug": "pengullet", "why": "Cute, not a fight win condition" },
-            { "slug": "jelliette", "why": "Fishing-leaning; leave for lunkers" }
+            {
+              "slug": "amione",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "arsox",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "bakemi",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "blue-slime",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "bristla",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "broncherry-aqua",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "bulldosu",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "caprity",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "caprity-noct",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "carnibora",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "cattiva",
+              "why": "Starter helper — leave the fight ASAP"
+            },
+            {
+              "slug": "cave-bat",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "cawgnito",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "celaray-lux",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "chikipi",
+              "why": "Ranch chicken, not a combatant"
+            },
+            {
+              "slug": "chillet-ignis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "cinnamoth",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "clovee",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "cremis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "croajiro",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "daedream",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "dazemu",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "dazzi-noct",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "depresso",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "digtoise",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "dumud",
+              "why": "Mud filler — early survey only"
+            },
+            {
+              "slug": "dumud-gild",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "dynamoff",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "elphidran",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "elphidran-aqua",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "finsider",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "finsider-ignis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "flambelle",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "flopie",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "foxparks",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "foxparks-cryst",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "fuack",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "fuack-ignis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "fuddler",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "galeclaw",
+              "why": "Glider partner — not a real DPS seat"
+            },
+            {
+              "slug": "gloopie",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "gloopie-primo",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "green-slime",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "grintale",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "gumoss",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "hangyu",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "hangyu-cryst",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "herbil",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "hoocrates",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "hoodle",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "illuminant-bat",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "illuminant-slime",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "jelliette",
+              "why": "Fishing-leaning; leave for lunkers"
+            },
+            {
+              "slug": "jellroy",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "jolthog",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "jolthog-cryst",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "kelpsea",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "kelpsea-ignis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "kikit",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "killamari-primo",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "kitsun-noct",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "lamball",
+              "why": "Early shield toy"
+            },
+            {
+              "slug": "lapiron",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "leezpunk",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "leezpunk-ignis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "lifmunk",
+              "why": "Tutorial partner — graduate ASAP"
+            },
+            {
+              "slug": "lullu",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "lunaris",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "mammorest-cryst",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "maraith",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "mau",
+              "why": "Gold ranch cat — skip for fights"
+            },
+            {
+              "slug": "mau-cryst",
+              "why": "Ice Mau — still a ranch pet"
+            },
+            {
+              "slug": "melpaca",
+              "why": "Wool taxi — no fight kit"
+            },
+            {
+              "slug": "mimog",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "mozzarina",
+              "why": "Milk ranch — leave in the pen"
+            },
+            {
+              "slug": "muffly",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "munchill",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "mycora",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "needoll",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "needoll-noct",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "nitemary",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "nitemary-botan",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "nox",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "pengullet",
+              "why": "Cute, not a fight win condition"
+            },
+            {
+              "slug": "pengullet-lux",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "petallia",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "prunelia",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "puffolt",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "pupperai",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "purple-slime",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "rainbow-slime",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "red-slime",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "ribbuny",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "ribbuny-botan",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "rooby",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "rushoar",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "shroomer",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "shroomer-noct",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "sibelyx",
+              "why": "Cloth / ranch Ice — leave combat to Bastigor"
+            },
+            {
+              "slug": "sibelyx-primo",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "skutlass",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "skutlass-ignis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "slowatt",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "smokie",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "smokie-cryst",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "snock",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "snock-lux",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "snugloo",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "solmora",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "solmora-lux",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "souffline",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "sparkit",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "surfent-terra",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "swee",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "sweepa",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "tanzee",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "tanzee-ignis",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "teafant",
+              "why": "Starter watering pal — retire from combat"
+            },
+            {
+              "slug": "tocotoco",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "tombat",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "tropicaw",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "turtacle",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "turtacle-terra",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "valentail",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "venusa",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "vixy",
+              "why": "Sphere ranch — economy, not DPS"
+            },
+            {
+              "slug": "wispaw",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "wistella",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "woolipop",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "woolipop-terra",
+              "why": "Roster expand — lower combat priority vs ranked meta"
+            },
+            {
+              "slug": "yakumo",
+              "why": "Early ground filler — swap out quickly"
+            }
           ]
         }
       ]
@@ -97,66 +1239,221 @@
         {
           "grade": "S",
           "pals": [
-            { "slug": "anubis", "why": "Handiwork 6 / Mining 6 — still the all-round base anchor" },
-            { "slug": "selyne", "why": "Handiwork 7 leader — three jobs in one bed slot" },
-            { "slug": "lyleen", "why": "Planting 7 + Gathering / Medicine farm elite" },
-            { "slug": "lyleen-noct", "why": "Dark Lyleen — Medicine 7 + farm elite" },
-            { "slug": "jormuntide-ignis", "why": "Kindling 7 — ore smelts while your raid sweeper rests" },
-            { "slug": "jormuntide", "why": "Watering 7 for crop cycles" },
-            { "slug": "astegon", "why": "Mining 7 + double ore drops while ridden" },
-            { "slug": "knocklem", "why": "Mining 7 / Transporting 7 — heavy-stack hauler" },
-            { "slug": "orserk", "why": "Generating Electricity 8 — best power specialist" },
-            { "slug": "bastigor", "why": "Cooling 8 for food / late production lines" },
-            { "slug": "frostallion", "why": "Cooling 7 legendary fridge" },
-            { "slug": "neptilius", "why": "Watering 7 — finishes crop cycles fast" },
-            { "slug": "bellanoir-libero", "why": "Medicine 7 + Handiwork hybrid" },
-            { "slug": "sibelyx", "why": "Cooling + cloth / ranch value" }
+            {
+              "slug": "orserk",
+              "why": "Generating Electricity 8 — best power specialist in the catalog"
+            },
+            {
+              "slug": "bastigor",
+              "why": "Cooling 8 for food / late production lines"
+            },
+            {
+              "slug": "jetragon",
+              "why": "Gathering 8 when parked — absurd for a combat flyer"
+            },
+            {
+              "slug": "selyne",
+              "why": "Handiwork 7 + Medicine 6 — three jobs in one bed"
+            },
+            {
+              "slug": "lyleen",
+              "why": "Planting 7 + Gathering / Medicine farm elite"
+            },
+            {
+              "slug": "lyleen-noct",
+              "why": "Medicine 7 + farm elite Dark Lyleen"
+            },
+            {
+              "slug": "jormuntide-ignis",
+              "why": "Kindling 7 — ore smelts while your raid sweeper rests"
+            },
+            {
+              "slug": "jormuntide",
+              "why": "Watering 7 for crop cycles"
+            },
+            {
+              "slug": "neptilius",
+              "why": "Watering 7 — finishes crop cycles fast"
+            },
+            {
+              "slug": "astegon",
+              "why": "Mining 7 + double ore drops while ridden"
+            },
+            {
+              "slug": "knocklem",
+              "why": "Mining 7 / Transporting 7 — heavy-stack hauler"
+            },
+            {
+              "slug": "blazamut",
+              "why": "Mining 7 / Kindling hybrid for smelting bases"
+            },
+            {
+              "slug": "blazamut-ryu",
+              "why": "Mining 7 / Kindling endgame smelter"
+            },
+            {
+              "slug": "frostallion",
+              "why": "Cooling 7 legendary fridge"
+            },
+            {
+              "slug": "frostallion-noct",
+              "why": "Gathering 7 legendary harvester"
+            },
+            {
+              "slug": "bellanoir-libero",
+              "why": "Medicine 7 + Handiwork hybrid"
+            },
+            {
+              "slug": "anubis",
+              "why": "Handiwork 6 / Mining 6 — still the all-round base anchor"
+            }
           ]
         },
         {
           "grade": "A",
           "pals": [
-            { "slug": "blazamut", "why": "Kindling / Mining 7 hybrid for smelting bases" },
-            { "slug": "blazamut-ryu", "why": "Kindling / Mining 7 endgame smelter" },
-            { "slug": "faleris", "why": "Kindling 6 Fire flyer that still works the forge" },
-            { "slug": "faleris-aqua", "why": "Watering 6 for ocean / farm bases" },
-            { "slug": "helzephyr", "why": "Fastest Transport path for compact crafting bases" },
-            { "slug": "helzephyr-lux", "why": "Lux Transport speed for spread-out layouts" },
-            { "slug": "wumpo", "why": "Transporting 6 + Lumbering capacity king" },
-            { "slug": "wumpo-botan", "why": "Transporting 6 Leaf hauler" },
-            { "slug": "mammorest", "why": "Logging + bulk transport" },
-            { "slug": "elizabee", "why": "Honey / Gathering base staple" },
-            { "slug": "beegarde", "why": "Farming swarm for plantations + cake honey" },
-            { "slug": "menasting", "why": "Mining + Dark base helper" },
-            { "slug": "vixy", "why": "Ranch spheres / gold — fuels every capture grind" },
-            { "slug": "frostallion-noct", "why": "Gathering 7 legendary harvester" },
-            { "slug": "jetragon", "why": "Gathering 8 when parked — absurd for a flyer" },
-            { "slug": "bellanoir", "why": "Medicine 5 + Handiwork before Libero" }
+            {
+              "slug": "faleris",
+              "why": "Kindling 6 Fire flyer that still works the forge"
+            },
+            {
+              "slug": "faleris-aqua",
+              "why": "Watering 6 for ocean / farm bases"
+            },
+            {
+              "slug": "suzaku-aqua",
+              "why": "Watering 6 flyer for coastal farms"
+            },
+            {
+              "slug": "wumpo",
+              "why": "Transporting 6 + Cooling / Lumbering capacity"
+            },
+            {
+              "slug": "wumpo-botan",
+              "why": "Transporting 6 Leaf hauler"
+            },
+            {
+              "slug": "helzephyr-lux",
+              "why": "Transport 5 + Electricity — spread-out layouts"
+            },
+            {
+              "slug": "helzephyr",
+              "why": "Transport 4 path for compact crafting bases"
+            },
+            {
+              "slug": "mammorest",
+              "why": "Logging + bulk transport body"
+            },
+            {
+              "slug": "necromus",
+              "why": "Lumbering 6 when parked between fights"
+            },
+            {
+              "slug": "paladius",
+              "why": "Lumbering 6 Neutral twin for wood lines"
+            },
+            {
+              "slug": "silvegis",
+              "why": "Lumbering 6 Dragon option"
+            },
+            {
+              "slug": "menasting",
+              "why": "Mining 5 Dark base helper"
+            },
+            {
+              "slug": "elizabee",
+              "why": "Honey / Gathering base staple"
+            },
+            {
+              "slug": "beegarde",
+              "why": "Farming swarm for plantations + cake honey"
+            },
+            {
+              "slug": "vixy",
+              "why": "Ranch spheres / gold — fuels every capture grind"
+            },
+            {
+              "slug": "bellanoir",
+              "why": "Medicine 5 + Handiwork before Libero"
+            },
+            {
+              "slug": "ghangler",
+              "why": "Watering 5 angler for farm bases"
+            },
+            {
+              "slug": "sibelyx",
+              "why": "Cooling / Farming / Medicine ranch hybrid — not a specialist king"
+            }
           ]
         },
         {
           "grade": "B",
           "pals": [
-            { "slug": "mozzarina", "why": "Milk ranch staple for cake" },
-            { "slug": "mau", "why": "Gold ranch helper" },
-            { "slug": "mau-cryst", "why": "Ice Mau ranch variant" },
-            { "slug": "melpaca", "why": "Wool / transport early" },
-            { "slug": "cattiva", "why": "Early Handiwork, mining, and +carry" },
-            { "slug": "chikipi", "why": "Eggs for cooking lines" },
-            { "slug": "grizzbolt", "why": "Generating Electricity 5 mid-game power" },
-            { "slug": "suzaku-aqua", "why": "Watering 6 flyer for coastal farms" },
-            { "slug": "broncherry", "why": "Planting 5 weight hybrid" },
-            { "slug": "quivern-botan", "why": "Planting 5 Leaf Quivern" },
-            { "slug": "reptyro-cryst", "why": "Cooling 5 before Bastigor / Frostallion" }
+            {
+              "slug": "mozzarina",
+              "why": "Milk ranch staple for cake"
+            },
+            {
+              "slug": "mau",
+              "why": "Gold ranch helper"
+            },
+            {
+              "slug": "mau-cryst",
+              "why": "Ice Mau ranch variant"
+            },
+            {
+              "slug": "melpaca",
+              "why": "Wool / transport early"
+            },
+            {
+              "slug": "cattiva",
+              "why": "Early Handiwork, mining, and +carry"
+            },
+            {
+              "slug": "chikipi",
+              "why": "Eggs for cooking lines"
+            },
+            {
+              "slug": "grizzbolt",
+              "why": "Generating Electricity 5 mid-game power"
+            },
+            {
+              "slug": "broncherry",
+              "why": "Planting 5 weight hybrid"
+            },
+            {
+              "slug": "quivern-botan",
+              "why": "Planting 5 Leaf Quivern"
+            },
+            {
+              "slug": "reptyro-cryst",
+              "why": "Cooling 5 before Bastigor / Frostallion"
+            },
+            {
+              "slug": "cryolinx",
+              "why": "Cooling 4 / Handiwork hybrid mid filler"
+            }
           ]
         },
         {
           "grade": "C",
           "pals": [
-            { "slug": "lamball", "why": "Starter wool / Kindling" },
-            { "slug": "lifmunk", "why": "Early Gathering until better pals" },
-            { "slug": "foxcicle", "why": "Farming 3 ranch filler" },
-            { "slug": "pengullet", "why": "Early watering / cute filler" }
+            {
+              "slug": "lamball",
+              "why": "Starter wool / Kindling"
+            },
+            {
+              "slug": "lifmunk",
+              "why": "Early Gathering until better pals"
+            },
+            {
+              "slug": "foxcicle",
+              "why": "Farming 3 ranch filler"
+            },
+            {
+              "slug": "pengullet",
+              "why": "Early watering / cute filler"
+            }
           ]
         }
       ]
@@ -164,47 +1461,114 @@
     {
       "role": "flying-mounts",
       "label": "Flying mounts",
-      "description": "Exploration speed, Sunreach vertical routes, oil rigs, and aerial survey.",
+      "description": "Ranked primarily by ride sprint speed from this catalog, then stamina and combat hybrid value.",
       "bands": [
         {
           "grade": "S",
           "pals": [
-            { "slug": "jetragon", "why": "~3300 sprint — fastest long-range flyer for 100% routes" },
-            { "slug": "xenolord", "why": "~2700 sprint with ~300 stamina — wins long Sunreach hauls" },
-            { "slug": "frostallion", "why": "Ice legendary steed — speed + combat conversion" },
-            { "slug": "frostallion-noct", "why": "Dark Frostallion for night / Dark zones" },
-            { "slug": "shadowbeak", "why": "Smoothest Dark hybrid of traversal and DPS" }
+            {
+              "slug": "jetragon",
+              "why": "3300 sprint — fastest flyer in the catalog by a wide margin"
+            },
+            {
+              "slug": "panthalus",
+              "why": "3000 sprint — near-Jetragon speed with huge bulk"
+            },
+            {
+              "slug": "xenolord",
+              "why": "2700 sprint + 300 stamina — best long-haul raid flyer"
+            }
           ]
         },
         {
           "grade": "A",
           "pals": [
-            { "slug": "faleris", "why": "Fastest common Fire flyer (~1400) before legendaries" },
-            { "slug": "helzephyr-lux", "why": "Fast lightning flyer" },
-            { "slug": "ragnahawk", "why": "Small hitbox — best dungeon / cave flyer" },
-            { "slug": "selyne", "why": "Astral flyer when the meteor event unlocks it" },
-            { "slug": "faleris-aqua", "why": "Water Faleris for ocean legs" },
-            { "slug": "quivern", "why": "Dragon flyer workhorse" },
-            { "slug": "silvegis", "why": "Steel dragon flyer option" },
-            { "slug": "suzaku", "why": "Classic Fire flyer" }
+            {
+              "slug": "frostallion",
+              "why": "1800 sprint Ice legendary — speed + combat conversion"
+            },
+            {
+              "slug": "frostallion-noct",
+              "why": "1800 sprint Dark Frostallion for night / Dark zones"
+            },
+            {
+              "slug": "selyne",
+              "why": "1600 sprint Astral flyer with combat amp"
+            },
+            {
+              "slug": "faleris",
+              "why": "1400 sprint — best common Fire flyer before legendaries"
+            },
+            {
+              "slug": "faleris-aqua",
+              "why": "1400 sprint Water Faleris for ocean legs"
+            },
+            {
+              "slug": "ragnahawk",
+              "why": "1300 sprint + small hitbox for dungeons"
+            },
+            {
+              "slug": "shadowbeak",
+              "why": "1200 sprint Dark hybrid of traversal and DPS"
+            }
           ]
         },
         {
           "grade": "B",
           "pals": [
-            { "slug": "helzephyr", "why": "Base Dark flyer before Lux" },
-            { "slug": "suzaku-aqua", "why": "Water Suzaku" },
-            { "slug": "beakon", "why": "Early Electric flyer" },
-            { "slug": "vanwyrm", "why": "Early Fire flyer + loot" },
-            { "slug": "vanwyrm-cryst", "why": "Ice Vanwyrm" },
-            { "slug": "quivern-botan", "why": "Leaf Quivern variant" },
-            { "slug": "astegon", "why": "Mining while flying" }
+            {
+              "slug": "beakon",
+              "why": "1200 sprint early Electric flyer"
+            },
+            {
+              "slug": "helzephyr-lux",
+              "why": "1100 sprint lightning flyer"
+            },
+            {
+              "slug": "helzephyr",
+              "why": "1100 sprint base Dark flyer"
+            },
+            {
+              "slug": "suzaku",
+              "why": "1100 sprint classic Fire flyer"
+            },
+            {
+              "slug": "suzaku-aqua",
+              "why": "1100 sprint Water Suzaku"
+            },
+            {
+              "slug": "astegon",
+              "why": "1100 sprint — mining while flying"
+            },
+            {
+              "slug": "silvegis",
+              "why": "1050 sprint Dragon lumber flyer"
+            },
+            {
+              "slug": "quivern",
+              "why": "950 sprint Dragon workhorse"
+            },
+            {
+              "slug": "quivern-botan",
+              "why": "950 sprint Leaf Quivern"
+            }
           ]
         },
         {
           "grade": "C",
           "pals": [
-            { "slug": "nitewing", "why": "First real sky unlock for many players" }
+            {
+              "slug": "vanwyrm",
+              "why": "850 sprint early Fire flyer + loot"
+            },
+            {
+              "slug": "vanwyrm-cryst",
+              "why": "850 sprint Ice Vanwyrm"
+            },
+            {
+              "slug": "nitewing",
+              "why": "750 sprint — first real sky unlock for many players"
+            }
           ]
         }
       ]
@@ -212,58 +1576,206 @@
     {
       "role": "ground-mounts",
       "label": "Ground mounts",
-      "description": "Land speed, weight stacks, water travel, and region traversal without flight.",
+      "description": "Land speed for caves / no-fly arenas, weight stacks, and water travel — ranked by catalog sprint, then utility.",
       "bands": [
         {
           "grade": "S",
           "pals": [
-            { "slug": "necromus", "why": "Legendary Dark ground speed + power" },
-            { "slug": "paladius", "why": "Legendary Neutral charger with triple jump" },
-            { "slug": "neptilius", "why": "Fastest water mount — vertical ocean jumps over cliffs" },
-            { "slug": "blazamut-ryu", "why": "Dragon-fire ground nuke mount" },
-            { "slug": "jormuntide-ignis", "why": "Fire Jormuntide for lava biomes + burn payoff" }
+            {
+              "slug": "necromus",
+              "why": "1900 sprint legendary Dark ground king + dash"
+            },
+            {
+              "slug": "paladius",
+              "why": "1800 sprint legendary Neutral charger with triple jump"
+            },
+            {
+              "slug": "neptilius",
+              "why": "Top water mount — ocean jumps and Fire-boss coverage"
+            }
           ]
         },
         {
           "grade": "A",
           "pals": [
-            { "slug": "fenglope", "why": "Best early/mid land speed — easy breed path" },
-            { "slug": "blazamut", "why": "Fire ground mount for volcano" },
-            { "slug": "grizzbolt", "why": "Electric mount + gunner skill" },
-            { "slug": "univolt", "why": "Fast Electric charger" },
-            { "slug": "rayhound", "why": "Electric sprint mount" },
-            { "slug": "jormuntide", "why": "Water serpent — no stamina drain on flat ocean" },
-            { "slug": "anubis", "why": "Ground combat mount with sidestep" },
-            { "slug": "knocklem", "why": "Tank mount with Guardian Mode" },
-            { "slug": "wumpo", "why": "Carry-weight king for survey loot" },
-            { "slug": "kingpaca", "why": "Weight + soft ground travel" }
+            {
+              "slug": "gildane",
+              "why": "1260 sprint Earth epic — fast mid/late lander"
+            },
+            {
+              "slug": "pyrin",
+              "why": "1300 sprint Fire horse — best mid-game land speed jump"
+            },
+            {
+              "slug": "pyrin-noct",
+              "why": "1300 sprint Dark Pyrin"
+            },
+            {
+              "slug": "blazamut-ryu",
+              "why": "1200 sprint Dragon-fire ground nuke mount"
+            },
+            {
+              "slug": "blazamut",
+              "why": "1200 sprint Fire ground mount for volcano"
+            },
+            {
+              "slug": "blazehowl-noct",
+              "why": "1200 sprint Dark-fire Howl mount"
+            },
+            {
+              "slug": "orserk",
+              "why": "1200 sprint Electric/Dragon — fight while you travel"
+            },
+            {
+              "slug": "menasting",
+              "why": "1200 sprint Dark scorpion lander"
+            },
+            {
+              "slug": "xenogard",
+              "why": "1200 sprint armed-Pal mount"
+            },
+            {
+              "slug": "rayhound",
+              "why": "1150 sprint Electric sprinter"
+            },
+            {
+              "slug": "univolt",
+              "why": "1100 sprint Electric charger"
+            },
+            {
+              "slug": "jormuntide-ignis",
+              "why": "Fire Jormuntide for lava biomes + burn payoff"
+            },
+            {
+              "slug": "jormuntide",
+              "why": "Water serpent — strong ocean traversal"
+            },
+            {
+              "slug": "anubis",
+              "why": "Ground combat mount with sidestep"
+            },
+            {
+              "slug": "knocklem",
+              "why": "Tank mount with Guardian Mode + Mining 7"
+            },
+            {
+              "slug": "wumpo",
+              "why": "1050 sprint carry-weight king for survey loot"
+            },
+            {
+              "slug": "kingpaca",
+              "why": "1040 sprint weight + soft ground travel"
+            }
           ]
         },
         {
           "grade": "B",
           "pals": [
-            { "slug": "direhowl", "why": "First great land sprint (Lv9)" },
-            { "slug": "eikthyrdeer", "why": "Classic forest charger" },
-            { "slug": "eikthyrdeer-terra", "why": "Terra deer for desert" },
-            { "slug": "kitsun", "why": "Fire fox mount" },
-            { "slug": "pyrin", "why": "Electric horse" },
-            { "slug": "pyrin-noct", "why": "Dark Pyrin" },
-            { "slug": "reindrix", "why": "Ice / Insulation travel" },
-            { "slug": "mossanda", "why": "Grenade partner + travel" },
-            { "slug": "relaxaurus", "why": "Missile mount mid-game" },
-            { "slug": "gildane", "why": "Gold coyote mount" },
-            { "slug": "azurobe", "why": "Water/Dragon scenic ride (Lv24 progression)" }
+            {
+              "slug": "fenglope",
+              "why": "1050 sprint — easy breed path, not the fastest anymore"
+            },
+            {
+              "slug": "direhowl",
+              "why": "1050 sprint first great land sprint (Lv9 saddle)"
+            },
+            {
+              "slug": "chillet",
+              "why": "1050 sprint Ice mount with Dragon infusion"
+            },
+            {
+              "slug": "yakumo",
+              "why": "1080 sprint utility land partner"
+            },
+            {
+              "slug": "grizzbolt",
+              "why": "Electric mount + gunner skill"
+            },
+            {
+              "slug": "kitsun",
+              "why": "Fire fox mount"
+            },
+            {
+              "slug": "eikthyrdeer",
+              "why": "Classic forest charger"
+            },
+            {
+              "slug": "eikthyrdeer-terra",
+              "why": "Terra deer for desert"
+            },
+            {
+              "slug": "reindrix",
+              "why": "Ice / Insulation travel"
+            },
+            {
+              "slug": "mossanda",
+              "why": "Grenade partner + travel"
+            },
+            {
+              "slug": "mossanda-lux",
+              "why": "Electric Mossanda travel hybrid"
+            },
+            {
+              "slug": "relaxaurus",
+              "why": "Missile mount mid-game"
+            },
+            {
+              "slug": "relaxaurus-lux",
+              "why": "Missile Lux travel hybrid"
+            },
+            {
+              "slug": "azurobe",
+              "why": "Water/Dragon scenic ride"
+            },
+            {
+              "slug": "kingpaca-cryst",
+              "why": "Ice Kingpaca weight mount"
+            },
+            {
+              "slug": "wumpo-botan",
+              "why": "Leaf Wumpo hauler"
+            },
+            {
+              "slug": "blazehowl",
+              "why": "1200 sprint early Fire Howl — retire for Noct"
+            }
           ]
         },
         {
           "grade": "C",
           "pals": [
-            { "slug": "melpaca", "why": "Early wool taxi" },
-            { "slug": "surfent", "why": "Water travel before better mounts" },
-            { "slug": "chillet", "why": "Cute Ice mount for early towers" },
-            { "slug": "dinossom", "why": "Leaf starter mount" },
-            { "slug": "yakumo", "why": "Utility land partner" },
-            { "slug": "broncherry", "why": "Weight + Planting hybrid" }
+            {
+              "slug": "melpaca",
+              "why": "Early wool taxi"
+            },
+            {
+              "slug": "surfent",
+              "why": "Water travel before better mounts"
+            },
+            {
+              "slug": "dinossom",
+              "why": "Leaf starter mount"
+            },
+            {
+              "slug": "dinossom-lux",
+              "why": "Electric Dinossom starter lander"
+            },
+            {
+              "slug": "broncherry",
+              "why": "Weight + Planting hybrid"
+            },
+            {
+              "slug": "reptyro",
+              "why": "Fire/Earth tank mount — slow"
+            },
+            {
+              "slug": "reptyro-cryst",
+              "why": "Ice Reptyro tank mount — slow"
+            },
+            {
+              "slug": "mammorest",
+              "why": "Bulk hauler — not a sprinter"
+            }
           ]
         }
       ]
@@ -276,34 +1788,73 @@
         {
           "grade": "S",
           "pals": [
-            { "slug": "vixy", "why": "Ranch spheres — fuels every capture grind" }
+            {
+              "slug": "vixy",
+              "why": "Ranch spheres — fuels every capture grind"
+            }
           ]
         },
         {
           "grade": "A",
           "pals": [
-            { "slug": "mau", "why": "Gold ranch for sphere crafting costs" },
-            { "slug": "mau-cryst", "why": "Ice Mau gold alternative" },
-            { "slug": "vanwyrm", "why": "More drops while surveying nests" },
-            { "slug": "gobfin", "why": "Stackable attack aura so weak pals stay catchable" },
-            { "slug": "beegarde", "why": "Honey for cakes while you hunt" },
-            { "slug": "mozzarina", "why": "Milk for cake / long catch sessions" }
+            {
+              "slug": "mau",
+              "why": "Gold ranch for sphere crafting costs"
+            },
+            {
+              "slug": "mau-cryst",
+              "why": "Ice Mau gold alternative"
+            },
+            {
+              "slug": "vanwyrm",
+              "why": "More drops while surveying nests"
+            },
+            {
+              "slug": "gobfin",
+              "why": "Stackable attack aura so weak pals stay catchable"
+            },
+            {
+              "slug": "beegarde",
+              "why": "Honey for cakes while you hunt"
+            },
+            {
+              "slug": "mozzarina",
+              "why": "Milk for cake / long catch sessions"
+            }
           ]
         },
         {
           "grade": "B",
           "pals": [
-            { "slug": "chikipi", "why": "Eggs / cooking sustain" },
-            { "slug": "cattiva", "why": "Early mining for sphere mats + carry" },
-            { "slug": "felbat", "why": "Life steal saves meds on long catch runs" },
-            { "slug": "gobfin-ignis", "why": "Fire Gobfin stacks for burn-capture setups" }
+            {
+              "slug": "chikipi",
+              "why": "Eggs / cooking sustain"
+            },
+            {
+              "slug": "cattiva",
+              "why": "Early mining for sphere mats + carry"
+            },
+            {
+              "slug": "felbat",
+              "why": "Life steal saves meds on long catch runs"
+            },
+            {
+              "slug": "gobfin-ignis",
+              "why": "Fire Gobfin stacks for burn-capture setups"
+            }
           ]
         },
         {
           "grade": "C",
           "pals": [
-            { "slug": "lifmunk", "why": "Starter partner until Vixy ranch is online" },
-            { "slug": "lamball", "why": "Wool filler — replace quickly" }
+            {
+              "slug": "lifmunk",
+              "why": "Starter partner until Vixy ranch is online"
+            },
+            {
+              "slug": "lamball",
+              "why": "Wool filler — replace quickly"
+            }
           ]
         }
       ]

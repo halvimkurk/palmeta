@@ -46,6 +46,7 @@ export function filterPals(palsList: Pal[], filters: PalFilters): Pal[] {
 export type PalSort =
   | "name"
   | "dex"
+  | "element"
   | "rarity"
   | "tier"
   | "work"
@@ -63,6 +64,18 @@ const RARITY_RANK: Record<PalRarity, number> = {
   epic: 1,
   rare: 2,
   common: 3,
+};
+
+const ELEMENT_RANK: Record<PalElement, number> = {
+  normal: 0,
+  fire: 1,
+  water: 2,
+  electricity: 3,
+  leaf: 4,
+  ice: 5,
+  earth: 6,
+  dark: 7,
+  dragon: 8,
 };
 
 /** Default table sort direction when a column is first selected. */
@@ -108,6 +121,11 @@ export function sortPals(
       const db = b.dexNo ?? b.breeding?.index ?? 9999;
       if (da !== db) return withDir(da - db, sort, dir);
     }
+    if (sort === "element") {
+      const ea = a.elements[0] ? ELEMENT_RANK[a.elements[0]] : 99;
+      const eb = b.elements[0] ? ELEMENT_RANK[b.elements[0]] : 99;
+      if (ea !== eb) return withDir(ea - eb, sort, dir);
+    }
     if (sort === "rarity") {
       const ra = RARITY_RANK[a.rarity];
       const rb = RARITY_RANK[b.rarity];
@@ -151,6 +169,7 @@ export function sortPals(
 export function parsePalSort(value: string | null | undefined): PalSort {
   if (
     value === "dex" ||
+    value === "element" ||
     value === "rarity" ||
     value === "tier" ||
     value === "name" ||

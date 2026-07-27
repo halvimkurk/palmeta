@@ -4,55 +4,50 @@ export const NAV = {
   tiers: {
     href: "/tiers?role=combat",
     match: "/tiers",
-    label: "Summit Tiers",
+    label: "Tier List",
+    eyebrow: "Ranked by role",
+    lead: "War-champions, ranch-hands, sky steeds, and catchers — each path to the summit keeps its own court, and every pal earns a verdict on the climb.",
+    hint: "Who rules combat, work & travel",
     icon: "tiers",
-    hint: "Role power ranks",
   },
   breeding: {
     href: "/breeding",
     match: "/breeding",
-    label: "Egg Nest",
+    label: "Breeding Calculator",
+    eyebrow: "Lineage & nests",
+    lead: "Pair two parents and read the omen in the egg, or name the hatchling you seek and trace every bloodline that might deliver it.",
+    hint: "Foretell the hatch, trace the sire",
     icon: "eggs",
-    hint: "What hatches next",
   },
   teams: {
     href: "/teams",
     match: "/teams",
-    label: "Raid Roster",
+    label: "Team Builder",
+    eyebrow: "Party of five",
+    lead: "Forge a five-pal war band, let partner auras weave into one rhythm, or march under a banner already proven in the meta.",
+    hint: "Five souls, one battle rhythm",
     icon: "teams",
-    hint: "Party of five",
   },
   pals: {
     href: "/pals",
     match: "/pals",
     label: "Paldeck",
+    eyebrow: "The bestiary",
+    lead: "Every creature in the catalog — hunt by element or calling, sort by the stat that matters, and open any pal's chronicle of skills, work, and breeding roads.",
+    hint: "Stats, skills & every pal's tale",
     icon: "pals",
-    hint: "Every pal sheet",
   },
   map: {
     href: "/map?mode=hunt",
     match: "/map",
-    label: "Field Atlas",
+    label: "Map",
+    eyebrow: "Palpagos fields",
+    lead: "Alphas on the ridgeline, spawns in the brush, effigies and fast-travel stones — chart the island before you set out.",
+    hint: "Alphas, spawns & hidden shrines",
     icon: "map",
-    hint: "Alphas, spawns, collect",
-  },
-  blues: {
-    href: "/blues",
-    match: "/blues",
-    label: "Dev Blues",
-    icon: "blues",
-    hint: "Studio word",
-  },
-  news: {
-    href: "/news",
-    match: "/news",
-    label: "Island Briefs",
-    icon: "news",
-    hint: "Patch & field notes",
   },
 } as const;
 
-export const TOOL_NAV = [NAV.tiers, NAV.breeding, NAV.teams, NAV.pals] as const;
-export const FEED_NAV = [NAV.blues, NAV.news] as const;
+export const TOOL_NAV = [NAV.pals, NAV.tiers, NAV.breeding, NAV.teams] as const;
 
 export type NavIconName = (typeof NAV)[keyof typeof NAV]["icon"];

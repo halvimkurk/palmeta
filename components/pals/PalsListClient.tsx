@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CompanionIntro } from "@/components/pals/CompanionIntro";
+import { NAV } from "@/lib/nav";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { ElementDots } from "@/components/pals/ElementDots";
 import { PalIcon } from "@/components/teams/PalIcon";
@@ -26,6 +27,7 @@ import {
   type PalElement,
   type PalRarity,
   type PalSort,
+  type PalSortDir,
   type WorkSuitabilityId,
 } from "@/lib/teams";
 
@@ -47,6 +49,29 @@ const TIER_GRADE_RANK: Record<string, number> = {
 function atkOf(pal: Pal): number | null {
   if (!pal.stats) return null;
   return Math.max(pal.stats.melee, pal.stats.shot);
+}
+
+type SortBtnProps = {
+  col: PalSort;
+  label: string;
+  active: boolean;
+  sortDir: PalSortDir;
+  onSort: (col: PalSort) => void;
+};
+
+function PalSortBtn({ col, label, active, sortDir, onSort }: SortBtnProps) {
+  const arrow = sortDir === "desc" ? "▾" : "▴";
+  return (
+    <button
+      type="button"
+      className={`pals-th-sort ${active ? "is-active" : ""}`}
+      aria-pressed={active}
+      onClick={() => onSort(col)}
+    >
+      {label}
+      {active ? <span aria-hidden> {arrow}</span> : null}
+    </button>
+  );
 }
 
 export function PalsListClient({ pals, combatGradeBySlug }: Props) {
@@ -104,30 +129,39 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
   }, []);
 
   function pushParams(next: Record<string, string | undefined>) {
-    const params = new URLSearchParams();
-    const elementValue = next.element ?? element;
-    const rarityValue = next.rarity ?? rarity;
-    const effectValue = next.effect ?? effectTag;
+    const params = new URLSearchParams(searchParams.toString());
+
+    const setOrDrop = (
+      key: string,
+      value: string | undefined,
+      dropValues: string[] = [],
+    ) => {
+      if (value === undefined) return;
+      if (!value || dropValues.includes(value)) params.delete(key);
+      else params.set(key, value);
+    };
+
+    setOrDrop("element", next.element ?? element, ["all"]);
+    setOrDrop("rarity", next.rarity ?? rarity, ["all"]);
+    setOrDrop("effect", next.effect ?? effectTag, ["all"]);
+    setOrDrop("work", next.work ?? work, ["all"]);
+
     const workValue = next.work ?? work;
     const workMinValue = next.workMin ?? String(workMin);
-    const sortValue = next.sort ?? sort;
-    const dirValue = next.dir ?? sortDir;
-    const qValue = next.q !== undefined ? next.q : q;
+    if (workValue === "all" || Number(workMinValue) <= 1) params.delete("workMin");
+    else params.set("workMin", workMinValue);
 
-    if (elementValue && elementValue !== "all") params.set("element", elementValue);
-    if (rarityValue && rarityValue !== "all") params.set("rarity", rarityValue);
-    if (effectValue && effectValue !== "all") params.set("effect", effectValue);
-    if (workValue && workValue !== "all") params.set("work", workValue);
-    if (workValue && workValue !== "all" && Number(workMinValue) > 1) {
-      params.set("workMin", workMinValue);
-    }
-    if (sortValue && sortValue !== "name") {
-      params.set("sort", sortValue);
-      if (dirValue !== defaultSortDir(sortValue as PalSort)) {
-        params.set("dir", dirValue);
-      }
-    }
-    if (qValue) params.set("q", qValue);
+    const sortValue = (next.sort ?? sort) as PalSort;
+    const dirValue = (next.dir ?? sortDir) as PalSortDir;
+    const naturalDir = defaultSortDir(sortValue);
+
+    if (sortValue === "name") params.delete("sort");
+    else params.set("sort", sortValue);
+
+    if (dirValue !== naturalDir) params.set("dir", dirValue);
+    else params.delete("dir");
+
+    if (next.q !== undefined) setOrDrop("q", next.q, [""]);
 
     const qs = params.toString();
     router.replace(qs ? `/pals?${qs}` : "/pals", { scroll: false });
@@ -194,33 +228,13 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
 
   const elements = Object.keys(ELEMENT_LABELS) as PalElement[];
 
-  function SortBtn({ col, label }: { col: SortCol; label: string }) {
-    const active = sort === col;
-    const arrow = sortDir === "desc" ? "▾" : "▴";
-    return (
-      <button
-        type="button"
-        className={`pals-th-sort ${active ? "is-active" : ""}`}
-        aria-pressed={active}
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          setSort(col);
-        }}
-      >
-        {label}
-        {active ? <span aria-hidden> {arrow}</span> : null}
-      </button>
-    );
-  }
-
   return (
     <div className="pals-page">
       <CompanionIntro
         tone="pals"
-        eyebrow="Creature index"
-        title="Palworld Paldeck"
-        lead="Every pal in the catalog — filter by role or element, sort by the stat you care about, open a sheet for breeding routes and tier placements."
+        eyebrow={NAV.pals.eyebrow}
+        title={NAV.pals.label}
+        lead={NAV.pals.lead}
       >
         <CompanionTools />
       </CompanionIntro>
@@ -290,6 +304,8 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
               aria-label="Sort pals"
             >
               <option value="name">Sort: Name</option>
+              <option value="dex">Sort: Dex #</option>
+              <option value="element">Sort: Element</option>
               <option value="tier">Sort: Tier</option>
               <option value="hp">Sort: HP</option>
               <option value="atk">Sort: Atk</option>
@@ -297,7 +313,6 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
               <option value="work">Sort: Work</option>
               <option value="combi">Sort: Breed</option>
               <option value="rarity">Sort: Rarity</option>
-              <option value="dex">Sort: Dex #</option>
             </select>
           </label>
           <label className="filter-select">
@@ -378,31 +393,85 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
             <thead>
               <tr>
                 <th scope="col" className="pals-th pals-th--rank">
-                  #
+                  <PalSortBtn
+                    col="dex"
+                    label="#"
+                    active={sort === "dex"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--pal">
-                  <SortBtn col="name" label="Pal" />
+                  <PalSortBtn
+                    col="name"
+                    label="Pal"
+                    active={sort === "name"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--el">
-                  El
+                  <PalSortBtn
+                    col="element"
+                    label="El"
+                    active={sort === "element"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--tier">
-                  <SortBtn col="tier" label="Tier" />
+                  <PalSortBtn
+                    col="tier"
+                    label="Tier"
+                    active={sort === "tier"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--num">
-                  <SortBtn col="hp" label="HP" />
+                  <PalSortBtn
+                    col="hp"
+                    label="HP"
+                    active={sort === "hp"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--num">
-                  <SortBtn col="atk" label="Atk" />
+                  <PalSortBtn
+                    col="atk"
+                    label="Atk"
+                    active={sort === "atk"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--num">
-                  <SortBtn col="defense" label="Def" />
+                  <PalSortBtn
+                    col="defense"
+                    label="Def"
+                    active={sort === "defense"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--work">
-                  <SortBtn col="work" label="Work" />
+                  <PalSortBtn
+                    col="work"
+                    label="Work"
+                    active={sort === "work"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
                 <th scope="col" className="pals-th pals-th--num pals-th--breed">
-                  <SortBtn col="combi" label="Breed" />
+                  <PalSortBtn
+                    col="combi"
+                    label="Breed"
+                    active={sort === "combi"}
+                    sortDir={sortDir}
+                    onSort={setSort}
+                  />
                 </th>
               </tr>
             </thead>

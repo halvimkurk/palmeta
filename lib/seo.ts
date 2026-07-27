@@ -17,10 +17,10 @@ function resolveSiteUrl(): string {
 export const SITE_URL = resolveSiteUrl();
 export const SITE_NAME = "Palworld Meta";
 export const SITE_TAGLINE =
-  "Unofficial Palworld 1.0 companion — Summit Tiers, Egg Nest breeding calculator, Raid Roster, and Paldeck.";
+  "Unofficial Palworld 1.0 companion — tier lists, breeding calculator, team builder, and Paldeck.";
 
 export const DEFAULT_DESCRIPTION =
-  "Palworld 1.0 companion: role tier lists with reasons, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
+  "Palworld 1.0 companion: role tier lists, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
 
 /** Build absolute page metadata with canonical + social cards. */
 export function pageMeta(opts: {

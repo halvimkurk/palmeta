@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { CompanionIntro } from "@/components/pals/CompanionIntro";
+import { NAV } from "@/lib/nav";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { CompCard } from "@/components/teams/CompCard";
 import { ElementBadges } from "@/components/teams/ElementBadge";
@@ -343,9 +344,9 @@ export function TeamBuilderClient({ pals, presets }: Props) {
     <div className="teams">
       <CompanionIntro
         tone="teams"
-        eyebrow="Party forge"
-        title="Raid Roster"
-        lead="Build a five-pal party, watch partner-skill effects update live, or load a meta comp — then save or share your roster."
+        eyebrow={NAV.teams.eyebrow}
+        title={NAV.teams.label}
+        lead={NAV.teams.lead}
       >
         <CompanionTools />
       </CompanionIntro>
@@ -801,9 +802,8 @@ export function TeamBuilderClient({ pals, presets }: Props) {
       ) : null}
 
       <p className="teams-footnote">
-        Shareable URL encodes your party.{" "}
-        <Link href="/pals">Paldeck</Link> · <Link href="/tiers?role=combat">Summit Tiers</Link> ·{" "}
-        <Link href="/breeding">Egg Nest</Link>
+        <Link href="/pals">{NAV.pals.label}</Link> · <Link href="/tiers?role=combat">{NAV.tiers.label}</Link> ·{" "}
+        <Link href="/breeding">{NAV.breeding.label}</Link>
       </p>
     </div>
   );

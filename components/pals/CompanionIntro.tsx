@@ -1,4 +1,7 @@
-import Image from "next/image";
+"use client";
+
+/* eslint-disable @next/next/no-img-element -- avoids next/image fill hydration mismatches */
+
 import type { ReactNode } from "react";
 import { companionArtFor, type CompanionArtTone } from "@/lib/companion-art";
 
@@ -22,6 +25,7 @@ export function CompanionIntro({
   return (
     <header className={`companion-intro companion-intro--${tone}`}>
       <div className="companion-intro__glow" aria-hidden />
+      <div className="companion-intro__mesh" aria-hidden />
       <div className="companion-intro__inner">
         <div className="companion-intro__copy">
           <p className="companion-intro__eyebrow">{eyebrow}</p>
@@ -30,14 +34,14 @@ export function CompanionIntro({
           {children}
         </div>
         <div className="companion-intro__art" aria-hidden>
-          <Image
+          {/* Plain img avoids next/image fill hydration mismatches in client trees. */}
+          <img
             src={art.src}
             alt=""
-            fill
-            sizes="(max-width: 720px) 42vw, 320px"
             className="companion-intro__art-img"
-            style={{ objectPosition: art.position }}
-            priority
+            style={{ objectPosition: art.objectPosition }}
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="companion-intro__art-shade" />
         </div>

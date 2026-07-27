@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { ElementDots } from "@/components/pals/ElementDots";
 import { PalIcon } from "@/components/teams/PalIcon";
+import { NAV } from "@/lib/nav";
 import type { UniqueCombo } from "@/lib/breeding/engine";
 import {
   EFFECT_TAG_LABELS,
@@ -134,13 +135,13 @@ export function PalDetailClient({
           Add to team
         </Link>
         <Link href={`/breeding?child=${pal.slug}`} className="chip chip--link chip--ghost">
-          Egg Nest
+          {NAV.breeding.label}
         </Link>
         <Link href="/tiers" className="chip chip--link chip--ghost">
-          Summit Tiers
+          {NAV.tiers.label}
         </Link>
         <Link href="/pals" className="chip chip--link chip--ghost">
-          ← Paldeck
+          ← {NAV.pals.label}
         </Link>
       </div>
 

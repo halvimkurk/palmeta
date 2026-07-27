@@ -1,56 +1,59 @@
 /**
- * Cache official Palworld Steam art for companion page heroes.
- * Uses in-game screenshots and library hero — no logo/header overlays.
- * Run: node scripts/fetch-companion-art.mjs [--force]
+ * Download official Palworld art for companion page heroes → public/companion/*.webp
+ *
+ * Sources: Steam store screenshots, trading cards, profile backgrounds.
+ * Usage: node scripts/fetch-companion-art.mjs
  */
-import { mkdirSync, existsSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const outDir = join(__dirname, "..", "public", "companion");
-const force = process.argv.includes("--force");
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const outDir = path.join(__dirname, "..", "public", "companion");
+const UA = "PalmetaBot/1.0 (+https://palmeta.app; unofficial Palworld toolkit)";
 
-/** Official Steam CDN — in-game screenshots without store text overlays. */
-const ASSETS = [
-  {
-    file: "tiers.webp",
-    url: "https://cdn.akamai.steamstatic.com/steam/apps/1623730/library_hero.jpg",
+/** @type {Record<string, { url: string, out: string, width: number }>} */
+const ASSETS = {
+  tiers: {
+    url: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1623730/124778e85aae5d2b1bc31f70fcdc48d7c65e27c9.jpg",
+    out: "tiers.webp",
+    width: 1200,
   },
-  {
-    file: "breeding.webp",
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/648ed4266fc18f413292292741304ef648421c55/ss_648ed4266fc18f413292292741304ef648421c55.1920x1080.jpg",
-  },
-  {
-    file: "teams.webp",
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/ss_06e27c15c7b4b10233c937b887cf6a6925c83009.1920x1080.jpg",
-  },
-  {
-    file: "pals.webp",
+  breeding: {
     url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/ss_1e6f7cf3c58086df2a3e9b13a988c2681d372b2d.1920x1080.jpg",
+    out: "breeding.webp",
+    width: 1200,
   },
-];
+  teams: {
+    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/ss_b3cea7c9f04a67d784d4c6a0c157a11d6268b189.1920x1080.jpg",
+    out: "teams.webp",
+    width: 1200,
+  },
+  pals: {
+    url: "https://steamcommunity.com/economy/profilebackground/items/1623730/d88e6f9f99794ac579c1814455704c4e0d4bf174.jpg",
+    out: "pals.webp",
+    width: 1200,
+  },
+};
 
-mkdirSync(outDir, { recursive: true });
-
-const UA = "PalmetaAssetBot/1.0 (+https://palmeta.app)";
-
-for (const asset of ASSETS) {
-  const dest = join(outDir, asset.file);
-  if (existsSync(dest) && !force) {
-    console.log("skip", asset.file);
-    continue;
-  }
-  const res = await fetch(asset.url, { headers: { "user-agent": UA } });
-  if (!res.ok) {
-    console.warn("fail", asset.file, res.status);
-    continue;
-  }
-  const buf = Buffer.from(await res.arrayBuffer());
-  await sharp(buf)
-    .resize({ width: 960, withoutEnlargement: true })
-    .webp({ quality: 84 })
-    .toFile(dest);
-  console.log(force && existsSync(dest) ? "refresh" : "ok", asset.file);
+async function fetchBuffer(url) {
+  const res = await fetch(url, { headers: { "user-agent": UA } });
+  if (!res.ok) throw new Error(`${res.status} ${url}`);
+  return Buffer.from(await res.arrayBuffer());
 }
+
+await mkdir(outDir, { recursive: true });
+
+for (const [key, asset] of Object.entries(ASSETS)) {
+  const raw = await fetchBuffer(asset.url);
+  const webp = await sharp(raw)
+    .resize(asset.width, null, { withoutEnlargement: true })
+    .webp({ quality: 84 })
+    .toBuffer();
+  const dest = path.join(outDir, asset.out);
+  await writeFile(dest, webp);
+  console.log(`${key} → ${asset.out} (${(webp.length / 1024).toFixed(0)} KB)`);
+}
+
+console.log("Done. Art cached in public/companion/");

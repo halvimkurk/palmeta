@@ -12,21 +12,6 @@ const PATHS: Record<string, ReactNode> = {
       <path d="M5 7h14M5 12h14M5 17h10" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
     </>
   ),
-  news: (
-    <>
-      <rect
-        x="5"
-        y="5"
-        width="14"
-        height="14"
-        rx="2"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
-      />
-      <path d="M8 9h8M8 12h8M8 15h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </>
-  ),
   teams: (
     <>
       <circle cx="8" cy="10" r="2.4" fill="none" stroke="currentColor" strokeWidth="1.75" />
@@ -63,22 +48,6 @@ const PATHS: Record<string, ReactNode> = {
         strokeWidth="1.75"
       />
       <path d="M9.5 11.5c1 .8 3.5.8 4.5 0" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </>
-  ),
-  blues: (
-    <>
-      <rect
-        x="5"
-        y="4"
-        width="14"
-        height="16"
-        rx="2"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
-      />
-      <path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="16.5" cy="7" r="2.2" fill="currentColor" />
     </>
   ),
   map: (

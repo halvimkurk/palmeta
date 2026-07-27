@@ -1,6 +1,8 @@
 /**
- * Generate pals.v1.json — curated partner-skill catalog for Team Builder (Medium).
- * Expand over time toward full Paldex; structure already supports 299+.
+ * LEGACY curated partner-skill catalog (~106). Prefer:
+ *   pnpm pals:import   → full 1.0 roster from palworld.gg
+ *   pnpm pals:tiers-fill
+ * Keep this file only for hand-authored stack overlays / historical reference.
  */
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";

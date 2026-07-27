@@ -1,4 +1,4 @@
-type FaqItem = { q: string; a: string };
+import type { FaqItem } from "@/lib/seo/faqs";
 
 type Props = {
   title?: string;
@@ -12,14 +12,14 @@ export function SeoFaq({ title = "FAQ", items }: Props) {
       <h2 id="seo-faq-title" className="seo-faq__title">
         {title}
       </h2>
-      <dl className="seo-faq__list">
+      <div className="seo-faq__list">
         {items.map((item) => (
-          <div key={item.q} className="seo-faq__item">
-            <dt>{item.q}</dt>
-            <dd>{item.a}</dd>
-          </div>
+          <details key={item.q} className="seo-faq__item">
+            <summary className="seo-faq__question">{item.q}</summary>
+            <p className="seo-faq__answer">{item.a}</p>
+          </details>
         ))}
-      </dl>
+      </div>
     </section>
   );
 }

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SeoFaq } from "@/components/seo/SeoFaq";
 import { TiersClient } from "@/components/tiers/TiersClient";
 import { pageMeta } from "@/lib/seo";
+import { TIERS_FAQ } from "@/lib/seo/faqs";
 import { breadcrumbJsonLd, faqJsonLd, webAppJsonLd } from "@/lib/seo/schema";
-import { getTierLists, getTiersCatalog } from "@/lib/tiers";
+import { getTierLists, getTiersCatalog, parseTierRole } from "@/lib/tiers";
 import { resolveAllTierLists } from "@/lib/tiers/resolve";
 
 const DESCRIPTION =
-  "Palworld 1.0 tier list by role — combat, base workers, flying mounts, ground mounts, and catching helpers. Every S–D placement includes a short why for bosses, ranching, and travel.";
+  "Palworld 1.0 tier list by role — combat, base workers, flying mounts, ground mounts, and catching helpers. Every S–D rank comes with placement notes for bosses, ranching, and travel.";
 
 export const metadata: Metadata = pageMeta({
   title: "Palworld Tier List 1.0 — Combat, Work & Mounts",
@@ -17,28 +17,17 @@ export const metadata: Metadata = pageMeta({
   path: "/tiers",
 });
 
-const FAQ = [
-  {
-    q: "What is the best Palworld combat tier list for 1.0?",
-    a: "Combat S-tier on Palworld Meta prioritizes endgame carries and supports such as Jetragon, Bellanoir Libero, Frostallion, Jormuntide Ignis, Orserk, and stackable Gobfin support — always read the short why notes for your boss element.",
-  },
-  {
-    q: "Why split tiers by role instead of one overall list?",
-    a: "A top combat Pal can be average at base work. Role lists keep rankings useful for bosses, ranching, flyers, ground travel, and capture economy.",
-  },
-  {
-    q: "Can I filter tier lists by role?",
-    a: "Yes. Switch between combat, base work, flying mounts, ground mounts, and catching helpers. Use search to find a pal inside the active list.",
-  },
-  {
-    q: "How often are tier lists updated?",
-    a: "Placements track Palworld 1.0 meta and catalog work stats. After major patches, combat and worker bands are re-checked against public coverage and in-catalog numbers.",
-  },
-];
 
-export default function TiersPage() {
+export default async function TiersPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ role?: string; q?: string }>;
+}) {
+  const sp = await searchParams;
   const catalog = getTiersCatalog();
   const lists = resolveAllTierLists(getTierLists());
+  const role = parseTierRole(sp.role);
+  const q = sp.q ?? "";
 
   return (
     <>
@@ -53,13 +42,11 @@ export default function TiersPage() {
             { name: "Home", path: "/" },
             { name: "Tier list", path: "/tiers" },
           ]),
-          faqJsonLd(FAQ),
+          faqJsonLd(TIERS_FAQ),
         ]}
       />
-      <Suspense fallback={<p className="hub-hint">Loading tiers…</p>}>
-        <TiersClient lists={lists} disclaimer={catalog.disclaimer} />
-      </Suspense>
-      <SeoFaq title="Tier list FAQ" items={FAQ} />
+      <TiersClient lists={lists} disclaimer={catalog.disclaimer} role={role} q={q} />
+      <SeoFaq title="Tier list FAQ" items={TIERS_FAQ} />
     </>
   );
 }

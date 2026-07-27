@@ -1,6 +1,4 @@
 import type { MetadataRoute } from "next";
-import { getBlueNotes } from "@/lib/blues";
-import { getNewsArticles } from "@/lib/news";
 import { SITE_URL } from "@/lib/seo";
 import { getPals } from "@/lib/teams/catalog";
 
@@ -9,6 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    {
+      url: `${SITE_URL}/pals`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
     {
       url: `${SITE_URL}/tiers`,
       lastModified: now,
@@ -28,22 +32,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/pals`,
+      url: `${SITE_URL}/map`,
       lastModified: now,
       changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/news`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/blues`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.55,
+      priority: 0.85,
     },
     {
       url: `${SITE_URL}/privacy`,
@@ -60,19 +52,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const news: MetadataRoute.Sitemap = getNewsArticles().map((a) => ({
-    url: `${SITE_URL}/news/${a.slug}`,
-    lastModified: new Date(a.updatedAt || a.publishedAt),
-    changeFrequency: "monthly",
-    priority: 0.5,
-  }));
-
-  const blues: MetadataRoute.Sitemap = getBlueNotes().map((n) => ({
-    url: `${SITE_URL}/blues/${n.slug}`,
-    lastModified: new Date(n.publishedAt),
-    changeFrequency: "monthly",
-    priority: 0.45,
-  }));
-
-  return [...staticRoutes, ...pals, ...news, ...blues];
+  return [...staticRoutes, ...pals];
 }

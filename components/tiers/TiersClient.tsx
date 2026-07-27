@@ -1,18 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CompanionIntro } from "@/components/pals/CompanionIntro";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { ElementDots } from "@/components/pals/ElementDots";
 import { PalIcon } from "@/components/teams/PalIcon";
-import { parseTierRole, type TierGrade, type TierRole } from "@/lib/tiers";
+import { type TierGrade, type TierRole } from "@/lib/tiers";
+import { NAV } from "@/lib/nav";
 import type { ResolvedTierList } from "@/lib/tiers/resolvedTypes";
 
 type Props = {
   lists: ResolvedTierList[];
   disclaimer: string;
+  role: TierRole;
+  q: string;
 };
 
 const GRADE_HINT: Record<TierGrade, string> = {
@@ -23,15 +26,11 @@ const GRADE_HINT: Record<TierGrade, string> = {
   D: "Early / niche",
 };
 
-export function TiersClient({ lists, disclaimer }: Props) {
+export function TiersClient({ lists, disclaimer, role, q }: Props) {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const searchRef = useRef<HTMLInputElement>(null);
-  const [qDraft, setQDraft] = useState(searchParams.get("q") ?? "");
+  const [qDraft, setQDraft] = useState(q);
   const searchTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const role = parseTierRole(searchParams.get("role"));
-  const q = searchParams.get("q") ?? "";
 
   const active = lists.find((l) => l.role === role) ?? lists[0];
 
@@ -59,11 +58,11 @@ export function TiersClient({ lists, disclaimer }: Props) {
   }, []);
 
   function pushParams(patch: Record<string, string | null>) {
-    const params = new URLSearchParams(searchParams.toString());
-    for (const [key, value] of Object.entries(patch)) {
-      if (value == null || value === "") params.delete(key);
-      else params.set(key, value);
-    }
+    const params = new URLSearchParams();
+    const nextRole = patch.role ?? role;
+    const nextQ = patch.q !== undefined ? (patch.q ?? "") : q;
+    params.set("role", nextRole);
+    if (nextQ) params.set("q", nextQ);
     const qs = params.toString();
     router.replace(qs ? `/tiers?${qs}` : "/tiers", { scroll: false });
   }
@@ -98,9 +97,9 @@ export function TiersClient({ lists, disclaimer }: Props) {
     <div className="tiers-page">
       <CompanionIntro
         tone="tiers"
-        eyebrow="Summit Tiers · by role"
-        title="Palworld Tier List 1.0"
-        lead="Combat, base work, flying mounts, ground mounts, and capture helpers — every S–D placement includes a short why."
+        eyebrow={NAV.tiers.eyebrow}
+        title={NAV.tiers.label}
+        lead={NAV.tiers.lead}
       >
         <CompanionTools />
       </CompanionIntro>
@@ -176,13 +175,13 @@ export function TiersClient({ lists, disclaimer }: Props) {
                       href={`/pals/${entry.slug}`}
                       className="tier-tile"
                       title={entry.why}
+                      aria-label={`${entry.pal.name} — ${entry.why}`}
                     >
                       <PalIcon pal={entry.pal} size={56} className="tier-tile__icon" />
                       <span className="tier-tile__name">{entry.pal.name}</span>
                       <span className="tier-tile__meta">
                         <ElementDots elements={entry.pal.elements} />
                       </span>
-                      <span className="tier-tile__why">{entry.why}</span>
                     </Link>
                   </li>
                 ))}
@@ -193,8 +192,8 @@ export function TiersClient({ lists, disclaimer }: Props) {
       )}
 
       <p className="tiers-footnote">
-        {disclaimer} <Link href="/pals">Browse pals</Link> ·{" "}
-        <Link href="/breeding">Egg Nest</Link> · <Link href="/teams">Raid Roster</Link>
+        {disclaimer} <Link href="/pals">{NAV.pals.label}</Link> ·{" "}
+        <Link href="/breeding">{NAV.breeding.label}</Link> · <Link href="/teams">{NAV.teams.label}</Link>
       </p>
     </div>
   );

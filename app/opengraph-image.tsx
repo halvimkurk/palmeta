@@ -59,7 +59,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.3,
             }}
           >
-            Summit Tiers · Egg Nest · Raid Roster · Paldeck
+            Tier List · Breeding Calculator · Team Builder · Paldeck
           </div>
         </div>
         <div
