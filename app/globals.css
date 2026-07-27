@@ -282,11 +282,7 @@ select {
 
   .sidebar__brand .brand-logo__mark {
     width: auto;
-    max-width: 7.75rem;
-  }
-
-  .sidebar__brand .brand-logo__meta {
-    color: rgba(244, 245, 248, 0.72);
+    max-width: 6.75rem;
   }
 
   .app-frame.is-home .sidebar {
@@ -467,43 +463,18 @@ select {
   filter: drop-shadow(0 2px 10px rgba(47, 98, 240, 0.28));
 }
 
-.brand-logo__meta {
-  display: inline-block;
-  flex-shrink: 0;
-  font-family: var(--font-brand);
-  font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 0.28em;
-  line-height: 1;
-  text-transform: uppercase;
-  color: rgba(244, 245, 248, 0.78);
-  /* Compensate wide tracking so the glyph cluster feels centered beside the mark */
-  padding-right: 0.28em;
-  transform: translateY(0.02em);
-}
-
 .brand-logo--sm {
   gap: 0.4rem;
 }
 
 .brand-logo--sm .brand-logo__mark {
-  width: 7.25rem;
+  width: 6.5rem;
   height: auto;
-}
-
-.brand-logo--sm .brand-logo__meta {
-  font-size: 0.62rem;
-  letter-spacing: 0.24em;
-  padding-right: 0.24em;
 }
 
 .brand-logo--md .brand-logo__mark {
-  width: 9.5rem;
+  width: 8.5rem;
   height: auto;
-}
-
-.brand-logo--md .brand-logo__meta {
-  font-size: 0.72rem;
 }
 
 .brand-logo--lg {
@@ -512,17 +483,8 @@ select {
 }
 
 .brand-logo--lg .brand-logo__mark {
-  width: min(15.5rem, 48vw);
+  width: min(14rem, 52vw);
   height: auto;
-}
-
-.brand-logo--lg .brand-logo__meta {
-  font-size: 0.9rem;
-  letter-spacing: 0.32em;
-  padding-right: 0.32em;
-  color: rgba(244, 245, 248, 0.82);
-  /* Antlers pad the mark box above the wordmark ? sink Meta to the letter mid */
-  transform: translateY(0.18em);
 }
 
 .brand-logo-link--mobile {
@@ -886,12 +848,6 @@ select {
 
   .brand-logo--lg .brand-logo__mark {
     width: min(11.25rem, 62vw);
-  }
-
-  .brand-logo--lg .brand-logo__meta {
-    font-size: 0.72rem;
-    letter-spacing: 0.26em;
-    transform: none;
   }
 
   .home-tools {

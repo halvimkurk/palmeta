@@ -1,4 +1,4 @@
-# Palpletion — Local preview & UX/UI review
+# Palpletion — Local preview & UX/UI review (legacy achievement tracker)
 
 **Date:** 2026-07-13  
 **Spec:** `tracker-ux`, `palworld-tracker-product`, `gaming-ad-monetization`, `mvp-plan.md`  

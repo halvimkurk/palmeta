@@ -3,7 +3,7 @@ import { SITE_NAME, SITE_TAGLINE } from "@/lib/seo";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE_NAME} — Palworld toolkit`,
+    name: `${SITE_NAME} — Palworld 1.0 toolkit`,
     short_name: SITE_NAME,
     description: SITE_TAGLINE,
     start_url: "/",

@@ -1,13 +1,13 @@
 ---
-name: palmeta-product
+name: paldex-product
 description: >-
-  Product north star for Palmeta (palmeta.app) — Palworld 1.0 toolkit with
+  Product north star for Paldex (paldex.app) — Palworld 1.0 toolkit with
   tier lists, breeding calculator, team builder, Paldeck, and interactive map.
   Use when planning features, scoping work, writing copy, or deciding what
   belongs in the product. Prefer this over the legacy achievement-tracker skill.
 ---
 
-# Palmeta — Product
+# Paldex — Product
 
 ## One-liner
 
@@ -58,8 +58,8 @@ Supporting: `/news`, `/blues` (dev notes).
 
 ## Related skills
 
-- Growth executor: `palmeta-growth`
-- SEO review loop: `palmeta-seo-review`
+- Growth executor: `paldex-growth`
+- SEO review loop: `paldex-seo-review`
 - Ads: `gaming-ad-monetization`
 - Guides (when approved): `guides-content`
 - Launch posts: `reddit-launch` (adapt angles to tools, not achievements)
@@ -69,4 +69,4 @@ Supporting: `/news`, `/blues` (dev notes).
 
 - Cluttered dashboard first paint.
 - Paywalling core tools.
-- New routes or features without user approval (see `palmeta-growth`).
+- New routes or features without user approval (see `paldex-growth`).

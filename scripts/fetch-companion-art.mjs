@@ -11,7 +11,7 @@ import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, "..", "public", "companion");
-const UA = "PalmetaBot/1.0 (+https://palmeta.app; unofficial Palworld toolkit)";
+const UA = "PaldexBot/1.0 (+https://paldex.app; unofficial Palworld toolkit)";
 
 /** @type {Record<string, { url: string, out: string, width: number }>} */
 const ASSETS = {

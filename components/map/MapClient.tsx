@@ -24,7 +24,8 @@ import {
   type MapMode,
 } from "@/lib/map/types";
 
-const FOUND_KEY = "palmeta-map-found-v1";
+const FOUND_KEY = "paldex-map-found-v1";
+const LEGACY_FOUND_KEYS = ["palmeta-map-found-v1"] as const;
 
 const LAYER_COLORS: Record<MapLayerId, string> = {
   "fast-travel": "#7aa8ff",
@@ -47,7 +48,17 @@ function parseMode(raw: string | null): MapMode {
 function loadFound(): Set<string> {
   if (typeof window === "undefined") return new Set();
   try {
-    const raw = localStorage.getItem(FOUND_KEY);
+    let raw = localStorage.getItem(FOUND_KEY);
+    if (!raw) {
+      for (const legacyKey of LEGACY_FOUND_KEYS) {
+        raw = localStorage.getItem(legacyKey);
+        if (raw) {
+          localStorage.setItem(FOUND_KEY, raw);
+          localStorage.removeItem(legacyKey);
+          break;
+        }
+      }
+    }
     if (!raw) return new Set();
     const arr = JSON.parse(raw) as unknown;
     return new Set(Array.isArray(arr) ? arr.filter((x) => typeof x === "string") : []);

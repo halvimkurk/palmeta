@@ -37,11 +37,9 @@ export default function HomePage() {
         <BrandLogo size="lg" className="home-hero__logo" />
         <div className="home-hero__copy">
           <h1 className="home-hero__title">
-            Palworld 1.0 Tier List, Breeding Calculator &amp; Team Builder
+            Palworld 1.0 Tier List, Breeding &amp; Teams
           </h1>
-          <p className="home-hero__tag">
-            Your unofficial chronicle for Palworld 1.0 — tier lists, breeding charts, team rosters, and the full Paldeck.
-          </p>
+          <p className="home-hero__tag">The island changed. So did the ranks.</p>
         </div>
       </header>
 

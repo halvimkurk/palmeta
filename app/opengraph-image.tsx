@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
+import { SITE_HOST } from "@/lib/seo";
 
-export const alt = "Palworld Meta — Palworld 1.0 toolkit";
+export const alt = "Paldex — Palworld 1.0 tier list, breeding & teams";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -47,8 +48,7 @@ export default function OpenGraphImage() {
               textTransform: "uppercase",
             }}
           >
-            <span style={{ color: "#f4f5f8" }}>Palworld</span>
-            <span style={{ color: "#ffb020", fontSize: 54, letterSpacing: 8 }}>Meta</span>
+            <span style={{ color: "#ffb020" }}>Paldex</span>
           </div>
           <div
             style={{
@@ -59,7 +59,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.3,
             }}
           >
-            Tier List · Breeding Calculator · Team Builder · Paldeck
+            The island changed. So did the ranks.
           </div>
         </div>
         <div
@@ -71,7 +71,7 @@ export default function OpenGraphImage() {
             color: "#6ea0ff",
           }}
         >
-          <span>palmeta.app</span>
+          <span>{SITE_HOST}</span>
           <span>Updated for Palworld 1.0</span>
         </div>
       </div>

@@ -1,4 +1,4 @@
-# Palmeta
+# Paldex
 
 Unofficial Palworld 1.0 toolkit: role tier lists, a breeding calculator, and a
 party builder built on a curated pal catalog (stats, work suitability, partner
@@ -28,4 +28,4 @@ pnpm icons:pals  # download pal portraits
 pnpm news        # ingest news briefs
 ```
 
-Palmeta is a fan project and is not affiliated with Pocketpair.
+Paldex is a fan project and is not affiliated with Pocketpair.

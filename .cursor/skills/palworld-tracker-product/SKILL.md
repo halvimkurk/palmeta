@@ -1,14 +1,14 @@
 ---
 name: palworld-tracker-product
 description: >-
-  LEGACY — achievement completion tracker north star (Palpletion). Palmeta no
-  longer ships this product. Prefer palmeta-product. Keep only for historical
-  research; do not use for new Palmeta features or growth work.
+  LEGACY — achievement completion tracker north star (Palpletion). Paldex no
+  longer ships this product. Prefer paldex-product. Keep only for historical
+  research; do not use for new Paldex features or growth work.
 ---
 
 # LEGACY — Palworld Portal (achievement tracker)
 
-> **Deprecated for Palmeta.** Current product: `.cursor/skills/palmeta-product/SKILL.md`.
+> **Deprecated for Paldex.** Current product: `.cursor/skills/paldex-product/SKILL.md`.
 > Do not plan or build achievement-tracker features unless the user explicitly revives this lane.
 
 # Palworld Portal — Product

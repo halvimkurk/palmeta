@@ -1,6 +1,6 @@
 # SEO
 
-Palmeta SEO targets **high-intent Palworld tool queries**, not broad “Palworld wiki” traffic.
+Paldex SEO targets **high-intent Palworld tool queries**, not broad “Palworld wiki” traffic.
 
 ## Positioning
 
@@ -16,7 +16,7 @@ Win long-tail tool SERPs first:
 
 Guides/articles are deferred until tools are stable; hubs ship FAQ + JSON-LD for snippets.
 
-Agent loop: `palmeta-growth` implements SEO/polish → `palmeta-seo-review` PASS/FAIL → growth fixes. Backlog: `.cursor/plans/growth-backlog.md`.
+Agent loop: `paldex-growth` implements SEO/polish → `paldex-seo-review` PASS/FAIL → growth fixes. Backlog: `.cursor/plans/growth-backlog.md`.
 
 ## Shipped on site
 
@@ -32,7 +32,7 @@ Agent loop: `palmeta-growth` implements SEO/polish → `palmeta-seo-review` PASS
 
 **Deferred until domain is registered:** GSC, Bing, request indexing, live OG checks.
 
-When `palmeta.app` (or chosen domain) is live:
+When `paldex.app` (or chosen domain) is live:
 
 1. Google Search Console → property → submit `https://<domain>/sitemap.xml`
 2. Bing Webmaster (optional) same sitemap

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Paldeck",
     "Palworld meta teams",
     "Palworld best pals",
-    "Palworld Meta",
+    "Paldex",
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,

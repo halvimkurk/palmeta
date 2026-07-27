@@ -31,7 +31,8 @@ type SavedTeamsActions = {
 type PersistedSavedTeams = Omit<SavedTeamsState, "_hasHydrated">;
 
 export const MAX_SAVED_TEAMS = 12;
-const STORAGE_KEY = "palforge-saved-teams-v1";
+const STORAGE_KEY = "paldex-saved-teams-v1";
+const LEGACY_STORAGE_KEYS = ["palforge-saved-teams-v1"] as const;
 
 const initial: SavedTeamsState = {
   version: 1,
@@ -43,7 +44,17 @@ const ssrSafeStorage: PersistStorage<PersistedSavedTeams> = {
   getItem: (name) => {
     if (typeof window === "undefined") return null;
     try {
-      const raw = localStorage.getItem(name);
+      let raw = localStorage.getItem(name);
+      if (!raw && name === STORAGE_KEY) {
+        for (const legacyKey of LEGACY_STORAGE_KEYS) {
+          raw = localStorage.getItem(legacyKey);
+          if (raw) {
+            localStorage.setItem(name, raw);
+            localStorage.removeItem(legacyKey);
+            break;
+          }
+        }
+      }
       return raw
         ? (JSON.parse(raw) as { state: PersistedSavedTeams; version?: number })
         : null;
@@ -159,7 +170,7 @@ export const useSavedTeamsStore = create<SavedTeamsState & SavedTeamsActions>()(
       }),
       onRehydrateStorage: () => (_state, error) => {
         if (error) {
-          console.warn("[palmeta] saved teams rehydrate failed", error);
+          console.warn("[paldex] saved teams rehydrate failed", error);
         }
         markHydrated();
       },

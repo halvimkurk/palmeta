@@ -1,42 +1,32 @@
 import Image from "next/image";
 
-/** Official Palworld wordmark with “Meta” beside it. */
+/** Paldex wordmark in Palworld logo style. */
 type Props = {
   className?: string;
   size?: "sm" | "md" | "lg";
-  showWordmark?: boolean;
 };
 
 const SIZES = {
-  sm: "(max-width: 900px) 7.25rem, 9.5rem",
-  md: "9.5rem",
-  lg: "(max-width: 720px) min(18rem, 70vw), 20rem",
+  sm: "(max-width: 900px) 6.5rem, 8.5rem",
+  md: "8.5rem",
+  lg: "(max-width: 720px) min(16rem, 68vw), 18rem",
 } as const;
 
-export function BrandLogo({
-  className = "",
-  size = "md",
-  showWordmark = true,
-}: Props) {
+export function BrandLogo({ className = "", size = "md" }: Props) {
   return (
     <span
       className={`brand-logo brand-logo--${size} ${className}`}
-      aria-label="Palworld Meta"
+      aria-label="Paldex"
     >
       <Image
         className="brand-logo__mark"
-        src="/brand/palworld-logo.webp"
+        src="/brand/paldex-logo.webp"
         alt=""
-        width={596}
-        height={164}
+        width={1181}
+        height={425}
         sizes={SIZES[size]}
         priority={size === "lg"}
       />
-      {showWordmark ? (
-        <span className="brand-logo__meta" aria-hidden>
-          Meta
-        </span>
-      ) : null}
     </span>
   );
 }

@@ -1,4 +1,4 @@
-# Palpletion — UX/UI research (live)
+# Palpletion — UX/UI research (legacy achievement tracker)
 
 **Date:** 2026-07-13  
 **URL tested:** http://localhost:3000  

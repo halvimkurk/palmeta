@@ -1,0 +1,18 @@
+---
+description: Route Paldex growth/SEO work to the executor + reviewer loop; require approval for new features.
+alwaysApply: true
+---
+
+# Paldex agent routing
+
+Product is **Paldex** (toolkit: tiers, breeding, teams, Paldeck, map) — not an achievement tracker. Prefer `paldex-product` over legacy tracker skills.
+
+## Growth / SEO loop
+
+1. **Execute:** use skill `paldex-growth` + `.cursor/plans/growth-backlog.md`
+2. **Review SEO batches:** use skill `paldex-seo-review` (review only; return FAIL → growth fixes)
+3. Do not mark SEO backlog items `done` until review is PASS (or user overrides)
+
+## Approval
+
+New features, new routes, ads wiring, map layers/modes, and commits/PRs need **explicit user approval**. SEO polish on existing pages (meta, FAQ, JSON-LD, cross-links, shareable query params) may proceed without asking.

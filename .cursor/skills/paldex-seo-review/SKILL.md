@@ -1,18 +1,18 @@
 ---
-name: palmeta-seo-review
+name: paldex-seo-review
 description: >-
-  SEO QA reviewer for Palmeta. Audits titles, meta, FAQ, JSON-LD, sitemap,
+  SEO QA reviewer for Paldex. Audits titles, meta, FAQ, JSON-LD, sitemap,
   internal links, and thin content; returns PASS/FAIL with a fix list for the
   growth executor. Use when the user asks for SEO review, after a growth SEO
-  batch, or to re-check palmeta.app organic readiness.
+  batch, or to re-check paldex.app organic readiness.
 ---
 
-# Palmeta SEO Reviewer
+# Paldex SEO Reviewer
 
 You **review only** — do not implement fixes unless the user explicitly says
-“fix it”. After FAIL, hand work back to `palmeta-growth`.
+“fix it”. After FAIL, hand work back to `paldex-growth`.
 
-Product truth: `.cursor/skills/palmeta-product/SKILL.md`  
+Product truth: `.cursor/skills/paldex-product/SKILL.md`  
 SEO baseline: [docs/seo.md](../../../docs/seo.md)  
 Backlog: [growth-backlog.md](../../plans/growth-backlog.md)
 
@@ -22,7 +22,7 @@ Backlog: [growth-backlog.md](../../plans/growth-backlog.md)
 2. If no batch given, audit the priority hubs: `/`, `/tiers`, `/breeding`, `/teams`, `/pals`, `/pals/[slug]` sample, `/map`, `sitemap.ts`, `robots.ts`, `lib/seo.ts`.
 3. Run the checklist below.
 4. Emit a **PASS** or **FAIL** report in the required format.
-5. On FAIL: list concrete fixes ordered by impact; tell the user to re-run `palmeta-growth` on that list.
+5. On FAIL: list concrete fixes ordered by impact; tell the user to re-run `paldex-growth` on that list.
 6. On PASS: note residual risks / next SEO opportunities (optional, short).
 
 ## Checklist
@@ -92,7 +92,7 @@ Backlog: [growth-backlog.md](../../plans/growth-backlog.md)
 | Critical/Major/Minor | … | path | concrete action |
 
 ### Handback (if FAIL)
-Re-run **palmeta-growth** on:
+Re-run **paldex-growth** on:
 1. …
 2. …
 

@@ -11,16 +11,16 @@ function resolveSiteUrl(): string {
   const deployment = process.env.VERCEL_URL;
   if (deployment) return `https://${deployment}`;
 
-  return "https://palmeta.app";
+  return "https://paldex.app";
 }
 
 export const SITE_URL = resolveSiteUrl();
-export const SITE_NAME = "Palworld Meta";
-export const SITE_TAGLINE =
-  "Unofficial Palworld 1.0 companion — tier lists, breeding calculator, team builder, and Paldeck.";
+export const SITE_HOST = new URL(SITE_URL).host;
+export const SITE_NAME = "Paldex";
+export const SITE_TAGLINE = "The island changed. So did the ranks.";
 
 export const DEFAULT_DESCRIPTION =
-  "Palworld 1.0 companion: role tier lists, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
+  "Paldex — Palworld 1.0 companion: role tier lists, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
 
 /** Build absolute page metadata with canonical + social cards. */
 export function pageMeta(opts: {

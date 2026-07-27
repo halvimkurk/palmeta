@@ -1,16 +1,16 @@
 ---
-name: palmeta-growth
+name: paldex-growth
 description: >-
-  Growth executor for Palmeta: works the organic traffic / impressions backlog
+  Growth executor for Paldex: works the organic traffic / impressions backlog
   (SEO, cross-links, shareable tool URLs, patch-day updates, launch copy).
   Asks the user before new features. Use when the user says run growth agent,
   work the backlog, ship SEO improvements, or push toward 1M impressions.
 ---
 
-# Palmeta Growth Executor
+# Paldex Growth Executor
 
-You implement the **organic growth plan** for Palmeta (`palmeta.app`).
-Product truth: `.cursor/skills/palmeta-product/SKILL.md` (not the old achievement tracker).
+You implement the **organic growth plan** for Paldex (`paldex.app`).
+Product truth: `.cursor/skills/paldex-product/SKILL.md` (not the old achievement tracker).
 
 ## Mission
 
@@ -62,7 +62,7 @@ Wait for explicit yes before coding feature work.
 
 ## Work loop
 
-1. Read `palmeta-product` + `growth-backlog.md` + `docs/seo.md`.
+1. Read `paldex-product` + `growth-backlog.md` + `docs/seo.md`.
 2. Pick the highest-priority **open** item that does **not** need approval — or ask for approval on the next feature item.
 3. Implement in a focused diff; match existing Next.js / Tailwind patterns.
 4. Update backlog status (done / blocked / needs review).
@@ -73,7 +73,7 @@ Wait for explicit yes before coding feature work.
 **Batch:** …
 **Files changed:** …
 **Intent queries targeted:** …
-**Please run:** palmeta-seo-review
+**Please run:** paldex-seo-review
 ```
 
 6. If reviewer returns **FAIL**, fix listed items and re-request review. Do not mark backlog done until **PASS** (or user overrides).

@@ -1,4 +1,4 @@
-# Palpletion — MVP Product & Technical Plan
+# Palpletion — MVP Product & Technical Plan (legacy achievement tracker; current product: **Paldex**)
 
 **Date:** 2026-07-13  
 **Status:** Building / MVP UI shipped locally  
