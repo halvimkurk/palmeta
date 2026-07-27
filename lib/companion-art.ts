@@ -14,7 +14,7 @@ export type CompanionArt = {
 /**
  * Official Pocketpair art (pre-cropped for home cards):
  * - pals: Xbox Super Hero key art (tight cast crop)
- * - breeding: same key art, left companion group
+ * - breeding: Press-kit farm screenshot (MobyGames / Pocketpair)
  * - teams: Steam screenshot — four mounted riders
  * - tiers: Steam screenshot — Zoe + Grizzbolt
  *
@@ -28,8 +28,8 @@ export const COMPANION_ART: Record<CompanionArtTone, CompanionArt> = {
   },
   breeding: {
     src: "/companion/breeding.webp",
-    objectPosition: "35% 55%",
-    credit: "Official key art — Palworld (Pocketpair / Xbox)",
+    objectPosition: "50% 50%",
+    credit: "Press kit screenshot — farm base (Pocketpair)",
   },
   teams: {
     src: "/companion/teams.webp",

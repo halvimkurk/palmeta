@@ -28,13 +28,17 @@ const ASSETS = {
     },
   },
   breeding: {
-    // Same official key art as MobyGames press promo (Moby CDN often blocks bots).
-    url: "https://store-images.s-microsoft.com/image/apps.54359.13654268679289325.ececb946-5639-4e77-b347-9d188d4e7e02.58b7fb42-a33a-48ea-a6c9-c990b4653b2f",
+    url: "https://cdn.mobygames.com/promos/18172409-palworld-screenshot.png",
     out: "breeding.webp",
     extract: (W, H) => {
-      const height = Math.round(H * 0.55);
+      const height = Math.round(H * 0.92);
       const width = Math.round(height * RATIO);
-      return { left: 0, top: H * 0.4, width, height };
+      return {
+        left: Math.max(0, (W - Math.min(width, W)) / 2),
+        top: Math.max(0, (H - height) / 2),
+        width: Math.min(width, W),
+        height,
+      };
     },
   },
   teams: {
