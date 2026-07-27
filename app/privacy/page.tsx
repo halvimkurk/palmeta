@@ -22,15 +22,25 @@ export default function PrivacyPage() {
         Saved teams are stored in your browser via localStorage and never leave
         your device. Clearing site data in your browser removes them.
       </p>
-      <h2>No accounts, no ads</h2>
+      <h2>No accounts</h2>
       <p>
-        The site has no sign-in, no advertising scripts, and no third-party
-        trackers.
+        The site has no sign-in. Advertising scripts stay off until explicitly
+        enabled.
       </p>
       <h2>Analytics</h2>
       <p>
-        We may use privacy-friendly host analytics (e.g. Vercel Analytics) for
-        aggregate traffic and performance. No personal data is sold.
+        We use Google Analytics 4 for aggregate traffic and page views (pages
+        visited, referrer, device type). GA may set cookies and collect
+        anonymized usage data per{" "}
+        <a
+          href="https://policies.google.com/privacy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Google&apos;s privacy policy
+        </a>
+        . We may also use privacy-friendly host analytics (e.g. Vercel
+        Analytics) for performance. No personal data is sold.
       </p>
       <h2>Contact</h2>
       <p>

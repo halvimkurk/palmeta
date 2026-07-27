@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { M_PLUS_1 } from "next/font/google";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { AppShell } from "@/components/layout/AppShell";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
@@ -76,6 +77,7 @@ export default function RootLayout({
       <body className={`${sans.variable} ${sans.className} antialiased`}>
         <JsonLd data={websiteJsonLd()} />
         <AppShell>{children}</AppShell>
+        <GoogleAnalytics />
       </body>
     </html>
   );
