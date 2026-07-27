@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { ElementDots } from "@/components/pals/ElementDots";
-import { ElementBadge } from "@/components/teams/ElementBadge";
 import { PalIcon } from "@/components/teams/PalIcon";
 import { NAV } from "@/lib/nav";
 import {
