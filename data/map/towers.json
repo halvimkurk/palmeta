@@ -1,0 +1,86 @@
+{
+  "layer": "tower",
+  "markers": [
+    {
+      "id": "tower-rayne",
+      "layer": "tower",
+      "name": "Rayne Syndicate Tower",
+      "nx": 0.46,
+      "ny": 0.7,
+      "region": "Grassland",
+      "note": "Early tower — Fire / Grass counters"
+    },
+    {
+      "id": "tower-zoe",
+      "layer": "tower",
+      "name": "Zoe & Grizzbolt Tower",
+      "nx": 0.5,
+      "ny": 0.62,
+      "region": "Grassland",
+      "note": "Electric boss — Ground pals shine"
+    },
+    {
+      "id": "tower-lily",
+      "layer": "tower",
+      "name": "Lily & Lyleen Tower",
+      "nx": 0.52,
+      "ny": 0.48,
+      "region": "Forest",
+      "note": "Grass / Leaf — Fire sweepers"
+    },
+    {
+      "id": "tower-axel",
+      "layer": "tower",
+      "name": "Axel & Orserk Tower",
+      "nx": 0.58,
+      "ny": 0.78,
+      "region": "Volcano",
+      "note": "Electric — bring Ground"
+    },
+    {
+      "id": "tower-marcus",
+      "layer": "tower",
+      "name": "Marcus & Faleris Tower",
+      "nx": 0.74,
+      "ny": 0.42,
+      "region": "Desert",
+      "note": "Fire flyer fight"
+    },
+    {
+      "id": "tower-victor",
+      "layer": "tower",
+      "name": "Victor & Shadowbeak Tower",
+      "nx": 0.38,
+      "ny": 0.28,
+      "region": "Snow",
+      "note": "Dark / Ice — Neutral or Dragon answers"
+    },
+    {
+      "id": "tower-saja",
+      "layer": "tower",
+      "name": "Saya & Selyne Tower",
+      "nx": 0.22,
+      "ny": 0.58,
+      "region": "Sakurajima",
+      "note": "Late island tower"
+    },
+    {
+      "id": "tower-bjorn",
+      "layer": "tower",
+      "name": "Bjorn & Bastigor Tower",
+      "nx": 0.16,
+      "ny": 0.32,
+      "region": "Feybreak",
+      "note": "Ice endgame tower"
+    },
+    {
+      "id": "tower-world-tree",
+      "layer": "tower",
+      "name": "World Tree approach",
+      "nx": 0.48,
+      "ny": 0.14,
+      "region": "World Tree",
+      "note": "Late progression hub — spoilers ahead"
+    }
+  ]
+}

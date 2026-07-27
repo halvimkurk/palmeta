@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import { CompanionIntro } from "@/components/pals/CompanionIntro";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { ElementDots } from "@/components/pals/ElementDots";
@@ -20,6 +20,7 @@ type Props = {
 };
 
 export function BreedingClient({ pals, uniqueCombos }: Props) {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const initialA = searchParams.get("a") ?? "";
   const initialB = searchParams.get("b") ?? "";
@@ -34,6 +35,22 @@ export function BreedingClient({ pals, uniqueCombos }: Props) {
   const [qA, setQA] = useState("");
   const [qB, setQB] = useState("");
   const [qC, setQC] = useState("");
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (mode === "predict") {
+      if (parentA) params.set("a", parentA);
+      if (parentB) params.set("b", parentB);
+    } else if (child) {
+      params.set("child", child);
+    }
+    const qs = params.toString();
+    const next = qs ? `/breeding?${qs}` : "/breeding";
+    const current = searchParams.toString();
+    const nextQs = qs;
+    if (current === nextQs) return;
+    router.replace(next, { scroll: false });
+  }, [mode, parentA, parentB, child, router, searchParams]);
 
   const palMap = useMemo(() => new Map(pals.map((p) => [p.slug, p])), [pals]);
 
@@ -66,7 +83,8 @@ export function BreedingClient({ pals, uniqueCombos }: Props) {
     <div className="breed-page">
       <CompanionIntro
         tone="breeding"
-        title="Breeding"
+        eyebrow="Hatching"
+        title="Egg Nest"
         lead="Pick two parents to see what hatches, or choose a target pal and get every parent pair that produces it."
       >
         <CompanionTools />
@@ -226,7 +244,7 @@ export function BreedingClient({ pals, uniqueCombos }: Props) {
 
       <p className="breed-footnote">
         Results follow the in-game breeding rules, including unique parent combos.{" "}
-        <Link href="/pals">Paldeck</Link> · <Link href="/tiers?role=combat">Tier list</Link>
+        <Link href="/pals">Paldeck</Link> · <Link href="/tiers?role=combat">Summit Tiers</Link>
       </p>
     </div>
   );

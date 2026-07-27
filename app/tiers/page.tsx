@@ -47,7 +47,7 @@ export default function TiersPage() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Tier lists", path: "/tiers" },
+            { name: "Summit Tiers", path: "/tiers" },
           ]),
           faqJsonLd(FAQ),
         ]}

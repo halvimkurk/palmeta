@@ -277,7 +277,8 @@ export function TeamBuilderClient({ pals, presets }: Props) {
     <div className="teams">
       <CompanionIntro
         tone="pals"
-        title="Team builder"
+        eyebrow="Party forge"
+        title="Raid Roster"
         lead="Load a proven comp or build your own party of 5 — partner-skill synergies update as you swap pals."
       >
         <CompanionTools />
@@ -764,8 +765,8 @@ export function TeamBuilderClient({ pals, presets }: Props) {
 
       <p className="teams-footnote">
         Teams save in this browser — share the link to hand a build to a friend.{" "}
-        <Link href="/pals">Paldeck</Link> · <Link href="/tiers?role=combat">Tier list</Link> ·{" "}
-        <Link href="/breeding">Breeding</Link>
+        <Link href="/pals">Paldeck</Link> · <Link href="/tiers?role=combat">Summit Tiers</Link> ·{" "}
+        <Link href="/breeding">Egg Nest</Link>
       </p>
     </div>
   );

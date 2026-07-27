@@ -98,7 +98,8 @@ export function TiersClient({ lists, disclaimer }: Props) {
     <div className="tiers-page">
       <CompanionIntro
         tone="tiers"
-        title="Tier lists"
+        eyebrow="Power ranks"
+        title="Summit Tiers"
         lead="Pick a role and scan S through D at a glance. Every placement has a short why — open a pal for the full sheet."
       >
         <CompanionTools />
@@ -193,7 +194,7 @@ export function TiersClient({ lists, disclaimer }: Props) {
 
       <p className="tiers-footnote">
         {disclaimer} <Link href="/pals">Browse pals</Link> ·{" "}
-        <Link href="/breeding">Breeding</Link> · <Link href="/teams">Teams</Link>
+        <Link href="/breeding">Egg Nest</Link> · <Link href="/teams">Raid Roster</Link>
       </p>
     </div>
   );

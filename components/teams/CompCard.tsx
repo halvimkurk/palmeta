@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { PalIcon } from "@/components/teams/PalIcon";
 import { EFFECT_TAG_LABELS, TEAM_SIZE, type EffectTag, type Pal } from "@/lib/teams/types";
 import { toneForTag } from "@/lib/teams/effectTone";
@@ -66,13 +67,18 @@ export function CompCard({
             {slots.map((pal, i) => (
               <li key={`${name}-${i}`} className={`comp-unit ${pal ? "" : "is-empty"}`}>
                 {pal ? (
-                  <PalIcon pal={pal} size={44} className="comp-unit__icon" />
+                  <Link href={`/pals/${pal.slug}`} className="comp-unit__link">
+                    <PalIcon pal={pal} size={44} className="comp-unit__icon" />
+                    <span className="comp-unit__name">{pal.name}</span>
+                  </Link>
                 ) : (
-                  <span className="comp-unit__empty" aria-hidden>
-                    ·
-                  </span>
+                  <>
+                    <span className="comp-unit__empty" aria-hidden>
+                      ·
+                    </span>
+                    <span className="comp-unit__name">—</span>
+                  </>
                 )}
-                <span className="comp-unit__name">{pal?.name ?? "—"}</span>
               </li>
             ))}
           </ul>

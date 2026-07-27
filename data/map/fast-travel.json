@@ -1,0 +1,25 @@
+{
+  "layer": "fast-travel",
+  "markers": [
+    { "id": "ft-plateau", "layer": "fast-travel", "name": "Plateau of Beginnings", "nx": 0.44, "ny": 0.74, "region": "Grassland" },
+    { "id": "ft-bridge", "layer": "fast-travel", "name": "Bridge of the Twin Knights", "nx": 0.48, "ny": 0.66, "region": "Grassland" },
+    { "id": "ft-small-settlement", "layer": "fast-travel", "name": "Small Settlement", "nx": 0.5, "ny": 0.6, "region": "Grassland" },
+    { "id": "ft-wildlife-1", "layer": "fast-travel", "name": "Wildlife Sanctuary No.1", "nx": 0.4, "ny": 0.64, "region": "Grassland" },
+    { "id": "ft-ancient", "layer": "fast-travel", "name": "Ancient Ritual Site", "nx": 0.54, "ny": 0.52, "region": "Forest" },
+    { "id": "ft-marsh", "layer": "fast-travel", "name": "Mossy Marsh", "nx": 0.5, "ny": 0.54, "region": "Forest" },
+    { "id": "ft-sealed-ice", "layer": "fast-travel", "name": "Sealed Realm of the Frozen Wings", "nx": 0.42, "ny": 0.5, "region": "Forest" },
+    { "id": "ft-volcano-foot", "layer": "fast-travel", "name": "Mount Obsidian Foot", "nx": 0.56, "ny": 0.8, "region": "Volcano" },
+    { "id": "ft-lava", "layer": "fast-travel", "name": "Hot Springs Island", "nx": 0.62, "ny": 0.72, "region": "Volcano" },
+    { "id": "ft-desiccated", "layer": "fast-travel", "name": "Desiccated Desert", "nx": 0.7, "ny": 0.48, "region": "Desert" },
+    { "id": "ft-dunes", "layer": "fast-travel", "name": "Deep Dunes", "nx": 0.78, "ny": 0.38, "region": "Desert" },
+    { "id": "ft-mine", "layer": "fast-travel", "name": "Abandoned Mine", "nx": 0.66, "ny": 0.44, "region": "Desert" },
+    { "id": "ft-frost", "layer": "fast-travel", "name": "Frostbound Mountains", "nx": 0.36, "ny": 0.3, "region": "Snow" },
+    { "id": "ft-ice", "layer": "fast-travel", "name": "Unthawed Lake", "nx": 0.32, "ny": 0.24, "region": "Snow" },
+    { "id": "ft-northern", "layer": "fast-travel", "name": "Northern Pier", "nx": 0.46, "ny": 0.22, "region": "Snow" },
+    { "id": "ft-sakura", "layer": "fast-travel", "name": "Sakurajima Shore", "nx": 0.24, "ny": 0.62, "region": "Sakurajima" },
+    { "id": "ft-cherry", "layer": "fast-travel", "name": "Cherry Blossom Grove", "nx": 0.2, "ny": 0.54, "region": "Sakurajima" },
+    { "id": "ft-bamboo", "layer": "fast-travel", "name": "Bamboo Groves", "nx": 0.26, "ny": 0.5, "region": "Sakurajima" },
+    { "id": "ft-fey", "layer": "fast-travel", "name": "Feybreak Coast", "nx": 0.14, "ny": 0.36, "region": "Feybreak" },
+    { "id": "ft-eastern", "layer": "fast-travel", "name": "Eastern Wild Island", "nx": 0.86, "ny": 0.52, "region": "Islands" }
+  ]
+}

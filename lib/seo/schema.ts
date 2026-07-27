@@ -81,6 +81,7 @@ export function articleJsonLd(opts: {
   path: string;
   publishedAt: string;
   updatedAt?: string;
+  image?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -90,6 +91,9 @@ export function articleJsonLd(opts: {
     datePublished: opts.publishedAt,
     dateModified: opts.updatedAt ?? opts.publishedAt,
     mainEntityOfPage: `${SITE_URL}${opts.path}`,
+    ...(opts.image
+      ? { image: opts.image.startsWith("http") ? opts.image : `${SITE_URL}${opts.image}` }
+      : {}),
     author: {
       "@type": "Organization",
       name: SITE_NAME,

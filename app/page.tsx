@@ -2,26 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { SeoFaq } from "@/components/seo/SeoFaq";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/seo/schema";
 
 const TOOLS = [
   {
     href: "/tiers?role=combat",
-    label: "Tier list",
+    label: "Summit Tiers",
     hint: "Combat, work, mounts, capture — ranked by role",
     image: "/home/tiers.webp",
     kicker: "01",
   },
   {
     href: "/breeding",
-    label: "Breeding",
+    label: "Egg Nest",
     hint: "Predict eggs or find parents for a target pal",
     image: "/home/breeding.webp",
     kicker: "02",
   },
   {
     href: "/teams",
-    label: "Teams",
+    label: "Raid Roster",
     hint: "Meta comps and a party builder for five pals",
     image: "/home/teams.webp",
     kicker: "03",
@@ -38,7 +39,7 @@ const TOOLS = [
 const HOME_FAQ = [
   {
     q: "What is Palworld Meta?",
-    a: "Palworld Meta is an unofficial Palworld 1.0 toolkit with role tier lists, a breeding calculator, a team builder with meta comps, and a searchable Paldeck. It is a fan project and is not affiliated with Pocketpair.",
+    a: "Palworld Meta is an unofficial Palworld 1.0 companion with Summit Tiers, an Egg Nest hatching chart, a Raid Roster with meta comps, and a searchable Paldeck. It is a fan project and is not affiliated with Pocketpair.",
   },
   {
     q: "Is the breeding calculator updated for Palworld 1.0?",
@@ -64,15 +65,15 @@ export default function HomePage() {
         <BrandLogo size="lg" className="home-hero__logo" />
         <div className="home-hero__copy">
           <h1 className="home-hero__title">
-            Tier lists, breeding calculator &amp; team builder
+            Summit Tiers, Egg Nest &amp; Raid Roster
           </h1>
           <p className="home-hero__tag">
-            Unofficial Palworld 1.0 toolkit — combat roles, eggs, parties, Paldeck.
+            Unofficial Palworld 1.0 companion — power ranks, hatching charts, parties, Paldeck.
           </p>
         </div>
       </header>
 
-      <section className="home-tools" aria-label="Toolkit">
+      <section className="home-tools" aria-label="Companion tools">
         {TOOLS.map((tool, i) => (
           <Link key={tool.href} href={tool.href} className="home-tool">
             <Image
@@ -90,6 +91,8 @@ export default function HomePage() {
           </Link>
         ))}
       </section>
+
+      <SeoFaq items={HOME_FAQ} />
     </div>
   );
 }

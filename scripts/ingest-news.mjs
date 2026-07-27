@@ -1,30 +1,35 @@
 /**
- * Multi-source Palworld news ingest → short original briefs for PalForge.
+ * Multi-source Palworld news ingest → short original briefs for Palmeta.
  *
  * Sources: Steam app news, Google News RSS, Reddit r/Palworld.
  * Dedupes by title similarity, rewrites into a concise editor voice
- * (optional OpenAI for higher quality).
+ * (optional OpenAI for higher quality). Cover art is pulled from source
+ * og:image / Steam headers and cached under public/news/.
  *
  * Usage: node scripts/ingest-news.mjs
  * Optional: OPENAI_API_KEY for higher-quality rewrite
+ * Optional: NEWS_FORCE=1 to rewrite existing articles
  */
 import { createHash } from "node:crypto";
+import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const outJson = path.join(root, "data", "news", "articles.json");
+const imageDir = path.join(root, "public", "news");
 
 const STEAM_APP = 1623730;
-const UA =
-  "PalForgeNewsBot/1.0 (+https://palforge.app; unofficial Palworld toolkit)";
+const UA = "PalmetaNewsBot/1.0 (+https://palmeta.app; unofficial Palworld toolkit)";
 
-const MAX_ARTICLES = 24;
+const MAX_ARTICLES = 20;
+const MAX_GOOGLE = 6;
 
 /** @typedef {{ type: 'p'|'h2'|'ul', text?: string, items?: string[] }} Block */
-/** @typedef {{ id: string, slug: string, title: string, excerpt: string, publishedAt: string, updatedAt: string, tags: string[], body: Block[], sourceRefs: {name:string,url:string}[] }} Article */
+/** @typedef {{ id: string, slug: string, title: string, excerpt: string, publishedAt: string, updatedAt: string, tags: string[], body: Block[], image?: string, sourceRefs: {name:string,url:string}[] }} Article */
 
 /**
  * @typedef {{
@@ -51,8 +56,20 @@ async function fetchText(url, init = {}) {
   return res;
 }
 
+function decodeHtmlEntities(text) {
+  return String(text || "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)));
+}
+
 function stripHtml(html) {
-  return String(html || "")
+  return decodeHtmlEntities(String(html || ""))
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<br\s*\/?>/gi, "\n")
@@ -60,16 +77,18 @@ function stripHtml(html) {
     .replace(/<\/(h[1-6]|li|div)>/gi, "\n")
     .replace(/<li[^>]*>/gi, "• ")
     .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
     .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .replace(/[ \t]{2,}/g, " ")
     .trim();
+}
+
+function cleanText(text) {
+  return stripHtml(text).replace(/\s+/g, " ").trim();
+}
+
+function meaningfulLength(text) {
+  return cleanText(text).replace(/https?:\/\/\S+/g, "").trim().length;
 }
 
 function extractSteamImage(html) {
@@ -133,12 +152,71 @@ function pickTags(title, text) {
 }
 
 function sentences(text, max = 8) {
-  return String(text)
-    .replace(/\s+/g, " ")
+  return cleanText(text)
     .split(/(?<=[.!?])\s+/)
     .map((s) => s.trim())
-    .filter((s) => s.length > 40 && s.length < 280)
+    .filter((s) => s.length > 40 && s.length < 280 && !/^https?:\/\//i.test(s))
     .slice(0, max);
+}
+
+function extractOgImageFromHtml(html) {
+  const raw = String(html || "");
+  const m =
+    raw.match(/property=["']og:image(?::url)?["']\s+content=["']([^"']+)["']/i) ||
+    raw.match(/content=["']([^"']+)["']\s+property=["']og:image(?::url)?["']/i) ||
+    raw.match(/name=["']twitter:image(?::src)?["']\s+content=["']([^"']+)["']/i) ||
+    raw.match(/content=["']([^"']+)["']\s+name=["']twitter:image(?::src)?["']/i);
+  return m?.[1]?.replace(/&amp;/g, "&");
+}
+
+async function resolveRemoteImage(url) {
+  if (!url) return undefined;
+  try {
+    const res = await fetch(url, {
+      headers: { "user-agent": UA, accept: "text/html,application/xhtml+xml" },
+      redirect: "follow",
+      signal: AbortSignal.timeout(12_000),
+    });
+    if (!res.ok) return undefined;
+    const html = await res.text();
+    return extractOgImageFromHtml(html) || extractSteamImage(html);
+  } catch {
+    return undefined;
+  }
+}
+
+async function cacheArticleImage(id, imageUrl) {
+  if (!imageUrl) return undefined;
+  await mkdir(imageDir, { recursive: true });
+  const rel = `/news/${id}.webp`;
+  const dest = path.join(imageDir, `${id}.webp`);
+  if (existsSync(dest)) return rel;
+  try {
+    const res = await fetch(imageUrl, {
+      headers: { "user-agent": UA, accept: "image/*,*/*" },
+      redirect: "follow",
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (!res.ok) return undefined;
+    const buf = Buffer.from(await res.arrayBuffer());
+    await sharp(buf)
+      .resize({ width: 1200, withoutEnlargement: true })
+      .webp({ quality: 82 })
+      .toFile(dest);
+    return rel;
+  } catch (e) {
+    console.warn("image cache failed", id, e.message);
+    return undefined;
+  }
+}
+
+async function resolveArticleImage(id, item) {
+  const candidates = [item.imageUrl, await resolveRemoteImage(item.url)].filter(Boolean);
+  for (const url of candidates) {
+    const cached = await cacheArticleImage(id, url);
+    if (cached) return cached;
+  }
+  return undefined;
 }
 
 function cleanSourceTitle(title) {
@@ -174,7 +252,7 @@ function rewriteLocal(item) {
 
   if (facts.length) {
     for (const f of facts.slice(0, 4).map(paraphraseFact)) {
-      body.push({ type: "p", text: f });
+      body.push({ type: "p", text: cleanText(f) });
     }
   } else {
     body.push({
@@ -185,7 +263,7 @@ function rewriteLocal(item) {
 
   body.push({ type: "p", text: `Source: ${item.sourceName}.` });
 
-  const excerpt = (body[0]?.text || title).slice(0, 190);
+  const excerpt = cleanText(body[0]?.text || title).slice(0, 190);
   return { title: title.slice(0, 110), excerpt, body, tags };
 }
 
@@ -200,7 +278,7 @@ async function rewriteWithOpenAI(item) {
       {
         role: "system",
         content:
-          "You write short original Palworld news briefs for PalForge (unofficial toolkit: tier lists, breeding, team builder). Never copy source wording. Return JSON: {title, excerpt, tags:string[], body:[{type:'p'|'h2'|'ul', text?:string, items?:string[]}]}. Tone: confident game-site editor — concise, specific, no hype, no exclamation marks, no calls to action, no next-step checklists. 2-4 short paragraphs max. End the body with a paragraph 'Source: <source name>.' English only.",
+          "You write short original Palworld news briefs for Palmeta (unofficial toolkit: tier lists, breeding, team builder). Never copy source wording. Return JSON: {title, excerpt, tags:string[], body:[{type:'p'|'h2'|'ul', text?:string, items?:string[]}]}. Tone: confident game-site editor — concise, specific, no hype, no exclamation marks, no calls to action, no next-step checklists. 2-4 short paragraphs max. End the body with a paragraph 'Source: <source name>.' English only.",
       },
       {
         role: "user",
@@ -264,6 +342,14 @@ async function fetchSteamNews() {
   return out;
 }
 
+function extractRssImage(chunk) {
+  const media =
+    chunk.match(/<media:content[^>]+url=["']([^"']+)["']/i) ||
+    chunk.match(/<media:thumbnail[^>]+url=["']([^"']+)["']/i) ||
+    chunk.match(/<enclosure[^>]+url=["']([^"']+\.(?:jpg|jpeg|png|webp)[^"']*)["']/i);
+  return media?.[1]?.replace(/&amp;/g, "&");
+}
+
 function parseRssItems(xml) {
   const items = [];
   const chunks = String(xml).split(/<item[\s>]/i).slice(1);
@@ -272,12 +358,13 @@ function parseRssItems(xml) {
       const m = chunk.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>|<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
       return (m?.[1] || m?.[2] || "").trim();
     };
-    const title = stripHtml(get("title"));
-    const link = stripHtml(get("link"));
-    const desc = stripHtml(get("description"));
+    const title = cleanText(get("title"));
+    const link = cleanText(get("link"));
+    const desc = cleanText(get("description"));
     const pub = get("pubDate") || get("published");
+    const imageUrl = extractRssImage(chunk);
     if (!title || !link) continue;
-    items.push({ title, link, desc, pub });
+    items.push({ title, link, desc, pub, imageUrl });
   }
   return items;
 }
@@ -288,14 +375,19 @@ async function fetchGoogleNews() {
   try {
     const res = await fetchText(url);
     const xml = await res.text();
-    return parseRssItems(xml).slice(0, 12).map((it, i) => ({
-      key: `gnews:${createHash("sha1").update(it.link).digest("hex").slice(0, 12)}`,
-      title: it.title.replace(/\s+-\s+[^-]+$/, "").trim(),
-      url: it.link,
-      publishedAt: it.pub ? new Date(it.pub).toISOString() : new Date().toISOString(),
-      sourceName: "Google News",
-      rawText: it.desc || it.title,
-    }));
+    return parseRssItems(xml)
+      .slice(0, 18)
+      .map((it) => ({
+        key: `gnews:${createHash("sha1").update(it.link).digest("hex").slice(0, 12)}`,
+        title: it.title.replace(/\s+-\s+[^-]+$/, "").trim(),
+        url: it.link,
+        publishedAt: it.pub ? new Date(it.pub).toISOString() : new Date().toISOString(),
+        sourceName: "Google News",
+        rawText: it.desc || it.title,
+        imageUrl: it.imageUrl,
+      }))
+      .filter((it) => meaningfulLength(it.rawText) >= 80 || it.imageUrl)
+      .slice(0, MAX_GOOGLE);
   } catch (e) {
     console.warn("Google News fetch failed:", e.message);
     return [];
@@ -309,7 +401,7 @@ async function fetchReddit() {
       headers: {
         accept: "application/rss+xml, application/atom+xml, text/xml",
         "user-agent":
-          "Mozilla/5.0 (compatible; PalForgeNewsBot/1.0; +https://palforge.app)",
+          "Mozilla/5.0 (compatible; PalmetaNewsBot/1.0; +https://palmeta.app)",
       },
     });
     const xml = await res.text();
@@ -413,9 +505,17 @@ async function main() {
   });
   console.log(`Reddit kept ${filteredReddit.length}`);
   const merged = dedupe(
-    [...steam, ...gnews, ...filteredReddit].sort(
-      (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
-    ),
+    [...steam, ...gnews, ...filteredReddit].sort((a, b) => {
+      const score = (item) => {
+        let s = 0;
+        if (item.sourceName === "Steam News") s += 40;
+        if (item.imageUrl) s += 10;
+        s += Math.min(meaningfulLength(item.rawText) / 20, 25);
+        return s;
+      };
+      const diff = score(b) - score(a);
+      return diff !== 0 ? diff : Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
+    }),
   ).slice(0, MAX_ARTICLES);
 
   const existing = await loadExisting();
@@ -431,9 +531,12 @@ async function main() {
     }
 
     const id = createHash("sha1").update(item.key).digest("hex").slice(0, 16);
-    if (byId.has(id) && !process.env.NEWS_FORCE) {
-      articles.push(byId.get(id));
-      continue;
+    const prev = byId.get(id);
+    if (prev && !process.env.NEWS_FORCE) {
+      if (prev.image || !process.env.NEWS_IMAGES_ONLY) {
+        articles.push(prev);
+        continue;
+      }
     }
 
     const rewritten = (await rewriteWithOpenAI(item)) || rewriteLocal(item);
@@ -444,25 +547,33 @@ async function main() {
       slug = `${slugify(rewritten.title)}-${n++}`;
     }
 
+    const image = (await resolveArticleImage(id, item)) || prev?.image;
+
     /** @type {Article} */
     const article = {
       id,
-      slug,
+      slug: prev?.slug || slug,
       title: rewritten.title,
-      excerpt: rewritten.excerpt || rewritten.body.find((b) => b.type === "p")?.text?.slice(0, 180) || "",
+      excerpt:
+        cleanText(rewritten.excerpt || rewritten.body.find((b) => b.type === "p")?.text || "").slice(
+          0,
+          190,
+        ) || "",
       publishedAt: item.publishedAt,
       updatedAt: new Date().toISOString(),
       tags: rewritten.tags,
       body: rewritten.body,
       sourceRefs: [{ name: item.sourceName, url: item.url }],
+      ...(image ? { image } : {}),
     };
     articles.push(article);
-    console.log("·", article.title);
+    console.log("·", article.title, image ? "[img]" : "");
   }
 
-  // Keep any older unique articles not in this run (up to 40 total)
+  // Keep editorial / site posts not in this ingest run (up to 40 total).
   for (const old of existing) {
     if (articles.length >= 40) break;
+    if (!old.tags?.includes("site") && !old.tags?.includes("launch")) continue;
     if (!articles.some((a) => a.id === old.id)) articles.push(old);
   }
 

@@ -46,7 +46,7 @@ export default function TeamsPage() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Team builder", path: "/teams" },
+            { name: "Raid Roster", path: "/teams" },
           ]),
           faqJsonLd(FAQ),
         ]}

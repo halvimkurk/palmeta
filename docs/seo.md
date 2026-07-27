@@ -12,8 +12,11 @@ Win long-tail tool SERPs first:
 | Breeding | `/breeding` | palworld breeding calculator, find parents |
 | Teams | `/teams` | palworld team builder, meta comps |
 | Paldeck | `/pals`, `/pals/[slug]` | [pal] palworld stats, work suitability |
+| Map | `/map` | palworld map alphas, effigies, notes, fast travel |
 
-Guides/articles are deferred; hubs already ship FAQ + JSON-LD for snippets.
+Guides/articles are deferred until tools are stable; hubs ship FAQ + JSON-LD for snippets.
+
+Agent loop: `palmeta-growth` implements SEO/polish → `palmeta-seo-review` PASS/FAIL → growth fixes. Backlog: `.cursor/plans/growth-backlog.md`.
 
 ## Shipped on site
 

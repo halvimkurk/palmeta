@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://palmeta.app";
+/** Canonical origin — Vercel sets VERCEL_PROJECT_PRODUCTION_URL / VERCEL_URL at build time. */
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (explicit) return explicit;
+
+  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (production) return `https://${production}`;
+
+  const deployment = process.env.VERCEL_URL;
+  if (deployment) return `https://${deployment}`;
+
+  return "https://palmeta.app";
+}
+
+export const SITE_URL = resolveSiteUrl();
 export const SITE_NAME = "Palworld Meta";
 export const SITE_TAGLINE =
-  "Unofficial Palworld 1.0 toolkit — tier lists, breeding calculator, team builder, and Paldeck.";
+  "Unofficial Palworld 1.0 companion — Summit Tiers, Egg Nest breeding calculator, Raid Roster, and Paldeck.";
 
 export const DEFAULT_DESCRIPTION =
-  "Palworld 1.0 toolkit: role tier lists with reasons, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
+  "Palworld 1.0 companion: role tier lists with reasons, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
 
 /** Build absolute page metadata with canonical + social cards. */
 export function pageMeta(opts: {

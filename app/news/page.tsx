@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { NewsCover } from "@/components/news/NewsCover";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getNewsArticles } from "@/lib/news";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palworld News",
+  title: "Palworld Island Briefs",
   description:
     "Palworld patch notes and community news condensed into short briefs — what changed and what it means for your roster.",
   path: "/news",
@@ -32,11 +33,12 @@ export default function NewsIndexPage() {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "News", path: "/news" },
+          { name: "Island Briefs", path: "/news" },
         ])}
       />
       <header className="page-head page-head--news">
-        <h1>News</h1>
+        <p className="news-kicker">From Palpagos</p>
+        <h1>Island Briefs</h1>
         <p>
           Patch notes and Palworld coverage, condensed into short briefs — what changed and
           what it means for your roster.
@@ -50,10 +52,14 @@ export default function NewsIndexPage() {
           <p>Check back after the next patch.</p>
         </div>
       ) : (
-        <ul className="news-grid news-grid--text">
-          {articles.map((a) => (
-            <li key={a.id} className="news-card news-card--text">
+        <ul className="news-grid">
+          {articles.map((a, i) => (
+            <li
+              key={a.id}
+              className={`news-card${a.image ? " news-card--with-image" : " news-card--text"}`}
+            >
               <Link href={`/news/${a.slug}`} className="news-card__link">
+                {a.image ? <NewsCover src={a.image} alt="" priority={i < 2} /> : null}
                 <div className="news-card__body">
                   <div className="news-card__meta">
                     <time dateTime={a.publishedAt}>{formatDate(a.publishedAt)}</time>

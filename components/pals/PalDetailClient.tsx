@@ -132,10 +132,10 @@ export function PalDetailClient({
           Add to team
         </Link>
         <Link href={`/breeding?child=${pal.slug}`} className="chip chip--link chip--ghost">
-          Breeding
+          Egg Nest
         </Link>
         <Link href="/tiers" className="chip chip--link chip--ghost">
-          Tier lists
+          Summit Tiers
         </Link>
         <Link href="/pals" className="chip chip--link chip--ghost">
           ← Paldeck

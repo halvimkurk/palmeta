@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { NewsCover } from "@/components/news/NewsCover";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   getNewsArticleBySlug,
@@ -22,13 +23,14 @@ export const dynamicParams = true;
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = getNewsArticleBySlug(slug);
-  if (!article) return { title: "News" };
+  if (!article) return { title: "Island Briefs" };
   return pageMeta({
     title: article.title,
     description: article.excerpt,
     path: `/news/${article.slug}`,
     type: "article",
     publishedTime: article.publishedAt,
+    images: article.image ? [article.image] : undefined,
   });
 }
 
@@ -75,20 +77,29 @@ export default async function NewsArticlePage({ params }: Props) {
             path: `/news/${article.slug}`,
             publishedAt: article.publishedAt,
             updatedAt: article.updatedAt,
+            image: article.image,
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "News", path: "/news" },
+            { name: "Island Briefs", path: "/news" },
             { name: article.title, path: `/news/${article.slug}` },
           ]),
         ]}
       />
       <header className="news-article__head">
         <p className="news-article__crumb">
-          <Link href="/news">News</Link>
+          <Link href="/news">Island Briefs</Link>
           <span aria-hidden> / </span>
           <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
         </p>
+        {article.image ? (
+          <NewsCover
+            src={article.image}
+            alt=""
+            className="news-article__cover"
+            priority
+          />
+        ) : null}
         <h1>{article.title}</h1>
         <div className="news-card__meta">
           {article.tags.map((t) => (
@@ -107,16 +118,16 @@ export default async function NewsArticlePage({ params }: Props) {
 
       <p className="news-article__cta">
         <Link href="/tiers?role=combat" className="btn btn--primary">
-          Tier list
+          Summit Tiers
         </Link>
         <Link href="/breeding" className="btn btn--ghost">
-          Breeding calculator
+          Egg Nest
         </Link>
       </p>
 
       {related.length > 0 && (
         <section className="section">
-          <h2 className="section__title">More news</h2>
+          <h2 className="section__title">More briefs</h2>
           <ul className="news-related">
             {related.map((r) => (
               <li key={r.id}>

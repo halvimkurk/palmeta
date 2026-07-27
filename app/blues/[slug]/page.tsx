@@ -18,7 +18,7 @@ export const dynamicParams = true;
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const note = getBlueNoteBySlug(slug);
-  if (!note) return { title: "Dev notes" };
+  if (!note) return { title: "Dev Blues" };
   return pageMeta({
     title: note.title,
     description: note.summary,
@@ -75,14 +75,14 @@ export default async function BlueNotePage({ params }: Props) {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Dev notes", path: "/blues" },
+            { name: "Dev Blues", path: "/blues" },
             { name: note.title, path: `/blues/${note.slug}` },
           ]),
         ]}
       />
       <header className="news-article__head">
         <p className="news-article__crumb">
-          <Link href="/blues">Dev notes</Link>
+          <Link href="/blues">Dev Blues</Link>
           <span aria-hidden> / </span>
           <time dateTime={note.publishedAt}>{formatDate(note.publishedAt)}</time>
         </p>
@@ -112,10 +112,10 @@ export default async function BlueNotePage({ params }: Props) {
 
       <p className="news-article__cta">
         <Link href="/blues" className="btn btn--ghost">
-          All dev notes
+          All Dev Blues
         </Link>
         <Link href="/tiers?role=combat" className="btn btn--primary">
-          Tier list
+          Summit Tiers
         </Link>
       </p>
 

@@ -1,10 +1,15 @@
 ---
 name: palworld-tracker-product
 description: >-
-  Product north star for the Palworld completion portal (tracker + guides).
-  Use when planning features, scoping MVP, prioritizing roadmap, writing copy,
-  or deciding what belongs in the product vs a generic competitor wiki.
+  LEGACY — achievement completion tracker north star (Palpletion). Palmeta no
+  longer ships this product. Prefer palmeta-product. Keep only for historical
+  research; do not use for new Palmeta features or growth work.
 ---
+
+# LEGACY — Palworld Portal (achievement tracker)
+
+> **Deprecated for Palmeta.** Current product: `.cursor/skills/palmeta-product/SKILL.md`.
+> Do not plan or build achievement-tracker features unless the user explicitly revives this lane.
 
 # Palworld Portal — Product
 

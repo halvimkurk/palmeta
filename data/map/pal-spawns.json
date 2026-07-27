@@ -1,0 +1,30 @@
+{
+  "layer": "pal-spawn",
+  "markers": [
+    { "id": "spawn-lamball-1", "layer": "pal-spawn", "name": "Lamball", "nx": 0.45, "ny": 0.72, "palSlug": "lamball", "region": "Grassland" },
+    { "id": "spawn-lamball-2", "layer": "pal-spawn", "name": "Lamball", "nx": 0.47, "ny": 0.7, "palSlug": "lamball", "region": "Grassland" },
+    { "id": "spawn-cattiva-1", "layer": "pal-spawn", "name": "Cattiva", "nx": 0.46, "ny": 0.71, "palSlug": "cattiva", "region": "Grassland" },
+    { "id": "spawn-chikipi-1", "layer": "pal-spawn", "name": "Chikipi", "nx": 0.44, "ny": 0.7, "palSlug": "chikipi", "region": "Grassland" },
+    { "id": "spawn-anubis-1", "layer": "pal-spawn", "name": "Anubis habitat", "nx": 0.73, "ny": 0.47, "palSlug": "anubis", "region": "Desert", "note": "Wild + alpha nearby" },
+    { "id": "spawn-jormuntide-ignis-1", "layer": "pal-spawn", "name": "Jormuntide Ignis habitat", "nx": 0.61, "ny": 0.77, "palSlug": "jormuntide-ignis", "region": "Volcano" },
+    { "id": "spawn-orserk-1", "layer": "pal-spawn", "name": "Orserk habitat", "nx": 0.59, "ny": 0.71, "palSlug": "orserk", "region": "Volcano" },
+    { "id": "spawn-jetragon-1", "layer": "pal-spawn", "name": "Jetragon habitat", "nx": 0.81, "ny": 0.41, "palSlug": "jetragon", "region": "Desert" },
+    { "id": "spawn-frostallion-1", "layer": "pal-spawn", "name": "Frostallion habitat", "nx": 0.33, "ny": 0.23, "palSlug": "frostallion", "region": "Snow" },
+    { "id": "spawn-shadowbeak-1", "layer": "pal-spawn", "name": "Shadowbeak habitat", "nx": 0.41, "ny": 0.33, "palSlug": "shadowbeak", "region": "Snow" },
+    { "id": "spawn-blazamut-1", "layer": "pal-spawn", "name": "Blazamut habitat", "nx": 0.65, "ny": 0.75, "palSlug": "blazamut", "region": "Volcano" },
+    { "id": "spawn-suzaku-1", "layer": "pal-spawn", "name": "Suzaku habitat", "nx": 0.75, "ny": 0.51, "palSlug": "suzaku", "region": "Desert" },
+    { "id": "spawn-grizzbolt-1", "layer": "pal-spawn", "name": "Grizzbolt habitat", "nx": 0.49, "ny": 0.69, "palSlug": "grizzbolt", "region": "Grassland" },
+    { "id": "spawn-chillet-1", "layer": "pal-spawn", "name": "Chillet habitat", "nx": 0.53, "ny": 0.43, "palSlug": "chillet", "region": "Forest" },
+    { "id": "spawn-direhowl-1", "layer": "pal-spawn", "name": "Direhowl", "nx": 0.43, "ny": 0.66, "palSlug": "direhowl", "region": "Grassland" },
+    { "id": "spawn-foxcicle-1", "layer": "pal-spawn", "name": "Foxcicle", "nx": 0.35, "ny": 0.3, "palSlug": "foxcicle", "region": "Snow" },
+    { "id": "spawn-vanwyrm-1", "layer": "pal-spawn", "name": "Vanwyrm", "nx": 0.63, "ny": 0.72, "palSlug": "vanwyrm", "region": "Volcano" },
+    { "id": "spawn-helzephyr-1", "layer": "pal-spawn", "name": "Helzephyr", "nx": 0.45, "ny": 0.45, "palSlug": "helzephyr", "region": "Forest" },
+    { "id": "spawn-beakon-1", "layer": "pal-spawn", "name": "Beakon", "nx": 0.51, "ny": 0.57, "palSlug": "beakon", "region": "Forest" },
+    { "id": "spawn-knocklem-1", "layer": "pal-spawn", "name": "Knocklem", "nx": 0.77, "ny": 0.45, "palSlug": "knocklem", "region": "Desert" },
+    { "id": "spawn-lyleen-1", "layer": "pal-spawn", "name": "Lyleen habitat", "nx": 0.53, "ny": 0.47, "palSlug": "lyleen", "region": "Forest" },
+    { "id": "spawn-mossanda-1", "layer": "pal-spawn", "name": "Mossanda", "nx": 0.5, "ny": 0.49, "palSlug": "mossanda", "region": "Forest" },
+    { "id": "spawn-penking-1", "layer": "pal-spawn", "name": "Penking", "nx": 0.43, "ny": 0.69, "palSlug": "penking", "region": "Grassland" },
+    { "id": "spawn-relaxaurus-1", "layer": "pal-spawn", "name": "Relaxaurus", "nx": 0.55, "ny": 0.61, "palSlug": "relaxaurus", "region": "Lakes" },
+    { "id": "spawn-warsect-1", "layer": "pal-spawn", "name": "Warsect", "nx": 0.55, "ny": 0.47, "palSlug": "warsect", "region": "Forest" }
+  ]
+}

@@ -6,7 +6,7 @@ import { pageMeta } from "@/lib/seo";
 import { breadcrumbJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palworld Dev Notes",
+  title: "Palworld Dev Blues",
   description:
     "Pocketpair developer notes and patch announcements for Palworld — a blue-tracker style feed with short summaries and source links.",
   path: "/blues",
@@ -32,12 +32,12 @@ export default function BluesPage() {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Dev notes", path: "/blues" },
+          { name: "Dev Blues", path: "/blues" },
         ])}
       />
       <header className="page-head page-head--news">
         <p className="blues-kicker">Blue tracker</p>
-        <h1>Dev notes</h1>
+        <h1>Dev Blues</h1>
         <p>
           Curated Pocketpair announcements and patch callouts — official word from the
           studio, summarized for quick reading. Open a note for the full brief.
@@ -66,7 +66,7 @@ export default function BluesPage() {
       </ul>
 
       <p className="blues-foot">
-        Looking for community briefs? <Link href="/news">News</Link>
+        Looking for community briefs? <Link href="/news">Island Briefs</Link>
       </p>
     </div>
   );

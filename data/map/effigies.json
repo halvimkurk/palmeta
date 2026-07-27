@@ -1,0 +1,28 @@
+{
+  "layer": "effigy",
+  "markers": [
+    { "id": "effigy-g-1", "layer": "effigy", "name": "Pal Effigy", "nx": 0.43, "ny": 0.72, "region": "Grassland" },
+    { "id": "effigy-g-2", "layer": "effigy", "name": "Pal Effigy", "nx": 0.47, "ny": 0.68, "region": "Grassland" },
+    { "id": "effigy-g-3", "layer": "effigy", "name": "Pal Effigy", "nx": 0.5, "ny": 0.64, "region": "Grassland" },
+    { "id": "effigy-g-4", "layer": "effigy", "name": "Pal Effigy", "nx": 0.41, "ny": 0.66, "region": "Grassland" },
+    { "id": "effigy-g-5", "layer": "effigy", "name": "Pal Effigy", "nx": 0.45, "ny": 0.62, "region": "Grassland" },
+    { "id": "effigy-f-1", "layer": "effigy", "name": "Pal Effigy", "nx": 0.52, "ny": 0.5, "region": "Forest" },
+    { "id": "effigy-f-2", "layer": "effigy", "name": "Pal Effigy", "nx": 0.55, "ny": 0.46, "region": "Forest" },
+    { "id": "effigy-f-3", "layer": "effigy", "name": "Pal Effigy", "nx": 0.48, "ny": 0.52, "region": "Forest" },
+    { "id": "effigy-f-4", "layer": "effigy", "name": "Pal Effigy", "nx": 0.54, "ny": 0.42, "region": "Forest" },
+    { "id": "effigy-f-5", "layer": "effigy", "name": "Pal Effigy", "nx": 0.5, "ny": 0.44, "region": "Forest" },
+    { "id": "effigy-v-1", "layer": "effigy", "name": "Pal Effigy", "nx": 0.57, "ny": 0.78, "region": "Volcano" },
+    { "id": "effigy-v-2", "layer": "effigy", "name": "Pal Effigy", "nx": 0.63, "ny": 0.74, "region": "Volcano" },
+    { "id": "effigy-v-3", "layer": "effigy", "name": "Pal Effigy", "nx": 0.59, "ny": 0.72, "region": "Volcano" },
+    { "id": "effigy-d-1", "layer": "effigy", "name": "Pal Effigy", "nx": 0.71, "ny": 0.45, "region": "Desert" },
+    { "id": "effigy-d-2", "layer": "effigy", "name": "Pal Effigy", "nx": 0.76, "ny": 0.4, "region": "Desert" },
+    { "id": "effigy-d-3", "layer": "effigy", "name": "Pal Effigy", "nx": 0.69, "ny": 0.5, "region": "Desert" },
+    { "id": "effigy-s-1", "layer": "effigy", "name": "Pal Effigy", "nx": 0.35, "ny": 0.28, "region": "Snow" },
+    { "id": "effigy-s-2", "layer": "effigy", "name": "Pal Effigy", "nx": 0.37, "ny": 0.22, "region": "Snow" },
+    { "id": "effigy-s-3", "layer": "effigy", "name": "Pal Effigy", "nx": 0.31, "ny": 0.3, "region": "Snow" },
+    { "id": "effigy-k-1", "layer": "effigy", "name": "Pal Effigy", "nx": 0.22, "ny": 0.58, "region": "Sakurajima" },
+    { "id": "effigy-k-2", "layer": "effigy", "name": "Pal Effigy", "nx": 0.24, "ny": 0.52, "region": "Sakurajima" },
+    { "id": "effigy-fb-1", "layer": "effigy", "name": "Pal Effigy", "nx": 0.15, "ny": 0.34, "region": "Feybreak" },
+    { "id": "effigy-fb-2", "layer": "effigy", "name": "Pal Effigy", "nx": 0.17, "ny": 0.3, "region": "Feybreak" }
+  ]
+}

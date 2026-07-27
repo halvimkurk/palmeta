@@ -46,7 +46,7 @@ export default function BreedingPage() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Breeding calculator", path: "/breeding" },
+            { name: "Egg Nest", path: "/breeding" },
           ]),
           faqJsonLd(FAQ),
         ]}

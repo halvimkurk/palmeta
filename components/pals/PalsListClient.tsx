@@ -200,6 +200,7 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
     <div className="pals-page">
       <CompanionIntro
         tone="pals"
+        eyebrow="Creature index"
         title="Paldeck"
         lead="Every pal in the catalog — filter by role or element, sort by the stat you care about, open a pal for the full sheet."
       >

@@ -1,0 +1,30 @@
+{
+  "layer": "alpha",
+  "markers": [
+    { "id": "alpha-anubis", "layer": "alpha", "name": "Alpha Anubis", "nx": 0.72, "ny": 0.46, "palSlug": "anubis", "region": "Desert", "note": "Earth alpha boss arena" },
+    { "id": "alpha-jormuntide-ignis", "layer": "alpha", "name": "Alpha Jormuntide Ignis", "nx": 0.6, "ny": 0.76, "palSlug": "jormuntide-ignis", "region": "Volcano", "note": "Lava cavern alpha" },
+    { "id": "alpha-jormuntide", "layer": "alpha", "name": "Alpha Jormuntide", "nx": 0.54, "ny": 0.58, "palSlug": "jormuntide", "region": "Lakes", "note": "Water serpent alpha" },
+    { "id": "alpha-blazamut", "layer": "alpha", "name": "Alpha Blazamut", "nx": 0.64, "ny": 0.74, "palSlug": "blazamut", "region": "Volcano", "note": "Volcano crater alpha" },
+    { "id": "alpha-suzaku", "layer": "alpha", "name": "Alpha Suzaku", "nx": 0.76, "ny": 0.5, "palSlug": "suzaku", "region": "Desert", "note": "Desert sky alpha" },
+    { "id": "alpha-suzaku-aqua", "layer": "alpha", "name": "Alpha Suzaku Aqua", "nx": 0.84, "ny": 0.44, "palSlug": "suzaku-aqua", "region": "Islands", "note": "Coastal water alpha" },
+    { "id": "alpha-orserk", "layer": "alpha", "name": "Alpha Orserk", "nx": 0.58, "ny": 0.7, "palSlug": "orserk", "region": "Volcano", "note": "Thunder dragon alpha" },
+    { "id": "alpha-frostallion", "layer": "alpha", "name": "Alpha Frostallion", "nx": 0.34, "ny": 0.22, "palSlug": "frostallion", "region": "Snow", "note": "Ice legendary alpha" },
+    { "id": "alpha-necromus", "layer": "alpha", "name": "Alpha Necromus", "nx": 0.36, "ny": 0.26, "palSlug": "necromus", "region": "Snow", "note": "Paired legendary route" },
+    { "id": "alpha-paladius", "layer": "alpha", "name": "Alpha Paladius", "nx": 0.38, "ny": 0.26, "palSlug": "paladius", "region": "Snow", "note": "Paired legendary route" },
+    { "id": "alpha-jetragon", "layer": "alpha", "name": "Alpha Jetragon", "nx": 0.8, "ny": 0.4, "palSlug": "jetragon", "region": "Desert", "note": "Endgame flyer alpha" },
+    { "id": "alpha-shadowbeak", "layer": "alpha", "name": "Alpha Shadowbeak", "nx": 0.4, "ny": 0.32, "palSlug": "shadowbeak", "region": "Snow", "note": "Dark flyer alpha" },
+    { "id": "alpha-beakon", "layer": "alpha", "name": "Alpha Beakon", "nx": 0.5, "ny": 0.56, "palSlug": "beakon", "region": "Forest", "note": "Electric flyer alpha" },
+    { "id": "alpha-menasting", "layer": "alpha", "name": "Alpha Menasting", "nx": 0.78, "ny": 0.48, "palSlug": "menasting", "region": "Desert", "note": "Dark scorpion alpha" },
+    { "id": "alpha-warsect", "layer": "alpha", "name": "Alpha Warsect", "nx": 0.54, "ny": 0.46, "palSlug": "warsect", "region": "Forest", "note": "Beetle alpha" },
+    { "id": "alpha-mammorest", "layer": "alpha", "name": "Alpha Mammorest", "nx": 0.48, "ny": 0.5, "palSlug": "mammorest", "region": "Forest", "note": "Forest giant alpha" },
+    { "id": "alpha-kingpaca", "layer": "alpha", "name": "Alpha Kingpaca", "nx": 0.46, "ny": 0.64, "palSlug": "kingpaca", "region": "Grassland", "note": "Early wool alpha" },
+    { "id": "alpha-penking", "layer": "alpha", "name": "Alpha Penking", "nx": 0.42, "ny": 0.68, "palSlug": "penking", "region": "Grassland", "note": "Coastal water alpha" },
+    { "id": "alpha-chillet", "layer": "alpha", "name": "Alpha Chillet", "nx": 0.52, "ny": 0.42, "palSlug": "chillet", "region": "Forest", "note": "Ice dragonling alpha" },
+    { "id": "alpha-astegon", "layer": "alpha", "name": "Alpha Astegon", "nx": 0.62, "ny": 0.68, "palSlug": "astegon", "region": "Volcano", "note": "Dragon/Dark tank alpha" },
+    { "id": "alpha-relaxaurus", "layer": "alpha", "name": "Alpha Relaxaurus", "nx": 0.56, "ny": 0.6, "palSlug": "relaxaurus", "region": "Lakes", "note": "Missile mount alpha" },
+    { "id": "alpha-helzephyr", "layer": "alpha", "name": "Alpha Helzephyr", "nx": 0.44, "ny": 0.44, "palSlug": "helzephyr", "region": "Forest", "note": "Dark flyer alpha" },
+    { "id": "alpha-knocklem", "layer": "alpha", "name": "Alpha Knocklem", "nx": 0.76, "ny": 0.44, "palSlug": "knocklem", "region": "Desert", "note": "Earth bruiser alpha" },
+    { "id": "alpha-cryolinx", "layer": "alpha", "name": "Alpha Cryolinx", "nx": 0.3, "ny": 0.28, "palSlug": "cryolinx", "region": "Snow", "note": "Ice cat alpha" },
+    { "id": "alpha-grizzbolt", "layer": "alpha", "name": "Alpha Grizzbolt", "nx": 0.48, "ny": 0.68, "palSlug": "grizzbolt", "region": "Grassland", "note": "Electric mount alpha" }
+  ]
+}

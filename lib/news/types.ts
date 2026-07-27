@@ -17,6 +17,8 @@ export type NewsArticle = {
   updatedAt: string;
   tags: string[];
   body: NewsBlock[];
+  /** Cached cover under /public/news — sourced from article og:image. */
+  image?: string;
   /** Internal provenance — not required on the page, kept for re-ingest. */
   sourceRefs: NewsSourceRef[];
 };

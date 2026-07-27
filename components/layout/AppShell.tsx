@@ -5,19 +5,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { NavIcon } from "@/components/layout/NavIcons";
+import { FEED_NAV, NAV, TOOL_NAV } from "@/lib/nav";
 
 type Props = {
   children: React.ReactNode;
 };
-
-const NAV_LINKS = [
-  { href: "/tiers?role=combat", match: "/tiers", label: "Tier list", icon: "tiers" },
-  { href: "/breeding", match: "/breeding", label: "Breeding", icon: "eggs" },
-  { href: "/teams", match: "/teams", label: "Teams", icon: "teams" },
-  { href: "/pals", match: "/pals", label: "Paldeck", icon: "pals" },
-  { href: "/blues", match: "/blues", label: "Dev notes", icon: "blues" },
-  { href: "/news", match: "/news", label: "News", icon: "news" },
-] as const;
 
 function isActive(pathname: string, match: string) {
   return pathname === match || pathname.startsWith(`${match}/`) || pathname.startsWith(`${match}?`);
@@ -48,8 +40,7 @@ export function AppShell({ children }: Props) {
   function NavBody({ onNavigate }: { onNavigate?: () => void }) {
     return (
       <>
-        <p className="side-nav__label">Toolkit</p>
-        {NAV_LINKS.map((link) => (
+        {TOOL_NAV.map((link) => (
           <Link
             key={link.match}
             href={link.href}
@@ -60,6 +51,25 @@ export function AppShell({ children }: Props) {
             {link.label}
           </Link>
         ))}
+
+        <div className="side-nav__feeds">
+          <p className="side-nav__label">Dispatches</p>
+          {FEED_NAV.map((link) => (
+            <Link
+              key={link.match}
+              href={link.href}
+              className={
+                isActive(pathname, link.match)
+                  ? "side-link side-link--feed is-active"
+                  : "side-link side-link--feed"
+              }
+              onClick={onNavigate}
+            >
+              <NavIcon name={link.icon} />
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </>
     );
   }
@@ -75,7 +85,7 @@ export function AppShell({ children }: Props) {
         <nav className="side-nav" aria-label="Primary">
           <NavBody />
         </nav>
-        <p className="sidebar__foot">Unofficial Palworld toolkit</p>
+        <p className="sidebar__foot">Unofficial Palworld companion</p>
       </aside>
 
       <div className="shell-main">
@@ -93,21 +103,21 @@ export function AppShell({ children }: Props) {
           <Link href="/" className="brand-logo-link brand-logo-link--mobile">
             <BrandLogo size="sm" showWordmark={false} />
           </Link>
-          <Link href="/tiers?role=combat" className="topbar__cta">
-            Tier list
+          <Link href={NAV.tiers.href} className="topbar__cta">
+            {NAV.tiers.label}
           </Link>
         </header>
 
         <main className="shell-main__content">{children}</main>
 
         <footer className={`site-footer${isHome ? " site-footer--home" : ""}`}>
-          <span>Palworld Meta — tier lists, breeding &amp; teams</span>
-          <Link href="/tiers?role=combat">Tiers</Link>
-          <Link href="/breeding">Breeding</Link>
-          <Link href="/teams">Teams</Link>
-          <Link href="/pals">Paldeck</Link>
-          <Link href="/blues">Dev notes</Link>
-          <Link href="/news">News</Link>
+          <span>Palworld Meta — summit tiers, egg nest &amp; raid rosters</span>
+          <Link href={NAV.tiers.href}>{NAV.tiers.label}</Link>
+          <Link href={NAV.breeding.href}>{NAV.breeding.label}</Link>
+          <Link href={NAV.teams.href}>{NAV.teams.label}</Link>
+          <Link href={NAV.pals.href}>{NAV.pals.label}</Link>
+          <Link href={NAV.blues.href}>{NAV.blues.label}</Link>
+          <Link href={NAV.news.href}>{NAV.news.label}</Link>
           <Link href="/privacy">Privacy</Link>
         </footer>
       </div>

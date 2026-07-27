@@ -1,0 +1,17 @@
+{
+  "layer": "note",
+  "markers": [
+    { "id": "note-g-1", "layer": "note", "name": "Journal note", "nx": 0.44, "ny": 0.7, "region": "Grassland", "note": "Early island lore scrap" },
+    { "id": "note-g-2", "layer": "note", "name": "Journal note", "nx": 0.48, "ny": 0.63, "region": "Grassland" },
+    { "id": "note-f-1", "layer": "note", "name": "Journal note", "nx": 0.53, "ny": 0.49, "region": "Forest" },
+    { "id": "note-f-2", "layer": "note", "name": "Journal note", "nx": 0.51, "ny": 0.43, "region": "Forest" },
+    { "id": "note-v-1", "layer": "note", "name": "Journal note", "nx": 0.6, "ny": 0.76, "region": "Volcano" },
+    { "id": "note-v-2", "layer": "note", "name": "Journal note", "nx": 0.64, "ny": 0.7, "region": "Volcano" },
+    { "id": "note-d-1", "layer": "note", "name": "Journal note", "nx": 0.73, "ny": 0.43, "region": "Desert" },
+    { "id": "note-d-2", "layer": "note", "name": "Journal note", "nx": 0.7, "ny": 0.48, "region": "Desert" },
+    { "id": "note-s-1", "layer": "note", "name": "Journal note", "nx": 0.36, "ny": 0.26, "region": "Snow" },
+    { "id": "note-s-2", "layer": "note", "name": "Journal note", "nx": 0.33, "ny": 0.32, "region": "Snow" },
+    { "id": "note-k-1", "layer": "note", "name": "Journal note", "nx": 0.23, "ny": 0.56, "region": "Sakurajima" },
+    { "id": "note-fb-1", "layer": "note", "name": "Journal note", "nx": 0.16, "ny": 0.35, "region": "Feybreak" }
+  ]
+}
