@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 
-/** Canonical origin — Vercel sets VERCEL_PROJECT_PRODUCTION_URL / VERCEL_URL at build time. */
+/** Canonical origin — override with NEXT_PUBLIC_SITE_URL when needed. */
 function resolveSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
   if (explicit) return explicit;
 
-  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  if (production) return `https://${production}`;
+  if (process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
 
-  const deployment = process.env.VERCEL_URL;
-  if (deployment) return `https://${deployment}`;
-
-  return "https://paldex.app";
+  return "https://palworld-achievements.vercel.app";
 }
 
 export const SITE_URL = resolveSiteUrl();

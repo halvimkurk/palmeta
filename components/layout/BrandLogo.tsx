@@ -22,8 +22,8 @@ export function BrandLogo({ className = "", size = "md" }: Props) {
         className="brand-logo__mark"
         src="/brand/paldex-logo.webp"
         alt=""
-        width={1181}
-        height={425}
+        width={1173}
+        height={416}
         sizes={SIZES[size]}
         priority={size === "lg"}
       />
