@@ -8,6 +8,7 @@ import { PalIcon } from "@/components/teams/PalIcon";
 import { NAV } from "@/lib/nav";
 import {
   EFFECT_TAG_LABELS,
+  ELEMENT_LABELS,
   RARITY_LABELS,
   WORK_LABELS,
   WORK_ORDER,
@@ -141,8 +142,8 @@ export function PalDetailClient({
                 </li>
               ) : null}
               <li>
-                <a href="#primary-skill" className="pal-detail__hl pal-detail__hl--skill">
-                  <span className="pal-detail__hl-kicker">Primary</span>
+                <a href="#partner-skill" className="pal-detail__hl pal-detail__hl--skill">
+                  <span className="pal-detail__hl-kicker">Partner</span>
                   <span className="pal-detail__hl-label">{pal.partnerSkill.name}</span>
                 </a>
               </li>
@@ -227,10 +228,10 @@ export function PalDetailClient({
           ) : null}
 
           <section
-            id="primary-skill"
+            id="partner-skill"
             className="pal-detail__panel pal-detail__panel--skill"
           >
-            <p className="pal-detail__panel-kicker">Primary skill</p>
+            <p className="pal-detail__panel-kicker">Partner skill</p>
             <h2 className="pal-detail__skill-name">{pal.partnerSkill.name}</h2>
             <p className="pal-detail__skill-desc">{pal.partnerSkill.description}</p>
             <ul className="pal-detail__tags">
@@ -251,18 +252,11 @@ export function PalDetailClient({
               className="pal-detail__panel pal-detail__panel--actives"
             >
               <summary className="pal-detail__actives-summary">
-                <span className="pal-detail__actives-summary-main">
-                  <span className="pal-detail__panel-title pal-detail__panel-title--inline">
-                    Active skills
-                  </span>
-                  <span className="pal-detail__actives-count">
-                    {actives.length} moves
-                  </span>
+                <span className="pal-detail__panel-title pal-detail__panel-title--inline">
+                  Active skills
                 </span>
-                <span className="pal-detail__actives-toggle">
-                  <span className="pal-detail__actives-toggle-show">Show</span>
-                  <span className="pal-detail__actives-toggle-hide">Hide</span>
-                  <span className="pal-detail__actives-chevron" aria-hidden />
+                <span className="pal-detail__actives-count">
+                  {actives.length} moves
                 </span>
               </summary>
               <ul className="pal-detail__actives-list">
@@ -270,22 +264,23 @@ export function PalDetailClient({
                   <li key={`${sk.level}-${sk.name}`} className="pal-detail__active">
                     <div className="pal-detail__active-top">
                       <span className="pal-detail__active-lv">Lv {sk.level}</span>
-                      <div className="pal-detail__active-main">
-                        <strong className="pal-detail__active-name">{sk.name}</strong>
-                        {sk.description ? (
-                          <p className="pal-detail__active-desc">{sk.description}</p>
-                        ) : null}
-                      </div>
-                      <ElementBadge element={sk.element} size={22} className="pal-detail__active-el" />
-                      <span className="pal-detail__active-stat" title="Power">
-                        <span className="pal-detail__active-stat-key">Power</span>
-                        <span className="pal-detail__active-stat-val">{sk.power}</span>
+                      <strong className="pal-detail__active-name">{sk.name}</strong>
+                      <span
+                        className={`pal-detail__active-el el-${sk.element}`}
+                        title={ELEMENT_LABELS[sk.element]}
+                      >
+                        {ELEMENT_LABELS[sk.element]}
                       </span>
-                      <span className="pal-detail__active-stat" title="Cooldown">
-                        <span className="pal-detail__active-stat-key">CD</span>
-                        <span className="pal-detail__active-stat-val">{sk.cooldown}s</span>
+                      <span className="pal-detail__active-meta" title="Power">
+                        {sk.power}
+                      </span>
+                      <span className="pal-detail__active-meta" title="Cooldown">
+                        {sk.cooldown}s
                       </span>
                     </div>
+                    {sk.description ? (
+                      <p className="pal-detail__active-desc">{sk.description}</p>
+                    ) : null}
                   </li>
                 ))}
               </ul>
