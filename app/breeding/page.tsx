@@ -6,6 +6,7 @@ import { pageMeta } from "@/lib/seo";
 import { BREEDING_FAQ } from "@/lib/seo/faqs";
 import { breadcrumbJsonLd, faqJsonLd, webAppJsonLd } from "@/lib/seo/schema";
 import { getBreedingMeta, getPals } from "@/lib/teams/catalog";
+import { parseBreedingMode } from "@/lib/breeding/url";
 
 const DESCRIPTION =
   "Free Palworld 1.0 breeding calculator — foretell the egg from any parent pair or trace every lineage that yields your target pal.";
@@ -20,11 +21,12 @@ export const metadata: Metadata = pageMeta({
 export default async function BreedingPage({
   searchParams,
 }: {
-  searchParams: Promise<{ a?: string; b?: string; child?: string }>;
+  searchParams: Promise<{ a?: string; b?: string; child?: string; mode?: string }>;
 }) {
   const sp = await searchParams;
   const pals = getPals();
   const { uniqueCombos } = getBreedingMeta();
+  const mode = parseBreedingMode(sp);
 
   return (
     <>
@@ -45,6 +47,7 @@ export default async function BreedingPage({
       <BreedingClient
         pals={pals}
         uniqueCombos={uniqueCombos}
+        mode={mode}
         parentA={sp.a ?? ""}
         parentB={sp.b ?? ""}
         child={sp.child ?? ""}
