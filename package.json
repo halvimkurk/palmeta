@@ -13,7 +13,8 @@
     "pals:stats": "node scripts/merge-pal-stats.mjs",
     "news": "node scripts/ingest-news.mjs",
     "news:force": "node scripts/ingest-news.mjs",
-    "icons:pals": "node scripts/fetch-pal-icons.mjs"
+    "icons:pals": "node scripts/fetch-pal-icons.mjs",
+    "companion:art": "node scripts/fetch-companion-art.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

@@ -9,10 +9,10 @@ import { getTierLists, getTiersCatalog } from "@/lib/tiers";
 import { resolveAllTierLists } from "@/lib/tiers/resolve";
 
 const DESCRIPTION =
-  "Palworld 1.0 tier list by role — combat, base workers, flying mounts, ground mounts, and catching helpers. Every S–D placement includes a short why.";
+  "Palworld 1.0 tier list by role — combat, base workers, flying mounts, ground mounts, and catching helpers. Every S–D placement includes a short why for bosses, ranching, and travel.";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palworld Tier List 1.0",
+  title: "Palworld Tier List 1.0 — Combat, Work & Mounts",
   description: DESCRIPTION,
   path: "/tiers",
 });
@@ -25,6 +25,10 @@ const FAQ = [
   {
     q: "Why split tiers by role instead of one overall list?",
     a: "A top combat Pal can be average at base work. Role lists keep rankings useful for bosses, ranching, flyers, ground travel, and capture economy.",
+  },
+  {
+    q: "Can I filter tier lists by role?",
+    a: "Yes. Switch between combat, base work, flying mounts, ground mounts, and catching helpers. Use search to find a pal inside the active list.",
   },
   {
     q: "How often are tier lists updated?",
@@ -47,7 +51,7 @@ export default function TiersPage() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Summit Tiers", path: "/tiers" },
+            { name: "Tier list", path: "/tiers" },
           ]),
           faqJsonLd(FAQ),
         ]}

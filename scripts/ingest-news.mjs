@@ -155,7 +155,14 @@ function sentences(text, max = 8) {
   return cleanText(text)
     .split(/(?<=[.!?])\s+/)
     .map((s) => s.trim())
-    .filter((s) => s.length > 40 && s.length < 280 && !/^https?:\/\//i.test(s))
+    .filter((s) => {
+      if (s.length <= 40 || s.length >= 280) return false;
+      if (/^https?:\/\//i.test(s)) return false;
+      if (/^read the full story\b/i.test(s)) return false;
+      if (/^source:\s*/i.test(s)) return false;
+      if (/view top \d+ on steamdb/i.test(s)) return false;
+      return true;
+    })
     .slice(0, max);
 }
 

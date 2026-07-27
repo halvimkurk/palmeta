@@ -8,10 +8,10 @@ import { breadcrumbJsonLd, faqJsonLd, webAppJsonLd } from "@/lib/seo/schema";
 import { getBreedingMeta, getPals } from "@/lib/teams/catalog";
 
 const DESCRIPTION =
-  "Free Palworld breeding calculator for 1.0 — predict the egg from any parent pair, or reverse-lookup every combo that produces a target pal.";
+  "Free Palworld 1.0 breeding calculator — predict the egg from any parent pair, reverse-lookup parents for a target pal, and share combos via URL.";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palworld Breeding Calculator",
+  title: "Palworld Breeding Calculator — Find Parents & Predict Eggs",
   description: DESCRIPTION,
   path: "/breeding",
 });
@@ -24,6 +24,10 @@ const FAQ = [
   {
     q: "Can I find parents for a specific pal?",
     a: "Yes. Reverse lookup mode lists combinations that produce your target so you can breed toward Anubis, Jormuntide Ignis, or other goals instead of guessing pairs.",
+  },
+  {
+    q: "Can I share a breeding combo link?",
+    a: "Yes. The URL updates as you pick parents (?a= and ?b=) or a target child (?child=). Copy the address bar to bookmark or send a combo to a friend.",
   },
   {
     q: "Is this calculator for Palworld 1.0?",
@@ -46,7 +50,7 @@ export default function BreedingPage() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Egg Nest", path: "/breeding" },
+            { name: "Breeding calculator", path: "/breeding" },
           ]),
           faqJsonLd(FAQ),
         ]}

@@ -56,12 +56,33 @@ export type PalSort =
   | "defense"
   | "combi";
 
+export type PalSortDir = "asc" | "desc";
+
 const RARITY_RANK: Record<PalRarity, number> = {
   legendary: 0,
   epic: 1,
   rare: 2,
   common: 3,
 };
+
+/** Default table sort direction when a column is first selected. */
+export function defaultSortDir(sort: PalSort): PalSortDir {
+  if (
+    sort === "hp" ||
+    sort === "melee" ||
+    sort === "shot" ||
+    sort === "atk" ||
+    sort === "defense" ||
+    sort === "work"
+  ) {
+    return "desc";
+  }
+  return "asc";
+}
+
+function withDir(cmp: number, sort: PalSort, dir: PalSortDir): number {
+  return dir === defaultSortDir(sort) ? cmp : -cmp;
+}
 
 export function topWorks(
   work: PalWork | undefined,
@@ -78,44 +99,49 @@ export function sortPals(
   palsList: Pal[],
   sort: PalSort = "name",
   workFocus?: WorkSuitabilityId | "all",
+  dir: PalSortDir = defaultSortDir(sort),
 ): Pal[] {
   const next = [...palsList];
   next.sort((a, b) => {
     if (sort === "dex") {
       const da = a.dexNo ?? a.breeding?.index ?? 9999;
       const db = b.dexNo ?? b.breeding?.index ?? 9999;
-      if (da !== db) return da - db;
+      if (da !== db) return withDir(da - db, sort, dir);
     }
     if (sort === "rarity") {
       const ra = RARITY_RANK[a.rarity];
       const rb = RARITY_RANK[b.rarity];
-      if (ra !== rb) return ra - rb;
+      if (ra !== rb) return withDir(ra - rb, sort, dir);
     }
     if (sort === "work") {
       if (workFocus && workFocus !== "all") {
         const wa = a.work?.[workFocus] ?? 0;
         const wb = b.work?.[workFocus] ?? 0;
-        if (wa !== wb) return wb - wa;
+        if (wa !== wb) return withDir(wb - wa, sort, dir);
       } else {
         const wa = topWorks(a.work, 1)[0]?.level ?? 0;
         const wb = topWorks(b.work, 1)[0]?.level ?? 0;
-        if (wa !== wb) return wb - wa;
+        if (wa !== wb) return withDir(wb - wa, sort, dir);
       }
     }
     if (sort === "hp" || sort === "melee" || sort === "shot" || sort === "defense") {
       const sa = a.stats?.[sort] ?? 0;
       const sb = b.stats?.[sort] ?? 0;
-      if (sa !== sb) return sb - sa;
+      if (sa !== sb) return withDir(sb - sa, sort, dir);
     }
     if (sort === "atk") {
       const sa = Math.max(a.stats?.melee ?? 0, a.stats?.shot ?? 0);
       const sb = Math.max(b.stats?.melee ?? 0, b.stats?.shot ?? 0);
-      if (sa !== sb) return sb - sa;
+      if (sa !== sb) return withDir(sb - sa, sort, dir);
     }
     if (sort === "combi") {
       const ra = a.breeding?.combiRank ?? 99999;
       const rb = b.breeding?.combiRank ?? 99999;
-      if (ra !== rb) return ra - rb;
+      if (ra !== rb) return withDir(ra - rb, sort, dir);
+    }
+    if (sort === "name") {
+      const cmp = a.name.localeCompare(b.name);
+      if (cmp !== 0) return withDir(cmp, sort, dir);
     }
     return a.name.localeCompare(b.name);
   });
@@ -139,6 +165,14 @@ export function parsePalSort(value: string | null | undefined): PalSort {
     return value;
   }
   return "name";
+}
+
+export function parsePalSortDir(
+  value: string | null | undefined,
+  sort: PalSort,
+): PalSortDir {
+  if (value === "asc" || value === "desc") return value;
+  return defaultSortDir(sort);
 }
 
 export function parseWorkId(value: string | null | undefined): WorkSuitabilityId | "all" {

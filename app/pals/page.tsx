@@ -9,10 +9,10 @@ import { getPals } from "@/lib/teams/catalog";
 import { getCombatGradeBySlug } from "@/lib/tiers";
 
 const DESCRIPTION =
-  "Palworld Paldeck — browse every pal in the catalog with combat stats, work suitability, partner skills, tier placements, and breeding links.";
+  "Palworld Paldeck — browse every pal with combat stats, work suitability, partner skills, tier placements, and breeding calculator links for 1.0.";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palworld Paldeck",
+  title: "Palworld Paldeck — Stats, Work & Breeding",
   description: DESCRIPTION,
   path: "/pals",
 });
@@ -25,6 +25,10 @@ const FAQ = [
   {
     q: "Can I sort pals by combat tier?",
     a: "Yes. Use Sort: Tier or click the Tier column header to rank by combat grade (S first), then name.",
+  },
+  {
+    q: "Does each pal link to breeding and tier lists?",
+    a: "Yes. Pal sheets show tier placements, work stats, and one-click links to the breeding calculator for parent pairs or reverse lookup.",
   },
 ];
 

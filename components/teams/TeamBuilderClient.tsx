@@ -8,6 +8,7 @@ import { CompanionTools } from "@/components/pals/CompanionTools";
 import { CompCard } from "@/components/teams/CompCard";
 import { ElementBadges } from "@/components/teams/ElementBadge";
 import { PalIcon } from "@/components/teams/PalIcon";
+import { TeamEffectsPanel } from "@/components/teams/TeamEffectsPanel";
 import {
   EFFECT_TAG_LABELS,
   ELEMENT_LABELS,
@@ -33,18 +34,20 @@ import {
   useSavedTeamsStore,
   type SavedTeam,
 } from "@/lib/teams";
-import { toneForTag, toneForTags } from "@/lib/teams/effectTone";
+import { teamParamEquals } from "@/lib/teams/url";
 
 type Props = {
   pals: Pal[];
   presets: TeamPreset[];
 };
 
+type View = "build" | "meta" | "saved";
+
 const TIER_ORDER: Record<string, number> = { S: 0, A: 1, B: 2, C: 3 };
 
 function defaultTeamName(resolved: (Pal | null)[]): string {
   const names = resolved.filter((p): p is Pal => Boolean(p)).map((p) => p.name);
-  if (names.length === 0) return "My team";
+  if (names.length === 0) return "My party";
   if (names.length <= 2) return names.join(" · ");
   return `${names[0]} party`;
 }
@@ -64,6 +67,11 @@ function teamFromSearch(
   return { team: parseTeamParam(searchParams.get("team")) };
 }
 
+function parseView(raw: string | null): View {
+  if (raw === "meta" || raw === "saved") return raw;
+  return "build";
+}
+
 export function TeamBuilderClient({ pals, presets }: Props) {
   const router = useRouter();
   const pathname = usePathname();
@@ -80,23 +88,25 @@ export function TeamBuilderClient({ pals, presets }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps -- initial URL only
     [],
   );
-  const highlightPresetId = boot.highlightPresetId;
 
+  const [view, setView] = useState<View>(() => parseView(searchParams.get("view")));
   const [slots, setSlots] = useState<(string | null)[]>(() => boot.team);
+  const [baselineSlots, setBaselineSlots] = useState<(string | null)[]>(() => boot.team);
   const [activeSlot, setActiveSlot] = useState<number | null>(null);
   const [q, setQ] = useState("");
   const [element, setElement] = useState<PalElement | "all">("all");
   const [rarity, setRarity] = useState<PalRarity | "all">("all");
   const [effectTag, setEffectTag] = useState<EffectTag | "all">("all");
   const [effectsFilter, setEffectsFilter] = useState<EffectTag | "all">("all");
-  const [compTrait, setCompTrait] = useState<EffectTag | "all">("all");
-  const [saving, setSaving] = useState(false);
+  const [compTrait, setCompTrait] = useState<EffectTag | null>(null);
+  const [loadedSavedId, setLoadedSavedId] = useState<string | null>(null);
+  const [saveOpen, setSaveOpen] = useState(false);
   const [saveName, setSaveName] = useState("");
-  const [saveNotice, setSaveNotice] = useState<string | null>(null);
+  const [saveAsNew, setSaveAsNew] = useState(false);
+  const [notice, setNotice] = useState<string | null>(null);
   const [renamingId, setRenamingId] = useState<string | null>(null);
   const [renameValue, setRenameValue] = useState("");
-  const [activeSavedId, setActiveSavedId] = useState<string | null>(null);
-  const [forceNewSave, setForceNewSave] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   const palMap = useMemo(() => new Map(pals.map((p) => [p.slug, p])), [pals]);
 
@@ -115,27 +125,40 @@ export function TeamBuilderClient({ pals, presets }: Props) {
     [pals, q, element, rarity, effectTag],
   );
 
+  const loadedSaved = useMemo(
+    () => (loadedSavedId ? savedTeams.find((t) => t.id === loadedSavedId) : undefined),
+    [loadedSavedId, savedTeams],
+  );
+
   const matchedSaved = useMemo(
     () => (savedHydrated ? findSavedTeamMatching(savedTeams, slots) : undefined),
     [savedHydrated, savedTeams, slots],
   );
 
-  const activeSaved = useMemo(
-    () =>
-      savedHydrated && activeSavedId
-        ? savedTeams.find((t) => t.id === activeSavedId)
-        : undefined,
-    [savedHydrated, savedTeams, activeSavedId],
+  const isDirty = useMemo(
+    () => !teamParamEquals(slots, baselineSlots),
+    [slots, baselineSlots],
   );
 
-  const canUpdateExisting = Boolean(matchedSaved || activeSaved);
+  const activePreset = useMemo(
+    () =>
+      presets.find(
+        (p) =>
+          slots.join(",") ===
+          Array.from({ length: TEAM_SIZE }, (_, i) => p.team[i] ?? null).join(","),
+      ),
+    [presets, slots],
+  );
+
+  const filled = slots.filter(Boolean).length;
+
+  const partyTitle =
+    loadedSaved?.name ?? activePreset?.name ?? (filled > 0 ? "Custom party" : "Empty party");
 
   const sortedPresets = useMemo(() => {
+    if (!compTrait) return [];
     return [...presets]
-      .filter((p) => {
-        if (compTrait === "all") return true;
-        return p.effectFocus?.includes(compTrait);
-      })
+      .filter((p) => p.effectFocus?.includes(compTrait))
       .sort((a, b) => {
         const ta = TIER_ORDER[a.tier ?? "C"] ?? 9;
         const tb = TIER_ORDER[b.tier ?? "C"] ?? 9;
@@ -153,34 +176,61 @@ export function TeamBuilderClient({ pals, presets }: Props) {
   }, [presets]);
 
   const syncUrl = useCallback(
-    (next: (string | null)[]) => {
+    (next: (string | null)[], nextView?: View) => {
       const params = new URLSearchParams(searchParams.toString());
       const encoded = encodeTeamParam(next);
       if (next.every((s) => !s)) params.delete("team");
       else params.set("team", encoded);
       params.delete("preset");
+      const v = nextView ?? view;
+      if (v === "build") params.delete("view");
+      else params.set("view", v);
       const qs = params.toString();
       router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
     },
-    [pathname, router, searchParams],
+    [pathname, router, searchParams, view],
+  );
+
+  const setViewAndUrl = useCallback(
+    (next: View) => {
+      setView(next);
+      syncUrl(slots, next);
+    },
+    [slots, syncUrl],
   );
 
   useEffect(() => {
-    const { team } = teamFromSearch(
-      new URLSearchParams(searchParams.toString()),
-      presets,
-    );
-    setSlots((prev) => {
-      const same = prev.every((s, i) => s === team[i]);
-      return same ? prev : team;
-    });
+    const params = new URLSearchParams(searchParams.toString());
+    const { team, highlightPresetId } = teamFromSearch(params, presets);
+    setSlots((prev) => (teamParamEquals(prev, team) ? prev : team));
+    setBaselineSlots((prev) => (teamParamEquals(prev, team) ? prev : team));
+    setView(parseView(params.get("view")));
+    if (highlightPresetId) setLoadedSavedId(null);
   }, [searchParams, presets]);
 
   useEffect(() => {
-    if (!saveNotice) return;
-    const t = window.setTimeout(() => setSaveNotice(null), 2200);
+    if (!notice) return;
+    const t = window.setTimeout(() => setNotice(null), 2400);
     return () => window.clearTimeout(t);
-  }, [saveNotice]);
+  }, [notice]);
+
+  useEffect(() => {
+    if (!linkCopied) return;
+    const t = window.setTimeout(() => setLinkCopied(false), 2000);
+    return () => window.clearTimeout(t);
+  }, [linkCopied]);
+
+  function applyParty(
+    next: (string | null)[],
+    opts?: { savedId?: string | null; switchToBuild?: boolean },
+  ) {
+    setSlots(next);
+    setBaselineSlots(next);
+    setActiveSlot(null);
+    setLoadedSavedId(opts?.savedId ?? null);
+    syncUrl(next, opts?.switchToBuild === false ? view : "build");
+    if (opts?.switchToBuild !== false) setView("build");
+  }
 
   function setSlot(index: number, slug: string | null) {
     setSlots((prev) => {
@@ -192,65 +242,83 @@ export function TeamBuilderClient({ pals, presets }: Props) {
     setActiveSlot(null);
   }
 
-  function applySlots(next: (string | null)[], opts?: { keepActiveSaved?: boolean }) {
-    setSlots(next);
-    syncUrl(next);
-    setActiveSlot(null);
-    if (!opts?.keepActiveSaved) setActiveSavedId(null);
+  function clearParty() {
+    const empty = Array.from({ length: TEAM_SIZE }, () => null);
+    applyParty(empty, { savedId: null });
+    setNotice("Party cleared");
   }
 
-  function applyPreset(preset: TeamPreset) {
-    applySlots(Array.from({ length: TEAM_SIZE }, (_, i) => preset.team[i] ?? null));
+  function loadPreset(preset: TeamPreset) {
+    const next = Array.from({ length: TEAM_SIZE }, (_, i) => preset.team[i] ?? null);
+    applyParty(next, { savedId: null });
+    setNotice(`Loaded ${preset.name}`);
   }
 
-  function applySaved(saved: SavedTeam) {
-    setActiveSavedId(saved.id);
-    applySlots(teamToSlots(saved.team), { keepActiveSaved: true });
+  function loadSaved(saved: SavedTeam) {
+    applyParty(teamToSlots(saved.team), { savedId: saved.id });
+    setNotice(`Loaded ${saved.name}`);
   }
 
-  function clearTeam() {
-    applySlots(Array.from({ length: TEAM_SIZE }, () => null));
-  }
-
-  function openSaveForm(asNew = false) {
-    setForceNewSave(asNew);
+  function openSave(asNew: boolean) {
+    setSaveAsNew(asNew);
     setSaveName(
       asNew
         ? defaultTeamName(resolved)
-        : (matchedSaved?.name ?? activeSaved?.name ?? defaultTeamName(resolved)),
+        : (loadedSaved?.name ?? matchedSaved?.name ?? defaultTeamName(resolved)),
     );
-    setSaving(true);
-    setSaveNotice(null);
+    setSaveOpen(true);
   }
 
   function commitSave() {
-    const createNew = forceNewSave;
-    const target = createNew ? undefined : matchedSaved ?? activeSaved;
-    if (target) {
+    const name = saveName.trim() || defaultTeamName(resolved);
+    const canUpdate = !saveAsNew && (loadedSaved ?? matchedSaved);
+
+    if (canUpdate) {
+      const target = loadedSaved ?? matchedSaved!;
       updateTeam(target.id, slots);
-      const nextName = saveName.trim();
-      if (nextName && nextName !== target.name) {
-        renameTeam(target.id, nextName);
-      }
-      setActiveSavedId(target.id);
-      setForceNewSave(false);
-      setSaving(false);
-      setSaveNotice("Team updated");
+      if (name !== target.name) renameTeam(target.id, name);
+      setLoadedSavedId(target.id);
+      setBaselineSlots([...slots]);
+      setSaveOpen(false);
+      setNotice("Party saved");
       return;
     }
-    const entry = saveTeam(saveName || defaultTeamName(resolved), slots);
+
+    const entry = saveTeam(name, slots);
     if (!entry) {
-      setSaveNotice(
+      setNotice(
         savedTeams.length >= MAX_SAVED_TEAMS
-          ? `Limit ${MAX_SAVED_TEAMS} teams — delete one first`
+          ? `Limit ${MAX_SAVED_TEAMS} — delete one in My teams`
           : "Add at least one Pal",
       );
       return;
     }
-    setActiveSavedId(entry.id);
-    setForceNewSave(false);
-    setSaving(false);
-    setSaveNotice("Saved");
+    setLoadedSavedId(entry.id);
+    setBaselineSlots([...slots]);
+    setSaveOpen(false);
+    setNotice("Party saved");
+  }
+
+  function quickSave() {
+    if (loadedSaved && isDirty) {
+      updateTeam(loadedSaved.id, slots);
+      setBaselineSlots([...slots]);
+      setNotice("Changes saved");
+      return;
+    }
+    if (matchedSaved && isDirty) {
+      updateTeam(matchedSaved.id, slots);
+      setLoadedSavedId(matchedSaved.id);
+      setBaselineSlots([...slots]);
+      setNotice("Changes saved");
+      return;
+    }
+    openSave(true);
+  }
+
+  function copyShareLink() {
+    const url = window.location.href;
+    void navigator.clipboard.writeText(url).then(() => setLinkCopied(true));
   }
 
   function startRename(saved: SavedTeam) {
@@ -262,186 +330,396 @@ export function TeamBuilderClient({ pals, presets }: Props) {
     if (!renamingId) return;
     renameTeam(renamingId, renameValue);
     setRenamingId(null);
+    setNotice("Renamed");
   }
 
-  const filled = slots.filter(Boolean).length;
+  const canSave = filled > 0;
+  const showQuickSave = canSave && (isDirty || !loadedSaved);
+  const saveLabel =
+    loadedSaved && isDirty ? "Save changes" : matchedSaved && isDirty ? "Save changes" : "Save party";
   const tagOptions = getEffectTagOptions();
-  const highlightedSavedId = matchedSaved?.id ?? activeSavedId;
-  const activePresetId = presets.find(
-    (p) =>
-      slots.join(",") ===
-      Array.from({ length: TEAM_SIZE }, (_, i) => p.team[i] ?? null).join(","),
-  )?.id;
 
   return (
     <div className="teams">
       <CompanionIntro
-        tone="pals"
+        tone="teams"
         eyebrow="Party forge"
         title="Raid Roster"
-        lead="Load a proven comp or build your own party of 5 — partner-skill synergies update as you swap pals."
+        lead="Build a five-pal party, watch partner-skill effects update live, or load a meta comp — then save or share your roster."
       >
         <CompanionTools />
       </CompanionIntro>
 
-      <section className="teams-comps" aria-label="Top meta teams">
-        <div className="teams-meta-head">
-          <div>
-            <h2 className="teams-meta-head__title">
-              {compTrait === "all" ? "Top meta teams" : "Meta comps"}
-            </h2>
-            <p className="teams-meta-head__lead">
-              {compTrait === "all"
-                ? "Researched 1.0 party comps — load one into the builder below. Trait filters narrow the list."
-                : "Comps matching this trait. Switch to All traits for the full meta board."}
-            </p>
-          </div>
-          <p className="teams-comps__sort">Sort: Tier</p>
-        </div>
+      <nav className="teams-view-bar" aria-label="Team builder sections">
+        <button
+          type="button"
+          className={`teams-view-tab ${view === "build" ? "is-active" : ""}`}
+          aria-current={view === "build" ? "page" : undefined}
+          onClick={() => setViewAndUrl("build")}
+        >
+          Build party
+        </button>
+        <button
+          type="button"
+          className={`teams-view-tab ${view === "meta" ? "is-active" : ""}`}
+          aria-current={view === "meta" ? "page" : undefined}
+          onClick={() => setViewAndUrl("meta")}
+        >
+          Meta comps
+          <span className="teams-view-tab__count">{presets.length}</span>
+        </button>
+        <button
+          type="button"
+          className={`teams-view-tab ${view === "saved" ? "is-active" : ""}`}
+          aria-current={view === "saved" ? "page" : undefined}
+          onClick={() => setViewAndUrl("saved")}
+        >
+          My teams
+          {savedHydrated && savedTeams.length > 0 ? (
+            <span className="teams-view-tab__count">{savedTeams.length}</span>
+          ) : null}
+        </button>
+      </nav>
 
-        <div className="teams-comps__bar">
-          <div className="tiers-role-bar pals-role-bar" role="tablist" aria-label="Comp traits">
-            <button
-              type="button"
-              role="tab"
-              aria-selected={compTrait === "all"}
-              className={`tiers-role-tab ${compTrait === "all" ? "is-active" : ""}`}
-              onClick={() => setCompTrait("all")}
-            >
-              All traits
-            </button>
-            {compsTraitOptions.map((t) => (
-              <button
-                key={t}
-                type="button"
-                role="tab"
-                aria-selected={compTrait === t}
-                className={`tiers-role-tab ${compTrait === t ? "is-active" : ""}`}
-                onClick={() => setCompTrait(t)}
-              >
-                {EFFECT_TAG_LABELS[t]}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {sortedPresets.length === 0 ? (
-          <p className="hub-hint">No comps for this trait.</p>
-        ) : (
-          <ul className={`teams-comps__list ${compTrait === "all" ? "teams-comps__list--meta" : ""}`}>
-            {sortedPresets.map((p) => (
-              <li key={p.id}>
-                <CompCard
-                  name={p.name}
-                  description={p.description}
-                  tier={p.tier}
-                  team={p.team}
-                  palMap={palMap}
-                  traits={p.effectFocus}
-                  active={activePresetId === p.id || highlightPresetId === p.id}
-                  actionLabel="Use comp"
-                  onSelect={() => applyPreset(p)}
-                />
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
-
-      <div className="teams-dock">
-        <section className="teams-saved" aria-label="Saved teams">
-          <div className="teams-saved__bar">
-            {saving ? (
-              <form
-                className="teams-saved__form"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  commitSave();
-                }}
-              >
-                <label className="teams-saved__name">
-                  <span className="sr-only">Team name</span>
+      {view === "build" ? (
+        <div className="teams-build">
+          <header className="teams-party-bar">
+            <div className="teams-party-bar__info">
+              <h2 className="teams-party-bar__title">{partyTitle}</h2>
+              <p className="teams-party-bar__meta">
+                {filled}/5 pals
+                {isDirty ? <span className="teams-party-bar__dirty">Unsaved changes</span> : null}
+                {activePreset && !loadedSaved ? (
+                  <span className="teams-party-bar__source">From meta comp</span>
+                ) : null}
+              </p>
+            </div>
+            <div className="teams-party-bar__actions">
+              {saveOpen ? (
+                <form
+                  className="teams-party-bar__save-form"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    commitSave();
+                  }}
+                >
                   <input
                     type="text"
                     value={saveName}
                     onChange={(e) => setSaveName(e.target.value)}
                     maxLength={40}
-                    placeholder="Team name"
+                    placeholder="Party name"
                     autoFocus
-                    aria-label="Team name"
+                    aria-label="Party name"
                   />
-                </label>
-                <button
-                  type="submit"
-                  className="chip chip--btn chip--sm teams-saved__btn-primary"
-                  disabled={filled === 0}
-                >
-                  Save new team
-                </button>
-                <button
-                  type="button"
-                  className="chip chip--btn chip--sm chip--ghost"
-                  onClick={() => {
-                    setSaving(false);
-                    setForceNewSave(false);
-                  }}
-                >
-                  Cancel
-                </button>
-              </form>
-            ) : (
-              <>
-                <button
-                  type="button"
-                  className="chip chip--btn chip--sm teams-saved__btn-primary"
-                  disabled={filled === 0 || savedTeams.length >= MAX_SAVED_TEAMS}
-                  title={
-                    savedTeams.length >= MAX_SAVED_TEAMS
-                      ? `Limit ${MAX_SAVED_TEAMS} saved teams — delete one first`
-                      : "Save current party as a new named team"
-                  }
-                  onClick={() => openSaveForm(true)}
-                >
-                  Save new team
-                </button>
-                {canUpdateExisting ? (
+                  <button type="submit" className="chip chip--btn chip--sm teams-saved__btn-primary">
+                    {saveAsNew ? "Save new" : "Save"}
+                  </button>
                   <button
                     type="button"
-                    className="chip chip--btn chip--sm"
+                    className="chip chip--btn chip--sm chip--ghost"
+                    onClick={() => setSaveOpen(false)}
+                  >
+                    Cancel
+                  </button>
+                </form>
+              ) : (
+                <>
+                  {showQuickSave ? (
+                    <button
+                      type="button"
+                      className="chip chip--btn chip--sm teams-saved__btn-primary"
+                      onClick={quickSave}
+                    >
+                      {saveLabel}
+                    </button>
+                  ) : null}
+                  {loadedSaved && isDirty ? (
+                    <button
+                      type="button"
+                      className="chip chip--btn chip--sm chip--ghost"
+                      onClick={() => openSave(true)}
+                      disabled={savedTeams.length >= MAX_SAVED_TEAMS}
+                    >
+                      Save as new
+                    </button>
+                  ) : null}
+                  <button
+                    type="button"
+                    className="chip chip--btn chip--sm chip--ghost"
+                    onClick={copyShareLink}
+                  >
+                    {linkCopied ? "Copied!" : "Copy link"}
+                  </button>
+                  <button
+                    type="button"
+                    className="chip chip--btn chip--sm chip--ghost"
+                    onClick={clearParty}
                     disabled={filled === 0}
+                  >
+                    Clear
+                  </button>
+                </>
+              )}
+              {notice ? (
+                <span className="teams-party-bar__notice" role="status">
+                  {notice}
+                </span>
+              ) : null}
+            </div>
+          </header>
+
+          <section className="teams-board" aria-label="Party slots">
+            <h3 className="teams-board__label">Your party</h3>
+            <p className="teams-board__hint">Tap a slot, then pick a pal below.</p>
+            <div className="teams-slots">
+              {resolved.map((pal, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`teams-slot ${activeSlot === i ? "is-active" : ""} ${pal ? "has-pal" : ""}`}
+                  onClick={() => setActiveSlot(activeSlot === i ? null : i)}
+                  aria-pressed={activeSlot === i}
+                  aria-label={
+                    activeSlot === i
+                      ? pal
+                        ? `${pal.name}, slot ${i + 1}, selected`
+                        : `Empty slot ${i + 1}, selected`
+                      : pal
+                        ? `${pal.name}, slot ${i + 1}`
+                        : `Empty slot ${i + 1}`
+                  }
+                >
+                  {activeSlot === i ? (
+                    <span className="teams-slot__pick">Pick below</span>
+                  ) : (
+                    <span className="teams-slot__index" aria-hidden>
+                      {i + 1}
+                    </span>
+                  )}
+                  {pal ? (
+                    <>
+                      <ElementBadges elements={pal.elements} size={14} className="teams-slot__els" />
+                      <span className="teams-slot__media">
+                        <PalIcon pal={pal} size={56} className="teams-slot__icon" priority={i < 2} />
+                      </span>
+                      <span className="teams-slot__name">{pal.name}</span>
+                      <span
+                        className="teams-slot__clear"
+                        role="presentation"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSlot(i, null);
+                        }}
+                      >
+                        ×
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="teams-slot__media">
+                        <span className="teams-slot__empty" aria-hidden>
+                          +
+                        </span>
+                      </span>
+                      <span className="teams-slot__name">Empty</span>
+                    </>
+                  )}
+                </button>
+              ))}
+            </div>
+          </section>
+
+          <div className="teams-picker-head">
+            <h3 className="teams-picker-head__title">Pal roster</h3>
+            <div className="filters filters--toolbar teams-filters">
+              <label className="filter-search filter-search--grow">
+                <span className="filter-search__icon" aria-hidden>
+                  ⌕
+                </span>
+                <input
+                  type="search"
+                  placeholder={`Search (${filteredPals.length}/${pals.length})`}
+                  value={q}
+                  onChange={(e) => setQ(e.target.value)}
+                  aria-label="Search pals"
+                />
+              </label>
+              <label className="filter-select filter-select--sm">
+                <span className="sr-only">Effect</span>
+                <select
+                  value={effectTag}
+                  onChange={(e) => setEffectTag(e.target.value as EffectTag | "all")}
+                >
+                  {tagOptions.map((opt) => (
+                    <option key={opt.id} value={opt.id}>
+                      {opt.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="filter-select filter-select--sm">
+                <span className="sr-only">Element</span>
+                <select
+                  value={element}
+                  onChange={(e) => setElement(e.target.value as PalElement | "all")}
+                >
+                  <option value="all">Element</option>
+                  {(Object.keys(ELEMENT_LABELS) as PalElement[]).map((el) => (
+                    <option key={el} value={el}>
+                      {ELEMENT_LABELS[el]}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="filter-select filter-select--sm">
+                <span className="sr-only">Rarity</span>
+                <select
+                  value={rarity}
+                  onChange={(e) => setRarity(e.target.value as PalRarity | "all")}
+                >
+                  <option value="all">Rarity</option>
+                  {(Object.keys(RARITY_LABELS) as PalRarity[]).map((r) => (
+                    <option key={r} value={r}>
+                      {RARITY_LABELS[r]}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            {activeSlot != null ? (
+              <p className="teams-count teams-count--pick">
+                Choosing for slot {activeSlot + 1} — tap a pal
+              </p>
+            ) : (
+              <p className="teams-count">Tap a slot above, or auto-fills the next empty slot.</p>
+            )}
+          </div>
+
+          <ul className="teams-pal-grid">
+            {filteredPals.map((pal) => {
+              const selected = slots.includes(pal.slug);
+              return (
+                <li key={pal.slug}>
+                  <button
+                    type="button"
+                    className={`teams-pal rarity-${pal.rarity} ${selected ? "is-selected" : ""}`}
+                    title={`${pal.name} · ${pal.partnerSkill.name}`}
                     onClick={() => {
-                      const target = matchedSaved ?? activeSaved;
-                      if (!target) return;
-                      updateTeam(target.id, slots);
-                      setActiveSavedId(target.id);
-                      setSaveNotice("Team updated");
+                      if (activeSlot != null) {
+                        setSlot(activeSlot, pal.slug);
+                        return;
+                      }
+                      const empty = slots.findIndex((s) => !s);
+                      if (empty >= 0) setSlot(empty, pal.slug);
                     }}
                   >
-                    Update team
+                    <ElementBadges elements={pal.elements} size={16} className="teams-pal__els" />
+                    {pal.isNew ? <span className="teams-pal__new">NEW</span> : null}
+                    <PalIcon pal={pal} size={52} className="teams-pal__portrait" />
+                    <span className="teams-pal__name">{pal.name}</span>
+                    <span className={`teams-pal__rarity rarity-${pal.rarity}`}>
+                      {RARITY_LABELS[pal.rarity]}
+                    </span>
                   </button>
-                ) : null}
+                </li>
+              );
+            })}
+          </ul>
+
+          <TeamEffectsPanel
+            effects={effects}
+            palMap={palMap}
+            filled={filled}
+            filter={effectsFilter}
+            onFilterChange={setEffectsFilter}
+          />
+        </div>
+      ) : null}
+
+      {view === "meta" ? (
+        <section className="teams-comps" aria-label="Meta team comps">
+          <header className="teams-meta-head">
+            <div>
+              <h2 className="teams-meta-head__title">Meta comps</h2>
+              <p className="teams-meta-head__lead">
+                Researched 1.0 parties — pick a playstyle, then load a comp into the builder.
+              </p>
+            </div>
+          </header>
+
+          <div className="teams-comps__bar">
+            <div className="tiers-role-bar pals-role-bar" role="tablist" aria-label="Comp traits">
+              {compsTraitOptions.map((t) => (
                 <button
+                  key={t}
                   type="button"
-                  className="chip chip--btn chip--sm chip--ghost"
-                  onClick={clearTeam}
+                  role="tab"
+                  aria-selected={compTrait === t}
+                  className={`tiers-role-tab ${compTrait === t ? "is-active" : ""}`}
+                  onClick={() => setCompTrait(t)}
                 >
-                  Clear
+                  {EFFECT_TAG_LABELS[t]}
                 </button>
-              </>
-            )}
-            {saveNotice ? (
-              <span className="teams-saved__notice" role="status">
-                {saveNotice}
-              </span>
-            ) : null}
-            {savedHydrated && savedTeams.length > 0 ? (
+              ))}
+            </div>
+          </div>
+
+          {!compTrait ? (
+            <div className="teams-meta-empty">
+              <p className="teams-meta-empty__kicker">Choose a playstyle</p>
+              <p>Select a trait above to browse meta parties for raids, mounts, fishing, and more.</p>
+            </div>
+          ) : sortedPresets.length === 0 ? (
+            <p className="hub-hint">No comps for this trait yet.</p>
+          ) : (
+            <ul className="teams-comps__list">
+              {sortedPresets.map((p) => (
+                <li key={p.id}>
+                  <CompCard
+                    name={p.name}
+                    description={p.description}
+                    tier={p.tier}
+                    team={p.team}
+                    palMap={palMap}
+                    traits={p.effectFocus}
+                    active={activePreset?.id === p.id}
+                    onSelect={() => loadPreset(p)}
+                  />
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ) : null}
+
+      {view === "saved" ? (
+        <section className="teams-saved-page" aria-label="Saved teams">
+          <header className="teams-meta-head">
+            <div>
+              <h2 className="teams-meta-head__title">My teams</h2>
+              <p className="teams-meta-head__lead">
+                Saved in this browser — up to {MAX_SAVED_TEAMS} parties. Load one to edit, or build
+                a new party on the Build tab.
+              </p>
+            </div>
+            {savedHydrated ? (
               <span className="teams-saved__count">
                 {savedTeams.length}/{MAX_SAVED_TEAMS}
               </span>
             ) : null}
-          </div>
+          </header>
 
-          {savedHydrated && savedTeams.length > 0 ? (
+          {!savedHydrated ? (
+            <p className="hub-hint">Loading saved teams…</p>
+          ) : savedTeams.length === 0 ? (
+            <div className="teams-meta-empty">
+              <p className="teams-meta-empty__kicker">No saved parties</p>
+              <p>
+                Build a party on the <button type="button" className="teams-inline-link" onClick={() => setViewAndUrl("build")}>Build party</button> tab, then hit Save party.
+              </p>
+            </div>
+          ) : (
             <ul className="teams-saved__comps">
               {savedTeams.map((t) => {
                 if (renamingId === t.id) {
@@ -476,15 +754,19 @@ export function TeamBuilderClient({ pals, presets }: Props) {
                     </li>
                   );
                 }
+                const isActive = loadedSavedId === t.id || matchedSaved?.id === t.id;
                 return (
                   <li key={t.id}>
                     <CompCard
                       name={t.name}
                       team={teamToSlots(t.team)}
                       palMap={palMap}
-                      active={highlightedSavedId === t.id}
-                      actionLabel="Load"
-                      onSelect={() => applySaved(t)}
+                      active={isActive}
+                      meta={new Intl.DateTimeFormat("en", {
+                        month: "short",
+                        day: "numeric",
+                      }).format(new Date(t.updatedAt))}
+                      onSelect={() => loadSaved(t)}
                       secondary={
                         <>
                           <button
@@ -501,8 +783,8 @@ export function TeamBuilderClient({ pals, presets }: Props) {
                             aria-label={`Delete ${t.name}`}
                             onClick={() => {
                               deleteTeam(t.id);
-                              if (activeSavedId === t.id) setActiveSavedId(null);
-                              setSaveNotice("Deleted");
+                              if (loadedSavedId === t.id) setLoadedSavedId(null);
+                              setNotice("Deleted");
                             }}
                           >
                             Delete
@@ -514,257 +796,12 @@ export function TeamBuilderClient({ pals, presets }: Props) {
                 );
               })}
             </ul>
-          ) : savedHydrated ? (
-            <p className="teams-saved__hint">
-              Build a party, then{" "}
-              <span className="teams-saved__hint-em">Save new team</span> — kept in this
-              browser (up to {MAX_SAVED_TEAMS}).
-            </p>
-          ) : null}
+          )}
         </section>
-
-        <section className="teams-board" aria-label="Party and effects">
-          <div className="teams-slots">
-            {resolved.map((pal, i) => (
-              <button
-                key={i}
-                type="button"
-                className={`teams-slot ${activeSlot === i ? "is-active" : ""} ${pal ? "has-pal" : ""}`}
-                onClick={() => setActiveSlot(activeSlot === i ? null : i)}
-                aria-pressed={activeSlot === i}
-                aria-label={
-                  activeSlot === i
-                    ? pal
-                      ? `${pal.name}, slot ${i + 1}, selected for swap`
-                      : `Empty slot ${i + 1}, selected`
-                    : pal
-                      ? `${pal.name}, slot ${i + 1}`
-                      : `Empty slot ${i + 1}`
-                }
-              >
-                {activeSlot === i ? (
-                  <span className="teams-slot__pick">Selecting</span>
-                ) : (
-                  <span className="teams-slot__index" aria-hidden>
-                    {i + 1}
-                  </span>
-                )}
-                {pal ? (
-                  <>
-                    <ElementBadges elements={pal.elements} size={14} className="teams-slot__els" />
-                    <PalIcon pal={pal} size={56} className="teams-slot__icon" priority={i < 2} />
-                    <span className="teams-slot__name">{pal.name}</span>
-                    <span
-                      className="teams-slot__clear"
-                      role="presentation"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSlot(i, null);
-                      }}
-                    >
-                      ×
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <span className="teams-slot__empty" aria-hidden>
-                      +
-                    </span>
-                    <span className="teams-slot__name">Select</span>
-                  </>
-                )}
-              </button>
-            ))}
-          </div>
-
-          <details className="teams-effects" aria-label="Team effects">
-            <summary className="teams-effects__head">
-              <span className="teams-effects__title">
-                Team Effects
-                {filled > 0 ? (
-                  <span className="teams-effects__count">
-                    {effects.stacks.length + effects.uniques.length}
-                  </span>
-                ) : null}
-              </span>
-              <label
-                className="filter-select filter-select--sm"
-                onClick={(e) => e.stopPropagation()}
-                onKeyDown={(e) => e.stopPropagation()}
-              >
-                <span className="sr-only">Filter effects</span>
-                <select
-                  value={effectsFilter}
-                  onChange={(e) => setEffectsFilter(e.target.value as EffectTag | "all")}
-                >
-                  {tagOptions.map((opt) => (
-                    <option key={opt.id} value={opt.id}>
-                      {opt.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </summary>
-            {filled === 0 ? (
-              <p className="teams-effects__empty">Add Pals to see partner-skill synergies.</p>
-            ) : (
-              <ul className="teams-effects__list">
-                {effects.stacks.map((s) => {
-                  const tone = toneForTags(s.tags);
-                  return (
-                    <li
-                      key={s.group}
-                      className={`teams-effect is-stack teams-effect--${tone}`}
-                      title={s.sources.join(" · ")}
-                    >
-                      <div className="teams-effect__badges">
-                        <span className="effect-badge effect-badge--stack">
-                          Stack ×{s.sources.length}
-                        </span>
-                        {s.tags.slice(0, 2).map((t) => (
-                          <span
-                            key={t}
-                            className={`effect-badge effect-badge--${toneForTag(t)}`}
-                          >
-                            {EFFECT_TAG_LABELS[t]}
-                          </span>
-                        ))}
-                      </div>
-                      <strong>{s.label}</strong>
-                      <span className="teams-effect__meta">{s.sources.join(" · ")}</span>
-                    </li>
-                  );
-                })}
-                {effects.uniques.map((u) => {
-                  const tone = toneForTags(u.tags);
-                  return (
-                    <li
-                      key={`${u.palSlug}-${u.skillName}`}
-                      className={`teams-effect teams-effect--${tone}`}
-                      title={u.description}
-                    >
-                      <div className="teams-effect__badges">
-                        {u.tags.slice(0, 3).map((t) => (
-                          <span
-                            key={t}
-                            className={`effect-badge effect-badge--${toneForTag(t)}`}
-                          >
-                            {EFFECT_TAG_LABELS[t]}
-                          </span>
-                        ))}
-                      </div>
-                      <strong>
-                        {u.palName} — {u.skillName}
-                      </strong>
-                      <span className="teams-effect__meta">{u.description}</span>
-                    </li>
-                  );
-                })}
-                {effects.stacks.length === 0 && effects.uniques.length === 0 ? (
-                  <li className="teams-effects__empty">No effects match this filter.</li>
-                ) : null}
-              </ul>
-            )}
-          </details>
-        </section>
-      </div>
-
-      <div className="teams-picker-head">
-        <div className="filters filters--toolbar teams-filters">
-          <label className="filter-search filter-search--grow">
-            <span className="filter-search__icon" aria-hidden>
-              ⌕
-            </span>
-            <input
-              type="search"
-              placeholder={`Search Pals (${filteredPals.length}/${pals.length})`}
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              aria-label="Search pals"
-            />
-          </label>
-          <label className="filter-select filter-select--sm">
-            <span className="sr-only">Effect</span>
-            <select
-              value={effectTag}
-              onChange={(e) => setEffectTag(e.target.value as EffectTag | "all")}
-            >
-              {tagOptions.map((opt) => (
-                <option key={opt.id} value={opt.id}>
-                  {opt.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="filter-select filter-select--sm">
-            <span className="sr-only">Element</span>
-            <select
-              value={element}
-              onChange={(e) => setElement(e.target.value as PalElement | "all")}
-            >
-              <option value="all">Element</option>
-              {(Object.keys(ELEMENT_LABELS) as PalElement[]).map((el) => (
-                <option key={el} value={el}>
-                  {ELEMENT_LABELS[el]}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="filter-select filter-select--sm">
-            <span className="sr-only">Rarity</span>
-            <select
-              value={rarity}
-              onChange={(e) => setRarity(e.target.value as PalRarity | "all")}
-            >
-              <option value="all">Rarity</option>
-              {(Object.keys(RARITY_LABELS) as PalRarity[]).map((r) => (
-                <option key={r} value={r}>
-                  {RARITY_LABELS[r]}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        {activeSlot != null ? (
-          <p className="teams-count teams-count--pick">
-            Picking for slot {activeSlot + 1} — click a Pal below
-          </p>
-        ) : null}
-      </div>
-
-      <ul className="teams-pal-grid">
-        {filteredPals.map((pal) => {
-          const selected = slots.includes(pal.slug);
-          return (
-            <li key={pal.slug}>
-              <button
-                type="button"
-                className={`teams-pal rarity-${pal.rarity} ${selected ? "is-selected" : ""}`}
-                title={`${pal.name} · ${pal.partnerSkill.name}`}
-                onClick={() => {
-                  if (activeSlot != null) {
-                    setSlot(activeSlot, pal.slug);
-                    return;
-                  }
-                  const empty = slots.findIndex((s) => !s);
-                  if (empty >= 0) setSlot(empty, pal.slug);
-                }}
-              >
-                <ElementBadges elements={pal.elements} size={16} className="teams-pal__els" />
-                {pal.isNew ? <span className="teams-pal__new">NEW</span> : null}
-                <PalIcon pal={pal} size={52} className="teams-pal__portrait" />
-                <span className="teams-pal__name">{pal.name}</span>
-                <span className={`teams-pal__rarity rarity-${pal.rarity}`}>
-                  {RARITY_LABELS[pal.rarity]}
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      ) : null}
 
       <p className="teams-footnote">
-        Teams save in this browser — share the link to hand a build to a friend.{" "}
+        Shareable URL encodes your party.{" "}
         <Link href="/pals">Paldeck</Link> · <Link href="/tiers?role=combat">Summit Tiers</Link> ·{" "}
         <Link href="/breeding">Egg Nest</Link>
       </p>

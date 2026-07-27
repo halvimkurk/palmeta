@@ -30,11 +30,17 @@ Agent loop: `palmeta-growth` implements SEO/polish → `palmeta-seo-review` PASS
 
 ## After deploy
 
-1. Google Search Console → property `https://palmeta.app` → submit `https://palmeta.app/sitemap.xml`
+**Deferred until domain is registered:** GSC, Bing, request indexing, live OG checks.
+
+When `palmeta.app` (or chosen domain) is live:
+
+1. Google Search Console → property → submit `https://<domain>/sitemap.xml`
 2. Bing Webmaster (optional) same sitemap
-3. Verify OG: https://www.opengraph.xyz/url/https://palmeta.app/
+3. Verify OG: https://www.opengraph.xyz/url/https://<domain>/
 4. Patch-day routine: update tiers/presets within 24–48h (live-service SEO advantage)
 5. Later: pillar guides that link back into tools (not before catalog/tools are stable)
+
+**Ads:** not in scope until user approves. Privacy policy currently says no ads — keep in sync when that changes.
 
 ## Do not chase yet
 

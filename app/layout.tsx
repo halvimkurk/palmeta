@@ -22,7 +22,7 @@ const sans = M_PLUS_1({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — tier lists, breeding & team builder`,
+    default: `${SITE_NAME} — Palworld 1.0 tier list, breeding & teams`,
     template: `%s · ${SITE_NAME}`,
   },
   description: DEFAULT_DESCRIPTION,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   openGraph: {
-    title: `${SITE_NAME} — tier lists, breeding & team builder`,
+    title: `${SITE_NAME} — Palworld 1.0 tier list, breeding & teams`,
     description: SITE_TAGLINE,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — tier lists, breeding & team builder`,
+    title: `${SITE_NAME} — Palworld 1.0 tier list, breeding & teams`,
     description: SITE_TAGLINE,
   },
   other: {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { filterPals, sortPals, topWorks, type Pal } from "@/lib/teams";
+import { defaultSortDir, filterPals, sortPals, topWorks, type Pal } from "@/lib/teams";
 import { getPals } from "@/lib/teams/catalog";
 import { getTierList } from "@/lib/tiers";
 import { resolveTierList } from "@/lib/tiers/resolve";
@@ -17,6 +17,7 @@ const sample: Pal[] = [
       tags: ["flying-mount", "combat-buffs"],
     },
     work: { gathering: 3 },
+    stats: { hp: 100, melee: 50, shot: 40, defense: 80 },
   },
   {
     slug: "anubis",
@@ -30,6 +31,7 @@ const sample: Pal[] = [
       tags: ["base-work"],
     },
     work: { handiwork: 6, mining: 6, transporting: 4 },
+    stats: { hp: 120, melee: 130, shot: 100, defense: 100 },
   },
 ];
 
@@ -43,6 +45,15 @@ describe("filterPals work", () => {
     expect(
       sortPals(sample, "work", "mining").map((p) => p.slug),
     ).toEqual(["anubis", "jetragon"]);
+  });
+
+  it("sorts HP descending by default and ascending when flipped", () => {
+    expect(defaultSortDir("hp")).toBe("desc");
+    expect(sortPals(sample, "hp").map((p) => p.slug)).toEqual(["anubis", "jetragon"]);
+    expect(sortPals(sample, "hp", "all", "asc").map((p) => p.slug)).toEqual([
+      "jetragon",
+      "anubis",
+    ]);
   });
 });
 

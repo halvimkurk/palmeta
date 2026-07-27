@@ -30,6 +30,7 @@ type Props = {
   uniqueCombos: UniqueCombo[];
   prevSlug?: string;
   nextSlug?: string;
+  seoIntro?: string;
 };
 
 const COMBAT_KEYS = [
@@ -57,6 +58,7 @@ export function PalDetailClient({
   uniqueCombos,
   prevSlug,
   nextSlug,
+  seoIntro,
 }: Props) {
   const works = WORK_ORDER.filter((id) => (pal.work?.[id] ?? 0) > 0)
     .map((id) => ({ id, level: pal.work![id]! }))
@@ -141,6 +143,10 @@ export function PalDetailClient({
           ← Paldeck
         </Link>
       </div>
+
+      {seoIntro ? (
+        <p className="pal-detail__seo-intro">{seoIntro}</p>
+      ) : null}
 
       <div className="pal-detail__columns">
         <div className="pal-detail__col">

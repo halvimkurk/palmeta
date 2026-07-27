@@ -12,10 +12,12 @@ import {
   ELEMENT_LABELS,
   RARITY_LABELS,
   WORK_LABELS,
+  defaultSortDir,
   filterPals,
   getEffectTagOptions,
   getWorkOptions,
   parsePalSort,
+  parsePalSortDir,
   parseWorkId,
   sortPals,
   topWorks,
@@ -59,6 +61,7 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
   const work = parseWorkId(searchParams.get("work"));
   const workMin = Math.max(1, Number(searchParams.get("workMin") ?? "1") || 1);
   const sort = parsePalSort(searchParams.get("sort"));
+  const sortDir = parsePalSortDir(searchParams.get("dir"), sort);
   const q = searchParams.get("q") ?? "";
   const [searchDraft, setSearchDraft] = useState(q);
 
@@ -108,6 +111,7 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
     const workValue = next.work ?? work;
     const workMinValue = next.workMin ?? String(workMin);
     const sortValue = next.sort ?? sort;
+    const dirValue = next.dir ?? sortDir;
     const qValue = next.q !== undefined ? next.q : q;
 
     if (elementValue && elementValue !== "all") params.set("element", elementValue);
@@ -117,7 +121,12 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
     if (workValue && workValue !== "all" && Number(workMinValue) > 1) {
       params.set("workMin", workMinValue);
     }
-    if (sortValue && sortValue !== "name") params.set("sort", sortValue);
+    if (sortValue && sortValue !== "name") {
+      params.set("sort", sortValue);
+      if (dirValue !== defaultSortDir(sortValue as PalSort)) {
+        params.set("dir", dirValue);
+      }
+    }
     if (qValue) params.set("q", qValue);
 
     const qs = params.toString();
@@ -136,7 +145,11 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
   }
 
   function setSort(next: SortCol) {
-    pushParams({ sort: next });
+    if (sort === next) {
+      pushParams({ sort: next, dir: sortDir === "asc" ? "desc" : "asc" });
+      return;
+    }
+    pushParams({ sort: next, dir: defaultSortDir(next) });
   }
 
   const filtered = useMemo(() => {
@@ -149,17 +162,21 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
       workMin,
     });
     if (sort === "tier") {
+      const natural = defaultSortDir("tier");
       return [...list].sort((a, b) => {
         const ga = combatGradeBySlug[a.slug];
         const gb = combatGradeBySlug[b.slug];
         const ra = ga ? (TIER_GRADE_RANK[ga] ?? 8) : 9;
         const rb = gb ? (TIER_GRADE_RANK[gb] ?? 8) : 9;
-        if (ra !== rb) return ra - rb;
+        if (ra !== rb) {
+          const cmp = ra - rb;
+          return sortDir === natural ? cmp : -cmp;
+        }
         return a.name.localeCompare(b.name);
       });
     }
-    return sortPals(list, sort, work);
-  }, [pals, q, element, rarity, effectTag, work, workMin, sort, combatGradeBySlug]);
+    return sortPals(list, sort, work, sortDir);
+  }, [pals, q, element, rarity, effectTag, work, workMin, sort, sortDir, combatGradeBySlug]);
 
   const primaryTags = getEffectTagOptions().filter(
     (o) =>
@@ -179,6 +196,7 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
 
   function SortBtn({ col, label }: { col: SortCol; label: string }) {
     const active = sort === col;
+    const arrow = sortDir === "desc" ? "▾" : "▴";
     return (
       <button
         type="button"
@@ -191,7 +209,7 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
         }}
       >
         {label}
-        {active ? <span aria-hidden> ▾</span> : null}
+        {active ? <span aria-hidden> {arrow}</span> : null}
       </button>
     );
   }
@@ -201,8 +219,8 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
       <CompanionIntro
         tone="pals"
         eyebrow="Creature index"
-        title="Paldeck"
-        lead="Every pal in the catalog — filter by role or element, sort by the stat you care about, open a pal for the full sheet."
+        title="Palworld Paldeck"
+        lead="Every pal in the catalog — filter by role or element, sort by the stat you care about, open a sheet for breeding routes and tier placements."
       >
         <CompanionTools />
       </CompanionIntro>
@@ -265,9 +283,10 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
             <span className="sr-only">Sort</span>
             <select
               value={sort}
-              onChange={(e) =>
-                pushParams({ sort: e.target.value as PalSort })
-              }
+              onChange={(e) => {
+                const next = e.target.value as PalSort;
+                pushParams({ sort: next, dir: defaultSortDir(next) });
+              }}
               aria-label="Sort pals"
             >
               <option value="name">Sort: Name</option>
@@ -370,39 +389,19 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
                 <th scope="col" className="pals-th pals-th--tier">
                   <SortBtn col="tier" label="Tier" />
                 </th>
-                <th
-                  scope="col"
-                  className="pals-th pals-th--num"
-                  onClick={() => setSort("hp")}
-                >
+                <th scope="col" className="pals-th pals-th--num">
                   <SortBtn col="hp" label="HP" />
                 </th>
-                <th
-                  scope="col"
-                  className="pals-th pals-th--num"
-                  onClick={() => setSort("atk")}
-                >
+                <th scope="col" className="pals-th pals-th--num">
                   <SortBtn col="atk" label="Atk" />
                 </th>
-                <th
-                  scope="col"
-                  className="pals-th pals-th--num"
-                  onClick={() => setSort("defense")}
-                >
+                <th scope="col" className="pals-th pals-th--num">
                   <SortBtn col="defense" label="Def" />
                 </th>
-                <th
-                  scope="col"
-                  className="pals-th pals-th--work"
-                  onClick={() => setSort("work")}
-                >
+                <th scope="col" className="pals-th pals-th--work">
                   <SortBtn col="work" label="Work" />
                 </th>
-                <th
-                  scope="col"
-                  className="pals-th pals-th--num pals-th--breed"
-                  onClick={() => setSort("combi")}
-                >
+                <th scope="col" className="pals-th pals-th--num pals-th--breed">
                   <SortBtn col="combi" label="Breed" />
                 </th>
               </tr>

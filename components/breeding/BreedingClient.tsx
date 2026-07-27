@@ -83,9 +83,9 @@ export function BreedingClient({ pals, uniqueCombos }: Props) {
     <div className="breed-page">
       <CompanionIntro
         tone="breeding"
-        eyebrow="Hatching"
-        title="Egg Nest"
-        lead="Pick two parents to see what hatches, or choose a target pal and get every parent pair that produces it."
+        eyebrow="Egg Nest · 1.0"
+        title="Palworld Breeding Calculator"
+        lead="Predict the egg from any parent pair, or reverse-lookup every combo that produces your target pal — shareable URLs included."
       >
         <CompanionTools />
       </CompanionIntro>

@@ -98,9 +98,9 @@ export function TiersClient({ lists, disclaimer }: Props) {
     <div className="tiers-page">
       <CompanionIntro
         tone="tiers"
-        eyebrow="Power ranks"
-        title="Summit Tiers"
-        lead="Pick a role and scan S through D at a glance. Every placement has a short why — open a pal for the full sheet."
+        eyebrow="Summit Tiers · by role"
+        title="Palworld Tier List 1.0"
+        lead="Combat, base work, flying mounts, ground mounts, and capture helpers — every S–D placement includes a short why."
       >
         <CompanionTools />
       </CompanionIntro>

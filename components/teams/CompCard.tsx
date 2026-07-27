@@ -13,7 +13,6 @@ type Props = {
   traits?: EffectTag[];
   active?: boolean;
   meta?: string;
-  actionLabel?: string;
   onSelect: () => void;
   secondary?: ReactNode;
 };
@@ -27,7 +26,6 @@ export function CompCard({
   traits = [],
   active = false,
   meta,
-  actionLabel = "Use",
   onSelect,
   secondary,
 }: Props) {
@@ -37,7 +35,18 @@ export function CompCard({
   });
 
   return (
-    <article className={`comp-card ${active ? "is-active" : ""}`}>
+    <article
+      className={`comp-card ${active ? "is-active" : ""}`}
+      role="button"
+      tabIndex={0}
+      onClick={onSelect}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onSelect();
+        }
+      }}
+    >
       <div className="comp-card__main">
         {tier ? (
           <span className={`tier-badge tier-badge--sm tier-badge--${tier}`} aria-label={`Tier ${tier}`}>
@@ -67,7 +76,11 @@ export function CompCard({
             {slots.map((pal, i) => (
               <li key={`${name}-${i}`} className={`comp-unit ${pal ? "" : "is-empty"}`}>
                 {pal ? (
-                  <Link href={`/pals/${pal.slug}`} className="comp-unit__link">
+                  <Link
+                    href={`/pals/${pal.slug}`}
+                    className="comp-unit__link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <PalIcon pal={pal} size={44} className="comp-unit__icon" />
                     <span className="comp-unit__name">{pal.name}</span>
                   </Link>
@@ -88,10 +101,12 @@ export function CompCard({
       </div>
 
       <div className="comp-card__actions">
-        <button type="button" className="chip chip--btn chip--sm comp-card__use" onClick={onSelect}>
-          {actionLabel}
-        </button>
-        {secondary}
+        <span className="comp-card__load">Load into party →</span>
+        {secondary ? (
+          <div className="comp-card__secondary" onClick={(e) => e.stopPropagation()}>
+            {secondary}
+          </div>
+        ) : null}
       </div>
     </article>
   );

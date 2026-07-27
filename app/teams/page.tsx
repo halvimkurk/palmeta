@@ -8,10 +8,10 @@ import { breadcrumbJsonLd, faqJsonLd, webAppJsonLd } from "@/lib/seo/schema";
 import { getPals, getTeamPresets } from "@/lib/teams/catalog";
 
 const DESCRIPTION =
-  "Palworld team builder for 1.0 — load researched meta comps or build a party of five around partner-skill synergies, then save and share your roster.";
+  "Palworld 1.0 team builder — load researched meta comps or build a party of five around partner-skill synergies, save rosters in your browser, and share via URL.";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palworld Team Builder",
+  title: "Palworld Team Builder — Meta Comps & Party of 5",
   description: DESCRIPTION,
   path: "/teams",
 });
@@ -24,6 +24,10 @@ const FAQ = [
   {
     q: "Do partner skills stack in Palworld 1.0?",
     a: "Most duplicate auras no longer stack. Gobfin Angry Shark still stacks for player Attack, and Orserk’s bullet ramp stacks with itself on the active Pal. Prefer distinct species for other buffs.",
+  },
+  {
+    q: "Can I share a custom team build?",
+    a: "Yes. The party encodes into the page URL as you add pals. Copy the address bar to send a five-slot roster to a friend.",
   },
   {
     q: "Can I save custom teams?",
@@ -46,7 +50,7 @@ export default function TeamsPage() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Raid Roster", path: "/teams" },
+            { name: "Team builder", path: "/teams" },
           ]),
           faqJsonLd(FAQ),
         ]}

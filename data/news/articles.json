@@ -1,21 +1,30 @@
 {
   "version": "1",
-  "generatedAt": "2026-07-27T10:34:36.006Z",
+  "generatedAt": "2026-07-27T11:11:06.506Z",
   "articles": [
     {
       "id": "bb889b08517951f3",
       "slug": "why-i-play-palworld-gives-us-the-weird-uncomfortable-reality-of-a-mature",
-      "title": "Why I Play: Palworld gives us the weird, uncomfortable reality of a mature Pokemon title – on…",
-      "excerpt": "Why I Play: Palworld gives us the weird, uncomfortable reality of a mature Pokemon title – on purpose Massively Overpowered.",
+      "title": "Why I Play: Palworld as a deliberately mature creature game",
+      "excerpt": "A Massively Overpowered column argues Palworld leans into uncomfortable adult themes that mainstream creature collectors usually avoid.",
       "publishedAt": "2026-07-24T15:00:00.000Z",
-      "updatedAt": "2026-07-27T10:34:35.538Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "palworld"
+        "palworld",
+        "community"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Why I Play: Palworld gives us the weird, uncomfortable reality of a mature Pokemon title – on purpose Massively Overpowered."
+          "text": "In a new Why I Play column, Massively Overpowered frames Palworld as something rarer than another cozy collector: a creature game that does not sand down labor, violence, or moral gray areas."
+        },
+        {
+          "type": "p",
+          "text": "The piece contrasts Palworld’s factory floors and combat loops with the softer tone players expect from the genre, suggesting Pocketpair is aiming at an older audience that wants systems with teeth rather than nostalgia alone."
+        },
+        {
+          "type": "p",
+          "text": "Whether you agree or not, the essay is a useful reminder that 1.0 Palworld is being read as a full survival RPG first and a meme second."
         },
         {
           "type": "p",
@@ -34,9 +43,9 @@
       "id": "palmeta-launch",
       "slug": "palmeta-is-open",
       "title": "Palmeta is open — send feedback",
-      "excerpt": "The Palworld toolkit portal is live: tier lists, breeding, team builder, and Paldeck. Tell us what to fix next at support@palmeta.app.",
+      "excerpt": "The unofficial Palworld 1.0 toolkit is live with tier lists, breeding, team builder, and Paldeck. Wrong data? Email support@palmeta.app.",
       "publishedAt": "2026-07-24T12:00:00.000Z",
-      "updatedAt": "2026-07-24T12:00:00.000Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "site",
         "launch",
@@ -46,7 +55,7 @@
       "body": [
         {
           "type": "p",
-          "text": "Palmeta is live — an unofficial Palworld 1.0 toolkit for role tier lists, breeding routes, party builds, and a full Paldeck."
+          "text": "Palmeta is live — an unofficial Palworld 1.0 toolkit for role tier lists, breeding routes, party builds, and a searchable Paldeck."
         },
         {
           "type": "h2",
@@ -55,8 +64,8 @@
         {
           "type": "ul",
           "items": [
-            "Browse combat, work, and mount tier lists",
-            "Run the breeding calculator for target pals",
+            "Browse combat, work, and mount tier lists with short reasons on every row",
+            "Run the breeding calculator forward or reverse for target pals",
             "Load meta comps or build a custom party of five",
             "Filter the Paldeck by element, work, and combat tier"
           ]
@@ -67,7 +76,7 @@
         },
         {
           "type": "p",
-          "text": "Found a wrong tier placement, a broken link, or a missing pal? Email support@palmeta.app — we read every note and prioritize data fixes first."
+          "text": "Found a wrong tier placement, a broken link, or a missing pal? Email support@palmeta.app — we read every note and prioritize catalog fixes first."
         },
         {
           "type": "p",
@@ -79,22 +88,27 @@
     {
       "id": "1456feb5138ad22f",
       "slug": "the-best-palworld-1-0-pals-for-running-your-base-like-a-well-oiled-machi",
-      "title": "The best Palworld 1.0 pals for running your base like a well-oiled machine",
-      "excerpt": "We all have our favorites, but my strategy of 'use the cutest little guys' doesn't guarantee I've always got the best Palworld pals in 1.0.",
+      "title": "Best Palworld 1.0 pals for an efficient base setup",
+      "excerpt": "PC Gamer rounds up strong work specialists for Kindling, Handiwork, Medicine, and other 1.0 base jobs — cute picks are not always the fastest.",
       "publishedAt": "2026-07-24T07:00:10.000Z",
-      "updatedAt": "2026-07-27T10:34:24.215Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "1.0",
-        "pals"
+        "pals",
+        "base"
       ],
       "body": [
         {
           "type": "p",
-          "text": "We all have our favorites, but my strategy of 'use the cutest little guys' doesn't guarantee I've always got the best Palworld pals in 1.0."
+          "text": "After early access experiments, PC Gamer’s latest base guide stops treating every ranch slot as a popularity contest and starts matching pals to actual suitability levels."
         },
         {
           "type": "p",
-          "text": "After my adventures in early access, I think I've learned my lesson, and finally have some actual recommendations for the best Palworld pals for suitabilities like Kindling, Handiwork, Medicine Production, and more..."
+          "text": "The write-up focuses on 1.0’s leveled work system — Kindling, Handiwork, Medicine Production, and the other jobs that keep smelters, benches, and farms moving without babysitting."
+        },
+        {
+          "type": "p",
+          "text": "If you are rebuilding a base post-1.0, cross-check any pick against Palmeta’s worker tier list and Paldeck work tiles before you sink cakes into a breed chain."
         },
         {
           "type": "p",
@@ -112,22 +126,27 @@
     {
       "id": "bb8e575abadab1b4",
       "slug": "ultra-palworld-1-0-mod-adds-ray-traced-lighting-and-it-s-already-got-18-",
-      "title": "\"Ultra\" Palworld 1.0 mod adds ray-traced lighting, and it's already got 18,000 downloads",
-      "excerpt": "Palworld modder 'Fr4nsson' has uploaded an \"Ultra Graphics\" mod to Nexus Mods, which adds ray-traced Lumen global illumination to the game.",
+      "title": "Ultra Graphics mod brings Lumen lighting to Palworld 1.0",
+      "excerpt": "Fr4nsson’s Nexus mod adds ray-traced global illumination and has already passed 18,000 downloads.",
       "publishedAt": "2026-07-22T10:20:18.000Z",
-      "updatedAt": "2026-07-27T10:34:29.772Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "1.0",
-        "community"
+        "community",
+        "mods"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Palworld modder 'Fr4nsson' has uploaded an \"Ultra Graphics\" mod to Nexus Mods, which adds ray-traced Lumen global illumination to the game."
+          "text": "Modder Fr4nsson released an Ultra Graphics pack on Nexus Mods that layers Unreal’s Lumen global illumination onto Palworld 1.0, pushing sunsets and cave runs toward a ray-traced look."
         },
         {
           "type": "p",
-          "text": "Read the full story on PCGamesN: \"Ultra\" Palworld 1.0 mod adds ray-traced lighting, and it's already got 18,000 downloads."
+          "text": "PCGamesN reports more than 18,000 downloads in short order — a sign that PC players still want visual upgrades even as the base game stabilizes after launch."
+        },
+        {
+          "type": "p",
+          "text": "As always with heavy graphics mods, expect a performance tax and test on a save backup before you commit to a long session."
         },
         {
           "type": "p",
@@ -145,22 +164,27 @@
     {
       "id": "c7a0727f2fafa824",
       "slug": "palworld-players-have-harnessed-the-power-of-selective-breeding-to-creat",
-      "title": "Palworld players have harnessed the power of selective breeding to create 'infinite bomb' Pal…",
-      "excerpt": "Palworld, as our breeding guide shows, lets you accomplish some wild things by playing matchmaker for your creatures.",
+      "title": "Players breed an “infinite bomb” pal for combat loops",
+      "excerpt": "Selective breeding produced a pal that can detonate repeatedly in fights without taking self-damage — another odd 1.0 lab result.",
       "publishedAt": "2026-07-21T18:35:28.000Z",
-      "updatedAt": "2026-07-27T10:34:25.289Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "pals",
-        "guide"
+        "breeding",
+        "community"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Palworld, as our breeding guide shows, lets you accomplish some wild things by playing matchmaker for your creatures."
+          "text": "Palworld’s breeding math already enables early access to late-game species and variant lines; the latest community discovery pushes that into combat tech."
         },
         {
           "type": "p",
-          "text": "You can gain early access to late-game Pals, spawn variant subspecies, and—as players have recently discovered—breed a genetic monstrosity that can repeatedly blow itself up in combat without taking any damage in the process..."
+          "text": "PC Gamer highlights a player-bred setup nicknamed an infinite bomb pal — a creature that can trigger explosive partner behavior on loop without eating its own HP bar."
+        },
+        {
+          "type": "p",
+          "text": "Whether it survives the next balance pass is anyone’s guess, but it is a reminder to sanity-check unique combos in the calculator before you farm dozens of eggs."
         },
         {
           "type": "p",
@@ -178,10 +202,10 @@
     {
       "id": "9e4bad811a9de0c4",
       "slug": "palworld-1-0-fishing-guide-how-to-get-the-best-pals-rods-bait-and-salvag",
-      "title": "Palworld 1.0 fishing guide: How to get the best Pals, rods, bait, and salvage",
-      "excerpt": "Palworld 1.0 fishing guide: How to get the best Pals, rods, bait, and salvage The Big Lead.",
+      "title": "Palworld 1.0 fishing: rods, bait, pals, and salvage",
+      "excerpt": "Coverage rounds up how the 1.0 fishing loop works — which pals help, what gear to craft, and where salvage fits in.",
       "publishedAt": "2026-07-21T09:51:57.000Z",
-      "updatedAt": "2026-07-27T10:34:36.006Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "1.0",
         "pals",
@@ -190,7 +214,15 @@
       "body": [
         {
           "type": "p",
-          "text": "Palworld 1.0 fishing guide: How to get the best Pals, rods, bait, and salvage The Big Lead."
+          "text": "Fishing arrived as a full progression lane in Palworld 1.0, not just a mini-game — rods, bait tiers, pal helpers, and salvage outputs all tie into base crafting."
+        },
+        {
+          "type": "p",
+          "text": "Roundups from The Big Lead and syndicated coverage stress pairing the right angler pals with upgraded tackle before you grind rare spawns, and watching which catches feed smelting or medicine lines."
+        },
+        {
+          "type": "p",
+          "text": "Palmeta’s team builder tags fishing-focused partner skills if you want to slot a dedicated angler without memorizing every species."
         },
         {
           "type": "p",
@@ -208,17 +240,26 @@
     {
       "id": "7500addd6d5e58db",
       "slug": "steam-global-top-sellers-for-week-of-14-jul-21-july-2026",
-      "title": "Steam Global Top Sellers for week of 14 Jul — 21 July 2026",
-      "excerpt": "Palworld • Assassin's Creed Black Flag Resynced • MECCHA CHAMELEON • Steam Deck • Dead by Daylight • The Mound: Omen of Cthulhu • Grand Theft Auto V Enhanced • EA SPORTS FC™ 26 • Forza Horiz",
+      "title": "Palworld stays on Steam’s global top sellers chart",
+      "excerpt": "SteamDB’s week of 14–21 July lists Palworld among the platform’s best-selling paid games alongside major AAA launches.",
       "publishedAt": "2026-07-21T09:00:00.000Z",
-      "updatedAt": "2026-07-27T10:34:27.917Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "steam"
+        "steam",
+        "1.0"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Palworld • Assassin's Creed Black Flag Resynced • MECCHA CHAMELEON • Steam Deck • Dead by Daylight • The Mound: Omen of Cthulhu • Grand Theft Auto V Enhanced • EA SPORTS FC™ 26 • Forza Horizon 6 • Halo: Campaign Evolved * excluding free to play games View top 100 on SteamDB."
+          "text": "SteamDB’s global top sellers snapshot for 14–21 July still includes Palworld in the paid chart, shoulder to shoulder with Assassin’s Creed Black Flag Resynced, GTA V Enhanced, Forza Horizon 6, and other heavy hitters."
+        },
+        {
+          "type": "p",
+          "text": "The list excludes free-to-play titles, so placement reflects continued purchases rather than a one-time launch spike alone."
+        },
+        {
+          "type": "p",
+          "text": "For a game that already had a massive early access run, holding chart position two weeks into 1.0 suggests returning players and new buys are both still moving copies."
         },
         {
           "type": "p",
@@ -236,20 +277,26 @@
       "id": "9e806b76616d6dab",
       "slug": "where-to-find-coralum-ore-in-palworld-1-0",
       "title": "Where to find Coralum Ore in Palworld 1.0",
-      "excerpt": "Coralum Ore is used for a ton of late-game items, and finding it isn't as straightforward as most other resources in Palworld 1.0.",
+      "excerpt": "Coralum Ore gates a chunk of late-game crafting and does not show up on every standard mining route.",
       "publishedAt": "2026-07-20T16:14:42.000Z",
-      "updatedAt": "2026-07-27T10:34:32.223Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "1.0"
+        "1.0",
+        "guide",
+        "resources"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Coralum Ore is used for a ton of late-game items, and finding it isn't as straightforward as most other resources in Palworld 1.0."
+          "text": "Coralum Ore underpins several endgame recipes in Palworld 1.0, but it is easy to overlook if you are still farming vanilla ore nodes on the main islands."
         },
         {
           "type": "p",
-          "text": "Read the full story on PCGamesN: Where to find Coralum Ore in Palworld 1.0."
+          "text": "PCGamesN’s location guide points players toward the newer map regions and specific veins tied to coral-themed biomes rather than generic mountain runs."
+        },
+        {
+          "type": "p",
+          "text": "Bring a strong Mining pal and cold or heat prep depending on route — the trip is usually worth it once you unlock the crafts that demand the material."
         },
         {
           "type": "p",
@@ -267,21 +314,26 @@
     {
       "id": "0e854f1d637c4462",
       "slug": "palworld-is-only-growing-more-powerful-hitting-nearly-a-million-concurre",
-      "title": "Palworld is only growing more powerful, hitting nearly a million concurrents in its second we…",
-      "excerpt": "Palworld continues to prove that it's more than a flash-in-the-pan novelty.",
+      "title": "Palworld nears one million concurrent players post-1.0",
+      "excerpt": "The second weekend after 1.0 pushed Steam concurrency close to seven figures — unusual for a title that already had a long early access run.",
       "publishedAt": "2026-07-20T15:13:38.000Z",
-      "updatedAt": "2026-07-27T10:34:28.491Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "1.0"
+        "1.0",
+        "steam"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Palworld continues to prove that it's more than a flash-in-the-pan novelty."
+          "text": "Palworld’s 1.0 launch was never going to match day-one novelty numbers from 2024, but the second full weekend still surprised trackers."
         },
         {
           "type": "p",
-          "text": "The survival-crafting romp with legally distinct pokémon just had its second weekend since it hit 1.0, following a couple of years in early access, and it's only getting more popular..."
+          "text": "PC Gamer reports concurrent players approaching one million on Steam — a sign that the World Tree expansion, new pals, and console parity are pulling lapsed owners back in."
+        },
+        {
+          "type": "p",
+          "text": "Sustained concurrency matters for co-op servers and mod scenes more than headlines; watch whether the curve holds after the launch discount window."
         },
         {
           "type": "p",
@@ -299,17 +351,26 @@
     {
       "id": "f9c53484e8ca0d00",
       "slug": "palworld-s-official-tcg-hits-3-5-million-pack-sales-worldwide-and-it-has",
-      "title": "Palworld's official TCG hits 3.5 million pack sales worldwide, and it hasn't even launched yet",
-      "excerpt": "Palworld's franchise seems like it's no way near slowing down after a successful 3.5 million sales of its card game before it even releases Read the full story on PCGamesN: Palworld's offici",
+      "title": "Palworld TCG passes 3.5 million packs sold pre-launch",
+      "excerpt": "Pocketpair’s physical card game hit 3.5 million packs in global pre-orders before the tabletop release date.",
       "publishedAt": "2026-07-20T14:50:06.000Z",
-      "updatedAt": "2026-07-27T10:34:29.178Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "palworld"
+        "palworld",
+        "community"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Palworld's franchise seems like it's no way near slowing down after a successful 3.5 million sales of its card game before it even releases Read the full story on PCGamesN: Palworld's official TCG hits 3.5 million pack sales worldwide, and it hasn't even launched yet."
+          "text": "Palworld’s brand stretch continues off-screen: the official trading card game has moved 3.5 million packs worldwide on pre-order alone."
+        },
+        {
+          "type": "p",
+          "text": "PCGamesN notes the total landed before retail launch, suggesting collector demand is decoupled from whether someone is still grinding towers in-game."
+        },
+        {
+          "type": "p",
+          "text": "For players, the more interesting question is whether future game patches reference TCG mechanics — for now it is mostly a licensing footprint signal."
         },
         {
           "type": "p",
@@ -328,21 +389,26 @@
       "id": "77c856a6694b8227",
       "slug": "where-to-find-holy-water-in-palworld-1-0",
       "title": "Where to find Holy Water in Palworld 1.0",
-      "excerpt": "A true endgame item, you need Holy Water to harvest World Tree resources and build some of the most powerful base items in the game.",
+      "excerpt": "Holy Water unlocks World Tree harvesting and several top-tier base recipes — here is what coverage says about sourcing it.",
       "publishedAt": "2026-07-20T11:01:04.000Z",
-      "updatedAt": "2026-07-27T10:34:31.580Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "1.0",
-        "guide"
+        "guide",
+        "endgame"
       ],
       "body": [
         {
           "type": "p",
-          "text": "A true endgame item, you need Holy Water to harvest World Tree resources and build some of the most powerful base items in the game."
+          "text": "Holy Water sits firmly in Palworld 1.0’s endgame crafting chain: you need it to harvest World Tree resources and to build some of the strongest base structures."
         },
         {
           "type": "p",
-          "text": "Read the full story on PCGamesN: Where to find Holy Water in Palworld 1.0."
+          "text": "PCGamesN’s guide walks through the dungeons, vendors, and pal drops that feed the material, emphasizing that it is not a early-game bottle pickup."
+        },
+        {
+          "type": "p",
+          "text": "Stockpile before you commit to a full World Tree push so you are not bouncing between biomes mid-build."
         },
         {
           "type": "p",
@@ -360,10 +426,10 @@
     {
       "id": "1b98e8aeaf49a154",
       "slug": "every-new-pal-in-palworld-1-0-and-where-to-catch-them",
-      "title": "Every new Pal in Palworld 1.0 and where to catch them",
-      "excerpt": "The Palworld 1.0 update adds 72 new pals—most of which you can catch, while the remainder at least adds an updated entry to your Palpedia.",
+      "title": "72 new pals in Palworld 1.0 and where to catch them",
+      "excerpt": "The 1.0 update adds dozens of catchable species across Palpagos and the World Tree — a catch-up list helps until you memorize spawns.",
       "publishedAt": "2026-07-19T08:30:04.000Z",
-      "updatedAt": "2026-07-27T10:34:23.115Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "patch",
         "1.0",
@@ -372,11 +438,15 @@
       "body": [
         {
           "type": "p",
-          "text": "The Palworld 1.0 update adds 72 new pals—most of which you can catch, while the remainder at least adds an updated entry to your Palpedia."
+          "text": "Palworld 1.0 ships 72 new pals, most of them capturable in the wild; the rest still flesh out the Paldeck for completionists."
         },
         {
           "type": "p",
-          "text": "That's a big undertaking with the expanded Palpagos map and the new World Tree region to explore, and referencing the in-game map can be a real pain, but that's where I come in to hopefully make the process a bit easier..."
+          "text": "PC Gamer’s roundup maps species to the expanded Palpagos landmass and World Tree region, where the in-game map alone can bury coordinates under icons."
+        },
+        {
+          "type": "p",
+          "text": "Use Palmeta’s Paldeck filters by element and tier while you hunt — it is faster than scrolling the full list when you only need one missing entry."
         },
         {
           "type": "p",
@@ -394,30 +464,27 @@
     {
       "id": "01d9e1f305e7c074",
       "slug": "for-years-survival-games-have-convinced-us-that-chopping-down-400-trees-",
-      "title": "For years, survival games have convinced us that chopping down 400 trees is somehow part of t…",
-      "excerpt": "Survival games are obsessed with the grind.",
+      "title": "Survival games confuse grind with depth — Palworld pushes back",
+      "excerpt": "A PC Gamer opinion piece argues genre convention wastes player time, and Palworld’s automation is part of the answer.",
       "publishedAt": "2026-07-18T14:00:00.000Z",
-      "updatedAt": "2026-07-27T10:34:26.847Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "guide",
-        "community"
+        "community",
+        "base"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Survival games are obsessed with the grind."
+          "text": "Survival games trained us to equate hours of tree chopping with depth. PC Gamer’s essay calls that out as friction masquerading as design."
         },
         {
           "type": "p",
-          "text": "You've got to spend an hour collecting stone."
+          "text": "The piece uses Palworld as a counterexample: pals exist to move logs, smelt ore, and keep benches running so players spend time exploring bosses and breeding chains instead of inventory Tetris."
         },
         {
           "type": "p",
-          "text": "Time to manually ferry hundreds of logs from one storage chest to another."
-        },
-        {
-          "type": "p",
-          "text": "Somewhere along the line, the genre started confusing friction with depth..."
+          "text": "Love or hate the tone, the takeaway for base builders is simple — invest in work suitability, not vanity ranch slots."
         },
         {
           "type": "p",
@@ -435,21 +502,26 @@
     {
       "id": "10a01689b5662917",
       "slug": "where-to-get-ancient-civilization-cores-in-palworld",
-      "title": "Where to get Ancient Civilization Cores in Palworld",
-      "excerpt": "Ancient Civilization Cores are a key ingredient for many high-level pieces of equipment - here's where to find them in Palworld.",
+      "title": "Where to get Ancient Civilization Cores",
+      "excerpt": "Ancient Civilization Cores gate high-tier gear — coverage points to tower clears, raids, and late dungeons as the main sources.",
       "publishedAt": "2026-07-16T14:13:11.000Z",
-      "updatedAt": "2026-07-27T10:34:30.059Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "palworld"
+        "guide",
+        "endgame"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Ancient Civilization Cores are a key ingredient for many high-level pieces of equipment - here's where to find them in Palworld."
+          "text": "Ancient Civilization Cores are a bottleneck for several endgame weapons and base modules, which means every guide eventually becomes a farming route."
         },
         {
           "type": "p",
-          "text": "Read the full story on PCGamesN: Where to get Ancient Civilization Cores in Palworld."
+          "text": "PCGamesN summarizes the reliable drops: syndicate towers, high-level pals, and repeatable combat content that rewards the material on a cadence you can plan around."
+        },
+        {
+          "type": "p",
+          "text": "Pair the runs with a combat-tier party from Palmeta’s team presets if you are still tuning elemental coverage."
         },
         {
           "type": "p",
@@ -467,21 +539,26 @@
     {
       "id": "c9991bb5ae03f40c",
       "slug": "where-to-find-ancient-bark-in-palworld",
-      "title": "Where to find Ancient Bark in Palworld",
-      "excerpt": "This ultra-rare resource is used for speciality equipment and base items; here's the best place to get Ancient Bark in Palworld.",
+      "title": "Where to find Ancient Bark",
+      "excerpt": "Ancient Bark feeds specialty gear and base items — it is rare enough that most players need a dedicated farming loop.",
       "publishedAt": "2026-07-15T11:39:34.000Z",
-      "updatedAt": "2026-07-27T10:34:32.943Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "palworld"
+        "guide",
+        "resources"
       ],
       "body": [
         {
           "type": "p",
-          "text": "This ultra-rare resource is used for speciality equipment and base items; here's the best place to get Ancient Bark in Palworld."
+          "text": "Ancient Bark is one of those materials you do not need until suddenly every bench recipe demands it."
         },
         {
           "type": "p",
-          "text": "Read the full story on PCGamesN: Where to find Ancient Bark in Palworld."
+          "text": "PCGamesN’s farm guide highlights the biomes and destructible nodes that drop bark at a useful rate, plus which pals speed up logging once you are parked in the right zone."
+        },
+        {
+          "type": "p",
+          "text": "Grab a Deforesting specialist before you spend an evening circling the same grove."
         },
         {
           "type": "p",
@@ -499,17 +576,26 @@
     {
       "id": "674677d3487aa467",
       "slug": "v1-0-1-bug-fixes",
-      "title": "v1.0.1: Bug fixes",
-      "excerpt": "Details are thin beyond the headline — worth a look at the source if the topic matters to your roster.",
+      "title": "Patch v1.0.1 — bug fixes",
+      "excerpt": "Pocketpair shipped a small 1.0.1 hotfix on Steam focused on stability fixes rather than balance swings.",
       "publishedAt": "2026-07-15T05:17:43.000Z",
-      "updatedAt": "2026-07-27T10:34:34.447Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "palworld"
+        "patch",
+        "1.0"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Details are thin beyond the headline — worth a look at the source if the topic matters to your roster."
+          "text": "Palworld v1.0.1 landed as a follow-up hotfix shortly after the 1.0 milestone, targeting crash and progression bugs reported in the first live week."
+        },
+        {
+          "type": "p",
+          "text": "Valve’s syndicated post is light on patch-note detail, so treat this as a signal to update your client before long co-op sessions rather than a meta shake-up."
+        },
+        {
+          "type": "p",
+          "text": "If a pal or item behaved oddly right after launch, retry after the patch — several desync reports cleared once everyone matched versions."
         },
         {
           "type": "p",
@@ -527,22 +613,27 @@
     {
       "id": "dccd7651a79cb326",
       "slug": "how-to-get-nightstar-sand-in-palworld",
-      "title": "How to get Nightstar Sand in Palworld",
-      "excerpt": "I was hoping to find a vendor selling Nightstar Sand after starting a new save for the Palworld 1.0 release, but it seems the mid-game crafting ingredient is still only available through goo",
+      "title": "How to get Nightstar Sand",
+      "excerpt": "Nightstar Sand still comes from manual gathering — there is no vendor shortcut for this mid-game crafting staple.",
       "publishedAt": "2026-07-15T01:26:38.000Z",
-      "updatedAt": "2026-07-27T10:34:25.899Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "1.0",
-        "guide"
+        "guide",
+        "resources"
       ],
       "body": [
         {
           "type": "p",
-          "text": "I was hoping to find a vendor selling Nightstar Sand after starting a new save for the Palworld 1.0 release, but it seems the mid-game crafting ingredient is still only available through good ol' fashioned gathering."
+          "text": "Nightstar Sand looked like it might arrive on a merchant menu after 1.0, but PC Gamer confirms it remains a gather-only material tied to specific desert nodes."
         },
         {
           "type": "p",
-          "text": "You'll have to pick it all up by hand to craft several items from tech tree recipes starting around level 56..."
+          "text": "You will start needing it around the level 56 tech band for several weapons and base upgrades, so farm a stack before you unlock the recipes that chain into it."
+        },
+        {
+          "type": "p",
+          "text": "A mount with solid carry weight and a pal that speeds mining or gathering cuts the busywork noticeably."
         },
         {
           "type": "p",
@@ -560,23 +651,27 @@
     {
       "id": "f2f67d30b6f982fa",
       "slug": "the-best-palworld-1-0-base-locations-for-early-game-builds-resource-rich",
-      "title": "The best Palworld 1.0 base locations for early game builds, resource-rich farms, or raid safe…",
-      "excerpt": "Between playing with friends and maintaining my own save file, I've spent far too much time scouting the best base locations in Palworld 1.0.",
+      "title": "Best Palworld 1.0 base locations for early and mid game",
+      "excerpt": "PC Gamer’s base tour covers flat building plots, ore-rich hills, and raid-safer cliffs across the expanded map.",
       "publishedAt": "2026-07-14T21:35:17.000Z",
-      "updatedAt": "2026-07-27T10:34:21.743Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "1.0",
-        "raid",
-        "guide"
+        "guide",
+        "base"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Between playing with friends and maintaining my own save file, I've spent far too much time scouting the best base locations in Palworld 1.0."
+          "text": "Choosing a Palworld base is half logistics, half vibe. PC Gamer’s location guide splits recommendations between early safe plots, resource-heavy valleys, and spots that survive raid waves with less repair spam."
         },
         {
           "type": "p",
-          "text": "I'm practically a Palpagos real estate agent now, and like any good agent, I've prepared a few listings for your own base tours—though my editor says I'm not allowed to charge the typical fees associated with such a service."
+          "text": "The author jokes about playing real-estate agent, but the criteria are practical: flat foundations, nearby ore, fast travel access, and room for pals without clipping into cliffs."
+        },
+        {
+          "type": "p",
+          "text": "Before you relocate, check which worker pals you already own — a perfect plot is useless if your Kindling line is on the other side of the map."
         },
         {
           "type": "p",
@@ -594,22 +689,27 @@
     {
       "id": "bafa0f1feb03aa6b",
       "slug": "how-to-get-hardwood-in-palworld-1-0",
-      "title": "How to get hardwood in Palworld 1.0",
-      "excerpt": "This mid-game ingredient is vital for base upgrades and making sure your equipment is up to scratch; here's how to find hardwood in Palworld.",
+      "title": "How to get Hardwood in Palworld 1.0",
+      "excerpt": "Hardwood bridges mid-game base upgrades and weapon crafts — you need the right trees and a Deforesting pal.",
       "publishedAt": "2026-07-14T15:40:16.000Z",
-      "updatedAt": "2026-07-27T10:34:30.827Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
         "1.0",
-        "guide"
+        "guide",
+        "resources"
       ],
       "body": [
         {
           "type": "p",
-          "text": "This mid-game ingredient is vital for base upgrades and making sure your equipment is up to scratch; here's how to find hardwood in Palworld."
+          "text": "Hardwood is the mid-game wood tier that gates serious base expansion and several gear benches in Palworld 1.0."
         },
         {
           "type": "p",
-          "text": "Read the full story on PCGamesN: How to get hardwood in Palworld 1.0."
+          "text": "PCGamesN points players toward the larger forest nodes that drop hardwood instead of basic logs, and reminds you to bring a pal with high Deforesting so you are not swinging an axe all afternoon."
+        },
+        {
+          "type": "p",
+          "text": "Farm a crate before you start a multi-story build — running out mid-project is more annoying than the gather itself."
         },
         {
           "type": "p",
@@ -627,21 +727,26 @@
     {
       "id": "c3b0915e87fafb24",
       "slug": "how-to-get-ancient-bone-in-palworld",
-      "title": "How to get Ancient Bone in Palworld",
-      "excerpt": "Finding Ancient Bone in Palworld is rather tricky if you haven't clocked that each of the three ancient materials come from the wildlife sanctuaries dotted around the islands.",
+      "title": "How to get Ancient Bone",
+      "excerpt": "Ancient Bone comes from wildlife sanctuaries — plan for stealth, shields, and quick mining before guards react.",
       "publishedAt": "2026-07-14T14:50:05.000Z",
-      "updatedAt": "2026-07-27T10:34:22.441Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "guide"
+        "guide",
+        "resources"
       ],
       "body": [
         {
           "type": "p",
-          "text": "Finding Ancient Bone in Palworld is rather tricky if you haven't clocked that each of the three ancient materials come from the wildlife sanctuaries dotted around the islands."
+          "text": "Ancient Bone is one of three sanctuary-only ancient materials, and the dome shields make it obvious where to look — less obvious how to mine without aggroing everything inside."
         },
         {
           "type": "p",
-          "text": "These areas are easy to recognise because of the big shield domes protecting them, but that does mean you have to sneak about and avoid their protectors while doing your illicit mining..."
+          "text": "PC Gamer’s walkthrough recommends sneaking the nodes, using fast mounts to exit, and remembering that each sanctuary skews toward a different ancient drop."
+        },
+        {
+          "type": "p",
+          "text": "If you are missing one of the trio, rotate islands instead of grinding the same dome on repeat."
         },
         {
           "type": "p",
@@ -659,21 +764,26 @@
     {
       "id": "9f0cb4bd0a046715",
       "slug": "how-to-get-cryogenic-coolant-in-palworld",
-      "title": "How to get Cryogenic Coolant in Palworld",
-      "excerpt": "cquiring Cryogenic Coolant in Palworld lets you craft a bunch of different items, from a saddle for Jormuntide, to more advanced coolers, to the refined cold resistant metal armour.",
+      "title": "How to get Cryogenic Coolant",
+      "excerpt": "Cryogenic Coolant feeds Jormuntide saddles, advanced coolers, and cold-resist armor — here is how guides say to craft it.",
       "publishedAt": "2026-07-14T10:50:43.000Z",
-      "updatedAt": "2026-07-27T10:34:27.381Z",
+      "updatedAt": "2026-07-27T11:00:00.000Z",
       "tags": [
-        "guide"
+        "guide",
+        "crafting"
       ],
       "body": [
         {
           "type": "p",
-          "text": "cquiring Cryogenic Coolant in Palworld lets you craft a bunch of different items, from a saddle for Jormuntide, to more advanced coolers, to the refined cold resistant metal armour."
+          "text": "Cryogenic Coolant sits in the middle of several unrelated tech trees: Jormuntide gear, high-tier coolers, and refined cold-resistant metal armor all ask for it."
         },
         {
           "type": "p",
-          "text": "Chances are at some stage you'll need to use this material, so here's how to get it..."
+          "text": "PC Gamer breaks down the refining loop — which pals provide Cooling, which benches unlock the recipe, and why you should batch production instead of crafting one bottle at a time."
+        },
+        {
+          "type": "p",
+          "text": "Bastigor and other Cooling specialists on Palmeta’s worker tier list are the usual answer if your base line is still stuck on ice pals from mid-game."
         },
         {
           "type": "p",
