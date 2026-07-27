@@ -92,7 +92,7 @@ export function AppShell({ children }: Props) {
         <main className="shell-main__content">{children}</main>
 
         <footer className={`site-footer${isHome ? " site-footer--home" : ""}`}>
-          <span>Paldex — Paldeck, tier lists, breeding &amp; teams</span>
+          <span>ThePaldex — Paldeck, tier lists, breeding &amp; teams</span>
           <Link href={NAV.tiers.href}>{NAV.tiers.label}</Link>
           <Link href={NAV.breeding.href}>{NAV.breeding.label}</Link>
           <Link href={NAV.teams.href}>{NAV.teams.label}</Link>

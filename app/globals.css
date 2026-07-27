@@ -282,7 +282,7 @@ select {
 
   .sidebar__brand .brand-logo__mark {
     width: auto;
-    max-width: 6.75rem;
+    max-width: 8.25rem;
   }
 
   .app-frame.is-home .sidebar {
@@ -468,12 +468,12 @@ select {
 }
 
 .brand-logo--sm .brand-logo__mark {
-  width: 6.5rem;
+  width: 7.5rem;
   height: auto;
 }
 
 .brand-logo--md .brand-logo__mark {
-  width: 8.5rem;
+  width: 10rem;
   height: auto;
 }
 
@@ -483,7 +483,7 @@ select {
 }
 
 .brand-logo--lg .brand-logo__mark {
-  width: min(14rem, 52vw);
+  width: min(18rem, 72vw);
   height: auto;
 }
 

@@ -1,14 +1,14 @@
 ---
 name: palworld-tracker-product
 description: >-
-  LEGACY — achievement completion tracker north star (Palpletion). Paldex no
+  LEGACY — achievement completion tracker north star (Palpletion). ThePaldex no
   longer ships this product. Prefer paldex-product. Keep only for historical
-  research; do not use for new Paldex features or growth work.
+  research; do not use for new ThePaldex features or growth work.
 ---
 
 # LEGACY — Palworld Portal (achievement tracker)
 
-> **Deprecated for Paldex.** Current product: `.cursor/skills/paldex-product/SKILL.md`.
+> **Deprecated for ThePaldex.** Current product: `.cursor/skills/paldex-product/SKILL.md`.
 > Do not plan or build achievement-tracker features unless the user explicitly revives this lane.
 
 # Palworld Portal — Product

@@ -4,7 +4,7 @@ export type FaqItem = { q: string; a: string };
 
 export const HOME_FAQ: FaqItem[] = [
   {
-    q: "What is Paldex?",
+    q: "What is ThePaldex?",
     a: "A free fan-made toolkit for Palworld 1.0 — tier lists, a breeding calculator, team builder, and Paldeck. Not affiliated with Pocketpair.",
   },
   {

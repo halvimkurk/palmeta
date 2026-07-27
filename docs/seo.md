@@ -1,6 +1,6 @@
 # SEO
 
-Paldex SEO targets **high-intent Palworld tool queries**, not broad “Palworld wiki” traffic.
+ThePaldex SEO targets **high-intent Palworld tool queries**, not broad “Palworld wiki” traffic.
 
 ## Positioning
 
@@ -32,7 +32,7 @@ Agent loop: `paldex-growth` implements SEO/polish → `paldex-seo-review` PASS/F
 
 **Deferred until domain is registered:** GSC, Bing, request indexing, live OG checks.
 
-When `paldex.app` (or chosen domain) is live:
+When `thepaldex.com` is live:
 
 1. Google Search Console → property → submit `https://<domain>/sitemap.xml`
 2. Bing Webmaster (optional) same sitemap

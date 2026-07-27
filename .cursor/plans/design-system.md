@@ -30,7 +30,7 @@ Hub visual reference: Completionism collection cards (art plane, 3-col grid, eme
 | Token | Hex | Use |
 | --- | --- | --- |
 | `--emerald` | `#10B981` | Progress fills, primary CTA, active nav |
-| `--pal-gold` | `#E8B920` | Brand accent (`Paldex`), pin highlight |
+| `--pal-gold` | `#E8B920` | Brand accent (`ThePaldex` gold THE), pin highlight |
 | `--bg` / `--slate` | `#12151A` | App ground + sidebar |
 | `--surface` | `#1A1D23` | Panels / list rows |
 | `--surface-2` | `#22262E` | Section bars, inputs |

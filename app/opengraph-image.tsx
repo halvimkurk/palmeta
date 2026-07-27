@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { SITE_HOST } from "@/lib/seo";
 
-export const alt = "Paldex — Palworld 1.0 tier list, breeding & teams";
+export const alt = "ThePaldex — Palworld 1.0 tier list, breeding & teams";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -40,7 +40,7 @@ export default function OpenGraphImage() {
             style={{
               display: "flex",
               alignItems: "flex-end",
-              gap: 22,
+              gap: 18,
               fontSize: 86,
               fontWeight: 800,
               letterSpacing: 4,
@@ -48,7 +48,18 @@ export default function OpenGraphImage() {
               textTransform: "uppercase",
             }}
           >
-            <span style={{ color: "#ffb020" }}>Paldex</span>
+            <span
+              style={{
+                color: "#e8b920",
+                fontSize: 28,
+                letterSpacing: 10,
+                fontWeight: 700,
+                transform: "translateY(-18px)",
+              }}
+            >
+              The
+            </span>
+            <span style={{ color: "#f4f5f8" }}>Paldex</span>
           </div>
           <div
             style={{

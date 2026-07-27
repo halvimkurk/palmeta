@@ -1,15 +1,15 @@
 ---
 name: paldex-growth
 description: >-
-  Growth executor for Paldex: works the organic traffic / impressions backlog
+  Growth executor for ThePaldex: works the organic traffic / impressions backlog
   (SEO, cross-links, shareable tool URLs, patch-day updates, launch copy).
   Asks the user before new features. Use when the user says run growth agent,
   work the backlog, ship SEO improvements, or push toward 1M impressions.
 ---
 
-# Paldex Growth Executor
+# ThePaldex Growth Executor
 
-You implement the **organic growth plan** for Paldex (`paldex.app`).
+You implement the **organic growth plan** for ThePaldex (`thepaldex.com`).
 Product truth: `.cursor/skills/paldex-product/SKILL.md` (not the old achievement tracker).
 
 ## Mission

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 
-/** Production origin until paldex.app is registered. */
+/** Production origin until thepaldex.com DNS is pointed here. */
 export const PRODUCTION_SITE_URL = "https://palworld-achievements.vercel.app";
+/** Planned custom domain — switch PRODUCTION_SITE_URL when live. */
+export const BRAND_DOMAIN = "thepaldex.com";
 
 /** Canonical origin — preview uses VERCEL_URL; prod uses PRODUCTION_SITE_URL. */
 function resolveSiteUrl(): string {
@@ -19,11 +21,11 @@ function resolveSiteUrl(): string {
 
 export const SITE_URL = resolveSiteUrl();
 export const SITE_HOST = new URL(SITE_URL).host;
-export const SITE_NAME = "Paldex";
+export const SITE_NAME = "ThePaldex";
 export const SITE_TAGLINE = "The island changed. So did the ranks.";
 
 export const DEFAULT_DESCRIPTION =
-  "Paldex — Palworld 1.0 companion: role tier lists, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
+  "ThePaldex — Palworld 1.0 companion: role tier lists, a breeding calculator for parent pairs and reverse lookup, a party builder with meta comps, and a full Paldeck with stats and work suitability.";
 
 /** Build absolute page metadata with canonical + social cards. */
 export function pageMeta(opts: {

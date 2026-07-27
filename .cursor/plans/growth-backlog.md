@@ -1,8 +1,8 @@
-# Paldex growth backlog
+# ThePaldex growth backlog
 
 Goal: organic path to **~1M ad impressions** without paid ads.  
 Agents: `paldex-growth` (execute) → `paldex-seo-review` (QA) → growth again on FAIL.  
-Product: `paldex-product`. **New features require user approval.**
+Product: `paldex-product` (ThePaldex / thepaldex.com). **New features require user approval.**
 
 Status legend: `todo` | `waiting-approval` | `in-progress` | `seo-review` | `done` | `blocked`
 

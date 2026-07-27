@@ -1,13 +1,13 @@
 ---
 name: paldex-product
 description: >-
-  Product north star for Paldex (paldex.app) — Palworld 1.0 toolkit with
+  Product north star for ThePaldex (thepaldex.com) — Palworld 1.0 toolkit with
   tier lists, breeding calculator, team builder, Paldeck, and interactive map.
   Use when planning features, scoping work, writing copy, or deciding what
   belongs in the product. Prefer this over the legacy achievement-tracker skill.
 ---
 
-# Paldex — Product
+# ThePaldex — Product
 
 ## One-liner
 

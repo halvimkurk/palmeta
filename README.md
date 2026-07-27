@@ -1,8 +1,10 @@
-# Paldex
+# ThePaldex
 
 Unofficial Palworld 1.0 toolkit: role tier lists, a breeding calculator, and a
 party builder built on a curated pal catalog (stats, work suitability, partner
 skills).
+
+Site: https://palworld-achievements.vercel.app (soon https://thepaldex.com)
 
 Built with Next.js 15 (App Router), React 19, Tailwind 4, and Zustand.
 
@@ -28,4 +30,4 @@ pnpm icons:pals  # download pal portraits
 pnpm news        # ingest news briefs
 ```
 
-Paldex is a fan project and is not affiliated with Pocketpair.
+ThePaldex is a fan project and is not affiliated with Pocketpair.

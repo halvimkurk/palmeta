@@ -1,11 +1,11 @@
 ---
-description: Route Paldex growth/SEO work to the executor + reviewer loop; require approval for new features.
+description: Route ThePaldex growth/SEO work to the executor + reviewer loop; require approval for new features.
 alwaysApply: true
 ---
 
-# Paldex agent routing
+# ThePaldex agent routing
 
-Product is **Paldex** (toolkit: tiers, breeding, teams, Paldeck, map) — not an achievement tracker. Prefer `paldex-product` over legacy tracker skills.
+Product is **ThePaldex** (toolkit: tiers, breeding, teams, Paldeck, map) — not an achievement tracker. Prefer `paldex-product` over legacy tracker skills. Domain: `thepaldex.com`.
 
 ## Growth / SEO loop
 
