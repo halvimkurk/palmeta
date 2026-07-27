@@ -161,6 +161,9 @@ export function TeamBuilderClient({ pals, presets }: Props) {
     return [...presets]
       .filter((p) => p.effectFocus?.includes(compTrait))
       .sort((a, b) => {
+        const sa = a.status === "outdated" ? 1 : 0;
+        const sb = b.status === "outdated" ? 1 : 0;
+        if (sa !== sb) return sa - sb;
         const ta = TIER_ORDER[a.tier ?? "C"] ?? 9;
         const tb = TIER_ORDER[b.tier ?? "C"] ?? 9;
         if (ta !== tb) return ta - tb;
@@ -391,7 +394,10 @@ export function TeamBuilderClient({ pals, presets }: Props) {
                 {filled}/5 pals
                 {isDirty ? <span className="teams-party-bar__dirty">Unsaved changes</span> : null}
                 {activePreset && !loadedSaved ? (
-                  <span className="teams-party-bar__source">From meta comp</span>
+                  <span className="teams-party-bar__source">
+                    From meta comp
+                    {activePreset.status === "outdated" ? " · outdated" : ""}
+                  </span>
                 ) : null}
               </p>
             </div>
@@ -644,7 +650,8 @@ export function TeamBuilderClient({ pals, presets }: Props) {
             <div>
               <h2 className="teams-meta-head__title">Meta comps</h2>
               <p className="teams-meta-head__lead">
-                Researched 1.0 parties — pick a playstyle, then load a comp into the builder.
+                Researched Palworld 1.0 parties — pick a playstyle, then load a comp. Outdated
+                comps stay listed with a badge for old share links.
               </p>
             </div>
           </header>
@@ -681,6 +688,7 @@ export function TeamBuilderClient({ pals, presets }: Props) {
                     name={p.name}
                     description={p.description}
                     tier={p.tier}
+                    status={p.status}
                     team={p.team}
                     palMap={palMap}
                     traits={p.effectFocus}

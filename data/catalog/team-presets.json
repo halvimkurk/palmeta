@@ -1,65 +1,100 @@
 [
   {
+    "id": "gunslinger",
+    "name": "Gunslinger Core",
+    "description": "1.0 trainer firearm shell: Solenne (+80% Attack if all species unique), Frostplume reload, Nyafia shotgun amp, Orserk bullet-ramp on the active Pal, Xenolord for armed Partner Skills.",
+    "tier": "S",
+    "status": "current",
+    "team": ["solenne", "frostplume", "nyafia", "orserk", "xenolord"],
+    "effectFocus": ["firearms", "combat-buffs"]
+  },
+  {
+    "id": "energy-gunner",
+    "name": "Energy Gunner",
+    "description": "Same Solenne / Frostplume / Orserk shell as Gunslinger, but Xenogard replaces Nyafia for energy weapons. Keep every species unique so Solenne stays active.",
+    "tier": "S",
+    "status": "current",
+    "team": ["solenne", "frostplume", "xenogard", "orserk", "xenolord"],
+    "effectFocus": ["firearms", "combat-buffs"]
+  },
+  {
     "id": "gobfin-weapon",
     "name": "Gobfin Weapon Stack",
-    "description": "Angry Shark still stacks in 1.0 — four Gobfin (or Ignis mix) plus a mount infusion (Chillet/Orserk) for player-weapon boss melts.",
+    "description": "Angry Shark still stacks in 1.0 — four Gobfin (or Ignis mix) plus a mount infusion (Chillet/Orserk) for player-weapon boss melts. Best pure trainer-damage alternative to Solenne parties.",
     "tier": "S",
+    "status": "current",
     "team": ["gobfin", "gobfin", "gobfin", "gobfin", "chillet"],
     "effectFocus": ["combat-buffs", "melee", "firearms"]
   },
   {
     "id": "orserk-ramp",
-    "name": "Orserk Bullet Ramp",
-    "description": "1.0 core: Orserk stacks Attack/Defense on the active Pal from bullet hits (up to +150%). Pair with a weakness DPS and Lyleen for long fights. Keep every species unique.",
+    "name": "Orserk Pal Nuke",
+    "description": "Core Pal-damage shell: Orserk ramps Attack/Defense on the active Pal from bullet hits (up to +150%), Jormuntide Ignis carries, Solenne buffs the trainer lane, Lyleen heals, Jetragon covers mobility / Dragon.",
     "tier": "S",
-    "team": ["orserk", "jormuntide-ignis", "lyleen", "jetragon", "anubis"],
+    "status": "current",
+    "team": ["orserk", "jormuntide-ignis", "solenne", "lyleen", "jetragon"],
     "effectFocus": ["combat-buffs", "firearms", "fire-boost"]
   },
   {
-    "id": "energy-gunner",
-    "name": "Energy Gunner",
-    "description": "Trainer energy weapons + Orserk ramp. Xenogard / Xenolord amplify armed-Pal skills while Jetragon covers mobility and Dragon damage.",
+    "id": "blind-punish",
+    "name": "Blind Status Shell",
+    "description": "Venusa applies Blind on your hits; Roujay punishes Blinded targets (+50–65% damage). Orserk ramps the active Pal, Celesdir Noct is the high-risk Attack amp (pair with Immortality), Astegon carries heavy skills.",
     "tier": "S",
-    "team": ["orserk", "xenogard", "xenolord", "jetragon", "lyleen"],
-    "effectFocus": ["firearms", "combat-buffs", "flying-mount"]
-  },
-  {
-    "id": "status-punish",
-    "name": "Status Punisher",
-    "description": "Blind from Vanwyrm Cryst into a heavy active Pal (Astegon), with Orserk ramping and Shadowbeak pressure. Swap the DPS for the boss weakness.",
-    "tier": "S",
-    "team": ["vanwyrm-cryst", "astegon", "orserk", "shadowbeak", "lyleen"],
+    "status": "current",
+    "team": ["venusa", "roujay", "astegon", "orserk", "celesdir-noct"],
     "effectFocus": ["status", "combat-buffs", "dark-boost"]
   },
   {
     "id": "libero-raid",
     "name": "Libero Raid Lead",
-    "description": "Bellanoir Libero as the active nuke with Orserk stacks, Lyleen sustain, and Frostallion for Ice coverage on Dragon threats.",
+    "description": "Bellanoir Libero as the active nuke with Orserk stacks, Solenne trainer Attack (unique species), Lyleen sustain, and Frostallion for Ice coverage on Dragon threats.",
     "tier": "S",
-    "team": ["bellanoir-libero", "orserk", "lyleen", "frostallion", "jetragon"],
+    "status": "current",
+    "team": ["bellanoir-libero", "orserk", "solenne", "lyleen", "frostallion"],
     "effectFocus": ["combat-buffs", "dark-boost", "ice-boost"]
   },
   {
-    "id": "knocklem-wall",
-    "name": "Knocklem Wall",
-    "description": "Knocklem Iron/Steel Guardian Mode for long raids — Orserk still ramps the active slot, Lyleen heals, Anubis covers Earth utility.",
+    "id": "knocklem-ignis-wall",
+    "name": "Knocklem Ignis Wall",
+    "description": "Knocklem Ignis Iron Guardian Mode (+210% Atk/Def at rank 5) for long raids — Orserk still ramps the active slot, Solenne for trainer Attack, Lyleen heals, Jetragon for repositioning.",
     "tier": "A",
-    "team": ["knocklem", "orserk", "lyleen", "anubis", "jetragon"],
-    "effectFocus": ["combat-buffs", "earth-boost", "healing"]
+    "status": "current",
+    "team": ["knocklem-ignis", "orserk", "solenne", "lyleen", "jetragon"],
+    "effectFocus": ["combat-buffs", "fire-boost", "healing"]
   },
   {
     "id": "ice-dragon",
     "name": "Ice vs Dragon",
-    "description": "Frostallion lead for Dragon bosses with Cryolinx support, Orserk stacks, and a flyer for repositioning.",
+    "description": "Frostallion lead for Dragon bosses (Xenolord, etc.) with Cryolinx support, Orserk stacks, Solenne unique-species Attack, and Lyleen for sustain.",
     "tier": "A",
-    "team": ["frostallion", "cryolinx", "orserk", "jetragon", "lyleen"],
-    "effectFocus": ["ice-boost", "flying-mount", "combat-buffs"]
+    "status": "current",
+    "team": ["frostallion", "cryolinx", "orserk", "solenne", "lyleen"],
+    "effectFocus": ["ice-boost", "combat-buffs", "healing"]
+  },
+  {
+    "id": "neptilius-fire",
+    "name": "Neptilius Fire Counter",
+    "description": "Neptilius as the Water carry for Fire threats (Blazamut Ryu phase 1). Orserk ramps, Solenne buffs, Lyleen sustains, Anubis covers Earth utility / swaps.",
+    "tier": "A",
+    "status": "current",
+    "team": ["neptilius", "orserk", "solenne", "lyleen", "anubis"],
+    "effectFocus": ["water-boost", "combat-buffs", "healing"]
+  },
+  {
+    "id": "selyne-mount",
+    "name": "Selyne Mount DPS",
+    "description": "Selyne mounted Dark/Neutral boost for Dark-weak bosses and typeless checks. Pair with Orserk ramp, Solenne (unique species), Lyleen, and a flexible DPS swap slot.",
+    "tier": "A",
+    "status": "current",
+    "team": ["selyne", "orserk", "solenne", "lyleen", "jetragon"],
+    "effectFocus": ["dark-boost", "combat-buffs", "flying-mount"]
   },
   {
     "id": "world-tree",
     "name": "World Tree Key",
     "description": "Panthalus opens the World Tree barrier — keep a flyer and a healer ready for the endgame route.",
     "tier": "A",
+    "status": "current",
     "team": ["panthalus", "jetragon", "anubis", "lyleen", "orserk"],
     "effectFocus": ["mobility", "water-boost", "combat-buffs"]
   },
@@ -68,6 +103,7 @@
     "name": "Fishing Build",
     "description": "Water party with fishing boosts for lunker hunting along the coast.",
     "tier": "B",
+    "status": "current",
     "team": ["ghangler", "penking", "pengullet", "jelliette", "faleris-aqua"],
     "effectFocus": ["fishing", "water-boost"]
   },
@@ -76,6 +112,7 @@
     "name": "Loot Farmer",
     "description": "Drop-rate and ranch helpers for sphere materials, ore, and gold while surveying.",
     "tier": "B",
+    "status": "current",
     "team": ["vanwyrm", "vixy", "mau", "reptyro", "mammorest"],
     "effectFocus": ["more-drops", "capture"]
   },
@@ -84,7 +121,35 @@
     "name": "Pack Mule",
     "description": "Stacked carry weight for long survey and hauling runs.",
     "tier": "B",
+    "status": "current",
     "team": ["wumpo", "kingpaca", "broncherry", "cattiva", "direhowl"],
     "effectFocus": ["carry-weight", "ground-mount"]
+  },
+  {
+    "id": "status-punish",
+    "name": "Status Punisher (Legacy)",
+    "description": "Pre-1.0 blind shell using Vanwyrm Cryst + Shadowbeak. Prefer Blind Status Shell (Venusa + Roujay + Celesdir Noct) for current partner-skill data.",
+    "tier": "B",
+    "status": "outdated",
+    "team": ["vanwyrm-cryst", "astegon", "orserk", "shadowbeak", "lyleen"],
+    "effectFocus": ["status", "combat-buffs", "dark-boost"]
+  },
+  {
+    "id": "knocklem-wall",
+    "name": "Knocklem Wall (Legacy)",
+    "description": "Earth Knocklem bruiser party. Prefer Knocklem Ignis Wall — Iron Guardian Mode is the stronger 1.0 raid tank skill.",
+    "tier": "B",
+    "status": "outdated",
+    "team": ["knocklem", "orserk", "lyleen", "anubis", "jetragon"],
+    "effectFocus": ["combat-buffs", "earth-boost", "healing"]
+  },
+  {
+    "id": "energy-gunner-legacy",
+    "name": "Energy Gunner (Legacy)",
+    "description": "Older energy party without Solenne / Frostplume trainer buffs. Prefer the updated Energy Gunner or Gunslinger Core.",
+    "tier": "C",
+    "status": "outdated",
+    "team": ["orserk", "xenogard", "xenolord", "jetragon", "lyleen"],
+    "effectFocus": ["firearms", "combat-buffs", "flying-mount"]
   }
 ]

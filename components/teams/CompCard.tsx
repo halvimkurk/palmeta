@@ -1,13 +1,20 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { PalIcon } from "@/components/teams/PalIcon";
-import { EFFECT_TAG_LABELS, TEAM_SIZE, type EffectTag, type Pal } from "@/lib/teams/types";
+import {
+  EFFECT_TAG_LABELS,
+  TEAM_SIZE,
+  type EffectTag,
+  type Pal,
+  type TeamPresetStatus,
+} from "@/lib/teams/types";
 import { toneForTag } from "@/lib/teams/effectTone";
 
 type Props = {
   name: string;
   description?: string;
   tier?: "S" | "A" | "B" | "C";
+  status?: TeamPresetStatus;
   team: (string | null)[];
   palMap: Map<string, Pal>;
   traits?: EffectTag[];
@@ -21,6 +28,7 @@ export function CompCard({
   name,
   description,
   tier,
+  status = "current",
   team,
   palMap,
   traits = [],
@@ -33,10 +41,11 @@ export function CompCard({
     const slug = team[i] ?? null;
     return slug ? palMap.get(slug) ?? null : null;
   });
+  const outdated = status === "outdated";
 
   return (
     <article
-      className={`comp-card ${active ? "is-active" : ""}`}
+      className={`comp-card ${active ? "is-active" : ""} ${outdated ? "is-outdated" : ""}`}
       role="button"
       tabIndex={0}
       onClick={onSelect}
@@ -59,6 +68,11 @@ export function CompCard({
         <div className="comp-card__body">
           <div className="comp-card__titles">
             <h3 className="comp-card__name">{name}</h3>
+            {outdated ? (
+              <span className="comp-card__status comp-card__status--outdated" title="No longer top meta — kept for reference">
+                Outdated
+              </span>
+            ) : null}
             {meta ? <span className="comp-card__meta">{meta}</span> : null}
           </div>
 

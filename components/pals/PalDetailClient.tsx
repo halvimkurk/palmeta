@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { ElementDots } from "@/components/pals/ElementDots";
 import { PalIcon } from "@/components/teams/PalIcon";
 import { NAV } from "@/lib/nav";
-import type { UniqueCombo } from "@/lib/breeding/engine";
 import {
   EFFECT_TAG_LABELS,
+  ELEMENT_LABELS,
   RARITY_LABELS,
   WORK_LABELS,
   WORK_ORDER,
@@ -24,11 +25,20 @@ type TierHit = {
   why: string;
 };
 
+/** Minimal pal ref for unique breeding formula cards. */
+export type BreedPalRef = Pick<Pal, "slug" | "name" | "elements">;
+
+export type UniqueBreedComboView = {
+  parentA: BreedPalRef;
+  parentB: BreedPalRef;
+  child: BreedPalRef;
+};
+
 type Props = {
   pal: Pal;
   presets: TeamPreset[];
   tiers: TierHit[];
-  uniqueCombos: UniqueCombo[];
+  uniqueCombos: UniqueBreedComboView[];
   prevSlug?: string;
   nextSlug?: string;
   seoIntro?: string;
@@ -66,6 +76,15 @@ export function PalDetailClient({
     .sort((a, b) => b.level - a.level);
   const topWork = works[0];
   const stats = pal.stats;
+  const actives = pal.actives ?? [];
+  const activesRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.location.hash === "#active-skills" && activesRef.current) {
+      activesRef.current.open = true;
+    }
+  }, []);
 
   const combatStats = stats
     ? COMBAT_KEYS.flatMap(([label, key]) => {
@@ -101,7 +120,7 @@ export function PalDetailClient({
           <h1 className="pal-detail__name">{pal.name}</h1>
           <ElementDots elements={pal.elements} labeled />
 
-          {(topTiers.length > 0 || topWork) && (
+          {(topTiers.length > 0 || topWork || pal.partnerSkill.name) && (
             <ul className="pal-detail__highlights" aria-label="Key highlights">
               {topTiers.slice(0, 3).map((t) => (
                 <li key={`${t.role}-${t.grade}`}>
@@ -122,6 +141,12 @@ export function PalDetailClient({
                   </Link>
                 </li>
               ) : null}
+              <li>
+                <a href="#partner-skill" className="pal-detail__hl pal-detail__hl--skill">
+                  <span className="pal-detail__hl-kicker">Partner</span>
+                  <span className="pal-detail__hl-label">{pal.partnerSkill.name}</span>
+                </a>
+              </li>
             </ul>
           )}
         </div>
@@ -202,7 +227,10 @@ export function PalDetailClient({
             </section>
           ) : null}
 
-          <section className="pal-detail__panel pal-detail__panel--skill">
+          <section
+            id="partner-skill"
+            className="pal-detail__panel pal-detail__panel--skill"
+          >
             <p className="pal-detail__panel-kicker">Partner skill</p>
             <h2 className="pal-detail__skill-name">{pal.partnerSkill.name}</h2>
             <p className="pal-detail__skill-desc">{pal.partnerSkill.description}</p>
@@ -216,6 +244,48 @@ export function PalDetailClient({
               ))}
             </ul>
           </section>
+
+          {actives.length > 0 ? (
+            <details
+              ref={activesRef}
+              id="active-skills"
+              className="pal-detail__panel pal-detail__panel--actives"
+            >
+              <summary className="pal-detail__actives-summary">
+                <span className="pal-detail__panel-title pal-detail__panel-title--inline">
+                  Active skills
+                </span>
+                <span className="pal-detail__actives-count">
+                  {actives.length} moves
+                </span>
+              </summary>
+              <ul className="pal-detail__actives-list">
+                {actives.map((sk) => (
+                  <li key={`${sk.level}-${sk.name}`} className="pal-detail__active">
+                    <div className="pal-detail__active-top">
+                      <span className="pal-detail__active-lv">Lv {sk.level}</span>
+                      <strong className="pal-detail__active-name">{sk.name}</strong>
+                      <span
+                        className={`pal-detail__active-el el-${sk.element}`}
+                        title={ELEMENT_LABELS[sk.element]}
+                      >
+                        {ELEMENT_LABELS[sk.element]}
+                      </span>
+                      <span className="pal-detail__active-meta" title="Power">
+                        {sk.power}
+                      </span>
+                      <span className="pal-detail__active-meta" title="Cooldown">
+                        {sk.cooldown}s
+                      </span>
+                    </div>
+                    {sk.description ? (
+                      <p className="pal-detail__active-desc">{sk.description}</p>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ) : null}
         </div>
 
         <div className="pal-detail__col">
@@ -273,26 +343,16 @@ export function PalDetailClient({
               <h2 className="pal-detail__panel-title">Unique breeding</h2>
               <ul className="pal-detail__breed-list">
                 {uniqueCombos.map((c) => (
-                  <li key={`${c.parents.join("-")}-${c.child}`}>
-                    <Link
-                      href={`/breeding?a=${c.parents[0] ?? ""}&b=${c.parents[1] ?? ""}`}
-                      className="pal-detail__breed-card"
-                    >
-                      <span className="pal-detail__breed-formula">
-                        <em>{c.parents[0]}</em>
-                        <span aria-hidden>×</span>
-                        <em>{c.parents[1]}</em>
-                        <span aria-hidden>→</span>
-                        <strong>{c.child}</strong>
-                      </span>
-                      <span className="pal-detail__breed-cta">Open calculator</span>
-                    </Link>
+                  <li key={`${c.parentA.slug}-${c.parentB.slug}-${c.child.slug}`}>
+                    <UniqueBreedCard combo={c} currentSlug={pal.slug} />
                   </li>
                 ))}
               </ul>
-              <p className="pal-detail__more">
-                <Link href={`/breeding?child=${pal.slug}`}>More catalog parents →</Link>
-              </p>
+              {pal.breeding && !pal.breeding.ignoreCombi ? (
+                <p className="pal-detail__more">
+                  <Link href={`/breeding?child=${pal.slug}`}>More catalog parents →</Link>
+                </p>
+              ) : null}
             </section>
           ) : pal.breeding ? (
             <section className="pal-detail__panel">
@@ -329,5 +389,55 @@ export function PalDetailClient({
         {nextSlug ? <Link href={`/pals/${nextSlug}`}>Next →</Link> : <span />}
       </nav>
     </article>
+  );
+}
+
+function UniqueBreedCard({
+  combo,
+  currentSlug,
+}: {
+  combo: UniqueBreedComboView;
+  currentSlug: string;
+}) {
+  const isChild = combo.child.slug === currentSlug;
+  const roleLabel = isChild ? "Only from" : "Breeds into";
+  const href = `/breeding?a=${combo.parentA.slug}&b=${combo.parentB.slug}`;
+
+  return (
+    <Link href={href} className="pal-detail__breed-card">
+      <span className="pal-detail__breed-meta">
+        <span className="pal-detail__breed-role">{roleLabel}</span>
+        <span className="pal-detail__breed-tag">Unique</span>
+      </span>
+      <span className="pal-detail__breed-formula" aria-hidden>
+        <BreedFormulaPal refPal={combo.parentA} isYou={combo.parentA.slug === currentSlug} />
+        <span className="pal-detail__breed-op">×</span>
+        <BreedFormulaPal refPal={combo.parentB} isYou={combo.parentB.slug === currentSlug} />
+        <span className="pal-detail__breed-op">→</span>
+        <BreedFormulaPal refPal={combo.child} isYou={isChild} emphasize />
+      </span>
+      <span className="sr-only">
+        {combo.parentA.name} times {combo.parentB.name} yields {combo.child.name}. Open calculator.
+      </span>
+      <span className="pal-detail__breed-cta">Open calculator</span>
+    </Link>
+  );
+}
+
+function BreedFormulaPal({
+  refPal,
+  isYou,
+  emphasize = false,
+}: {
+  refPal: BreedPalRef;
+  isYou: boolean;
+  emphasize?: boolean;
+}) {
+  return (
+    <span className={`pal-detail__breed-pal ${emphasize ? "is-result" : ""} ${isYou ? "is-you" : ""}`}>
+      <PalIcon pal={refPal} size={40} />
+      <span className="pal-detail__breed-pal-name">{refPal.name}</span>
+      {isYou ? <span className="pal-detail__breed-you">You</span> : null}
+    </span>
   );
 }

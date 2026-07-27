@@ -91,6 +91,16 @@ export type PartnerSkill = {
   stackLabel?: string;
 };
 
+/** Level-up active combat skill (move) learned by a pal. */
+export type PalActiveSkill = {
+  level: number;
+  name: string;
+  description: string;
+  element: PalElement;
+  power: number;
+  cooldown: number;
+};
+
 export type Pal = {
   slug: string;
   name: string;
@@ -107,7 +117,12 @@ export type Pal = {
   stats?: PalCombatStats;
   /** Breeding / combi rank when known */
   breeding?: PalBreeding;
+  /** Level-up active skills when known */
+  actives?: PalActiveSkill[];
 };
+
+/** Current = researched 1.0 meta; outdated = kept for reference / share links. */
+export type TeamPresetStatus = "current" | "outdated";
 
 export type TeamPreset = {
   id: string;
@@ -115,6 +130,8 @@ export type TeamPreset = {
   description: string;
   /** Community placement for comps browser (Blitz-style). */
   tier?: "S" | "A" | "B" | "C";
+  /** Defaults to current when omitted. */
+  status?: TeamPresetStatus;
   /** Up to 5 pal slugs (nulls padded in UI) */
   team: string[];
   effectFocus?: EffectTag[];

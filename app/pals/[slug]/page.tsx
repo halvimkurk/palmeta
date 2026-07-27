@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PalDetailClient } from "@/components/pals/PalDetailClient";
+import {
+  PalDetailClient,
+  type BreedPalRef,
+  type UniqueBreedComboView,
+} from "@/components/pals/PalDetailClient";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getUniqueCombosForPal } from "@/lib/breeding";
 import {
@@ -13,12 +17,40 @@ import { pageMeta, SITE_URL } from "@/lib/seo";
 import { breadcrumbJsonLd } from "@/lib/seo/schema";
 import { getPalBySlug, getPals, getPresetsForPal } from "@/lib/teams/catalog";
 import { getPalIconSrc } from "@/lib/teams/icons";
+import type { PalElement } from "@/lib/teams/types";
 import { sortPals } from "@/lib/teams/query";
 import { findPalTiers } from "@/lib/tiers";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+function slugToDisplayName(slug: string) {
+  return slug
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function toBreedPalRef(slug: string): BreedPalRef {
+  const pal = getPalBySlug(slug);
+  if (pal) {
+    return { slug: pal.slug, name: pal.name, elements: pal.elements };
+  }
+  return {
+    slug,
+    name: slugToDisplayName(slug),
+    elements: ["normal"] as PalElement[],
+  };
+}
+
+function resolveUniqueCombos(slug: string): UniqueBreedComboView[] {
+  return getUniqueCombosForPal(slug).map((c) => ({
+    parentA: toBreedPalRef(c.parents[0] ?? ""),
+    parentB: toBreedPalRef(c.parents[1] ?? ""),
+    child: toBreedPalRef(c.child),
+  }));
+}
 
 export async function generateStaticParams() {
   return getPals().map((p) => ({ slug: p.slug }));
@@ -76,7 +108,7 @@ export default async function PalDetailPage({ params }: Props) {
         pal={pal}
         presets={getPresetsForPal(slug)}
         tiers={tiers}
-        uniqueCombos={getUniqueCombosForPal(slug)}
+        uniqueCombos={resolveUniqueCombos(slug)}
         prevSlug={prevSlug}
         nextSlug={nextSlug}
         seoIntro={seoIntro}

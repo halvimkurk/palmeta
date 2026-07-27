@@ -85,6 +85,14 @@ describe("catalog work merge", () => {
     expect(anubis?.work?.mining).toBe(6);
   });
 
+  it("attaches active skills sorted by level", () => {
+    const lamball = getPals().find((p) => p.slug === "lamball");
+    expect(lamball?.actives?.length).toBeGreaterThanOrEqual(5);
+    expect(lamball?.actives?.[0]?.name).toBe("Roly Poly");
+    const levels = lamball!.actives!.map((s) => s.level);
+    expect(levels).toEqual([...levels].sort((a, b) => a - b));
+  });
+
   it("includes 1.0-only pals in the roster", () => {
     const slugs = new Set(getPals().map((p) => p.slug));
     expect(slugs.has("hartalis")).toBe(true);

@@ -3,9 +3,11 @@ import "server-only";
 import palsJson from "@/data/catalog/pals.v1.json";
 import workJson from "@/data/catalog/pal-work.v1.json";
 import statsJson from "@/data/catalog/pal-stats.v1.json";
+import activesJson from "@/data/catalog/pal-actives.v1.json";
 import breedingJson from "@/data/catalog/pal-breeding.v1.json";
 import type {
   Pal,
+  PalActiveSkill,
   PalBreeding,
   PalCombatStats,
   PalWork,
@@ -25,6 +27,11 @@ type StatsCatalog = {
   pals: Record<string, PalCombatStats>;
 };
 
+type ActivesCatalog = {
+  version: number;
+  pals: Record<string, PalActiveSkill[]>;
+};
+
 type BreedingCatalogFile = {
   version: number;
   formula: string;
@@ -35,16 +42,19 @@ type BreedingCatalogFile = {
 const catalog = palsJson as PalsCatalog;
 const workBySlug = (workJson as WorkCatalog).pals;
 const statsBySlug = (statsJson as StatsCatalog).pals;
+const activesBySlug = (activesJson as ActivesCatalog).pals;
 const breedingFile = breedingJson as BreedingCatalogFile;
 
 const pals: Pal[] = catalog.pals.map((p) => {
   const work = workBySlug[p.slug];
   const stats = statsBySlug[p.slug];
+  const actives = activesBySlug[p.slug];
   const breeding = breedingFile.ranks[p.slug];
   return {
     ...p,
     ...(work ? { work } : {}),
     ...(stats ? { stats } : {}),
+    ...(actives?.length ? { actives } : {}),
     ...(breeding ? { breeding } : {}),
   };
 });

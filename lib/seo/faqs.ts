@@ -62,7 +62,7 @@ export const BREEDING_FAQ: FaqItem[] = [
 export const TEAMS_FAQ: FaqItem[] = [
   {
     q: "What teams are people running in 1.0?",
-    a: "Browse Meta comps for starters — Orserk bullet builds, Gobfin weapon stacks, Libero raid parties, and utility setups. Swap pals for the boss element you need.",
+    a: "Browse Meta comps for starters — Gunslinger / Solenne firearm shells, Orserk Pal nukes, Gobfin weapon stacks, Blind status parties, Libero raids, and utility setups. Comps marked Outdated are kept for reference.",
   },
   {
     q: "Do partner skills stack?",

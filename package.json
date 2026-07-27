@@ -13,6 +13,7 @@
     "pals:tiers-fill": "node scripts/expand-combat-tiers.mjs",
     "pals:work": "node scripts/merge-pal-work.mjs",
     "pals:stats": "node scripts/merge-pal-stats.mjs",
+    "pals:actives": "node scripts/merge-pal-actives.mjs",
     "icons:pals": "node scripts/fetch-pal-icons.mjs",
     "companion:art": "node scripts/fetch-companion-art.mjs"
   },
