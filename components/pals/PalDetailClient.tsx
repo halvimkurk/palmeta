@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { CompanionTools } from "@/components/pals/CompanionTools";
 import { ElementDots } from "@/components/pals/ElementDots";
+import { StatIcon } from "@/components/pals/StatIcon";
+import { ElementBadge } from "@/components/teams/ElementBadge";
 import { PalIcon } from "@/components/teams/PalIcon";
 import { NAV } from "@/lib/nav";
 import {
   EFFECT_TAG_LABELS,
-  ELEMENT_LABELS,
   RARITY_LABELS,
   WORK_LABELS,
   WORK_ORDER,
@@ -89,13 +90,13 @@ export function PalDetailClient({
   const combatStats = stats
     ? COMBAT_KEYS.flatMap(([label, key]) => {
         const value = stats[key];
-        return value == null ? [] : [{ label, value }];
+        return value == null ? [] : [{ key, label, value }];
       })
     : [];
   const moveStats = stats
     ? MOVE_KEYS.flatMap(([label, key]) => {
         const value = stats[key];
-        return value == null ? [] : [{ label, value }];
+        return value == null ? [] : [{ key, label, value }];
       })
     : [];
   const combatMax = Math.max(1, ...combatStats.map((s) => s.value));
@@ -189,7 +190,10 @@ export function PalDetailClient({
                       className={hot ? "pal-detail__stat is-hot" : "pal-detail__stat"}
                     >
                       <div className="pal-detail__stat-top">
-                        <span>{s.label}</span>
+                        <span className="pal-detail__stat-label">
+                          <StatIcon id={s.key} />
+                          {s.label}
+                        </span>
                         <strong>{s.value}</strong>
                       </div>
                       <div
@@ -209,7 +213,10 @@ export function PalDetailClient({
                     const pct = Math.round((s.value / moveMax) * 100);
                     return (
                       <li key={s.label}>
-                        <span>{s.label}</span>
+                        <span className="pal-detail__stat-label">
+                          <StatIcon id={s.key} />
+                          {s.label}
+                        </span>
                         <strong>{s.value}</strong>
                         <div className="pal-detail__stat-track" aria-hidden>
                           <span style={{ width: `${pct}%` }} />
@@ -234,6 +241,10 @@ export function PalDetailClient({
             <p className="pal-detail__panel-kicker">Partner skill</p>
             <h2 className="pal-detail__skill-name">{pal.partnerSkill.name}</h2>
             <p className="pal-detail__skill-desc">{pal.partnerSkill.description}</p>
+            <p className="pal-detail__skill-hint">
+              {pal.name}&rsquo;s unique signature ability — rank it up by condensing
+              duplicates at the Pal Essence Condenser.
+            </p>
             <ul className="pal-detail__tags">
               {pal.partnerSkill.tags.map((t) => (
                 <li key={t}>
@@ -258,32 +269,60 @@ export function PalDetailClient({
                 <span className="pal-detail__actives-count">
                   {actives.length} moves
                 </span>
+                <span className="pal-detail__actives-toggle" aria-hidden>
+                  <span className="pal-detail__actives-toggle-show">Show</span>
+                  <span className="pal-detail__actives-toggle-hide">Hide</span>
+                  <span className="pal-detail__actives-chevron" />
+                </span>
               </summary>
+              <div className="pal-detail__actives-head" aria-hidden>
+                <span title="Level learned">Lv</span>
+                <span>Skill</span>
+                <span />
+                <span
+                  className="pal-detail__actives-head-num"
+                  title="Base attack power of the move"
+                >
+                  Power
+                </span>
+                <span
+                  className="pal-detail__actives-head-num"
+                  title="Cooldown time between uses, in seconds"
+                >
+                  CT
+                </span>
+              </div>
               <ul className="pal-detail__actives-list">
                 {actives.map((sk) => (
                   <li key={`${sk.level}-${sk.name}`} className="pal-detail__active">
-                    <div className="pal-detail__active-top">
-                      <span className="pal-detail__active-lv">Lv {sk.level}</span>
+                    <span className="pal-detail__active-lv">{sk.level}</span>
+                    <div className="pal-detail__active-main">
                       <strong className="pal-detail__active-name">{sk.name}</strong>
-                      <span
-                        className={`pal-detail__active-el el-${sk.element}`}
-                        title={ELEMENT_LABELS[sk.element]}
-                      >
-                        {ELEMENT_LABELS[sk.element]}
-                      </span>
-                      <span className="pal-detail__active-meta" title="Power">
-                        {sk.power}
-                      </span>
-                      <span className="pal-detail__active-meta" title="Cooldown">
-                        {sk.cooldown}s
-                      </span>
+                      {sk.description ? (
+                        <p className="pal-detail__active-desc">{sk.description}</p>
+                      ) : null}
                     </div>
-                    {sk.description ? (
-                      <p className="pal-detail__active-desc">{sk.description}</p>
-                    ) : null}
+                    <ElementBadge
+                      element={sk.element}
+                      size={18}
+                      className="pal-detail__active-el"
+                    />
+                    <span className="pal-detail__active-num" title="Power">
+                      {sk.power}
+                    </span>
+                    <span
+                      className="pal-detail__active-num pal-detail__active-num--ct"
+                      title={`Cooldown: ${sk.cooldown} seconds`}
+                    >
+                      {sk.cooldown}s
+                    </span>
                   </li>
                 ))}
               </ul>
+              <p className="pal-detail__actives-foot">
+                Power = base damage · CT = cooldown in seconds. Learned by level;
+                Skill Fruits can teach moves early.
+              </p>
             </details>
           ) : null}
         </div>
