@@ -18,7 +18,6 @@ import { breadcrumbJsonLd } from "@/lib/seo/schema";
 import { getPalBySlug, getPals, getPresetsForPal } from "@/lib/teams/catalog";
 import { getPalIconSrc } from "@/lib/teams/icons";
 import type { PalElement } from "@/lib/teams/types";
-import { sortPals } from "@/lib/teams/query";
 import { findPalTiers } from "@/lib/tiers";
 
 type Props = {
@@ -80,11 +79,6 @@ export default async function PalDetailPage({ params }: Props) {
   const seoIntro = buildPalSeoIntro(pal, tiers);
   const structuredDescription = buildPalStructuredDescription(pal, tiers);
 
-  const ordered = sortPals(getPals(), "name");
-  const idx = ordered.findIndex((p) => p.slug === slug);
-  const prevSlug = idx > 0 ? ordered[idx - 1]?.slug : undefined;
-  const nextSlug = idx >= 0 && idx < ordered.length - 1 ? ordered[idx + 1]?.slug : undefined;
-
   return (
     <>
       <JsonLd
@@ -109,8 +103,6 @@ export default async function PalDetailPage({ params }: Props) {
         presets={getPresetsForPal(slug)}
         tiers={tiers}
         uniqueCombos={resolveUniqueCombos(slug)}
-        prevSlug={prevSlug}
-        nextSlug={nextSlug}
         seoIntro={seoIntro}
       />
     </>

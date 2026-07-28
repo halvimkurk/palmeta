@@ -40,8 +40,6 @@ type Props = {
   presets: TeamPreset[];
   tiers: TierHit[];
   uniqueCombos: UniqueBreedComboView[];
-  prevSlug?: string;
-  nextSlug?: string;
   seoIntro?: string;
 };
 
@@ -68,8 +66,6 @@ export function PalDetailClient({
   presets,
   tiers,
   uniqueCombos,
-  prevSlug,
-  nextSlug,
   seoIntro,
 }: Props) {
   const works = WORK_ORDER.filter((id) => (pal.work?.[id] ?? 0) > 0)
@@ -422,11 +418,6 @@ export function PalDetailClient({
           ) : null}
         </div>
       </div>
-
-      <nav className="pal-detail__nav" aria-label="Adjacent pals">
-        {prevSlug ? <Link href={`/pals/${prevSlug}`}>← Prev</Link> : <span />}
-        {nextSlug ? <Link href={`/pals/${nextSlug}`}>Next →</Link> : <span />}
-      </nav>
     </article>
   );
 }
