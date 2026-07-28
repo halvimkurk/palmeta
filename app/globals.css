@@ -265,7 +265,7 @@ html {
   justify-content: space-between;
   gap: 0.5rem;
   margin-bottom: 0.85rem;
-  padding: 0 0 0.75rem calc(0.6rem + 3px);
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(255, 176, 32, 0.28);
   position: relative;
   z-index: 1;
@@ -313,8 +313,7 @@ html {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.35rem;
-    /* Match .side-link inset (3px border + 0.6rem pad) so logo lines up with nav. */
-    padding: 0 0.6rem 0.55rem calc(0.6rem + 3px);
+    padding-bottom: 0.55rem;
     border-bottom: 1px solid rgba(255, 176, 32, 0.28);
     flex-shrink: 0;
     position: relative;
