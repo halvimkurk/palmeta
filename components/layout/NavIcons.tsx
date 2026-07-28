@@ -68,10 +68,10 @@ export function NavIcon({ name, className = "" }: Props) {
   const glyph = PATHS[name] ?? PATHS.all;
   return (
     <svg
-      className={`side-link__icon ${className}`}
+      className={`side-link__icon side-link__icon--${name} ${className}`}
       viewBox="0 0 24 24"
-      width="16"
-      height="16"
+      width="20"
+      height="20"
       aria-hidden
       focusable="false"
     >

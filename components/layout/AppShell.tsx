@@ -44,14 +44,29 @@ export function AppShell({ children }: Props) {
           <Link
             key={link.match}
             href={link.href}
-            className={isActive(pathname, link.match) ? "side-link is-active" : "side-link"}
+            className={`side-link side-link--${link.icon}${
+              isActive(pathname, link.match) ? " is-active" : ""
+            }`}
             onClick={onNavigate}
           >
             <NavIcon name={link.icon} />
-            {link.label}
+            <span className="side-link__label">{link.label}</span>
           </Link>
         ))}
       </>
+    );
+  }
+
+  function SideFoot() {
+    return (
+      <div className="sidebar__foot">
+        <p className="sidebar__foot-note">Unofficial Palworld companion</p>
+        <p className="sidebar__foot-meta">
+          <span>1.0 data</span>
+          <span aria-hidden>·</span>
+          <Link href="/privacy">Privacy</Link>
+        </p>
+      </div>
     );
   }
 
@@ -60,13 +75,14 @@ export function AppShell({ children }: Props) {
   return (
     <div className={`app-frame${isHome ? " is-home" : ""}`}>
       <aside className="sidebar" aria-label="Site">
+        <span className="sidebar__atmosphere" aria-hidden />
         <Link href="/" className="sidebar__brand">
           <BrandLogo size="sm" />
         </Link>
         <nav className="side-nav" aria-label="Primary">
           <NavBody />
         </nav>
-        <p className="sidebar__foot">Unofficial Palworld companion</p>
+        <SideFoot />
       </aside>
 
       <div className="shell-main">
@@ -119,6 +135,7 @@ export function AppShell({ children }: Props) {
           aria-modal="true"
           aria-label="Navigation"
         >
+          <span className="sidebar__atmosphere" aria-hidden />
           <div className="drawer__head">
             <BrandLogo size="sm" />
             <button
@@ -132,6 +149,7 @@ export function AppShell({ children }: Props) {
           <nav className="side-nav" aria-label="Mobile">
             <NavBody onNavigate={() => setDrawerOpen(false)} />
           </nav>
+          <SideFoot />
         </aside>
       </div>
     </div>
