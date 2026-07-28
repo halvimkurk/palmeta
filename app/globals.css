@@ -297,11 +297,13 @@ html {
     position: sticky;
     top: 0;
     align-self: start;
-    /* No fixed viewport height — no inner scrollbar; page scrolls as one. */
+    /* Full viewport height so the foot always sits at the bottom. */
+    height: 100dvh;
+    max-height: 100dvh;
     padding: 0.85rem 0.7rem 1rem;
     background: var(--slate);
     border-right: 1px solid rgba(125, 200, 235, 0.1);
-    overflow: visible;
+    overflow: hidden;
     color: var(--sky-ink);
     isolation: isolate;
   }
@@ -327,12 +329,6 @@ html {
   .sidebar__brand .brand-logo__mark {
     width: auto;
     max-width: 8.25rem;
-  }
-
-  .app-frame.is-home .sidebar {
-    height: 100dvh;
-    max-height: 100dvh;
-    overflow: hidden;
   }
 
   .app-frame.is-home .shell-main {
