@@ -83,6 +83,40 @@ select {
   font: inherit;
 }
 
+/* -- Scrollbars: slim, dark, on-theme (standard props + WebKit fallback) -- */
+html {
+  scrollbar-color: rgba(82, 100, 146, 0.55) transparent;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(82, 100, 146, 0.5);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 128, 180, 0.7);
+}
+
+/* Enables height:auto transitions (details expand) in supporting browsers. */
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}
+
 .shell,
 .shell-main__content {
   width: 100%;
@@ -589,13 +623,38 @@ select {
 .home {
   flex: 1 1 auto;
   min-height: 0;
+  position: relative;
   display: grid;
   grid-template-rows: auto auto;
+  align-content: start;
   gap: 0.55rem;
   width: 100%;
   height: auto;
   max-height: none;
   padding: 0;
+}
+
+/* Palpagos night atmosphere behind the hero — soft glows + faint stars. */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem -1.25rem auto;
+  height: min(34rem, 80vh);
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(1px 1px at 12% 16%, rgba(255, 255, 255, 0.55), transparent 100%),
+    radial-gradient(1px 1px at 31% 7%, rgba(255, 255, 255, 0.35), transparent 100%),
+    radial-gradient(1.5px 1.5px at 54% 20%, rgba(255, 255, 255, 0.4), transparent 100%),
+    radial-gradient(1px 1px at 70% 10%, rgba(255, 255, 255, 0.3), transparent 100%),
+    radial-gradient(1px 1px at 86% 26%, rgba(255, 255, 255, 0.45), transparent 100%),
+    radial-gradient(1.5px 1.5px at 43% 33%, rgba(255, 255, 255, 0.22), transparent 100%),
+    radial-gradient(1px 1px at 8% 38%, rgba(255, 255, 255, 0.3), transparent 100%),
+    radial-gradient(1px 1px at 93% 44%, rgba(255, 255, 255, 0.25), transparent 100%),
+    radial-gradient(ellipse 42% 55% at 82% 6%, rgba(255, 176, 32, 0.09), transparent 62%),
+    radial-gradient(ellipse 55% 65% at 12% 22%, rgba(47, 98, 240, 0.13), transparent 65%);
+  mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
 }
 
 .home-hero {
@@ -2303,13 +2362,39 @@ select {
   box-shadow: 0 0 0 1px rgba(59, 130, 255, 0.15);
 }
 
+/* Unfilled slots read as "drop something here". */
+.teams-slot:not(.has-pal) {
+  border-style: dashed;
+}
+
 .teams-slot.is-active {
+  border-style: solid;
   border-color: var(--pal-gold);
   background: linear-gradient(180deg, rgba(255, 176, 32, 0.18) 0%, rgba(255, 176, 32, 0.06) 100%);
   box-shadow:
     0 0 0 2px rgba(255, 176, 32, 0.45),
     0 0 22px rgba(255, 176, 32, 0.22);
   z-index: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .teams-slot.is-active:not(.has-pal) {
+    animation: slot-pulse 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes slot-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(255, 176, 32, 0.45),
+      0 0 22px rgba(255, 176, 32, 0.22);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(255, 176, 32, 0.62),
+      0 0 30px rgba(255, 176, 32, 0.36);
+  }
 }
 
 .teams-slot.has-pal:not(.is-active) {
@@ -2762,11 +2847,34 @@ float effects over the pal grid (no nested page chop). */
   color: var(--ink);
   cursor: pointer;
   font: inherit;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* Rarity reads at a glance from the card frame, not just the chip. */
+.teams-pal.rarity-rare {
+  border-color: rgba(96, 165, 250, 0.34);
+}
+
+.teams-pal.rarity-epic {
+  border-color: rgba(192, 132, 252, 0.36);
+}
+
+.teams-pal.rarity-legendary {
+  border-color: rgba(251, 191, 36, 0.42);
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.12);
 }
 
 .teams-pal:hover,
 .teams-pal.is-selected {
   border-color: rgba(255, 176, 32, 0.45);
+}
+
+.teams-pal:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
 }
 
 .teams-pal.is-selected {
@@ -3079,6 +3187,9 @@ float effects over the pal grid (no nested page chop). */
   position: relative;
   min-height: 100%;
   overflow: hidden;
+  /* Soft blend into the panel instead of a hard vertical seam. */
+  mask-image: linear-gradient(90deg, transparent 0%, #000 32%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 32%);
 }
 
 .companion-intro__art-img {
@@ -3204,11 +3315,17 @@ float effects over the pal grid (no nested page chop). */
   border-radius: 0.55rem;
   border: 1px solid rgba(125, 200, 235, 0.14);
   background: rgba(0, 0, 0, 0.22);
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .companion-tools__item:hover {
   border-color: rgba(59, 130, 255, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
 }
 
 .companion-tools__item.is-active {
@@ -3357,6 +3474,13 @@ float effects over the pal grid (no nested page chop). */
 .pals-th--el,
 .pals-td--el {
   text-align: center;
+}
+
+/* Element badges laid out in a row inside the Paldeck table cell. */
+.pals-table__els {
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.2rem;
 }
 
 .pals-th-sort {
@@ -3756,6 +3880,46 @@ float effects over the pal grid (no nested page chop). */
   scroll-margin-top: 5rem;
 }
 
+/* Smooth expand in browsers with interpolate-size; instant elsewhere. */
+.pal-detail__panel--actives::details-content {
+  height: 0;
+  overflow: clip;
+  transition:
+    height 0.28s ease,
+    content-visibility 0.28s allow-discrete;
+}
+
+.pal-detail__panel--actives[open]::details-content {
+  height: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pal-detail__panel--actives[open] .pal-detail__active {
+    animation: rise-in 0.32s ease backwards;
+  }
+
+  .pal-detail__panel--actives[open] .pal-detail__active:nth-child(2) { animation-delay: 0.03s; }
+  .pal-detail__panel--actives[open] .pal-detail__active:nth-child(3) { animation-delay: 0.06s; }
+  .pal-detail__panel--actives[open] .pal-detail__active:nth-child(4) { animation-delay: 0.09s; }
+  .pal-detail__panel--actives[open] .pal-detail__active:nth-child(5) { animation-delay: 0.12s; }
+  .pal-detail__panel--actives[open] .pal-detail__active:nth-child(6) { animation-delay: 0.15s; }
+  .pal-detail__panel--actives[open] .pal-detail__active:nth-child(7) { animation-delay: 0.18s; }
+  .pal-detail__panel--actives[open] .pal-detail__active:nth-child(n + 8) { animation-delay: 0.21s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pal-detail__panel--actives::details-content {
+    transition: none;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
 .pal-detail__actives-summary {
   list-style: none;
   cursor: pointer;
@@ -4046,6 +4210,27 @@ float effects over the pal grid (no nested page chop). */
   background: linear-gradient(90deg, rgba(59, 130, 255, 0.55), rgba(122, 168, 255, 0.95));
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .pal-detail__stat-track > span {
+    transform-origin: left center;
+    animation: pal-stat-fill 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+
+  .pal-detail__stat-bars li:nth-child(2) .pal-detail__stat-track > span { animation-delay: 0.05s; }
+  .pal-detail__stat-bars li:nth-child(3) .pal-detail__stat-track > span { animation-delay: 0.1s; }
+  .pal-detail__stat-bars li:nth-child(4) .pal-detail__stat-track > span { animation-delay: 0.15s; }
+  .pal-detail__stat-bars li:nth-child(5) .pal-detail__stat-track > span { animation-delay: 0.2s; }
+  .pal-detail__stat-bars li:nth-child(6) .pal-detail__stat-track > span { animation-delay: 0.25s; }
+  .pal-detail__move-stats li .pal-detail__stat-track > span { animation-delay: 0.3s; }
+  .pal-detail__move-stats li:nth-child(2) .pal-detail__stat-track > span { animation-delay: 0.35s; }
+}
+
+@keyframes pal-stat-fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+
 .pal-detail__stat.is-hot .pal-detail__stat-track > span {
   background: linear-gradient(90deg, rgba(255, 176, 32, 0.55), rgba(255, 200, 90, 0.95));
 }
@@ -4105,7 +4290,10 @@ float effects over the pal grid (no nested page chop). */
   background: rgba(0, 0, 0, 0.22);
   border: 1px solid rgba(125, 200, 235, 0.14);
   text-align: center;
-  transition: border-color 0.15s ease, transform 0.12s ease;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .pal-detail__work-tile strong {
@@ -4133,7 +4321,8 @@ float effects over the pal grid (no nested page chop). */
 
 .pal-detail__work-tile:hover {
   border-color: rgba(59, 130, 255, 0.4);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 .pal-detail__tier-cards {
@@ -4153,11 +4342,17 @@ float effects over the pal grid (no nested page chop). */
   border-radius: var(--radius);
   background: rgba(0, 0, 0, 0.22);
   border: 1px solid rgba(125, 200, 235, 0.14);
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .pal-detail__tier-card:hover {
   border-color: rgba(59, 130, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 .pal-detail__tier-card.grade-S {
@@ -4498,7 +4693,12 @@ float effects over the pal grid (no nested page chop). */
   scroll-margin-top: 5rem;
 }
 
-.tier-lane--S { box-shadow: inset 3px 0 0 #fb7185; }
+.tier-lane--S {
+  border-color: rgba(251, 113, 133, 0.32);
+  box-shadow:
+    inset 3px 0 0 #fb7185,
+    0 0 22px rgba(251, 113, 133, 0.1);
+}
 .tier-lane--A { box-shadow: inset 3px 0 0 #fdba74; }
 .tier-lane--B { box-shadow: inset 3px 0 0 #fde68a; }
 .tier-lane--C { box-shadow: inset 3px 0 0 #86efac; }
@@ -4556,7 +4756,17 @@ float effects over the pal grid (no nested page chop). */
   box-shadow: 0 0 0 1px rgba(125, 200, 235, 0.2);
 }
 
-.tier-badge--S { background: #fb7185; color: #1a0b0e; }
+.tier-badge--S {
+  background: #fb7185;
+  color: #1a0b0e;
+  box-shadow: 0 0 10px rgba(251, 113, 133, 0.4);
+}
+
+.tier-badge--lg.tier-badge--S {
+  box-shadow:
+    0 0 0 1px rgba(251, 113, 133, 0.55),
+    0 0 18px rgba(251, 113, 133, 0.45);
+}
 .tier-badge--A { background: #fdba74; color: #1c1006; }
 .tier-badge--B { background: #fde68a; color: #1c1600; }
 .tier-badge--C { background: #86efac; color: #052e16; }
@@ -4571,13 +4781,18 @@ float effects over the pal grid (no nested page chop). */
   background: rgba(0, 0, 0, 0.22);
   border: 1px solid transparent;
   text-align: center;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .tier-tile:hover {
   background: rgba(125, 200, 235, 0.07);
   border-color: rgba(59, 130, 255, 0.35);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 .tier-tile__icon {
@@ -4746,6 +4961,33 @@ float effects over the pal grid (no nested page chop). */
     radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.2), transparent 40%),
     linear-gradient(160deg, #d6c28a, #8b7340);
   opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .breed-slot__egg {
+    transform-origin: 50% 88%;
+    animation: egg-wobble 5.5s ease-in-out infinite;
+  }
+}
+
+@keyframes egg-wobble {
+  0%,
+  84%,
+  100% {
+    transform: rotate(0deg);
+  }
+  88% {
+    transform: rotate(-5deg);
+  }
+  91% {
+    transform: rotate(4deg);
+  }
+  94% {
+    transform: rotate(-2.5deg);
+  }
+  97% {
+    transform: rotate(1deg);
+  }
 }
 
 .breed-result-meta {
@@ -5427,6 +5669,73 @@ float effects over the pal grid (no nested page chop). */
 
 .leaflet-container a.chip {
   color: inherit;
+}
+
+/* -- 404 -- */
+.not-found {
+  min-height: 58vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.4rem;
+  padding: 2.5rem 1rem 3rem;
+  text-align: center;
+}
+
+.not-found__pal {
+  border-radius: 1.1rem;
+  filter: saturate(0.85);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .not-found__pal {
+    animation: depresso-slump 4.5s ease-in-out infinite;
+  }
+}
+
+@keyframes depresso-slump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px) rotate(-1.5deg);
+  }
+}
+
+.not-found__code {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: var(--pal-gold);
+}
+
+.not-found__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.not-found__lead {
+  margin: 0.2rem 0 0;
+  max-width: 32rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.not-found__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 

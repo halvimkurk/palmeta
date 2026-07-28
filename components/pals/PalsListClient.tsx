@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { CompanionIntro } from "@/components/pals/CompanionIntro";
 import { NAV } from "@/lib/nav";
 import { CompanionTools } from "@/components/pals/CompanionTools";
-import { ElementDots } from "@/components/pals/ElementDots";
+import { ElementBadges } from "@/components/teams/ElementBadge";
 import { PalIcon } from "@/components/teams/PalIcon";
 import type { TierGrade } from "@/lib/tiers/types";
 import {
@@ -502,7 +502,11 @@ export function PalsListClient({ pals, combatGradeBySlug }: Props) {
                         </Link>
                       </td>
                       <td className="pals-td pals-td--el">
-                        <ElementDots elements={pal.elements} />
+                        <ElementBadges
+                          elements={pal.elements}
+                          size={16}
+                          className="pals-table__els"
+                        />
                       </td>
                       <td className="pals-td pals-td--tier">
                         {grade ? (
