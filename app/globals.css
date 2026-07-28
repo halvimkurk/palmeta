@@ -654,7 +654,7 @@ html {
 .app-frame.is-home .shell-main__content {
   flex: 1 1 auto;
   min-height: 0;
-  padding-top: 0.25rem;
+  padding-top: 1.75rem;
   padding-bottom: 0.2rem;
   display: flex;
   flex-direction: column;
@@ -687,7 +687,7 @@ html {
 
   .app-frame.is-home .shell-main__content {
     overflow: visible;
-    padding-top: 0.35rem;
+    padding-top: 1.35rem;
     padding-bottom: 0.75rem;
   }
 
