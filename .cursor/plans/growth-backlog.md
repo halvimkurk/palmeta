@@ -37,7 +37,7 @@ Status legend: `todo` | `waiting-approval` | `in-progress` | `seo-review` | `don
 | P2-2 | `/map` FAQ + WebApplication JSON-LD + mode intent | seo | waiting-approval | Blocked on P0-1 |
 | P2-3 | Top-30 pal pages: unique descriptions + complete modules | seo | done | `lib/seo/pal-meta.ts` + intro block 2026-07-27 |
 | P2-4 | Patch-day routine doc (tiers/breeding within 24–48h) | ops | todo | |
-| P2-5 | 3–5 pillar mini-guides linking into tools | feature | waiting-approval | Ask first |
+| P2-5 | 3–5 pillar mini-guides linking into tools | feature | seo-review | Shipped 3 pillars + `/guides` IA 2026-07-28; map CTAs deferred until P0-1 |
 | P2-6 | Home visible FAQ (match JSON-LD) | seo | done | PASS 2026-07-27 |
 
 ## Phase 3 — Distribution (no budget)
@@ -59,6 +59,12 @@ Status legend: `todo` | `waiting-approval` | `in-progress` | `seo-review` | `don
 
 ## Agent handoff log
 
+### 2026-07-28 (guides package)
+- Growth/feature: P2-5 — `/guides` + 3 pillars (progression, breeding, Capture Power), nav + home Start here, schematics, skills (`guides-content` refresh, `paldex-guide-brief`, `paldex-guide-author`).
+- Map deep-link CTAs deferred while `/map` 404s (P0-1).
+- Needs SEO review: yes — guides batch.
+- Next: `paldex-seo-review` on `/guides`, or approve P0-1 map to restore map CTAs.
+
 ### 2026-07-27 (batch 3)
 - Growth: P2-3 — data-driven unique pal meta for all pages; top-30 intent titles + visible SEO intro; JSON-LD uses full description.
 - Next: P3 distribution drafts or P2-4 patch-day doc.
@@ -71,5 +77,5 @@ Status legend: `todo` | `waiting-approval` | `in-progress` | `seo-review` | `don
 ### 2026-07-27
 - Growth: started loop; baseline SEO review PASS with notes; fixed breeding URL write-back, home SeoFaq, CompCard → pal links, tagline refresh (no map claims).
 - SEO review ([recheck](fdae73d2-7420-41d0-a8d4-81592e6092a2)): **PASS with notes** for batch.
-- Waiting approval: **P0-1 ship map**, **P0-3 AdSlot**, P2-5 guides.
-- Next: P2-1 (intent h1/FAQ) or user-approved map/ads.
+- Waiting approval: **P0-1 ship map**, **P0-3 AdSlot**.
+- Next: SEO review for guides batch, or user-approved map/ads.

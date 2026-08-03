@@ -25,7 +25,7 @@ without killing tool usability.
 | **Paldeck** | Stats, work, skills per pal | `/pals`, `/pals/[slug]` |
 | **Map** | Hunt alphas/towers, find spawns, collect, travel | `/map` |
 
-Supporting: `/news`, `/blues` (dev notes).
+Supporting: `/guides`, `/news`, `/blues` (dev notes).
 
 ## Positioning
 
@@ -61,7 +61,7 @@ Supporting: `/news`, `/blues` (dev notes).
 - Growth executor: `paldex-growth`
 - SEO review loop: `paldex-seo-review`
 - Ads: `gaming-ad-monetization`
-- Guides (when approved): `guides-content`
+- Guides: `guides-content` (+ `paldex-guide-brief`, `paldex-guide-author`)
 - Launch posts: `reddit-launch` (adapt angles to tools, not achievements)
 ---
 

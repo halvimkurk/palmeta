@@ -1,0 +1,1387 @@
+{
+  "version": 1,
+  "articles": [
+    {
+      "slug": "palworld-1-0-progression",
+      "title": "Palworld 1.0 Progression Route — First Hours to Towers",
+      "excerpt": "A practical 1.0 route: capture bonus, first bases, Capture Power, then towers without wasting spheres or cake.",
+      "category": "progression",
+      "tags": [
+        "1.0",
+        "beginner",
+        "towers",
+        "base",
+        "capture"
+      ],
+      "publishedAt": "2026-07-28",
+      "updatedAt": "2026-07-28",
+      "featured": true,
+      "relatedGuideSlugs": [
+        "capture-power-pal-effigies",
+        "breeding-calculator-1-0",
+        "base-space-worker-qol-1-0",
+        "hack-terminals-schematics-expeditions"
+      ],
+      "relatedPalSlugs": [
+        "foxparks",
+        "anubis",
+        "jetragon"
+      ],
+      "faq": [
+        {
+          "q": "What changed for progression in Palworld 1.0?",
+          "a": "Capture bonus finishes after five catches of a species (not twelve), tower fights run on a five-minute timer, and Lifmunk Effigies were broadened into Pal Effigies that upgrade player stats."
+        },
+        {
+          "q": "Should I rush towers first?",
+          "a": "No. Clear one early tower when you are geared for it, but stack Capture Power and a mining base before you burn high-tier spheres on mid and late towers."
+        },
+        {
+          "q": "When should I start breeding?",
+          "a": "Once you have a stable ore base and a combat core. Use the breeding calculator to target workers or fighters instead of rolling random eggs."
+        },
+        {
+          "q": "Do I need Hard Mode towers for normal progression?",
+          "a": "Not for your first clear loop. Hard Mode access is gated behind the Azure Covenant Tower boss — finish the normal tower route first."
+        },
+        {
+          "q": "Where do I check which pals to raise next?",
+          "a": "Use the role tier lists for combat, work, and mounts, then open Team Builder when you are ready to lock a party of five."
+        }
+      ],
+      "body": [
+        {
+          "type": "tldr",
+          "items": [
+            "In 1.0, farm the capture bonus five times per species — it is the fastest early XP.",
+            "Stand up a second ore base before you chase late towers.",
+            "Spend Pal Effigies on Capture Power early; spheres get expensive when rates are bad.",
+            "Treat towers as timed DPS checks (five minutes), not endless stalls."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Start here on a fresh 1.0 world or after returning from Early Access. The route prioritizes fast XP, steady ore production, and enough Capture Power to stop wasting spheres before tower attempts."
+        },
+        {
+          "type": "p",
+          "text": "If you have already cleared the early islands, skip to Phase 2 for the ore base and Capture Power priorities, or Phase 3 for tower preparation."
+        },
+        {
+          "type": "callout",
+          "kind": "patch",
+          "title": "1.0 pacing changes",
+          "text": "Capture bonus completes at five catches per species. Tower boss fights use a five-minute limit with retuned stats. Effigies are no longer Lifmunk-only — treat every Pal Effigy as a permanent upgrade material."
+        },
+        {
+          "type": "image",
+          "src": "/guides/palworld-1-0-progression/hero.webp",
+          "alt": "Players on flying mounts over Palpagos cliffs with a Syndicate tower in view",
+          "caption": "Do not skip Phase 2. Capture Power and ore solve more wipe problems than another random legendary egg."
+        },
+        {
+          "type": "h2",
+          "id": "phase-1",
+          "text": "Phase 1 — Catch for XP, not for a perfect box"
+        },
+        {
+          "type": "p",
+          "text": "Your first job is levels and a usable starter crew. Walk a small loop of easy species and finish the capture bonus on each one before you move on. Aiming a sphere at a wild pal still shows how many you already own — stop at five and rotate."
+        },
+        {
+          "type": "image",
+          "src": "/guides/palworld-1-0-progression/catch.webp",
+          "alt": "Player aiming at a large wild pal in a canyon pool during a capture fight",
+          "caption": "Bonus completes at five. Emptying high-tier spheres on the first Alpha is the expensive mistake."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Build a first base near early nodes and a Statue of Power path you will reuse.",
+            "Craft basic spheres and keep a Ring of Mercy once you start overkilling targets.",
+            "Grab an early flamethrower-style partner such as Foxparks for camp clearing.",
+            "Clear your first comfortable tower only when food, ammo, and a mount are stable."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Don't",
+          "text": "Do not empty a stack of high-tier spheres on the first Alpha you see. Soften it, check your Capture Power rank, then throw."
+        },
+        {
+          "type": "toolCta",
+          "tool": "tiers",
+          "href": "/tiers?role=combat",
+          "label": "Choose an early combat pal",
+          "hint": "Compare fighters before spending cake or upgrade materials"
+        },
+        {
+          "type": "h2",
+          "id": "phase-2",
+          "text": "Phase 2 — Second base and Capture Power"
+        },
+        {
+          "type": "p",
+          "text": "Once base level allows a second Palbox, plant it on dense ore. Staff it with Mining-capable workers, a hot spring, and enough beds that SAN does not collapse overnight. This base funds spheres, ammo, and the boring materials every tower run burns."
+        },
+        {
+          "type": "p",
+          "text": "In parallel, pick up Pal Effigies while you explore and offer them at a Statue of Power. Early ranks are cheap. The capture-rate compounding matters more in mid-game than another fashion saddle."
+        },
+        {
+          "type": "image",
+          "src": "/guides/palworld-1-0-progression/base.webp",
+          "alt": "Busy player base with conveyor lines, crop plots, and working pals in a canyon",
+          "caption": "Run both tracks while you explore. Decorations wait until ore and ranks are online."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Ore base first, fancy decoration later",
+            "Keep a travel mount on the party even if it is not your top DPS",
+            "Collect effigies along routes you already travel; save full biome sweeps for when your early ranks slow down"
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "tiers",
+          "href": "/tiers?role=combat",
+          "label": "Pick the next combat core",
+          "hint": "Choose a fighter with the right element for your next tower"
+        },
+        {
+          "type": "h2",
+          "id": "phase-3",
+          "text": "Phase 3 — Towers as timed fights"
+        },
+        {
+          "type": "p",
+          "text": "Normal towers are no longer ten-minute endurance tests. You have five minutes. Build for continuous damage, clean dodges, and element matchups — stall teams that only outlast the clock will fail more often."
+        },
+        {
+          "type": "image",
+          "src": "/guides/palworld-1-0-progression/tower.webp",
+          "alt": "Zoe riding Grizzbolt with a minigun during a Syndicate tower encounter",
+          "caption": "Treat the arena as a DPS check. Enter only when food, ammo, coverage, and mobility are ready."
+        },
+        {
+          "type": "table",
+          "caption": "Practical tower prep checklist",
+          "headers": [
+            "Before you enter",
+            "Why it matters"
+          ],
+          "rows": [
+            [
+              "Food and spare ammo",
+              "Deaths inside the timer waste the whole attempt"
+            ],
+            [
+              "Element coverage for the boss",
+              "Neutral parties take longer and burn spheres afterward"
+            ],
+            [
+              "Capture Power rank reviewed",
+              "Post-fight catches and nearby alphas get cheaper"
+            ],
+            [
+              "One mobility pal",
+              "Faster repositioning helps you avoid area attacks"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Leave Hard Mode until your normal tower route and combat party are complete. Access is tied to defeating the Azure Covenant Tower boss, so there is no benefit in preparing for it early."
+        },
+        {
+          "type": "toolCta",
+          "tool": "teams",
+          "href": "/teams",
+          "label": "Prepare a five-pal tower party",
+          "hint": "Check element coverage and compare proven team setups"
+        },
+        {
+          "type": "h2",
+          "id": "breeding-when",
+          "text": "When breeding is worth the cake"
+        },
+        {
+          "type": "p",
+          "text": "Start breeding after your ore loop is stable. Version 1.0 changed many parent combinations, so old Early Access recipes are unreliable. Decide the job first — base worker, mount, or tower specialist — then reverse-search valid parents."
+        },
+        {
+          "type": "image",
+          "src": "/guides/palworld-1-0-progression/breeding.webp",
+          "alt": "Chillet and Chillet Ignis together in a sakura garden setting",
+          "caption": "No target job, no cake. Reverse-search after the ore loop is stable."
+        },
+        {
+          "type": "toolCta",
+          "tool": "breeding",
+          "href": "/breeding",
+          "label": "Find a valid breeding pair",
+          "hint": "Predict a child or search every pair for your target"
+        },
+        {
+          "type": "h2",
+          "id": "pitfalls",
+          "text": "Pitfalls that waste evenings"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Chasing every Alpha before Capture Power ranks are online",
+            "Building three decorative bases and zero mining throughput",
+            "Ignoring the five-catch bonus and wondering why levels crawl",
+            "Trusting a pre-1.0 breeding spreadsheet",
+            "Entering towers hungry, under-ammoed, or with a mono-element party into a bad matchup"
+          ]
+        },
+        {
+          "type": "h2",
+          "id": "next",
+          "text": "What to do next"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Raise Capture Power with Pal Effigies while you explore new regions.",
+            "Start a breeding chain only after choosing a specific target pal.",
+            "Check combat and worker rankings before spending cake on a long chain."
+          ]
+        }
+      ],
+      "sourceRefs": [
+        {
+          "name": "Palworld Version 1.0 patch notes (Fandom summary)",
+          "url": "https://palworld.fandom.com/wiki/Version_1.0"
+        },
+        {
+          "name": "Community 1.0 progression coverage",
+          "url": "https://9puz.com/2917-palworld-guide/"
+        },
+        {
+          "name": "Official Palworld Steam screenshots (Pocketpair)",
+          "url": "https://store.steampowered.com/app/1623730/Palworld/"
+        }
+      ]
+    },
+    {
+      "slug": "breeding-calculator-1-0",
+      "title": "Palworld Breeding Guide 1.0 — Use the Calculator Without Wasting Cake",
+      "excerpt": "How 1.0 breeding changed, when to reverse-search parents, and how to share a combo with a link.",
+      "category": "endgame",
+      "tags": [
+        "1.0",
+        "breeding",
+        "passives",
+        "calculator"
+      ],
+      "publishedAt": "2026-07-28",
+      "updatedAt": "2026-07-28",
+      "featured": true,
+      "relatedGuideSlugs": [
+        "palworld-1-0-progression",
+        "capture-power-pal-effigies",
+        "base-space-worker-qol-1-0"
+      ],
+      "relatedPalSlugs": [
+        "anubis",
+        "orserk",
+        "jetragon"
+      ],
+      "faq": [
+        {
+          "q": "Did Palworld 1.0 change breeding results?",
+          "a": "Yes. The breeding table was rewritten. Many Early Access parent pairs hatch something different now, so recalculate targets instead of trusting old spreadsheets."
+        },
+        {
+          "q": "Should I use Parents → Child or Child → Parents?",
+          "a": "Use Parents → Child when you already own two pals and want to know the egg. Use Child → Parents when you know the target and need every valid pair."
+        },
+        {
+          "q": "Can I share a breeding combo?",
+          "a": "Yes. The calculator writes ?a= and ?b= for parents, or ?child= for reverse lookup, into the URL."
+        },
+        {
+          "q": "When is breeding worth doing?",
+          "a": "After you can feed a farm (cake, ranch space, time). Breeding before a mining base usually stalls both projects."
+        },
+        {
+          "q": "Do legendary pals follow the same rules?",
+          "a": "Most pairs follow the catalog math. Some legendaries and unique lines have extra constraints — if a result looks wrong, open that pal's detail page and re-check the pair list."
+        }
+      ],
+      "body": [
+        {
+          "type": "tldr",
+          "items": [
+            "Recalculate everything for 1.0 — old recipes lie.",
+            "Pick the job first (work, combat, mount), then the species.",
+            "Reverse-search with ?child= when you know the target.",
+            "Share links instead of screenshots of half a table."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Use breeding when you need a specific worker, fighter, or mount. Check the result before assigning two pals so you do not spend cake and incubation time on a species you already own."
+        },
+        {
+          "type": "callout",
+          "kind": "patch",
+          "title": "Recheck old breeding pairs",
+          "text": "Version 1.0 changed parent outcomes across the roster. Recalculate any pair saved during Early Access before placing the parents in a breeding farm."
+        },
+        {
+          "type": "image",
+          "src": "/guides/breeding-calculator-1-0/modes.svg",
+          "alt": "Diagram comparing Parents to Child mode and Child to Parents reverse lookup",
+          "caption": "Two modes, two questions. Do not mix them in your head — pick the question you actually have."
+        },
+        {
+          "type": "h2",
+          "id": "before-you-breed",
+          "text": "Before you light the ranch"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Stable food and cake production",
+            "Beds and SAN management so parents actually work",
+            "A clear target: species and role, not \"something strong\"",
+            "Inventory space for eggs and failed hatches you will still use as workers"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If any of these are missing, stabilize food and ore production first. A breeding farm consumes cake and worker time before it improves your team."
+        },
+        {
+          "type": "h2",
+          "id": "mode-parents",
+          "text": "Mode A — Parents → Child"
+        },
+        {
+          "type": "p",
+          "text": "You already have two pals in the farm. Ask what the egg becomes before you wait the timer. This mode is for \"I am about to commit these two — is the child useful?\""
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Open the breeding calculator.",
+            "Select parent A and parent B.",
+            "Read the predicted child against your tier list and work needs.",
+            "Copy the URL if the pair is a keeper for a friend or your second save."
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "breeding",
+          "href": "/breeding",
+          "label": "Predict the next egg",
+          "hint": "Predict the egg from any parent pair"
+        },
+        {
+          "type": "h2",
+          "id": "mode-child",
+          "text": "Mode B — Child → Parents (the useful one)"
+        },
+        {
+          "type": "p",
+          "text": "You want a specific pal. Reverse lookup lists valid combinations so you can prefer parents you already own, parents that are easy to catch, or parents that sit on the way to a longer chain."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Decide the target species (example: a work specialist or a combat core).",
+            "Open reverse lookup and search the child.",
+            "Prefer combinations whose parents you already own or can capture in your current region.",
+            "Check the child's Paldeck page for work levels, partner skill, and tier badges before you commit a long chain."
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "breeding",
+          "href": "/breeding?child=anubis",
+          "label": "Example: find parents for Anubis",
+          "hint": "Switch Anubis to any target pal you need"
+        },
+        {
+          "type": "h2",
+          "id": "pick-targets",
+          "text": "How to pick targets that matter"
+        },
+        {
+          "type": "table",
+          "caption": "Choose the target by the job you need",
+          "headers": [
+            "Job",
+            "Where to look",
+            "Then breed toward"
+          ],
+          "rows": [
+            [
+              "Tower / boss DPS",
+              "Combat tier list",
+              "A species that covers the next boss element"
+            ],
+            [
+              "Ore / production",
+              "Work tier list + Paldeck work ranks",
+              "High Mining / Handiwork lines you will actually assign"
+            ],
+            [
+              "Travel",
+              "Mounts tier list",
+              "A mount you will saddle and keep on the party"
+            ],
+            [
+              "Capture support",
+              "Catching role list",
+              "Helpers that make the next Alpha cheaper"
+            ]
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "tiers",
+          "href": "/tiers?role=workers",
+          "label": "Choose the worker you need",
+          "hint": "Compare base workers before starting a breeding chain"
+        },
+        {
+          "type": "h2",
+          "id": "chain-discipline",
+          "text": "Chain discipline"
+        },
+        {
+          "type": "p",
+          "text": "Long chains fail when every step is \"maybe.\" Write the end species first. Then only keep intermediate parents that either (1) you already own, or (2) drop naturally while exploring. If a step requires a rare you do not have, catch or buy that rare before you start incubating the rest."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Shareable URLs",
+          "text": "Parents mode saves ?a= and ?b= in the URL; reverse mode saves ?child=. Copy the link to keep or share the exact combination."
+        },
+        {
+          "type": "h2",
+          "id": "passives",
+          "text": "Passives and \"one more egg\""
+        },
+        {
+          "type": "p",
+          "text": "Species first, then passives. A perfect passive stack on the wrong worker still sits in the box. Hatch for the species and role you need, keep the best work or combat individuals, and only then burn cake chasing a prettier passive line."
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "title": "Don't",
+          "text": "Do not restart a whole chain because an early hatch missed a single passive. Park that pal as a base worker and keep the species goal moving."
+        },
+        {
+          "type": "h2",
+          "id": "after-hatch",
+          "text": "After the hatch"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Open the pal's Paldeck page and confirm work ranks / partner skill",
+            "Drop fighters into Team Builder and check coverage",
+            "Assign workers immediately — unassigned \"future legends\" clog the box"
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "pals",
+          "href": "/pals",
+          "label": "Check the hatched pal's stats",
+          "hint": "Review work suitability, partner skill, and combat stats"
+        },
+        {
+          "type": "toolCta",
+          "tool": "teams",
+          "href": "/teams",
+          "label": "Build the party around the hatch",
+          "hint": "Five slots, meta comps, shareable roster URLs"
+        },
+        {
+          "type": "h2",
+          "id": "pitfalls",
+          "text": "Pitfalls"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Following a pre-1.0 Anubis (or any) recipe without recalculating",
+            "Breeding legendaries before you can feed the farm",
+            "Optimizing passives while your ore base is still empty",
+            "Keeping twenty \"maybe\" eggs and zero assigned miners"
+          ]
+        }
+      ],
+      "sourceRefs": [
+        {
+          "name": "ThePaldex breeding catalog (1.0)",
+          "url": "/breeding"
+        },
+        {
+          "name": "Palworld Version 1.0 notes — systems changes",
+          "url": "https://palworld.fandom.com/wiki/Version_1.0"
+        }
+      ]
+    },
+    {
+      "slug": "capture-power-pal-effigies",
+      "title": "Palworld Capture Power & Pal Effigies Guide (1.0)",
+      "excerpt": "How to use Pal Effigies and the Statue of Power to improve capture rates and waste fewer spheres.",
+      "category": "capture",
+      "tags": [
+        "1.0",
+        "capture",
+        "effigy",
+        "statue of power"
+      ],
+      "publishedAt": "2026-07-28",
+      "updatedAt": "2026-07-28",
+      "featured": true,
+      "relatedGuideSlugs": [
+        "palworld-1-0-progression",
+        "breeding-calculator-1-0"
+      ],
+      "relatedPalSlugs": [
+        "lamball",
+        "cattiva",
+        "foxparks"
+      ],
+      "faq": [
+        {
+          "q": "What are Pal Effigies in 1.0?",
+          "a": "Collectible idols found in the world. 1.0 expanded the old Lifmunk-only framing into Pal Effigies for multiple species. Offer them at a Statue of Power to raise player stats, including Capture Power."
+        },
+        {
+          "q": "Do old Lifmunk Effigies still work?",
+          "a": "Yes — existing Lifmunk Effigies carry over. Keep collecting every effigy type you find; do not sell them as junk."
+        },
+        {
+          "q": "When should I spend effigies?",
+          "a": "Early and steadily. Early ranks are cheaper, and the capture-rate boost compounds for the rest of the playthrough."
+        },
+        {
+          "q": "Does Capture Power replace better spheres?",
+          "a": "No. It stacks with sphere tier and the target's remaining HP. Soften the pal, use an appropriate sphere, and let Capture Power cut failures."
+        },
+        {
+          "q": "Where should I look for effigies?",
+          "a": "Search around landmarks, cliffs, ruins, and fast-travel points. Clear one biome at a time when you need several ranks instead of wandering between regions."
+        }
+      ],
+      "body": [
+        {
+          "type": "tldr",
+          "items": [
+            "Pal Effigies → Statue of Power → permanent Capture Power ranks.",
+            "Spend early ranks; do not hoard idols \"for later.\"",
+            "Capture Power stacks with sphere quality and low HP.",
+            "1.0 capture bonus still wants five catches per species for XP — that is separate from Capture Power."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If mid-game pals keep escaping, check three things: your Capture Power rank, sphere tier, and the target's remaining HP. Improving only one of them will still leave you with poor odds."
+        },
+        {
+          "type": "image",
+          "src": "/guides/capture-power-pal-effigies/statue-flow.svg",
+          "alt": "Flowchart from finding Pal Effigies to offering them at a Statue of Power for Capture Power",
+          "caption": "Find → offer → catch cheaper. Everything else is inventory management."
+        },
+        {
+          "type": "h2",
+          "id": "how-it-works",
+          "text": "How the loop works"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Explore and pick up Pal Effigies (including carried-over Lifmunk Effigies).",
+            "Use any Statue of Power — world statues or the one at your base.",
+            "Offer effigies to buy the next Capture Power rank.",
+            "Return to catching with better odds on the same sphere tier."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "patch",
+          "title": "1.0 effigy change",
+          "text": "Version 1.0 added effigies for multiple pal species. Existing Lifmunk Effigies carry over, but maps made before 1.0 may not show every collectible."
+        },
+        {
+          "type": "h2",
+          "id": "statue",
+          "text": "Statue of Power setup"
+        },
+        {
+          "type": "p",
+          "text": "Unlock and build a Statue of Power at base when the tech tree allows so you are not riding across the map every time you hit a pocket of idols. World statues still count when you are already traveling."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Keep a short loop from Palbox → statue → storage",
+            "Offer ranks when you return with a stack — early ranks fall fast",
+            "Do not sell effigies to vendors \"for gold\"; the capture tax later costs more"
+          ]
+        },
+        {
+          "type": "h2",
+          "id": "field-habits",
+          "text": "Field habits that actually raise ranks"
+        },
+        {
+          "type": "p",
+          "text": "Piggyback effigy hunting on routes you already run: ore trips, tower approaches, Alpha scouting. A dedicated island-wide cleanup is fine later; early on, stolen idols along the way are enough to climb cheap ranks."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Clear one region at a time",
+          "text": "Collect nearby idols during ore and tower trips. When rank costs increase, choose one biome and sweep its landmarks before moving on."
+        },
+        {
+          "type": "toolCta",
+          "tool": "tiers",
+          "href": "/tiers?role=catching",
+          "label": "Choose a capture-support pal",
+          "hint": "Pair Capture Power ranks with pals that help you catch"
+        },
+        {
+          "type": "image",
+          "src": "/map/world.webp",
+          "alt": "World map overview for planning Pal Effigy and exploration routes",
+          "caption": "When ranks slow down, pick one biome and search its landmarks systematically."
+        },
+        {
+          "type": "h2",
+          "id": "capture-triangle",
+          "text": "The capture triangle"
+        },
+        {
+          "type": "table",
+          "caption": "Three levers that stack",
+          "headers": [
+            "Lever",
+            "What you control",
+            "Common mistake"
+          ],
+          "rows": [
+            [
+              "Capture Power",
+              "Effigy ranks at the statue",
+              "Hoarding idols while failing catches"
+            ],
+            [
+              "Sphere tier",
+              "What you craft / buy",
+              "Throwing Legendaries at full-HP trash"
+            ],
+            [
+              "Target HP",
+              "How hard you soften first",
+              "Killing the pal or throwing at full health"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "1.0 also made baseline catching easier and shortened the capture bonus to five per species. Use that bonus for XP. Use Capture Power for economy. They solve different problems."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Avoid accidental knockouts",
+          "text": "Equip a Ring of Mercy when farming the five-catch XP bonus. It keeps the target at 1 HP so you can throw a sphere instead of losing the catch."
+        },
+        {
+          "type": "h2",
+          "id": "when-to-push",
+          "text": "When to push ranks hard"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Before a biome jump where levels spike",
+            "Before an Alpha tour you planned on the map",
+            "Whenever you notice the same sphere tier failing repeatedly on equal-level pals"
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "pals",
+          "href": "/pals",
+          "label": "Check the target before throwing",
+          "hint": "Review the pal's stats and role before spending rare spheres"
+        },
+        {
+          "type": "h2",
+          "id": "pitfalls",
+          "text": "Pitfalls"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Selling effigies",
+            "Ignoring ranks until endgame alphas",
+            "Confusing capture-bonus XP farming with Capture Power upgrades",
+            "Blaming \"bad RNG\" while throwing low spheres at healthy targets"
+          ]
+        },
+        {
+          "type": "h2",
+          "id": "next",
+          "text": "What to do next"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Offer every effigy you are sitting on.",
+            "Return to the progression route if towers still feel early.",
+            "When catches are stable, spend cake through the breeding guide on a real target."
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "breeding",
+          "href": "/breeding",
+          "label": "Turn your catches into a breeding target",
+          "hint": "Choose a species and find valid parents before spending cake"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "name": "Palworld Version 1.0 — Pal Effigy rework",
+          "url": "https://palworld.fandom.com/wiki/Version_1.0"
+        },
+        {
+          "name": "Community Capture Power / effigy coverage",
+          "url": "https://pindrop.gg/palworld/guides/lifmunk-effigies"
+        }
+      ]
+    },
+    {
+      "slug": "base-space-worker-qol-1-0",
+      "title": "Palworld Base Space Tricks — Workers, Stacking & Border Builds (1.0)",
+      "excerpt": "Free floor space and keep workers producing: border stations, vertical stacks, Viewing Cage merchants, teleport chests, and Guild Chest food storage.",
+      "category": "base",
+      "tags": [
+        "1.0",
+        "base",
+        "automation",
+        "layout",
+        "qol"
+      ],
+      "publishedAt": "2026-08-04",
+      "updatedAt": "2026-08-04",
+      "featured": false,
+      "relatedGuideSlugs": [
+        "palworld-1-0-progression",
+        "hack-terminals-schematics-expeditions",
+        "breeding-calculator-1-0"
+      ],
+      "relatedPalSlugs": [
+        "anubis",
+        "eikthyrdeer",
+        "tombat"
+      ],
+      "faq": [
+        {
+          "q": "Do placeables only need to be half inside the base?",
+          "a": "Yes for usability. If roughly half of a large station sits inside the blue base ring, workers can still use it. Park Ranch, Breeding Farm, and Expedition Station on the border to reclaim interior tiles."
+        },
+        {
+          "q": "Can merchants in a Viewing Cage still trade?",
+          "a": "Yes. Catch a merchant, assign them to a Viewing Cage, and trade through the cage without spending a normal base worker slot. If the trade prompt fails, reseat them closer to the cage edge."
+        },
+        {
+          "q": "Why put chests where pals cannot walk?",
+          "a": "When a chest is hard or impossible to path to, transport pals often teleport items into it instead of walking. Use that for overflow storage so haulers stop wandering across the whole base."
+        },
+        {
+          "q": "Should hot springs sit next to every job?",
+          "a": "No. Keep Feed Boxes near work. Place Hot Springs farther out (community tests land around nine foundation tiles). Workers usually prefer finishing jobs over long walks for SAN."
+        },
+        {
+          "q": "Does Guild Chest food really stop spoiling?",
+          "a": "Community testing since Feybreak still reports spoil timers freeze inside Guild Chests, including solo play. Use it for surplus meals and cake ingredients, and re-check after patches that touch storage."
+        }
+      ],
+      "body": [
+        {
+          "type": "tldr",
+          "items": [
+            "Hang large stations on the base border — half inside is enough.",
+            "Stack farms, chests, and craft lines vertically; delete the scaffolding after build.",
+            "Cage merchants for trading without burning worker slots.",
+            "Make haul chests awkward to reach so pals teleport deposits.",
+            "Park Hot Springs far; keep Feed Boxes close. Guild Chests pause food spoil timers."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Most early bases fail the same way: every station sits on the ground floor, haulers walk forever, and half your Pal slots are wasted on NPCs you only talk to twice a day. This chapter is about floor space and worker behavior — the quiet layout rules that keep ore and cakes moving while you are off the base."
+        },
+        {
+          "type": "p",
+          "text": "Use it after your first Palbox is stable and before you plant a second mining outpost. If you are still unlocking basic tech, finish the early progression route first, then come back and rebuild the interior once."
+        },
+        {
+          "type": "image",
+          "src": "/guides/base-space-worker-qol-1-0/layout-rules.svg",
+          "alt": "Three base rules: border placement, vertical stacking, and worker pathing priorities",
+          "caption": "Border for big stations. Vertical for farms and chests. Pathing for everything else."
+        },
+        {
+          "type": "h2",
+          "id": "border-half",
+          "text": "Hang big stations on the blue ring"
+        },
+        {
+          "type": "p",
+          "text": "A placeable only needs about half of its footprint inside the base radius to stay usable. That means Ranch, Breeding Farm, and Expedition Station can sit on the border instead of owning the middle of your yard."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Build the Palbox where resources and flat ground matter most.",
+            "Drag oversized stations until the placement ghost is roughly half in / half out.",
+            "Confirm a worker can still interact, then fill the freed interior with beds, craft lines, or stacked farms."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Don't",
+          "text": "Do not center a Breeding Farm and then complain you have no room for ore crushers. Border the farm first; keep dense production inside the ring."
+        },
+        {
+          "type": "toolCta",
+          "tool": "breeding",
+          "href": "/breeding",
+          "label": "Plan the breeding target before you place the farm",
+          "hint": "Pick the child species, then park the Breeding Farm on the border"
+        },
+        {
+          "type": "h2",
+          "id": "stacking",
+          "text": "Go vertical instead of wider"
+        },
+        {
+          "type": "p",
+          "text": "Most production placeables can stack. The game mostly cares that the center of the footprint has support. Community stacking loops use temporary boxes, benches, tables, or floor cushions as scaffolding, then delete the props after the station finishes building — the upper layer stays floating and pals still work it."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Farms and plantations — cushion or box between layers",
+            "Chests — same spacer trick for storage towers",
+            "Craft / assembly lines — temporary table platforms, then tear down",
+            "Mining / stone pits — short box columns for a second floating node"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "title": "Build order",
+          "text": "Finish the upper station before you delete scaffolding. If you remove support mid-build, the ghost placement can fail and you redo the stack."
+        },
+        {
+          "type": "table",
+          "caption": "What to stack first when space is tight",
+          "headers": [
+            "Priority",
+            "Stack this",
+            "Why"
+          ],
+          "rows": [
+            [
+              "1",
+              "Berry / crop plantations",
+              "Biggest early floor hog"
+            ],
+            [
+              "2",
+              "Chests",
+              "Stops storage sprawl"
+            ],
+            [
+              "3",
+              "Crafting lines",
+              "Frees paths for transporters"
+            ],
+            [
+              "4",
+              "Decorative props",
+              "Only after production is dense"
+            ]
+          ]
+        },
+        {
+          "type": "h2",
+          "id": "viewing-cage",
+          "text": "Park merchants in a Viewing Cage"
+        },
+        {
+          "type": "p",
+          "text": "Captured merchants count toward base capacity if you leave them as normal workers. Drop them in a Viewing Cage instead. You can still open trade, they stop eating beds and Feed Box space, and you recover a slot for a real miner or transporter."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Catch the merchant you want on rotation (weapons, pals, or materials).",
+            "Unlock and place a Viewing Cage near a path you actually walk.",
+            "Assign the merchant to the cage and test the trade prompt from outside.",
+            "If nothing happens, pull them out and reseat them closer to the cage edge."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Slot math",
+          "text": "Every merchant living free in the base is a missing Mining or Transport rank. Cage the NPC; hire the worker."
+        },
+        {
+          "type": "toolCta",
+          "tool": "tiers",
+          "href": "/tiers?role=workers",
+          "label": "Fill the freed slot with a real worker",
+          "hint": "Check worker tiers before you spend the recovered Pal slot"
+        },
+        {
+          "type": "h2",
+          "id": "teleport-chests",
+          "text": "Make haul chests hard to reach on purpose"
+        },
+        {
+          "type": "p",
+          "text": "When a chest sits where pals cannot comfortably walk — rooftop, floating stack, blocked alcove — transporters often skip the pathing puzzle and teleport the deposit. That is the opposite of how you want Feed Boxes to work, and exactly how you want overflow storage to work."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Keep active craft inputs on easy ground-level chests near the stations.",
+            "Put bulk overflow (ore, stone, wood) in a deliberately awkward chest cluster.",
+            "Watch one hauler after a redesign — if they still walk a long loop, the chest is still too accessible."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/guides/base-space-worker-qol-1-0/worker-loop.svg",
+          "alt": "Diagram showing job site, nearby Feed Box, hard-to-reach chest, and distant Hot Spring",
+          "caption": "Feed close. Overflow chests awkward. Hot Springs farther than a short hop."
+        },
+        {
+          "type": "h2",
+          "id": "hot-springs",
+          "text": "Keep Hot Springs farther than the job"
+        },
+        {
+          "type": "p",
+          "text": "Pals will abandon work for nearby comfort buildings. Community layouts keep Hot Springs roughly nine foundation tiles away from the busy cluster so SAN recovery stays available without becoming the default path. Feed Boxes stay inside the work loop — hunger should interrupt faster than spa day."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Rule of thumb",
+          "text": "If you constantly see workers soaking while furnaces sit idle, move the spring out another few tiles before you hire more pals."
+        },
+        {
+          "type": "h2",
+          "id": "guild-chest-food",
+          "text": "Store surplus food in the Guild Chest"
+        },
+        {
+          "type": "p",
+          "text": "Guild Chests share inventory across your bases. Community testing also shows food spoil timers pause while stacks sit inside — useful for cake ingredients, grilled meat, and anything you cook ahead of a breeding push. One chest per base is enough; treat it as the shared pantry, not your entire storage plan."
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "title": "Patch sensitivity",
+          "text": "Spoil pause is community-verified behavior, not a tutorial tip. If a later patch changes Guild Chest spoilage, move perishables back to refrigeration immediately."
+        },
+        {
+          "type": "h2",
+          "id": "rebuild-order",
+          "text": "One-evening rebuild order"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Border the Breeding Farm / Ranch / Expedition Station.",
+            "Stack plantations and chests until paths open again.",
+            "Cage every merchant still eating a worker slot.",
+            "Move overflow chests up or out of path; keep Feed Boxes on the floor.",
+            "Push Hot Springs to the fringe; fill Guild Chest with surplus meals.",
+            "Assign the recovered slots to Mining and Transport specialists."
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "pals",
+          "href": "/pals",
+          "label": "Check work ranks before you assign",
+          "hint": "Confirm Mining, Transport, and Handiwork levels on the Paldeck"
+        },
+        {
+          "type": "image",
+          "src": "/map/world.webp",
+          "alt": "World map overview for choosing a second base location after the first base is densified",
+          "caption": "Densify the first base before you drop a second Palbox on an ore node."
+        },
+        {
+          "type": "h2",
+          "id": "pitfalls",
+          "text": "Pitfalls"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Centering every large station and then expanding the base radius instead of stacking",
+            "Leaving merchants as free workers",
+            "Putting Feed Boxes on the same inaccessible trick as overflow chests",
+            "Building Hot Springs in the middle of the craft lane",
+            "Starting a second base before the first one stops wasting pathing time"
+          ]
+        },
+        {
+          "type": "h2",
+          "id": "next",
+          "text": "What to do next"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Open the systems QoL guide for Hack Terminals, schematic combining, and expedition overfarming.",
+            "If ore is still the bottleneck, plant the mining outpost from the progression route.",
+            "When breeding starts, keep the farm on the border and feed it from the Guild Chest pantry."
+          ]
+        }
+      ],
+      "sourceRefs": [
+        {
+          "name": "r/Palworld — base QoL tips thread (community)",
+          "url": "https://www.reddit.com/r/Palworld/comments/1uzqbrl/palworld_10_useful_tips_tricks/"
+        },
+        {
+          "name": "PalMods — 1.0 stacking methods",
+          "url": "https://www.palmods.gg/blog/palworld-1-0-stacking-tricks"
+        },
+        {
+          "name": "GameRant — Guild Chest food spoil behavior",
+          "url": "https://gamerant.com/palworld-guild-chests-food-doesnt-spoil-decay/"
+        },
+        {
+          "name": "NerdSchalk — Viewing Cage merchant trading",
+          "url": "https://nerdschalk.com/keep-trader-at-your-base-palworld/"
+        }
+      ]
+    },
+    {
+      "slug": "hack-terminals-schematics-expeditions",
+      "title": "Palworld Hack Terminals, Schematics & Expeditions Guide (1.0)",
+      "excerpt": "Clear every Hack Terminal, bank schematics for the Drafting Table, tune QoL settings, and push Expedition power past 100% for denser rewards.",
+      "category": "progression",
+      "tags": [
+        "1.0",
+        "schematics",
+        "expeditions",
+        "qol",
+        "accessories"
+      ],
+      "publishedAt": "2026-08-04",
+      "updatedAt": "2026-08-04",
+      "featured": false,
+      "relatedGuideSlugs": [
+        "base-space-worker-qol-1-0",
+        "palworld-1-0-progression",
+        "breeding-calculator-1-0"
+      ],
+      "relatedPalSlugs": [
+        "frostallion",
+        "anubis",
+        "jetragon"
+      ],
+      "faq": [
+        {
+          "q": "Are Hack Terminals the same as Watchtowers?",
+          "a": "No. Watchtowers clear fog and unlock travel. Hack Terminals sit in Ancient Ruins (and similar fixed puzzle sites) and drop accessory and gear schematics. Do both on the same route when you can."
+        },
+        {
+          "q": "Should I sell common schematics?",
+          "a": "No. Keep lower-rarity copies. At the Drafting Table you combine five identical schematics of the same rarity into one of the next rarity (Uncommon → Rare → Epic → Legendary)."
+        },
+        {
+          "q": "Do expeditions stop being useful at 100% power?",
+          "a": "No. Meeting the recommendation is the floor. Sending stronger condensed teams shortens timers and raises reward multipliers well past the baseline — keep running them."
+        },
+        {
+          "q": "Which settings are worth changing first?",
+          "a": "Turn on single-press / toggle options so you stop holding craft and build buttons. Disable noisy pal aura VFX if combat readability suffers. Then skim every menu footer for bulk-stow and map-base keybinds."
+        },
+        {
+          "q": "When do expeditions unlock?",
+          "a": "Build the Expedition Station once the tech unlocks, then clear at least one Tower boss to open early missions. More towers unlock more routes."
+        }
+      ],
+      "body": [
+        {
+          "type": "tldr",
+          "items": [
+            "Never skip Hack Terminals — accessory schematics are fixed on the map.",
+            "Hoard matching schematics; five of one rarity upgrade at the Drafting Table.",
+            "Flip QoL settings: single-press actions, quieter auras, then read every menu keybind.",
+            "Expeditions scale past 100% power — overshoot for more loot, not just a green check."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "This is the systems chapter players skip while chasing towers. Hack Terminals, schematic combining, and Expedition overfarming quietly decide whether your mid-game gear and material income feel smooth or stuck."
+        },
+        {
+          "type": "p",
+          "text": "Pair it with the base space guide when your yard is the bottleneck. If you still lack a second ore base or Capture Power ranks, finish those first so spheres and metal keep up with the gear you unlock here."
+        },
+        {
+          "type": "image",
+          "src": "/guides/hack-terminals-schematics-expeditions/systems-loop.svg",
+          "alt": "Flow from Hack Terminals to schematics to Drafting Table upgrades",
+          "caption": "Ruin puzzle → schematic bank → Drafting Table rarity climb."
+        },
+        {
+          "type": "h2",
+          "id": "hack-terminals",
+          "text": "Clear every Hack Terminal you see"
+        },
+        {
+          "type": "p",
+          "text": "Hack Terminals (the puzzle devices inside Ancient Ruins and related fixed sites) are not random world clutter. Their locations stay put, and the rewards include some of the best accessory schematics in the early and mid game. If a glowing ruin is on your path, stop and finish the minigame before you fly past."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Mark the ruin on your map the first time you spot it.",
+            "Solve the terminal puzzle (path / power / panel variants all count).",
+            "Loot the schematic and leave it in storage — do not sell junk Uncommons.",
+            "Reuse Watchtowers on the same loop so fog clears while you collect ruins."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Don't",
+          "text": "Do not treat Watchtowers as a substitute for Hack Terminals. Towers help you travel; terminals pay in craftable gear recipes."
+        },
+        {
+          "type": "toolCta",
+          "tool": "map",
+          "href": "/map?mode=travel",
+          "label": "Plan a tower-and-travel sweep",
+          "hint": "Clear travel points, then backtrack to any ruin markers you dropped"
+        },
+        {
+          "type": "h2",
+          "id": "schematics",
+          "text": "Bank schematics for the Drafting Table"
+        },
+        {
+          "type": "p",
+          "text": "Schematics are long-term currency. You craft the item while holding the schematic, and you later spend duplicates at the Drafting Table. Five copies of the same schematic at one rarity become one copy of the next rarity. Mixing different items or skipping a tier does not work."
+        },
+        {
+          "type": "table",
+          "caption": "Drafting Table combine path",
+          "headers": [
+            "Input",
+            "Output"
+          ],
+          "rows": [
+            [
+              "5× Uncommon (same item)",
+              "1× Rare"
+            ],
+            [
+              "5× Rare",
+              "1× Epic"
+            ],
+            [
+              "5× Epic",
+              "1× Legendary"
+            ]
+          ]
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Sort storage by schematic name so duplicates stack visibly.",
+            "Prioritize accessories and weapons you actually wear into towers.",
+            "Unlock the Drafting Table when the tech tree allows, then burn the backlog in one session."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "patch",
+          "title": "1.0 gear note",
+          "text": "Accessories lean harder on schematics than the old drop-and-equip ladder. Throwing away early Uncommons is how players get stuck wearing mid-tier rings into late towers."
+        },
+        {
+          "type": "h2",
+          "id": "settings-keybinds",
+          "text": "Spend five minutes in Settings and menu footers"
+        },
+        {
+          "type": "p",
+          "text": "Two toggles remove a lot of friction: single-press for hold interactions, and toggle instead of hold for build-mode switching. Also disable pal aura VFX if fights become a glow soup — readability matters more than spectacle when you are timing sphere throws."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Inventory — look for bulk stow / deposit keybinds that dump into base chests",
+            "Map — cycle between bases without closing the UI",
+            "Build menu — favor boxes and cushions if you use stacking scaffolds"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Read the footer",
+          "text": "Every major menu already prints the hotkeys. Learn stow and base-cycle once; you will use them hundreds of times before endgame."
+        },
+        {
+          "type": "h2",
+          "id": "expeditions",
+          "text": "Run Expeditions past the 100% mark"
+        },
+        {
+          "type": "p",
+          "text": "The Expedition Station is not a checkbox you abandon after one clear. Missions list a recommended combat power; that number is the floor. Overshoot it with condensed, on-element teams and both duration and reward density improve. Stopping at good enough leaves free mats on the table every cycle."
+        },
+        {
+          "type": "image",
+          "src": "/guides/hack-terminals-schematics-expeditions/expedition-power.svg",
+          "alt": "Bar chart showing expedition rewards rising as team power exceeds the recommendation",
+          "caption": "Green check at 100% is not the ceiling. Stronger teams finish faster and bring more."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Unlock and build the Expedition Station, then clear a Tower to open missions.",
+            "Match the required element with part of the squad.",
+            "Fill the rest with your highest combat power pals; condense key members.",
+            "Launch, collect, and immediately requeue the mission you still need mats from."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "title": "Don't",
+          "text": "Do not park the station forever at just-cleared recommendation power. If you have stronger pals idle in the box, send them."
+        },
+        {
+          "type": "toolCta",
+          "tool": "tiers",
+          "href": "/tiers?role=combat",
+          "label": "Pick high-power pals for expedition squads",
+          "hint": "Use combat tiers to staff element-matched expedition teams"
+        },
+        {
+          "type": "toolCta",
+          "tool": "teams",
+          "href": "/teams",
+          "label": "Lock a five-pal combat core",
+          "hint": "Build the party you also use to raise expedition power"
+        },
+        {
+          "type": "h2",
+          "id": "session-plan",
+          "text": "One session plan"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Flip QoL settings and learn inventory stow + map base cycle.",
+            "Sweep two biomes: Watchtower → nearby Hack Terminals → mark unfinished ruins.",
+            "Deposit every schematic; note which Uncommons already have three or more copies.",
+            "Queue an Expedition with power well above the recommendation while you craft.",
+            "When Drafting Table unlocks, combine toward the accessories you wear daily."
+          ]
+        },
+        {
+          "type": "toolCta",
+          "tool": "breeding",
+          "href": "/breeding",
+          "label": "Breed the expedition specialists you keep reusing",
+          "hint": "Target the combat pals that carry your over-100% runs"
+        },
+        {
+          "type": "image",
+          "src": "/map/world.webp",
+          "alt": "World map for planning Hack Terminal and tower routes across Palpagos",
+          "caption": "Treat ruins like fixed pins. Clear them on the same nights you hit towers."
+        },
+        {
+          "type": "h2",
+          "id": "pitfalls",
+          "text": "Pitfalls"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Flying past Hack Terminals because you will come back later",
+            "Selling Uncommon schematics for pocket gold",
+            "Leaving hold-to-craft enabled into late game",
+            "Canceling expeditions once the UI shows 100% power",
+            "Building Expedition Station but never clearing a Tower to unlock missions"
+          ]
+        },
+        {
+          "type": "h2",
+          "id": "next",
+          "text": "What to do next"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Rebuild base floor space so the Expedition Station and Breeding Farm sit on the border.",
+            "Return to the progression route if towers still wipe your timer.",
+            "When catches and ore are stable, spend cake on the combat pals that staff expeditions."
+          ]
+        }
+      ],
+      "sourceRefs": [
+        {
+          "name": "r/Palworld — systems QoL tips thread (community)",
+          "url": "https://www.reddit.com/r/Palworld/comments/1uzqbrl/palworld_10_useful_tips_tricks/"
+        },
+        {
+          "name": "NextTier — Ancient Ruins / Hack Terminals",
+          "url": "https://nexttier.pro/guide/palworld-ancient-ruins"
+        },
+        {
+          "name": "AllThings.How — Drafting Table schematic upgrades",
+          "url": "https://allthings.how/palworld-how-to-upgrade-schematics-to-legendary-rarity/"
+        },
+        {
+          "name": "AllThings.How — Expedition reward scaling",
+          "url": "https://allthings.how/palworld-expeditions-how-to-unlock-and-maximize-every-reward/"
+        },
+        {
+          "name": "wiki.gg — Drafting Table",
+          "url": "https://palworld.wiki.gg/wiki/Drafting_Table"
+        }
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ Win long-tail tool SERPs first:
 | Paldeck | `/pals`, `/pals/[slug]` | [pal] palworld stats, work suitability |
 | Map | `/map` | palworld map alphas, effigies, notes, fast travel |
 
-Guides/articles are deferred until tools are stable; hubs ship FAQ + JSON-LD for snippets.
+Guides/articles ship as **session chapters** that link into tools (`/guides`). Prefer tool SERPs first; pillars support long-tail how-to without becoming a wiki farm.
 
 Agent loop: `paldex-growth` implements SEO/polish → `paldex-seo-review` PASS/FAIL → growth fixes. Backlog: `.cursor/plans/growth-backlog.md`.
 
@@ -38,7 +38,7 @@ When `thepaldex.com` is live:
 2. Bing Webmaster (optional) same sitemap
 3. Verify OG: https://www.opengraph.xyz/url/https://<domain>/
 4. Patch-day routine: update tiers/presets within 24–48h (live-service SEO advantage)
-5. Later: pillar guides that link back into tools (not before catalog/tools are stable)
+5. Pillar guides that link back into tools (`/guides`, session depth)
 
 **Ads:** not in scope until user approves. Privacy policy currently says no ads — keep in sync when that changes.
 

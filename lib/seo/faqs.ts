@@ -19,6 +19,10 @@ export const HOME_FAQ: FaqItem[] = [
     q: "Can I save or share teams?",
     a: "Yes. Your party encodes in the URL, and saved rosters stay in your browser — no account needed.",
   },
+  {
+    q: "Where should a new Palworld 1.0 player start?",
+    a: "Follow the progression guide: earn XP from five catches per species, stabilize an ore base, raise Capture Power, then prepare a party for the five-minute tower fights.",
+  },
 ];
 
 export const TIERS_FAQ: FaqItem[] = [

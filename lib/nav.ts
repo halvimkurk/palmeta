@@ -46,8 +46,20 @@ export const NAV = {
     hint: "Alphas, spawns & hidden shrines",
     icon: "map",
   },
+  guides: {
+    href: "/guides",
+    match: "/guides",
+    label: "Guides",
+    eyebrow: "Plan your next goal",
+    lead: "Progress from the first hours to towers, build reliable breeding chains, and improve your capture rate without wasting resources.",
+    hint: "Progress faster & waste less",
+    icon: "guides",
+  },
 } as const;
 
 export const TOOL_NAV = [NAV.pals, NAV.tiers, NAV.breeding, NAV.teams] as const;
+
+/** Sidebar / drawer primary links (tools + guides). */
+export const PRIMARY_NAV = [...TOOL_NAV, NAV.guides] as const;
 
 export type NavIconName = (typeof NAV)[keyof typeof NAV]["icon"];

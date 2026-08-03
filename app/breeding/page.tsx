@@ -7,6 +7,7 @@ import { BREEDING_FAQ } from "@/lib/seo/faqs";
 import { breadcrumbJsonLd, faqJsonLd, webAppJsonLd } from "@/lib/seo/schema";
 import { getBreedingMeta, getPals } from "@/lib/teams/catalog";
 import { parseBreedingMode } from "@/lib/breeding/url";
+import { getCombatGradeBySlug } from "@/lib/tiers";
 
 const DESCRIPTION =
   "Free Palworld 1.0 breeding calculator — foretell the egg from any parent pair or trace every lineage that yields your target pal.";
@@ -27,6 +28,7 @@ export default async function BreedingPage({
   const pals = getPals();
   const { uniqueCombos } = getBreedingMeta();
   const mode = parseBreedingMode(sp);
+  const combatGradeBySlug = getCombatGradeBySlug();
 
   return (
     <>
@@ -47,6 +49,7 @@ export default async function BreedingPage({
       <BreedingClient
         pals={pals}
         uniqueCombos={uniqueCombos}
+        combatGradeBySlug={combatGradeBySlug}
         mode={mode}
         parentA={sp.a ?? ""}
         parentB={sp.b ?? ""}

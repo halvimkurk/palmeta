@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GuideCard } from "@/components/guides/GuideCard";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SeoFaq } from "@/components/seo/SeoFaq";
+import { getFeaturedGuides } from "@/lib/guides/catalog";
 import { companionArtFor, type CompanionArtTone } from "@/lib/companion-art";
-import { TOOL_NAV } from "@/lib/nav";
+import { NAV, TOOL_NAV } from "@/lib/nav";
 import { HOME_FAQ } from "@/lib/seo/faqs";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/seo/schema";
 
@@ -24,6 +26,8 @@ const HOME_TOOLS = TOOL_NAV.map((tool, index) => ({
 }));
 
 export default function HomePage() {
+  const featuredGuides = getFeaturedGuides(3);
+
   return (
     <div className="home">
       <JsonLd
@@ -71,6 +75,35 @@ export default function HomePage() {
           );
         })}
       </section>
+
+      {featuredGuides.length ? (
+        <section className="home-guides" aria-labelledby="home-guides-title">
+          <div className="home-guides__head">
+            <div>
+              <p className="home-guides__eyebrow">Start here</p>
+              <h2 id="home-guides-title" className="home-guides__title">
+                Palworld 1.0 guides
+              </h2>
+              <p className="home-guides__lead">
+                Choose your next goal: progress faster, plan a breeding pair,
+                or improve your capture rate.
+              </p>
+            </div>
+            <Link href={NAV.guides.href} className="home-guides__all">
+              All guides
+            </Link>
+          </div>
+          <div className="home-guides__grid">
+            {featuredGuides.map((article, index) => (
+              <GuideCard
+                key={article.slug}
+                article={article}
+                kicker={String(index + 1).padStart(2, "0")}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <SeoFaq items={HOME_FAQ} />
     </div>

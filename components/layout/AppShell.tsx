@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { NavIcon } from "@/components/layout/NavIcons";
-import { NAV, TOOL_NAV } from "@/lib/nav";
+import { NAV, PRIMARY_NAV } from "@/lib/nav";
 
 type Props = {
   children: React.ReactNode;
@@ -40,7 +40,7 @@ export function AppShell({ children }: Props) {
   function NavBody({ onNavigate }: { onNavigate?: () => void }) {
     return (
       <>
-        {TOOL_NAV.map((link) => (
+        {PRIMARY_NAV.map((link) => (
           <Link
             key={link.match}
             href={link.href}
@@ -108,11 +108,12 @@ export function AppShell({ children }: Props) {
         <main className="shell-main__content">{children}</main>
 
         <footer className={`site-footer${isHome ? " site-footer--home" : ""}`}>
-          <span>ThePaldex — Paldeck, tier lists, breeding &amp; teams</span>
+          <span>ThePaldex — Paldeck, tier lists, breeding, teams &amp; guides</span>
           <Link href={NAV.tiers.href}>{NAV.tiers.label}</Link>
           <Link href={NAV.breeding.href}>{NAV.breeding.label}</Link>
           <Link href={NAV.teams.href}>{NAV.teams.label}</Link>
           <Link href={NAV.pals.href}>{NAV.pals.label}</Link>
+          <Link href={NAV.guides.href}>{NAV.guides.label}</Link>
           <Link href="/privacy">Privacy</Link>
         </footer>
       </div>

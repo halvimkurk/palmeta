@@ -88,7 +88,7 @@ Wait for explicit yes before coding feature work.
 6. Map mode SEO (FAQ, meta, indexable modes) — mix; ask if new routes
 7. Top pal page polish — SEO lane
 8. Distribution drafts (Reddit) — copy only
-9. Pillar guides — *feature: ask*
+9. Pillar guides — shipped; expand via `paldex-guide-brief` / `paldex-guide-author`
 
 ## Output after each session
 

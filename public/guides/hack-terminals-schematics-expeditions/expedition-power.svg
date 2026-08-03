@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" role="img" aria-label="Expedition reward scaling past recommended power">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1222"/>
+      <stop offset="100%" stop-color="#070B16"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#151C30"/>
+      <stop offset="100%" stop-color="#2A3348"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#151C30"/>
+      <stop offset="100%" stop-color="#3B82FF"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#151C30"/>
+      <stop offset="100%" stop-color="#FFB020"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#151C30"/>
+      <stop offset="100%" stop-color="#FFD060"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="240" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="1" width="798" height="238" rx="13" fill="none" stroke="rgba(59,130,255,0.18)" stroke-width="1"/>
+
+  <text x="28" y="36" fill="#8A93A8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="0.08em">EXPEDITION POWER VS REWARDS</text>
+
+  <!-- baseline guide -->
+  <line x1="48" y1="168" x2="752" y2="168" stroke="rgba(138,147,168,0.25)" stroke-width="1"/>
+
+  <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" text-anchor="middle">
+    <!-- Under -->
+    <rect x="72" y="132" width="100" height="36" rx="6" fill="url(#bar1)"/>
+    <text x="122" y="118" fill="#F4F5F8" font-size="14" font-weight="700">Slow</text>
+    <text x="122" y="192" fill="#8A93A8" font-size="12" font-weight="400">Under</text>
+
+    <!-- At recommend -->
+    <rect x="236" y="104" width="100" height="64" rx="6" fill="url(#bar2)"/>
+    <text x="286" y="90" fill="#F4F5F8" font-size="14" font-weight="700">Baseline</text>
+    <text x="286" y="192" fill="#8A93A8" font-size="12" font-weight="400">At recommend</text>
+
+    <!-- Above 100% -->
+    <rect x="400" y="72" width="100" height="96" rx="6" fill="url(#bar3)"/>
+    <text x="450" y="58" fill="#F4F5F8" font-size="14" font-weight="700">More loot</text>
+    <text x="450" y="192" fill="#FFB020" font-size="12" font-weight="600">Above 100%</text>
+
+    <!-- Far over -->
+    <rect x="564" y="48" width="100" height="120" rx="6" fill="url(#bar4)"/>
+    <text x="614" y="36" fill="#F4F5F8" font-size="14" font-weight="700">Max push</text>
+    <text x="614" y="192" fill="#FFD060" font-size="12" font-weight="600">Far over</text>
+  </g>
+
+  <text x="28" y="222" fill="#8A93A8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="400">100% is the floor — denser teams raise both speed and drop volume</text>
+</svg>

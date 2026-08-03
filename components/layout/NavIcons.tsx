@@ -62,6 +62,23 @@ const PATHS: Record<string, ReactNode> = {
       <circle cx="12" cy="11.5" r="1.6" fill="currentColor" />
     </>
   ),
+  guides: (
+    <>
+      <path
+        d="M7 5.5h10v13H7z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.5 9h5M9.5 12h5M9.5 15h3.5"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+      />
+    </>
+  ),
 };
 
 export function NavIcon({ name, className = "" }: Props) {

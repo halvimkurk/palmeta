@@ -19,7 +19,7 @@ Backlog: [growth-backlog.md](../../plans/growth-backlog.md)
 ## When invoked
 
 1. Identify the **batch** (files / routes from the user or last growth summary).
-2. If no batch given, audit the priority hubs: `/`, `/tiers`, `/breeding`, `/teams`, `/pals`, `/pals/[slug]` sample, `/map`, `sitemap.ts`, `robots.ts`, `lib/seo.ts`.
+2. If no batch given, audit the priority hubs: `/`, `/tiers`, `/breeding`, `/teams`, `/pals`, `/pals/[slug]` sample, `/guides`, `/guides/[slug]` sample, `/map`, `sitemap.ts`, `robots.ts`, `lib/seo.ts`.
 3. Run the checklist below.
 4. Emit a **PASS** or **FAIL** report in the required format.
 5. On FAIL: list concrete fixes ordered by impact; tell the user to re-run `paldex-growth` on that list.

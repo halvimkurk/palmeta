@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getGuides } from "@/lib/guides/catalog";
 import { SITE_URL } from "@/lib/seo";
 import { getPals } from "@/lib/teams/catalog";
 
@@ -38,12 +39,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${SITE_URL}/guides`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.88,
+    },
+    {
       url: `${SITE_URL}/privacy`,
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.2,
     },
   ];
+
+  const guides: MetadataRoute.Sitemap = getGuides().map((article) => ({
+    url: `${SITE_URL}/guides/${article.slug}`,
+    lastModified: new Date(article.updatedAt),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
 
   const pals: MetadataRoute.Sitemap = getPals().map((p) => ({
     url: `${SITE_URL}/pals/${p.slug}`,
@@ -52,5 +66,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...pals];
+  return [...staticRoutes, ...guides, ...pals];
 }
